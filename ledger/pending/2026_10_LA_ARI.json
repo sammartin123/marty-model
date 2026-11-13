@@ -1,0 +1,82 @@
+{
+ "game_id": "2026_10_LA_ARI",
+ "season": 2026,
+ "week": 10,
+ "away": "LA",
+ "home": "ARI",
+ "kickoff_utc": "2026-11-15T21:05:00+00:00",
+ "book": "ESPN lines (DraftKings)",
+ "logged_utc": "2026-11-13T19:58+00:00",
+ "entries": [
+  {
+   "kind": "yards",
+   "pid": "00-0036849",
+   "name": "Tutu Atwell",
+   "team": "LA",
+   "stat": "rec",
+   "line": 30.5,
+   "side": "under",
+   "price": null,
+   "book": "DraftKings",
+   "sim": 0.649,
+   "call": "play",
+   "live": false,
+   "gate": "QB unclear"
+  },
+  {
+   "kind": "td",
+   "pid": "00-0037840",
+   "name": "Kyren Williams",
+   "team": "LA",
+   "price": -150,
+   "book": "DraftKings",
+   "sim": 0.6306,
+   "mkt": 0.6,
+   "call": "play",
+   "live": false,
+   "gate": "QB unclear"
+  },
+  {
+   "kind": "td",
+   "pid": "00-0039738",
+   "name": "Blake Corum",
+   "team": "LA",
+   "price": 115,
+   "book": "DraftKings",
+   "sim": 0.3926,
+   "mkt": 0.4651,
+   "call": "fade",
+   "live": false,
+   "gate": "QB unclear"
+  },
+  {
+   "kind": "spread",
+   "call": "pass",
+   "live": false,
+   "gate": "QB unclear",
+   "team": "ARI",
+   "line": 9.5,
+   "price": -110,
+   "sim": 0.5118
+  },
+  {
+   "kind": "total",
+   "call": "lean",
+   "live": false,
+   "gate": "QB unclear",
+   "side": "over",
+   "line": 39.5,
+   "price": -110,
+   "sim": 0.7216
+  },
+  {
+   "kind": "ml",
+   "call": "pass",
+   "live": false,
+   "gate": "QB unclear",
+   "team": "ARI",
+   "price": 390,
+   "sim": 0.2331
+  }
+ ]
+}

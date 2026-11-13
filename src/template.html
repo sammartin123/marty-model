@@ -100,6 +100,7 @@ select,input{font-family:var(--mono);font-size:15px;background:#1a0607;color:var
 .evlist div{display:grid;grid-template-columns:54px 1fr auto;gap:8px;padding:6px 0;border-bottom:1px solid #331214;align-items:baseline}
 .evlist div:last-child{border-bottom:0}
 .evlist .t{color:var(--faint)} .evlist .sc{color:var(--ink);font-weight:700;white-space:nowrap}
+.evlist .sc.pos{color:var(--money)} .evlist .sc.neg{color:var(--bad)} .evlist .sc.dimtxt{color:var(--dim)}
 .bars{display:flex;flex-direction:column;gap:7px}
 .bar{display:grid;grid-template-columns:92px 1fr 64px;gap:8px;align-items:center;font-family:var(--mono);font-size:11.5px}
 .bar .trk{height:10px;background:#331214;border-radius:2px;position:relative}
@@ -144,6 +145,13 @@ footer{font-family:var(--mono);font-size:11px;color:var(--faint)}
   <div id="bestCalls" style="display:flex;flex-direction:column;gap:8px"></div>
   <p class="note" id="slateNote"></p>
   <div class="card"><div class="eyebrow" style="margin-bottom:4px">Every game · tap one to open it</div><div id="slateList"></div></div>
+</section>
+
+<section id="s-record">
+  <div><h2>Track record</h2><div class="sub">Every call, graded after the game</div></div>
+  <div class="card" id="recCard"></div>
+  <div class="card" id="recList" hidden><div class="eyebrow" style="margin-bottom:6px">Latest graded calls</div><div class="evlist" id="recRows"></div></div>
+  <p class="note" id="recNote"></p>
 </section>
 
 <div class="picker" id="picker" hidden><label for="gameSel">Game</label><select id="gameSel"></select><button class="btn" id="gPrev" type="button" aria-label="Previous game">◀</button><button class="btn" id="gNext" type="button" aria-label="Next game">▶</button></div>
@@ -585,6 +593,22 @@ const call = p => tdCall(D,p);
   $('foot').textContent='MartyMakesMoneyModel · '+A+' at '+H+' · model estimates, not guarantees.';
 })();
 } // end render
+
+/* ---------- track record ---------- */
+(function(){
+  const R = ALL.record || (GAMES[0] && GAMES[0].record); const card=$('recCard');
+  if(!R){ $('s-record').hidden=true; return; }
+  const B=R.buckets, wl=b=>b.w+'-'+b.l+(b.p?'-'+b.p:''), un=b=>(b.units>0?'+':'')+b.units.toFixed(2)+'u';
+  const bet=['td_play','td_lean','yards','spread','total','ml'], tot=bet.reduce((a,k)=>({w:a.w+B[k].w,l:a.l+B[k].l,p:a.p+B[k].p,units:a.units+B[k].units}),{w:0,l:0,p:0,units:0});
+  if(!R.games_graded){
+    card.innerHTML='<div class="verdict" style="border-left-color:var(--gold)"><div class="who">Nothing graded yet</div><div class="num" style="font-size:23px">'+R.pending_calls+' live call'+(R.pending_calls===1?'':'s')+' logged across '+R.pending_games+' games</div></div>';
+    $('recNote').textContent='The calls on this page are saved before kickoff. The next run after the games finish grades each one against what actually happened and starts the record here: wins, losses and units won or lost at one unit per call.';
+    return; }
+  const st=[[wl(tot), 'All bettable calls · '+un(tot)],[wl(B.td_play),'TD plays · '+un(B.td_play)],[wl(B.td_lean),'TD leans · '+un(B.td_lean)],[wl(B.td_fade),'TD fades that were right'],[wl(B.yards),'Yardage calls · '+un(B.yards)],[wl(B.spread),'Spread leans · '+un(B.spread)],[wl(B.total),'Total leans · '+un(B.total)],[wl(B.ml),'Moneyline leans · '+un(B.ml)]];
+  card.innerHTML='<div class="two">'+st.map(x=>'<div class="stat"><b>'+x[0]+'</b><span>'+esc(x[1])+'</span></div>').join('')+'</div>';
+  if(R.recent.length){ $('recList').hidden=false; $('recRows').innerHTML=R.recent.map(r=>'<div><span class="t">Wk '+r.week+'</span><span>'+esc(r.label)+' <span class="dimtxt">'+esc(r.game)+(r.price!=null&&r.call!=='fade'?' · '+am(r.price):'')+'</span></span><span class="sc '+(r.result==='win'?'pos':r.result==='loss'?'neg':'dimtxt')+'">'+r.result.toUpperCase()+(r.units?' '+(r.units>0?'+':'')+r.units.toFixed(2):'')+'</span></div>').join(''); }
+  const P=R.priced; $('recNote').innerHTML='Record covers '+R.games_graded+' graded game'+(R.games_graded===1?'':'s')+' over '+R.weeks+' week'+(R.weeks===1?'':'s')+', one unit per call at the logged price. Only calls that were live before kickoff count. '+(P.n?'Across all '+P.n+' priced TD props, the sim’s error score is '+P.brier_model.toFixed(3)+' against the book’s '+P.brier_book.toFixed(3)+' (lower is better). ':'')+(R.pending_calls?R.pending_calls+' live calls are waiting on results. ':'')+(R.games_graded<40?'This is still a small sample, so treat it as a progress report.':'');
+})();
 
 /* ---------- slate ---------- */
 let cur = 0;

@@ -1,0 +1,82 @@
+{
+ "game_id": "2026_10_BUF_NYJ",
+ "season": 2026,
+ "week": 10,
+ "away": "BUF",
+ "home": "NYJ",
+ "kickoff_utc": "2026-11-15T18:00:00+00:00",
+ "book": "ESPN lines (DraftKings)",
+ "logged_utc": "2026-11-13T19:58+00:00",
+ "entries": [
+  {
+   "kind": "yards",
+   "pid": "00-0030565",
+   "name": "Geno Smith",
+   "team": "NYJ",
+   "stat": "pass",
+   "line": 220.5,
+   "side": "under",
+   "price": null,
+   "book": "DraftKings",
+   "sim": 0.5668,
+   "call": "play",
+   "live": false,
+   "gate": "Injuries not final"
+  },
+  {
+   "kind": "td",
+   "pid": "00-0034857",
+   "name": "Josh Allen",
+   "team": "BUF",
+   "price": -170,
+   "book": "DraftKings",
+   "sim": 0.3575,
+   "mkt": 0.6296,
+   "call": "fade",
+   "live": false,
+   "gate": "Injuries not final"
+  },
+  {
+   "kind": "td",
+   "pid": "00-0037248",
+   "name": "James Cook",
+   "team": "BUF",
+   "price": -170,
+   "book": "DraftKings",
+   "sim": 0.7078,
+   "mkt": 0.6296,
+   "call": "play",
+   "live": false,
+   "gate": "Injuries not final"
+  },
+  {
+   "kind": "spread",
+   "call": "lean",
+   "live": true,
+   "gate": null,
+   "team": "BUF",
+   "line": -8.5,
+   "price": -110,
+   "sim": 0.6078
+  },
+  {
+   "kind": "total",
+   "call": "lean",
+   "live": true,
+   "gate": null,
+   "side": "over",
+   "line": 50.5,
+   "price": -110,
+   "sim": 0.5556
+  },
+  {
+   "kind": "ml",
+   "call": "pass",
+   "live": false,
+   "gate": null,
+   "team": "BUF",
+   "price": -440,
+   "sim": 0.8317
+  }
+ ]
+}

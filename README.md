@@ -67,6 +67,13 @@ listed spread, total and moneyline. Before running, complete these by hand or by
 - `src/build_page.py` drops that JSON into `src/template.html`.
 - `src/backtest.py` replays past games blind. `work/bt_report.json` holds the latest result, shown on the page.
 
+## Results tracker
+
+`src/ledger.py` snapshots every call before kickoff (`ledger/pending/`), then grades it once the game is in the
+data (`ledger/graded.json`): anytime TD by whether the player scored, yardage against the line, leans against the
+final score. One unit per call at the logged price. Only calls that were live before kickoff count toward the
+record shown on the page. A player with no touch in the game is graded void.
+
 ## Backtest (2024, 2025 and 2026 through Week 9: 681 games)
 
 - Winners picked: 64.5% (book favourite: 68.3%). Against the closing spread: 320-350. Totals: 339-339.

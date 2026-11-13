@@ -1,0 +1,97 @@
+{
+ "game_id": "2026_10_MIA_IND",
+ "season": 2026,
+ "week": 10,
+ "away": "MIA",
+ "home": "IND",
+ "kickoff_utc": "2026-11-15T18:00:00+00:00",
+ "book": "ESPN lines (DraftKings)",
+ "logged_utc": "2026-11-13T19:58+00:00",
+ "entries": [
+  {
+   "kind": "yards",
+   "pid": "00-0035710",
+   "name": "Daniel Jones",
+   "team": "IND",
+   "stat": "pass",
+   "line": 186.5,
+   "side": "over",
+   "price": null,
+   "book": "DraftKings",
+   "sim": 0.573,
+   "call": "play",
+   "live": false,
+   "gate": "QB unclear"
+  },
+  {
+   "kind": "td",
+   "pid": "00-0036223",
+   "name": "Jonathan Taylor",
+   "team": "IND",
+   "price": -120,
+   "book": "DraftKings",
+   "sim": 0.5864,
+   "mkt": 0.5455,
+   "call": "play",
+   "live": false,
+   "gate": "QB unclear"
+  },
+  {
+   "kind": "yards",
+   "pid": "00-0039880",
+   "name": "Malik Washington",
+   "team": "MIA",
+   "stat": "rec",
+   "line": 30.5,
+   "side": "under",
+   "price": null,
+   "book": "DraftKings",
+   "sim": 0.597,
+   "call": "play",
+   "live": false,
+   "gate": "QB unclear"
+  },
+  {
+   "kind": "td",
+   "pid": "00-0040198",
+   "name": "Ollie Gordon II",
+   "team": "MIA",
+   "price": 115,
+   "book": "DraftKings",
+   "sim": 0.4078,
+   "mkt": 0.4651,
+   "call": "fade",
+   "live": false,
+   "gate": "QB unclear"
+  },
+  {
+   "kind": "spread",
+   "call": "pass",
+   "live": false,
+   "gate": "QB unclear",
+   "team": "IND",
+   "line": -3.5,
+   "price": -110,
+   "sim": 0.5061
+  },
+  {
+   "kind": "total",
+   "call": "lean",
+   "live": false,
+   "gate": "QB unclear",
+   "side": "over",
+   "line": 38.5,
+   "price": -110,
+   "sim": 0.7075
+  },
+  {
+   "kind": "ml",
+   "call": "pass",
+   "live": false,
+   "gate": "QB unclear",
+   "team": "MIA",
+   "price": 170,
+   "sim": 0.3856
+  }
+ ]
+}

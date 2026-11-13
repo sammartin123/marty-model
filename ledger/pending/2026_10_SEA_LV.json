@@ -1,0 +1,82 @@
+{
+ "game_id": "2026_10_SEA_LV",
+ "season": 2026,
+ "week": 10,
+ "away": "SEA",
+ "home": "LV",
+ "kickoff_utc": "2026-11-15T21:05:00+00:00",
+ "book": "ESPN lines (DraftKings)",
+ "logged_utc": "2026-11-13T19:58+00:00",
+ "entries": [
+  {
+   "kind": "yards",
+   "pid": "00-0038563",
+   "name": "Tre Tucker",
+   "team": "LV",
+   "stat": "rec",
+   "line": 25.5,
+   "side": "over",
+   "price": -115,
+   "book": "DraftKings",
+   "sim": 0.5873,
+   "call": "play",
+   "live": false,
+   "gate": "QB unclear"
+  },
+  {
+   "kind": "td",
+   "pid": "00-0038543",
+   "name": "Jaxon Smith-Njigba",
+   "team": "SEA",
+   "price": 100,
+   "book": "DraftKings",
+   "sim": 0.4493,
+   "mkt": 0.5,
+   "call": "fade",
+   "live": false,
+   "gate": "QB unclear"
+  },
+  {
+   "kind": "td",
+   "pid": "00-0039165",
+   "name": "Zach Charbonnet",
+   "team": "SEA",
+   "price": 125,
+   "book": "DraftKings",
+   "sim": 0.3386,
+   "mkt": 0.4444,
+   "call": "fade",
+   "live": false,
+   "gate": "QB unclear"
+  },
+  {
+   "kind": "spread",
+   "call": "lean",
+   "live": false,
+   "gate": "QB unclear",
+   "team": "SEA",
+   "line": -6.5,
+   "price": -110,
+   "sim": 0.5568
+  },
+  {
+   "kind": "total",
+   "call": "lean",
+   "live": false,
+   "gate": "QB unclear",
+   "side": "over",
+   "line": 40.5,
+   "price": -110,
+   "sim": 0.6475
+  },
+  {
+   "kind": "ml",
+   "call": "pass",
+   "live": false,
+   "gate": "QB unclear",
+   "team": "SEA",
+   "price": -298,
+   "sim": 0.7508
+  }
+ ]
+}

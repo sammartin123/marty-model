@@ -1,0 +1,80 @@
+{
+ "game_id": "2026_10_CAR_NO",
+ "season": 2026,
+ "week": 10,
+ "away": "CAR",
+ "home": "NO",
+ "kickoff_utc": "2026-11-15T18:00:00+00:00",
+ "book": "ESPN lines (DraftKings)",
+ "logged_utc": "2026-11-13T19:58+00:00",
+ "entries": [
+  {
+   "kind": "td",
+   "pid": "00-0039373",
+   "name": "Audric Estime",
+   "team": "NO",
+   "price": 120,
+   "book": "DraftKings",
+   "sim": 0.3814,
+   "mkt": 0.4545,
+   "call": "fade",
+   "live": false,
+   "gate": "Injuries not final"
+  },
+  {
+   "kind": "td",
+   "pid": "00-0036555",
+   "name": "Chuba Hubbard",
+   "team": "CAR",
+   "price": -160,
+   "book": "DraftKings",
+   "sim": 0.5336,
+   "mkt": 0.6154,
+   "call": "fade",
+   "live": false,
+   "gate": "Injuries not final"
+  },
+  {
+   "kind": "td",
+   "pid": "00-0040124",
+   "name": "Tetairoa McMillan",
+   "team": "CAR",
+   "price": 140,
+   "book": "DraftKings",
+   "sim": 0.345,
+   "mkt": 0.4167,
+   "call": "fade",
+   "live": false,
+   "gate": "Injuries not final"
+  },
+  {
+   "kind": "spread",
+   "call": "lean",
+   "live": true,
+   "gate": null,
+   "team": "CAR",
+   "line": 2.5,
+   "price": -110,
+   "sim": 0.6366
+  },
+  {
+   "kind": "total",
+   "call": "pass",
+   "live": false,
+   "gate": null,
+   "side": "over",
+   "line": 48.5,
+   "price": -110,
+   "sim": 0.5121
+  },
+  {
+   "kind": "ml",
+   "call": "lean",
+   "live": true,
+   "gate": null,
+   "team": "CAR",
+   "price": 110,
+   "sim": 0.5817
+  }
+ ]
+}

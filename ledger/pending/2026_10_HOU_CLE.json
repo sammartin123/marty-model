@@ -1,0 +1,93 @@
+{
+ "game_id": "2026_10_HOU_CLE",
+ "season": 2026,
+ "week": 10,
+ "away": "HOU",
+ "home": "CLE",
+ "kickoff_utc": "2026-11-15T18:00:00+00:00",
+ "book": "ESPN lines (DraftKings)",
+ "logged_utc": "2026-11-13T19:57+00:00",
+ "entries": [
+  {
+   "kind": "td",
+   "pid": "00-0040784",
+   "name": "Quinshon Judkins",
+   "team": "CLE",
+   "price": 160,
+   "book": "DraftKings",
+   "sim": 0.3224,
+   "mkt": 0.3846,
+   "call": "fade",
+   "live": false,
+   "gate": "Injuries not final"
+  },
+  {
+   "kind": "td",
+   "pid": "00-0041037",
+   "name": "Denzel Boston",
+   "team": "CLE",
+   "price": 255,
+   "book": "DraftKings",
+   "sim": 0.2488,
+   "mkt": 0.2817,
+   "call": "pass",
+   "live": false,
+   "gate": "Injuries not final"
+  },
+  {
+   "kind": "td",
+   "pid": "00-0036554",
+   "name": "Nico Collins",
+   "team": "HOU",
+   "price": 170,
+   "book": "DraftKings",
+   "sim": 0.2336,
+   "mkt": 0.3704,
+   "call": "fade",
+   "live": false,
+   "gate": "Injuries not final"
+  },
+  {
+   "kind": "td",
+   "pid": "00-0040583",
+   "name": "Woody Marks",
+   "team": "HOU",
+   "price": 120,
+   "book": "DraftKings",
+   "sim": 0.2972,
+   "mkt": 0.4545,
+   "call": "fade",
+   "live": false,
+   "gate": "Injuries not final"
+  },
+  {
+   "kind": "spread",
+   "call": "lean",
+   "live": true,
+   "gate": null,
+   "team": "HOU",
+   "line": -4.5,
+   "price": -110,
+   "sim": 0.5476
+  },
+  {
+   "kind": "total",
+   "call": "pass",
+   "live": false,
+   "gate": null,
+   "side": "under",
+   "line": 40.5,
+   "price": -110,
+   "sim": 0.5228
+  },
+  {
+   "kind": "ml",
+   "call": "pass",
+   "live": false,
+   "gate": null,
+   "team": "HOU",
+   "price": -225,
+   "sim": 0.6859
+  }
+ ]
+}

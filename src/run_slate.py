@@ -45,17 +45,20 @@ def main(path):
         if G['market'] is None:
             print('SKIP (no line):', key); continue
         json.dump(G, open(os.path.join(ROOT, 'games', f'{key}.json'), 'w'), indent=1)
-        o = run(G, db, quiet=True)
+        o = run(G, db, quiet=True, record=False)
         gm = o['game']; top = sorted(o['players'], key=lambda p: -p['p_td'])[:3]
         print(' ', G['inputs']['qbs'], 'low_conf', list(G['inputs']['low_conf']), 'out', len(G['out']))
         print(f"{away:>3} @ {home:<3} {home} {gm['p_home']:.3f} (book {gm['mkt_nv_home']:.3f})  {gm['mean_away']:.1f}-{gm['mean_home']:.1f}  tot {gm['med_total']:.0f} (book {G['market']['total']})  "
               + ', '.join(f"{p['name']} {p['p_td']:.2f}" for p in top) + (f"  UNMATCHED {o['inputs']['unmatched']}" if o['inputs'].get('unmatched') else ''))
         games.append(o)
+    import ledger
+    record = ledger.grade(db)
     out = dict(meta=dict(label=S['label'], week=S['week'], season=S['season'],
-                         generated=dt.datetime.now().strftime('%a %b %d, %Y').replace(' 0', ' ')), games=games)
+                         generated=dt.datetime.now().strftime('%a %b %d, %Y').replace(' 0', ' ')), games=games, record=record)
     os.makedirs(os.path.join(ROOT, 'out'), exist_ok=True)
     json.dump(out, open(os.path.join(ROOT, 'out', 'slate.json'), 'w'))
     print('wrote out/slate.json', len(games), 'games')
+    print('RESULTS TRACKER UPDATED: commit everything with git add -A (ledger/ included) and push.')
 
 if __name__ == '__main__':
     main(sys.argv[1])

@@ -3,7 +3,7 @@ usage: python3 src/run_game.py games/<AWAY_HOME>.json"""
 import os, sys, json, numpy as np, pandas as pd
 import model as M
 
-def run(G, db=None, quiet=False):
+def run(G, db=None, quiet=False, record=True):
     N = G.get('n_sims', 100000)
     home, away = G['home'], G['away']
     asof = pd.Timestamp(G['asof'])
@@ -249,6 +249,10 @@ def run(G, db=None, quiet=False):
                 sources=G.get('sources', []), injuries=G.get('injuries', []), inputs=dict(G.get('inputs', {}), unmatched=unmatched),
                 per_drive=dict(td=[float(x) for x in M.sigmoid(par['td'])], fg=[float(x) for x in M.sigmoid(par['fg'])],
                                rush_share=[float(x) for x in M.sigmoid(par['rush'])]))
+    import ledger
+    ledger.log_game(G, outj)
+    if record:
+        outj['record'] = ledger.grade(db)
     ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
     out_path = G['out_json'] if os.path.isabs(G['out_json']) else os.path.join(ROOT, G['out_json'])
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
@@ -271,3 +275,4 @@ def run(G, db=None, quiet=False):
 
 if __name__ == '__main__':
     run(json.load(open(sys.argv[1])))
+    print('RESULTS TRACKER UPDATED: commit everything with git add -A (ledger/ included) and push.')

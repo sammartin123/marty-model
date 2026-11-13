@@ -1,0 +1,54 @@
+{
+ "game_id": "2026_10_MIN_GB",
+ "season": 2026,
+ "week": 10,
+ "away": "MIN",
+ "home": "GB",
+ "kickoff_utc": "2026-11-15T18:00:00+00:00",
+ "book": "ESPN lines (DraftKings)",
+ "logged_utc": "2026-11-13T19:58+00:00",
+ "entries": [
+  {
+   "kind": "td",
+   "pid": "00-0040667",
+   "name": "Matthew Golden",
+   "team": "GB",
+   "price": 170,
+   "book": "DraftKings",
+   "sim": 0.3143,
+   "mkt": 0.3704,
+   "call": "fade",
+   "live": false,
+   "gate": "QB unclear"
+  },
+  {
+   "kind": "spread",
+   "call": "lean",
+   "live": false,
+   "gate": "QB unclear",
+   "team": "MIN",
+   "line": 3.0,
+   "price": -110,
+   "sim": 0.5412
+  },
+  {
+   "kind": "total",
+   "call": "lean",
+   "live": false,
+   "gate": "QB unclear",
+   "side": "under",
+   "line": 41.5,
+   "price": -110,
+   "sim": 0.6292
+  },
+  {
+   "kind": "ml",
+   "call": "lean",
+   "live": false,
+   "gate": "QB unclear",
+   "team": "MIN",
+   "price": 130,
+   "sim": 0.4862
+  }
+ ]
+}

@@ -122,6 +122,11 @@ dcount = drives.groupby(['game_id', 'posteam']).agg(drives=('td', 'size'), off_t
 tgm = tgm.merge(dcount, on=['game_id', 'team'], how='left')
 tgm.to_parquet(os.path.join(WORK, 'team_games.parquet'))
 
+# ---------------- every touchdown by scorer (rush, catch or return) for grading anytime-TD calls ----------------
+tdp = p[(p.touchdown == 1) & p.td_player_id.notna() & (p.two_point_attempt != 1)]
+tdp.groupby(['game_id', 'td_player_id']).size().rename('tds').reset_index().rename(columns={'td_player_id': 'pid'}).to_parquet(
+    os.path.join(WORK, 'tds.parquet'))
+
 # ---------------- scoring details ----------------
 sc = p[((p.touchdown == 1) & (p.td_team == p.posteam) & (p.two_point_attempt != 1)) |
        (p.field_goal_result == 'made')][['season', 'play_type', 'rush_touchdown', 'pass_touchdown', 'yards_gained',

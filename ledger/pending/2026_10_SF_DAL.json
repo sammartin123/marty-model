@@ -1,0 +1,93 @@
+{
+ "game_id": "2026_10_SF_DAL",
+ "season": 2026,
+ "week": 10,
+ "away": "SF",
+ "home": "DAL",
+ "kickoff_utc": "2026-11-15T21:25:00+00:00",
+ "book": "ESPN lines (DraftKings)",
+ "logged_utc": "2026-11-13T19:58+00:00",
+ "entries": [
+  {
+   "kind": "td",
+   "pid": "00-0036358",
+   "name": "CeeDee Lamb",
+   "team": "DAL",
+   "price": -120,
+   "book": "DraftKings",
+   "sim": 0.4406,
+   "mkt": 0.5455,
+   "call": "fade",
+   "live": false,
+   "gate": "Injuries not final"
+  },
+  {
+   "kind": "td",
+   "pid": "00-0036997",
+   "name": "Javonte Williams",
+   "team": "DAL",
+   "price": -180,
+   "book": "DraftKings",
+   "sim": 0.527,
+   "mkt": 0.6429,
+   "call": "fade",
+   "live": false,
+   "gate": "Injuries not final"
+  },
+  {
+   "kind": "td",
+   "pid": "00-0033280",
+   "name": "Christian McCaffrey",
+   "team": "SF",
+   "price": -285,
+   "book": "DraftKings",
+   "sim": 0.6717,
+   "mkt": 0.7403,
+   "call": "fade",
+   "live": false,
+   "gate": "Injuries not final"
+  },
+  {
+   "kind": "td",
+   "pid": "00-0033288",
+   "name": "George Kittle",
+   "team": "SF",
+   "price": 105,
+   "book": "DraftKings",
+   "sim": 0.2708,
+   "mkt": 0.4878,
+   "call": "fade",
+   "live": false,
+   "gate": "Injuries not final"
+  },
+  {
+   "kind": "spread",
+   "call": "lean",
+   "live": true,
+   "gate": null,
+   "team": "SF",
+   "line": -3.5,
+   "price": -110,
+   "sim": 0.5986
+  },
+  {
+   "kind": "total",
+   "call": "pass",
+   "live": false,
+   "gate": null,
+   "side": "over",
+   "line": 55.5,
+   "price": -110,
+   "sim": 0.5294
+  },
+  {
+   "kind": "ml",
+   "call": "pass",
+   "live": false,
+   "gate": null,
+   "team": "SF",
+   "price": -205,
+   "sim": 0.699
+  }
+ ]
+}

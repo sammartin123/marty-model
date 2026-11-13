@@ -1,0 +1,80 @@
+{
+ "game_id": "2026_10_JAX_TEN",
+ "season": 2026,
+ "week": 10,
+ "away": "JAX",
+ "home": "TEN",
+ "kickoff_utc": "2026-11-15T18:00:00+00:00",
+ "book": "ESPN lines (DraftKings)",
+ "logged_utc": "2026-11-13T19:58+00:00",
+ "entries": [
+  {
+   "kind": "td",
+   "pid": "00-0034960",
+   "name": "Jakobi Meyers",
+   "team": "JAX",
+   "price": 230,
+   "book": "DraftKings",
+   "sim": 0.3141,
+   "mkt": 0.303,
+   "call": "pass",
+   "live": false,
+   "gate": "Injuries not final"
+  },
+  {
+   "kind": "td",
+   "pid": "00-0038606",
+   "name": "Parker Washington",
+   "team": "JAX",
+   "price": 135,
+   "book": "DraftKings",
+   "sim": 0.3931,
+   "mkt": 0.4255,
+   "call": "pass",
+   "live": false,
+   "gate": "Injuries not final"
+  },
+  {
+   "kind": "td",
+   "pid": "00-0040719",
+   "name": "Bhayshul Tuten",
+   "team": "JAX",
+   "price": -130,
+   "book": "DraftKings",
+   "sim": 0.4442,
+   "mkt": 0.5652,
+   "call": "fade",
+   "live": false,
+   "gate": "Injuries not final"
+  },
+  {
+   "kind": "spread",
+   "call": "lean",
+   "live": true,
+   "gate": null,
+   "team": "JAX",
+   "line": -10.5,
+   "price": -110,
+   "sim": 0.5579
+  },
+  {
+   "kind": "total",
+   "call": "pass",
+   "live": false,
+   "gate": null,
+   "side": "under",
+   "line": 46.5,
+   "price": -110,
+   "sim": 0.5198
+  },
+  {
+   "kind": "ml",
+   "call": "pass",
+   "live": false,
+   "gate": null,
+   "team": "JAX",
+   "price": -600,
+   "sim": 0.8429
+  }
+ ]
+}

@@ -1,0 +1,67 @@
+{
+ "game_id": "2026_10_NE_DET",
+ "season": 2026,
+ "week": 10,
+ "away": "NE",
+ "home": "DET",
+ "kickoff_utc": "2026-11-15T14:30:00+00:00",
+ "book": "ESPN lines (DraftKings)",
+ "logged_utc": "2026-11-13T19:57+00:00",
+ "entries": [
+  {
+   "kind": "td",
+   "pid": "00-0036963",
+   "name": "Amon-Ra St. Brown",
+   "team": "DET",
+   "price": -110,
+   "book": "DraftKings",
+   "sim": 0.44,
+   "mkt": 0.5238,
+   "call": "fade",
+   "live": false,
+   "gate": "Injuries not final"
+  },
+  {
+   "kind": "td",
+   "pid": "00-0039139",
+   "name": "Jahmyr Gibbs",
+   "team": "DET",
+   "price": -280,
+   "book": "DraftKings",
+   "sim": 0.5946,
+   "mkt": 0.7368,
+   "call": "fade",
+   "live": false,
+   "gate": "Injuries not final"
+  },
+  {
+   "kind": "spread",
+   "call": "lean",
+   "live": true,
+   "gate": null,
+   "team": "NE",
+   "line": 3.0,
+   "price": -110,
+   "sim": 0.5813
+  },
+  {
+   "kind": "total",
+   "call": "lean",
+   "live": true,
+   "gate": null,
+   "side": "under",
+   "line": 51.5,
+   "price": -110,
+   "sim": 0.5483
+  },
+  {
+   "kind": "ml",
+   "call": "lean",
+   "live": true,
+   "gate": null,
+   "team": "NE",
+   "price": 130,
+   "sim": 0.5285
+  }
+ ]
+}

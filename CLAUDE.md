@@ -11,6 +11,9 @@ runbook for the weekly run and the rules that always apply.
 - The page is one private artifact. Always republish to the same one so Sam's link never changes:
   slug `79852994-f850-4c0e-876b-fdb91bc130c4` (https://claude.ai/artifact/G1Lc9453gKaZtNvn6oUVg7).
   Get its current version first, then publish `site/index.html` as `index.html` with that base version.
+- Results tracker: every run saves its calls to `ledger/pending/` before kickoff and grades finished games into
+  `ledger/graded.json`, which feeds the Track record section of the page. This only survives if it is committed,
+  so always commit with `git add -A` (never just the config files) and push. Never edit ledger files by hand.
 - Writing for Sam: concise, paragraphs over bullets, no em dashes.
 - Keep the honest framing on the page (the "How far to trust it" section). Game lines never get more than a Lean.
 

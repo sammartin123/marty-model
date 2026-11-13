@@ -1,0 +1,67 @@
+{
+ "game_id": "2026_10_KC_ATL",
+ "season": 2026,
+ "week": 10,
+ "away": "KC",
+ "home": "ATL",
+ "kickoff_utc": "2026-11-15T18:00:00+00:00",
+ "book": "ESPN lines (DraftKings)",
+ "logged_utc": "2026-11-13T19:57+00:00",
+ "entries": [
+  {
+   "kind": "td",
+   "pid": "00-0038542",
+   "name": "Bijan Robinson",
+   "team": "ATL",
+   "price": -210,
+   "book": "DraftKings",
+   "sim": 0.4949,
+   "mkt": 0.6774,
+   "call": "fade",
+   "live": false,
+   "gate": "Injuries not final"
+  },
+  {
+   "kind": "td",
+   "pid": "00-0038134",
+   "name": "Kenneth Walker III",
+   "team": "KC",
+   "price": -205,
+   "book": "DraftKings",
+   "sim": 0.5969,
+   "mkt": 0.6721,
+   "call": "fade",
+   "live": false,
+   "gate": "Injuries not final"
+  },
+  {
+   "kind": "spread",
+   "call": "pass",
+   "live": false,
+   "gate": null,
+   "team": "KC",
+   "line": -3.0,
+   "price": -110,
+   "sim": 0.5174
+  },
+  {
+   "kind": "total",
+   "call": "lean",
+   "live": true,
+   "gate": null,
+   "side": "under",
+   "line": 46.5,
+   "price": -110,
+   "sim": 0.5886
+  },
+  {
+   "kind": "ml",
+   "call": "pass",
+   "live": false,
+   "gate": null,
+   "team": "KC",
+   "price": -180,
+   "sim": 0.6246
+  }
+ ]
+}

@@ -1,0 +1,7 @@
+data/
+out/
+site/
+work/*
+!work/bt_report.json
+__pycache__/
+*.pyc

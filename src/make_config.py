@@ -31,7 +31,11 @@ def build(away, home, season=None):
     dc = dc[dc.dt == dc.dt.max()]
     ros = pd.read_csv(os.path.join(ROOT, 'data', f'roster_weekly_{season}.csv'), low_memory=False)
     ros['team'] = ros.team.replace({'LAR': 'LA'})
-    pg = pd.read_parquet(os.path.join(ROOT, 'work', 'player_games.parquet'))
+    pgp = os.path.join(ROOT, 'work', 'player_games.parquet')
+    if not os.path.exists(pgp) or os.path.getmtime(pgp) < os.path.getmtime(os.path.join(ROOT, 'data', 'games.csv')):
+        import subprocess
+        subprocess.run([sys.executable, os.path.join(ROOT, 'src', 'prep.py')], check=True, stdout=subprocess.DEVNULL)
+    pg = pd.read_parquet(pgp)
     pg = pg[pg.season == season]
     dnp = set(inj[inj.practice_status.fillna('').str.contains('Did Not')].gsis_id) if os.path.exists(ip) else set()
     qb, qbn, low_conf = {}, {}, {}

@@ -62,7 +62,8 @@
   "precip": 15,
   "wind": null,
   "rain_flag": false,
-  "note": "Daily forecast only: 15% chance of precipitation Sunday, high 9\u00b0C, low 0\u00b0C. Kickoff is 8:20 PM, so expect roughly 3 to 4\u00b0C (high 30s \u00b0F). No hourly or wind forecast was available."
+  "note": "Daily forecast only: 15% chance of precipitation Sunday, high 9\u00b0C, low 0\u00b0C. Kickoff is 8:20 PM, so expect roughly 3 to 4\u00b0C (high 30s \u00b0F). No hourly or wind forecast was available.",
+  "effect": "Rain chance is under the 30% line, so no prop type is ruled out. The sim trims passing efficiency and scoring slightly for the cold."
  },
  "wx_model": {
   "pass_mult": 0.987,

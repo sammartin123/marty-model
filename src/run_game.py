@@ -198,6 +198,11 @@ for t, (team, opp) in enumerate([(home, away), (away, home)]):
                              comp=float(s['comp'].mean()), td=float(s['pass_td'].mean()),
                              p_2ptd=float((s['pass_td'] >= 2).mean()))
             d['dvp_pass'] = dict(rank=dv['passyds']['rank'], per_game=dv['passyds']['per_game'])
+        if len(cur) >= 4:
+            key, lab = ('pass_yds', 'pass yds') if df.is_qb[j] else (('rush_yds', 'rush yds') if cur.rush_yds.sum() > cur.rec_yds.sum() else ('rec_yds', 'rec yds'))
+            cs = cur.sort_values('game_date')
+            if cs[key].mean() >= 15:
+                d['form'] = dict(label=lab, season=float(cs[key].mean()), last3=float(cs[key].tail(3).mean()), games=int(len(cs)))
         if df.name[j] in odds:
             od = odds[df.name[j]]
             d['td_mkt'] = dict(price=od['price'], book=od['book'], implied=implied(od['price']), all=od.get('all', []))

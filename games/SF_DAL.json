@@ -1,0 +1,122 @@
+{
+ "home": "DAL",
+ "away": "SF",
+ "season": 2026,
+ "week": 10,
+ "asof": "2026-11-15",
+ "n_sims": 100000,
+ "seed": 20261115,
+ "neutral": false,
+ "qb": {
+  "DAL": "00-0033077",
+  "SF": "00-0037834"
+ },
+ "out": [],
+ "status": {},
+ "out_json": "out/SF_DAL.json",
+ "meta": {
+  "title": "49ers at Cowboys",
+  "home_name": "Cowboys",
+  "away_name": "49ers",
+  "home_city": "Dallas",
+  "away_city": "San Francisco",
+  "kickoff": "Sun Nov 15, 2026 \u00b7 4:25 PM ET",
+  "time": "4:25 PM",
+  "venue": "AT&T Stadium, Dallas",
+  "generated": "Fri Nov 13, 2026",
+  "roof": "retractable",
+  "lat": 32.748,
+  "lon": -97.093,
+  "data_through": "Week 10",
+  "td_note": "Market = the DraftKings anytime TD price quoted by ESPN on Nov 13. Only players with a quoted price get a call, and nobody listed as questionable gets one. Confirm the price in your own book first: the call only holds at the price shown or longer."
+ },
+ "market": {
+  "spread_home": 3.5,
+  "total": 55.5,
+  "ml_home": 170,
+  "ml_away": -205,
+  "book": "ESPN lines (DraftKings)",
+  "others": []
+ },
+ "weather": {
+  "summary": "Retractable roof",
+  "precip": 0,
+  "wind": null,
+  "rain_flag": false,
+  "note": "Retractable roof, treated as closed.",
+  "effect": "No weather adjustment."
+ },
+ "wx_model": {
+  "pass_mult": 1.0,
+  "cr_mult": 1.0,
+  "td_shift": 0.0,
+  "fg_shift": 0.0
+ },
+ "td_odds": {
+  "Christian McCaffrey": {
+   "price": -285,
+   "book": "DraftKings",
+   "all": [
+    [
+     "DraftKings",
+     -285
+    ]
+   ]
+  },
+  "Javonte Williams": {
+   "price": -180,
+   "book": "DraftKings",
+   "all": [
+    [
+     "DraftKings",
+     -180
+    ]
+   ]
+  },
+  "CeeDee Lamb": {
+   "price": -120,
+   "book": "DraftKings",
+   "all": [
+    [
+     "DraftKings",
+     -120
+    ]
+   ]
+  },
+  "George Kittle": {
+   "price": 105,
+   "book": "DraftKings",
+   "all": [
+    [
+     "DraftKings",
+     105
+    ]
+   ]
+  }
+ },
+ "yard_lines": {},
+ "injuries": [],
+ "inputs": {
+  "qbs": {
+   "DAL": "Dak Prescott",
+   "SF": "Brock Purdy"
+  },
+  "report_final": false,
+  "low_conf": {},
+  "notes": []
+ },
+ "sources": [
+  {
+   "label": "Play-by-play, rosters, depth charts, injuries, schedule (nflverse)",
+   "url": "https://github.com/nflverse/nflverse-data"
+  },
+  {
+   "label": "Game lines for every game (ESPN, updated Nov 12)",
+   "url": "https://abc7ny.com/post/nfl-week-10-betting-odds-lines-totals-every-game/20026536/"
+  },
+  {
+   "label": "DraftKings anytime TD and prop prices quoted by ESPN (Nov 13)",
+   "url": "https://www.espn.com/espn/betting/story/_/id/50463729/week-10-nfl-odds-touchdown-props-best-bets-sunday-games"
+  }
+ ]
+}

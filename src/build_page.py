@@ -1,11 +1,12 @@
 """Inject a game's JSON into the page template.
-usage: python3 src/build_page.py out/<GAME>.json site/index.html"""
+usage: python3 src/build_page.py out/<GAME>.json site/index.html   (also accepts out/slate.json for a multi-game page)"""
 import sys, json, os, base64
 from teams import colours
 J = json.load(open(sys.argv[1]))
-m = J['meta']
-m.setdefault('colors', colours(m['home'], m['away']))
-m.setdefault('data_through', 'the most recent completed game')
+for g in (J['games'] if 'games' in J else [J]):
+    m = g['meta']
+    m.setdefault('colors', colours(m['home'], m['away']))
+    m.setdefault('data_through', 'the most recent completed game')
 t = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'template.html')).read()
 os.makedirs(os.path.dirname(os.path.abspath(sys.argv[2])), exist_ok=True)
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')

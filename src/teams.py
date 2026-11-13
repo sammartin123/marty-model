@@ -32,3 +32,34 @@ def colours(home, away):
         if _dist(h, a) < 150:
             h = TEAMS[home][3]
     return {home: h.lower(), away: a.lower()}
+
+
+# Home stadium: (lat, lon, roof). roof: 'outdoors', 'dome' (fixed) or 'retractable'.
+STADIUMS = {
+ 'ARI': (33.528, -112.263, 'retractable'), 'ATL': (33.755, -84.401, 'retractable'), 'BAL': (39.278, -76.623, 'outdoors'),
+ 'BUF': (42.774, -78.787, 'outdoors'), 'CAR': (35.226, -80.853, 'outdoors'), 'CHI': (41.862, -87.617, 'outdoors'),
+ 'CIN': (39.095, -84.516, 'outdoors'), 'CLE': (41.506, -81.699, 'outdoors'), 'DAL': (32.748, -97.093, 'retractable'),
+ 'DEN': (39.744, -105.020, 'outdoors'), 'DET': (42.340, -83.046, 'dome'), 'GB': (44.501, -88.062, 'outdoors'),
+ 'HOU': (29.685, -95.411, 'retractable'), 'IND': (39.760, -86.164, 'retractable'), 'JAX': (30.324, -81.637, 'outdoors'),
+ 'KC': (39.049, -94.484, 'outdoors'), 'LA': (33.953, -118.339, 'dome'), 'LAC': (33.953, -118.339, 'dome'),
+ 'LV': (36.091, -115.184, 'dome'), 'MIA': (25.958, -80.239, 'outdoors'), 'MIN': (44.974, -93.258, 'dome'),
+ 'NE': (42.091, -71.264, 'outdoors'), 'NO': (29.951, -90.081, 'dome'), 'NYG': (40.813, -74.074, 'outdoors'),
+ 'NYJ': (40.813, -74.074, 'outdoors'), 'PHI': (39.901, -75.168, 'outdoors'), 'PIT': (40.447, -80.016, 'outdoors'),
+ 'SEA': (47.595, -122.332, 'outdoors'), 'SF': (37.403, -121.970, 'outdoors'), 'TB': (27.976, -82.503, 'outdoors'),
+ 'TEN': (36.166, -86.771, 'outdoors'), 'WAS': (38.908, -76.864, 'outdoors'),
+}
+# Neutral-site and international venues by schedule name.
+NEUTRAL = {
+ 'FC Bayern Munich Stadium': (48.219, 11.625, 'outdoors', 'Munich'),
+ 'Allianz Arena': (48.219, 11.625, 'outdoors', 'Munich'),
+ 'Tottenham Hotspur Stadium': (51.604, -0.066, 'outdoors', 'London'), 'Tottenham Stadium': (51.604, -0.066, 'outdoors', 'London'),
+ 'Wembley Stadium': (51.556, -0.280, 'outdoors', 'London'),
+}
+
+def venue(home, stadium):
+    """(lat, lon, roof, neutral, place) for a game."""
+    if stadium in NEUTRAL:
+        la, lo, roof, place = NEUTRAL[stadium]
+        return la, lo, roof, True, place
+    la, lo, roof = STADIUMS[home]
+    return la, lo, roof, False, TEAMS[home][0]

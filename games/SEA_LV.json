@@ -1,0 +1,117 @@
+{
+ "home": "LV",
+ "away": "SEA",
+ "season": 2026,
+ "week": 10,
+ "asof": "2026-11-15",
+ "n_sims": 100000,
+ "seed": 20261115,
+ "neutral": false,
+ "qb": {
+  "LV": "00-0041562",
+  "SEA": "00-0034869"
+ },
+ "out": [],
+ "status": {},
+ "out_json": "out/SEA_LV.json",
+ "meta": {
+  "title": "Seahawks at Raiders",
+  "home_name": "Raiders",
+  "away_name": "Seahawks",
+  "home_city": "Las Vegas",
+  "away_city": "Seattle",
+  "kickoff": "Sun Nov 15, 2026 \u00b7 4:05 PM ET",
+  "time": "4:05 PM",
+  "venue": "Allegiant Stadium, Las Vegas",
+  "generated": "Fri Nov 13, 2026",
+  "roof": "dome",
+  "lat": 36.091,
+  "lon": -115.184,
+  "data_through": "Week 10",
+  "td_note": "Market = the DraftKings anytime TD price quoted by ESPN on Nov 13. Only players with a quoted price get a call, and nobody listed as questionable gets one. Confirm the price in your own book first: the call only holds at the price shown or longer."
+ },
+ "market": {
+  "spread_home": 6.5,
+  "total": 40.5,
+  "ml_home": 240,
+  "ml_away": -298,
+  "book": "ESPN lines (DraftKings)",
+  "others": []
+ },
+ "weather": {
+  "summary": "Indoors",
+  "precip": 0,
+  "wind": null,
+  "rain_flag": false,
+  "note": "Fixed roof, so weather is not a factor.",
+  "effect": "No weather adjustment."
+ },
+ "wx_model": {
+  "pass_mult": 1.0,
+  "cr_mult": 1.0,
+  "td_shift": 0.0,
+  "fg_shift": 0.0
+ },
+ "td_odds": {
+  "Jaxon Smith-Njigba": {
+   "price": 100,
+   "book": "DraftKings",
+   "all": [
+    [
+     "DraftKings",
+     100
+    ]
+   ]
+  },
+  "Zach Charbonnet": {
+   "price": 125,
+   "book": "DraftKings",
+   "all": [
+    [
+     "DraftKings",
+     125
+    ]
+   ]
+  }
+ },
+ "yard_lines": {
+  "Tre Tucker": [
+   {
+    "stat": "rec",
+    "line": 25.5,
+    "over": -115,
+    "book": "DraftKings"
+   }
+  ]
+ },
+ "injuries": [],
+ "inputs": {
+  "qbs": {
+   "LV": "Fernando Mendoza",
+   "SEA": "Sam Darnold"
+  },
+  "report_final": false,
+  "low_conf": {
+   "LV": "Fernando Mendoza has 8 pass attempts for the Raiders this season, so their numbers are low confidence.",
+   "SEA": "Sam Darnold has not practised this week, so the Seahawks quarterback is not certain."
+  },
+  "notes": [
+   "Seahawks QB Sam Darnold missed Week 9 and has not practised this week (ribs). If he is ruled out, Drew Lock starts.",
+   "Raiders rookie Fernando Mendoza now tops the depth chart after Kirk Cousins left."
+  ]
+ },
+ "sources": [
+  {
+   "label": "Play-by-play, rosters, depth charts, injuries, schedule (nflverse)",
+   "url": "https://github.com/nflverse/nflverse-data"
+  },
+  {
+   "label": "Game lines for every game (ESPN, updated Nov 12)",
+   "url": "https://abc7ny.com/post/nfl-week-10-betting-odds-lines-totals-every-game/20026536/"
+  },
+  {
+   "label": "DraftKings anytime TD and prop prices quoted by ESPN (Nov 13)",
+   "url": "https://www.espn.com/espn/betting/story/_/id/50463729/week-10-nfl-odds-touchdown-props-best-bets-sunday-games"
+  }
+ ]
+}

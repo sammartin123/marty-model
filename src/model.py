@@ -41,6 +41,8 @@ class DB:
         for c in ['home_team', 'away_team']:
             self.games[c] = self.games[c].replace({'OAK': 'LV', 'SD': 'LAC', 'STL': 'LA'})
         self.games['gameday'] = pd.to_datetime(self.games['gameday'])
+        pl = pd.read_csv(os.path.join(DATA, 'players.csv'), low_memory=False, usecols=['gsis_id', 'display_name']).dropna()
+        self.pnames = dict(zip(pl.gsis_id, pl.display_name))
         self._prep_team_drive()
         self._prep_player_states()
         self._prep_team_states()
@@ -315,6 +317,19 @@ def player_table(db, team, opp, asof, ids, qb_id=None, cfg=CFG, h2h=True):
     last = last[(last.pos != 'QB') | (last.pid == qb_id)].copy()
     if len(last) == 0:
         return None
+    if qb_id is not None and qb_id not in last.pid.values:
+        # starter with no NFL history: give him a league-typical quarterback profile
+        row = last.iloc[[0]].copy()
+        for c in row.columns:
+            if c.startswith(('u_', 'e_', 'p_')):
+                row[c] = 0.0
+        row['pid'] = qb_id; row['pos'] = 'QB'; row['gp'] = 0; row['W2'] = 0.0
+        row['name'] = (db.pnames.get(qb_id) or 'Starting QB')
+        row['game_date'] = asof - pd.Timedelta(days=1)
+        for c, v in dict(u_carries=1.7, u_T_car=26.0, u_car_in10=0.15, u_T_in10=3.0, u_car_in5=0.08, u_T_in5=1.5, u_pass_att=32.0,
+                         u_T_tgt=31.0, u_T_air=250.0, u_T_rz=4.0, u_T_in10t=2.0, u_T_ez=1.5).items():
+            row[c] = v
+        last = pd.concat([last, row], ignore_index=True)
     df = last[['pid', 'name', 'pos', 'gp']].copy()
     for kind, feats in [('rush', RUSH_F), ('rec', REC_F)]:
         S = []

@@ -1,0 +1,128 @@
+{
+ "home": "CLE",
+ "away": "HOU",
+ "season": 2026,
+ "week": 10,
+ "asof": "2026-11-15",
+ "n_sims": 100000,
+ "seed": 20261115,
+ "neutral": false,
+ "qb": {
+  "CLE": "00-0033537",
+  "HOU": "00-0039163"
+ },
+ "out": [],
+ "status": {},
+ "out_json": "out/HOU_CLE.json",
+ "meta": {
+  "title": "Texans at Browns",
+  "home_name": "Browns",
+  "away_name": "Texans",
+  "home_city": "Cleveland",
+  "away_city": "Houston",
+  "kickoff": "Sun Nov 15, 2026 \u00b7 1:00 PM ET",
+  "time": "1:00 PM",
+  "venue": "Huntington Bank Field, Cleveland",
+  "generated": "Fri Nov 13, 2026",
+  "roof": "outdoors",
+  "lat": 41.506,
+  "lon": -81.699,
+  "data_through": "Week 10",
+  "td_note": "Market = the DraftKings anytime TD price quoted by ESPN on Nov 13. Only players with a quoted price get a call, and nobody listed as questionable gets one. Confirm the price in your own book first: the call only holds at the price shown or longer."
+ },
+ "market": {
+  "spread_home": 4.5,
+  "total": 40.5,
+  "ml_home": 185,
+  "ml_away": -225,
+  "book": "ESPN lines (DraftKings)",
+  "others": []
+ },
+ "weather": {
+  "summary": "Cool, small rain chance",
+  "precip": 20,
+  "wind": null,
+  "rain_flag": false,
+  "note": "Cleveland: about 7\u00b0C (mid 40s \u00b0F), 20% chance of rain for the day. Daily forecast only. No hourly or wind forecast was available, so wind is not adjusted for.",
+  "effect": "Rain chance is under the 30% line, so no adjustment."
+ },
+ "wx_model": {
+  "pass_mult": 1.0,
+  "cr_mult": 1.0,
+  "td_shift": 0.0,
+  "fg_shift": 0.0
+ },
+ "td_odds": {
+  "Quinshon Judkins": {
+   "price": 160,
+   "book": "DraftKings",
+   "all": [
+    [
+     "DraftKings",
+     160
+    ]
+   ]
+  },
+  "Woody Marks": {
+   "price": 120,
+   "book": "DraftKings",
+   "all": [
+    [
+     "DraftKings",
+     120
+    ]
+   ]
+  },
+  "Nico Collins": {
+   "price": 170,
+   "book": "DraftKings",
+   "all": [
+    [
+     "DraftKings",
+     170
+    ]
+   ]
+  },
+  "Denzel Boston": {
+   "price": 255,
+   "book": "DraftKings",
+   "all": [
+    [
+     "DraftKings",
+     255
+    ]
+   ]
+  }
+ },
+ "yard_lines": {},
+ "injuries": [],
+ "inputs": {
+  "qbs": {
+   "CLE": "Deshaun Watson",
+   "HOU": "C.J. Stroud"
+  },
+  "report_final": false,
+  "low_conf": {},
+  "notes": [
+   "Deshaun Watson is reported to return as the Browns starter after missing Week 9 (concussion). The coach had not confirmed it publicly."
+  ]
+ },
+ "sources": [
+  {
+   "label": "Play-by-play, rosters, depth charts, injuries, schedule (nflverse)",
+   "url": "https://github.com/nflverse/nflverse-data"
+  },
+  {
+   "label": "Game lines for every game (ESPN, updated Nov 12)",
+   "url": "https://abc7ny.com/post/nfl-week-10-betting-odds-lines-totals-every-game/20026536/"
+  },
+  {
+   "label": "DraftKings anytime TD and prop prices quoted by ESPN (Nov 13)",
+   "url": "https://www.espn.com/espn/betting/story/_/id/50463729/week-10-nfl-odds-touchdown-props-best-bets-sunday-games"
+  },
+  {
+   "label": "Browns expected to start Deshaun Watson (Field Level Media, Nov 9)",
+   "url": "https://fieldlevelmedia.com/news/browns-expected-to-start-deshaun-watson-vs-texans/"
+  }
+ ]
+}

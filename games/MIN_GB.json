@@ -1,0 +1,105 @@
+{
+ "home": "GB",
+ "away": "MIN",
+ "season": 2026,
+ "week": 10,
+ "asof": "2026-11-15",
+ "n_sims": 100000,
+ "seed": 20261115,
+ "neutral": false,
+ "qb": {
+  "GB": "00-0036264",
+  "MIN": "00-0029604"
+ },
+ "out": [
+  "00-0035700"
+ ],
+ "status": {},
+ "out_json": "out/MIN_GB.json",
+ "meta": {
+  "title": "Vikings at Packers",
+  "home_name": "Packers",
+  "away_name": "Vikings",
+  "home_city": "Green Bay",
+  "away_city": "Minnesota",
+  "kickoff": "Sun Nov 15, 2026 \u00b7 1:00 PM ET",
+  "time": "1:00 PM",
+  "venue": "Lambeau Field, Green Bay",
+  "generated": "Fri Nov 13, 2026",
+  "roof": "outdoors",
+  "lat": 44.501,
+  "lon": -88.062,
+  "data_through": "Week 10",
+  "td_note": "Market = the DraftKings anytime TD price quoted by ESPN on Nov 13. Only players with a quoted price get a call, and nobody listed as questionable gets one. Confirm the price in your own book first: the call only holds at the price shown or longer."
+ },
+ "market": {
+  "spread_home": -3.0,
+  "total": 41.5,
+  "ml_home": -155,
+  "ml_away": 130,
+  "book": "ESPN lines (DraftKings)",
+  "others": []
+ },
+ "weather": {
+  "summary": "Cool and dry",
+  "precip": 0,
+  "wind": null,
+  "rain_flag": false,
+  "note": "Green Bay: about 6\u00b0C (low 40s \u00b0F) at kickoff, 0% chance of precipitation. Daily forecast only. No hourly or wind forecast was available, so wind is not adjusted for.",
+  "effect": "No weather adjustment."
+ },
+ "wx_model": {
+  "pass_mult": 1.0,
+  "cr_mult": 1.0,
+  "td_shift": 0.0,
+  "fg_shift": 0.0
+ },
+ "td_odds": {
+  "Matthew Golden": {
+   "price": 170,
+   "book": "DraftKings",
+   "all": [
+    [
+     "DraftKings",
+     170
+    ]
+   ]
+  }
+ },
+ "yard_lines": {},
+ "injuries": [
+  "GB Josh Jacobs: Out (from news reports)"
+ ],
+ "inputs": {
+  "qbs": {
+   "GB": "Jordan Love",
+   "MIN": "Kirk Cousins"
+  },
+  "report_final": false,
+  "low_conf": {
+   "MIN": "Kirk Cousins has 0 pass attempts for the Vikings this season, so their numbers are low confidence."
+  },
+  "notes": [
+   "Kirk Cousins joined the Vikings this week and tops their depth chart. Kyler Murray (hamstring) has not practised.",
+   "Packers RB Josh Jacobs (finger) is reported out."
+  ]
+ },
+ "sources": [
+  {
+   "label": "Play-by-play, rosters, depth charts, injuries, schedule (nflverse)",
+   "url": "https://github.com/nflverse/nflverse-data"
+  },
+  {
+   "label": "Game lines for every game (ESPN, updated Nov 12)",
+   "url": "https://abc7ny.com/post/nfl-week-10-betting-odds-lines-totals-every-game/20026536/"
+  },
+  {
+   "label": "DraftKings anytime TD and prop prices quoted by ESPN (Nov 13)",
+   "url": "https://www.espn.com/espn/betting/story/_/id/50463729/week-10-nfl-odds-touchdown-props-best-bets-sunday-games"
+  },
+  {
+   "label": "Josh Jacobs status (Sportsnaut preview)",
+   "url": "https://sportsnaut.com/nfl/green-bay-packers-predictions-vs-minnesota-vikings"
+  }
+ ]
+}

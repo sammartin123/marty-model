@@ -1,0 +1,102 @@
+{
+ "home": "ATL",
+ "away": "KC",
+ "season": 2026,
+ "week": 10,
+ "asof": "2026-11-15",
+ "n_sims": 100000,
+ "seed": 20261115,
+ "neutral": false,
+ "qb": {
+  "ATL": "00-0039917",
+  "KC": "00-0033873"
+ },
+ "out": [],
+ "status": {},
+ "out_json": "out/KC_ATL.json",
+ "meta": {
+  "title": "Chiefs at Falcons",
+  "home_name": "Falcons",
+  "away_name": "Chiefs",
+  "home_city": "Atlanta",
+  "away_city": "Kansas City",
+  "kickoff": "Sun Nov 15, 2026 \u00b7 1:00 PM ET",
+  "time": "1:00 PM",
+  "venue": "Mercedes-Benz Stadium, Atlanta",
+  "generated": "Fri Nov 13, 2026",
+  "roof": "retractable",
+  "lat": 33.755,
+  "lon": -84.401,
+  "data_through": "Week 10",
+  "td_note": "Market = the DraftKings anytime TD price quoted by ESPN on Nov 13. Only players with a quoted price get a call, and nobody listed as questionable gets one. Confirm the price in your own book first: the call only holds at the price shown or longer."
+ },
+ "market": {
+  "spread_home": 3.0,
+  "total": 46.5,
+  "ml_home": 150,
+  "ml_away": -180,
+  "book": "ESPN lines (DraftKings)",
+  "others": []
+ },
+ "weather": {
+  "summary": "Retractable roof",
+  "precip": 0,
+  "wind": null,
+  "rain_flag": false,
+  "note": "Retractable roof, treated as closed.",
+  "effect": "No weather adjustment."
+ },
+ "wx_model": {
+  "pass_mult": 1.0,
+  "cr_mult": 1.0,
+  "td_shift": 0.0,
+  "fg_shift": 0.0
+ },
+ "td_odds": {
+  "Kenneth Walker III": {
+   "price": -205,
+   "book": "DraftKings",
+   "all": [
+    [
+     "DraftKings",
+     -205
+    ]
+   ]
+  },
+  "Bijan Robinson": {
+   "price": -210,
+   "book": "DraftKings",
+   "all": [
+    [
+     "DraftKings",
+     -210
+    ]
+   ]
+  }
+ },
+ "yard_lines": {},
+ "injuries": [],
+ "inputs": {
+  "qbs": {
+   "ATL": "Michael Penix Jr.",
+   "KC": "Patrick Mahomes"
+  },
+  "report_final": false,
+  "low_conf": {},
+  "notes": []
+ },
+ "sources": [
+  {
+   "label": "Play-by-play, rosters, depth charts, injuries, schedule (nflverse)",
+   "url": "https://github.com/nflverse/nflverse-data"
+  },
+  {
+   "label": "Game lines for every game (ESPN, updated Nov 12)",
+   "url": "https://abc7ny.com/post/nfl-week-10-betting-odds-lines-totals-every-game/20026536/"
+  },
+  {
+   "label": "DraftKings anytime TD and prop prices quoted by ESPN (Nov 13)",
+   "url": "https://www.espn.com/espn/betting/story/_/id/50463729/week-10-nfl-odds-touchdown-props-best-bets-sunday-games"
+  }
+ ]
+}

@@ -1,0 +1,127 @@
+{
+ "home": "IND",
+ "away": "MIA",
+ "season": 2026,
+ "week": 10,
+ "asof": "2026-11-15",
+ "n_sims": 100000,
+ "seed": 20261115,
+ "neutral": false,
+ "qb": {
+  "IND": "00-0035710",
+  "MIA": "00-0040014"
+ },
+ "out": [],
+ "status": {},
+ "out_json": "out/MIA_IND.json",
+ "meta": {
+  "title": "Dolphins at Colts",
+  "home_name": "Colts",
+  "away_name": "Dolphins",
+  "home_city": "Indianapolis",
+  "away_city": "Miami",
+  "kickoff": "Sun Nov 15, 2026 \u00b7 1:00 PM ET",
+  "time": "1:00 PM",
+  "venue": "Lucas Oil Stadium, Indianapolis",
+  "generated": "Fri Nov 13, 2026",
+  "roof": "retractable",
+  "lat": 39.76,
+  "lon": -86.164,
+  "data_through": "Week 10",
+  "td_note": "Market = the DraftKings anytime TD price quoted by ESPN on Nov 13. Only players with a quoted price get a call, and nobody listed as questionable gets one. Confirm the price in your own book first: the call only holds at the price shown or longer."
+ },
+ "market": {
+  "spread_home": -3.5,
+  "total": 38.5,
+  "ml_home": -205,
+  "ml_away": 170,
+  "book": "ESPN lines (DraftKings)",
+  "others": []
+ },
+ "weather": {
+  "summary": "Retractable roof",
+  "precip": 0,
+  "wind": null,
+  "rain_flag": false,
+  "note": "Retractable roof, treated as closed.",
+  "effect": "No weather adjustment."
+ },
+ "wx_model": {
+  "pass_mult": 1.0,
+  "cr_mult": 1.0,
+  "td_shift": 0.0,
+  "fg_shift": 0.0
+ },
+ "td_odds": {
+  "Jonathan Taylor": {
+   "price": -120,
+   "book": "DraftKings",
+   "all": [
+    [
+     "DraftKings",
+     -120
+    ]
+   ]
+  },
+  "Ollie Gordon II": {
+   "price": 115,
+   "book": "DraftKings",
+   "all": [
+    [
+     "DraftKings",
+     115
+    ]
+   ]
+  }
+ },
+ "yard_lines": {
+  "Daniel Jones": [
+   {
+    "stat": "pass",
+    "line": 186.5,
+    "under": -112,
+    "book": "DraftKings"
+   }
+  ],
+  "Malik Washington": [
+   {
+    "stat": "rec",
+    "line": 30.5,
+    "over": -116,
+    "book": "DraftKings"
+   }
+  ]
+ },
+ "injuries": [],
+ "inputs": {
+  "qbs": {
+   "IND": "Daniel Jones",
+   "MIA": "Kyle McCord"
+  },
+  "report_final": false,
+  "low_conf": {
+   "MIA": "Kyle McCord has 0 pass attempts for the Dolphins this season, so their numbers are low confidence."
+  },
+  "notes": [
+   "Dolphins QB Malik Willis is on injured reserve. Kyle McCord makes his first NFL start."
+  ]
+ },
+ "sources": [
+  {
+   "label": "Play-by-play, rosters, depth charts, injuries, schedule (nflverse)",
+   "url": "https://github.com/nflverse/nflverse-data"
+  },
+  {
+   "label": "Game lines for every game (ESPN, updated Nov 12)",
+   "url": "https://abc7ny.com/post/nfl-week-10-betting-odds-lines-totals-every-game/20026536/"
+  },
+  {
+   "label": "DraftKings anytime TD and prop prices quoted by ESPN (Nov 13)",
+   "url": "https://www.espn.com/espn/betting/story/_/id/50463729/week-10-nfl-odds-touchdown-props-best-bets-sunday-games"
+  },
+  {
+   "label": "Kyle McCord named Dolphins starter (CNY Central)",
+   "url": "https://cnycentral.com/news/local/former-syracuse-qb-kyle-mccord-named-miami-starter-for-week-10-vs-colts"
+  }
+ ]
+}

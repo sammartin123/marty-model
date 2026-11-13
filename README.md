@@ -18,6 +18,23 @@ python3 src/make_config.py PIT CIN         # AWAY HOME -> games/PIT_CIN.json (sk
 
 Publish `site/index.html` to the artifact above (same slug, so the link never changes).
 
+## Run a whole slate (every Sunday game)
+
+```bash
+./fetch_data.sh && python3 src/prep.py
+python3 src/run_slate.py slates/2026-W10.json     # every game in the file -> out/slate.json
+python3 src/build_page.py out/slate.json site/index.html
+```
+
+A slate file (`slates/<season>-W<week>.json`) lists games as `"AWAY_HOME"` keys. Teams, kickoff, venue, roof,
+injuries (Out and Doubtful removed, Questionable flagged) and starting quarterbacks (current depth chart QB1,
+skipping anyone ruled out) are built automatically. Each game may override `market`, `td_odds`, `yard_lines`,
+`weather`, `wx_model`, `out_names`, `qb_names`, `notes` and `sources`.
+
+The page only makes a call when all of these hold: a real sportsbook price was found, the final injury report
+is in (6 PM ET two days before the game), the player is not Questionable, and neither team's quarterback is
+flagged low confidence (new starter with under 60 attempts for the team, or a starter who has not practised).
+
 ## What goes in a game config
 
 `make_config.py` fills in teams, week, kickoff, venue, starting QBs (depth chart QB1) and the schedule's

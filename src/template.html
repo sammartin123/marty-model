@@ -112,6 +112,22 @@ select,input{font-family:var(--mono);font-size:15px;background:#1a0607;color:var
 a{color:#f4c95a}
 ul.src{margin:0;padding-left:18px;font-size:13px;color:var(--dim);display:flex;flex-direction:column;gap:4px}
 footer{font-family:var(--mono);font-size:11px;color:var(--faint)}
+#game{display:flex;flex-direction:column;gap:44px}
+.picker{position:sticky;top:0;z-index:20;background:var(--bg);padding:8px 0;display:flex;gap:8px;align-items:center;border-bottom:1px solid var(--line);margin-top:-20px}
+.picker label{font-family:var(--mono);font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--dim)}
+.picker select{flex:1;min-width:0}
+.grow{display:block;width:100%;text-align:left;background:transparent;border:0;border-bottom:1px solid #331214;color:var(--ink);padding:10px 2px;cursor:pointer;font-family:var(--body)}
+.grow:last-child{border-bottom:0}
+.grow:hover,.grow[aria-current="true"]{background:var(--panel2)}
+.grow:focus-visible{outline:2px solid #fff;outline-offset:-2px}
+.grow .g1{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+.grow .g1 b{font-family:var(--display);font-style:italic;font-weight:800;font-size:21px;text-transform:uppercase}
+.grow .g1 span{font-family:var(--mono);font-size:11px;color:var(--dim);white-space:nowrap}
+.grow .g2{font-family:var(--mono);font-size:11.5px;color:#e6d2cc;margin-top:3px}
+.grow .g3{display:flex;gap:5px;flex-wrap:wrap;margin-top:6px}
+.tag.flag{background:#4a3a10;color:var(--gold)}
+.inp{font-size:13.5px;color:#e6d2cc;display:flex;flex-direction:column;gap:6px}
+.inp b{color:var(--ink)} .inp .warn{color:var(--gold)}
 @media (max-width:420px){.brand{font-size:24px} h1{font-size:40px} h2{font-size:30px} .big{font-size:54px} .box{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
@@ -120,10 +136,25 @@ footer{font-family:var(--mono);font-size:11px;color:var(--faint)}
 <div class="wrap">
 <header>
   <div class="brandrow"><img src="/*LOGO*/" alt="Marty Makes Money logo" width="54" height="54"><div class="brand">Marty<b>Makes</b><wbr>Money<b>Model</b></div></div>
+  <div class="eyebrow" id="slateLab"></div>
+</header>
+
+<section id="s-slate" hidden>
+  <div><h2 id="slateH">The slate</h2><div class="sub" id="slateS"></div></div>
+  <div id="bestCalls" style="display:flex;flex-direction:column;gap:8px"></div>
+  <p class="note" id="slateNote"></p>
+  <div class="card"><div class="eyebrow" style="margin-bottom:4px">Every game · tap one to open it</div><div id="slateList"></div></div>
+</section>
+
+<div class="picker" id="picker" hidden><label for="gameSel">Game</label><select id="gameSel"></select><button class="btn" id="gPrev" type="button" aria-label="Previous game">◀</button><button class="btn" id="gNext" type="button" aria-label="Next game">▶</button></div>
+
+<div id="game">
+<section id="s-head">
   <div class="eyebrow" id="kick"></div>
   <h1 id="h1"></h1>
   <div class="chips" id="chips"></div>
-</header>
+  <div class="card"><div class="eyebrow" style="margin-bottom:8px">What this run assumes</div><div class="inp" id="inputs"></div></div>
+</section>
 
 <section id="s-grid">
   <div><h2 id="gridH"></h2><div class="sub" id="gridS"></div></div>
@@ -206,34 +237,84 @@ footer{font-family:var(--mono);font-size:11px;color:var(--faint)}
   <footer id="foot"></footer>
 </section>
 </div>
+</div>
 
 <script id="data" type="application/json">/*DATA*/</script>
 <script>
 (function(){
-const D = JSON.parse(document.getElementById('data').textContent);
-const M = D.meta, G = D.game, H = M.home, A = M.away;
-const css = getComputedStyle(document.documentElement);
-document.documentElement.style.setProperty('--home', M.colors[H]);
-document.documentElement.style.setProperty('--away', M.colors[A]);
-const C = {home:M.colors[H], away:M.colors[A], tie:'#a39a98', ink:'#fbf3ea', dim:'#cbb0aa', line:'#4a1c1f', money:'#35d08a', warn:'#f0bf23', bad:'#ff5d6c'};
+const ALL = JSON.parse(document.getElementById('data').textContent);
+const GAMES = ALL.games ? ALL.games : [ALL];
 const $ = id => document.getElementById(id);
 const pct = (x,d=0) => (100*x).toFixed(d)+'%';
 const am = v => (v>0?'+':'')+v;
 const fairAm = p => { p=Math.min(.9999,Math.max(.0001,p)); return p>=.5 ? Math.round(-100*p/(1-p)) : Math.round(100*(1-p)/p); };
 const imp = o => o<0 ? -o/(-o+100) : 100/(o+100);
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-const NAME = {[H]:M.home_name, [A]:M.away_name};
 function el(tag, cls, html){ const e=document.createElement(tag); if(cls) e.className=cls; if(html!=null) e.innerHTML=html; return e; }
 function esc(s){ return String(s).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
-function fit(canvas, ratio){ const w=canvas.clientWidth, dpr=Math.min(2,window.devicePixelRatio||1); canvas.width=Math.round(w*dpr); canvas.height=Math.round(w*ratio*dpr); canvas.style.height=(w*ratio)+'px'; const c=canvas.getContext('2d'); c.setTransform(dpr,0,0,dpr,0,0); return {c,w,h:w*ratio}; }
-function seen(node, fn){ if(reduce||!('IntersectionObserver' in window)) return; const io=new IntersectionObserver(es=>{ es.forEach(e=>{ if(e.isIntersecting){ io.disconnect(); fn(); } }); },{threshold:.45}); io.observe(node); }
+const C = {tie:'#a39a98', ink:'#fbf3ea', dim:'#cbb0aa', line:'#4a1c1f', money:'#35d08a', warn:'#f0bf23', bad:'#ff6b78'};
 let seed=7; function rnd(){ seed=(seed*1664525+1013904223)>>>0; return seed/4294967296; }
+const lowConf = D => Object.keys((D.inputs&&D.inputs.low_conf)||{});
+const isFinal = D => !D.inputs || D.inputs.report_final!==false;
+/* A call is only live when there is a real price, the injury report is final, the player is not
+   questionable and his team's quarterback situation is settled. */
+function tdCall(D,p){
+  if(!p.td_mkt) return {cls:'pass',label:'No price',base:'none'};
+  if(lowConf(D).length) return {cls:'flag',label:'QB unclear',base:'none'};
+  if(p.status==='Questionable') return {cls:'flag',label:'Questionable',base:'none'};
+  const e=p.td_edge; let base='pass';
+  if(e>=.03 && p.p_td>=.10) base='play'; else if(e>=.015 && p.p_td>=.10) base='lean'; else if(e<=-.05) base='fade';
+  if(!isFinal(D) && base!=='pass') return {cls:'flag',label:'Wait: injuries',base:base,pending:true};
+  return {cls:base,label:{play:'Play',lean:'Lean',fade:'Fade',pass:'Pass'}[base],base:base};
+}
+function lineCall(D,p,L){
+  const side=L.p_over>=.5?'over':'under', pr=Math.max(L.p_over,1-L.p_over);
+  const price = side==='over'?L.over:L.under; const be = price!=null?imp(price):.524; const e=pr-be;
+  let base = e>=.04?'play':e>=.02?'lean':'pass', gate=null;
+  if(price==null && base!=='pass') gate='No '+side+' price';
+  else if(lowConf(D).length) gate='QB unclear'; else if(p.status==='Questionable') gate='Questionable'; else if(!isFinal(D)&&base!=='pass') gate='Wait: injuries';
+  return {side,pr,price,e,base,gate,pending:gate==='Wait: injuries'};
+}
+function leans(D){
+  const G=D.game, mk=D.market, H=D.meta.home, A=D.meta.away, sp=mk.spread_home, n=Math.abs(sp);
+  const fav = sp<0?H:A, dog = sp<0?A:H;
+  const pFav = sp<0?G.p_home_cover:G.p_away_cover, pDog = sp<0?G.p_away_cover:G.p_home_cover;
+  const gated = lowConf(D).length>0;
+  const tag=(ok,txt)=> gated?'<span class="tag flag">QB unclear</span>': ok?'<span class="tag lean">Lean '+txt+'</span>':'<span class="tag pass">Pass</span>';
+  const sideP=Math.max(pFav,pDog), sideT = pFav>pDog?fav+' -'+n:dog+' +'+n;
+  const ou=Math.max(G.p_over,G.p_under), ouT=(G.p_over>G.p_under?'Over ':'Under ')+mk.total;
+  const eH=G.p_home-imp(mk.ml_home), eA=G.p_away-imp(mk.ml_away); const mlB=eH>eA?[H,eH,mk.ml_home]:[A,eA,mk.ml_away];
+  const out={fav,dog,n,pFav,pDog,gated, ml:{ok:mlB[1]>=.03,txt:mlB[0]+' '+am(mlB[2])}, side:{ok:sideP>=.54,txt:sideT}, tot:{ok:ou>=.54,txt:ouT}};
+  out.ml.tag=tag(out.ml.ok,out.ml.txt); out.side.tag=tag(out.side.ok,out.side.txt); out.tot.tag=tag(out.tot.ok,out.tot.txt);
+  out.list = gated?[]:[out.side,out.tot,out.ml].filter(x=>x.ok).map(x=>x.txt);
+  return out;
+}
+const pristine = $('game').innerHTML;
+let GEN = 0;
+
+function render(D, alive){
+const M = D.meta, G = D.game, H = M.home, A = M.away;
+document.documentElement.style.setProperty('--home', M.colors[H]);
+document.documentElement.style.setProperty('--away', M.colors[A]);
+C.home = M.colors[H]; C.away = M.colors[A];
+const NAME = {[H]:M.home_name, [A]:M.away_name};
+const onResize = f => addEventListener('resize', () => { if(alive()) f(); });
+function fit(canvas, ratio){ const w=canvas.clientWidth, dpr=Math.min(2,window.devicePixelRatio||1); canvas.width=Math.round(w*dpr); canvas.height=Math.round(w*ratio*dpr); canvas.style.height=(w*ratio)+'px'; const c=canvas.getContext('2d'); c.setTransform(dpr,0,0,dpr,0,0); return {c,w,h:w*ratio}; }
+function seen(node, fn){ if(reduce||!('IntersectionObserver' in window)) return; const io=new IntersectionObserver(es=>{ es.forEach(e=>{ if(e.isIntersecting){ io.disconnect(); if(alive()) fn(); } }); },{threshold:.45}); io.observe(node); }
 
 /* ---------- header ---------- */
-document.title = 'MartyMakesMoneyModel';
 $('kick').textContent = M.kickoff+' · '+M.venue;
 $('h1').innerHTML = esc(M.away_name)+' at '+esc(M.home_name);
 ['100,000 simulations','Week '+M.week+', '+M.season,'Data through '+M.data_through,'Run '+M.generated].forEach(t=>$('chips').appendChild(el('span','chip',esc(t))));
+(function(){ const I=D.inputs||{}, rows=[];
+  if(I.qbs) rows.push('<div><b>Quarterbacks:</b> '+esc(I.qbs[A])+' ('+A+') and '+esc(I.qbs[H])+' ('+H+').</div>');
+  Object.values(I.low_conf||{}).forEach(t=>rows.push('<div class="warn">'+esc(t)+' No calls are made on this game.</div>'));
+  (I.notes||[]).forEach(t=>rows.push('<div>'+esc(t)+'</div>'));
+  const inj=D.injuries||[];
+  rows.push('<div><b>Injuries:</b> '+(inj.length?inj.map(esc).join('; ')+'. Players listed Out or Doubtful are removed from the sim.':'no skill-position players with a game status so far.')+'</div>');
+  if(I.report_final===false) rows.push('<div class="warn">The final injury report is not in yet, so every call on this game is on hold until the page refreshes.</div>');
+  rows.push('<div><b>Lines:</b> '+esc(D.market.book)+'.</div>');
+  $('inputs').innerHTML=rows.join(''); })();
 
 /* ---------- 1. grid ---------- */
 (function(){
@@ -266,9 +347,9 @@ $('h1').innerHTML = esc(M.away_name)+' at '+esc(M.home_name);
       oc.putImageData(im,0,0); c.imageSmoothingEnabled=false; c.drawImage(off,0,0,w,w);
     }
   }
-  function play(){ cancelAnimationFrame(raf); if(reduce){ draw(1); return; } const t0=performance.now(), dur=4200; (function step(now){ const t=Math.min(1,(now-t0)/dur); draw(t); if(t<1) raf=requestAnimationFrame(step); })(t0); }
+  function play(){ cancelAnimationFrame(raf); if(reduce){ draw(1); return; } const t0=performance.now(), dur=4200; (function step(now){ if(!alive()) return; const t=Math.min(1,(now-t0)/dur); draw(t); if(t<1) raf=requestAnimationFrame(step); })(t0); }
   $('gridL').innerHTML='<span><i style="background:'+C.home+'"></i>'+esc(M.home_name)+' win</span><span><i style="background:'+C.away+'"></i>'+esc(M.away_name)+' win</span><span>Top number in a cell = '+esc(A)+', bottom = '+esc(H)+'</span>';
-  draw(1); $('gridBtn').onclick=play; addEventListener('resize',()=>draw(1)); if(!reduce) setTimeout(play,350);
+  draw(1); $('gridBtn').onclick=play; onResize(()=>draw(1)); if(!reduce) setTimeout(()=>{ if(alive()) play(); },350);
 })();
 
 /* ---------- 2. galton ---------- */
@@ -308,33 +389,29 @@ $('h1').innerHTML = esc(M.away_name)+' at '+esc(M.home_name);
     const live=new Float64Array(BINS); const q=[]; for(let i=0;i<BALLS;i++){ const r=rnd(); let b=0; const rr=r*cum[BINS-1]; while(cum[b]<rr && b<BINS-1) b++; q.push({bin:b, t0:i*5.2+rnd()*60, jit:rnd()*6.28}); }
     const start=performance.now(), fall=1150;
     (function step(now){
-      const el=now-start; const g=frame(live, null); const c=cv.getContext('2d'); let done=true;
+      if(!alive()) return; const el=now-start; const g=frame(live, null); const c=cv.getContext('2d'); let done=true;
       for(const b of q){ const p=(el-b.t0)/fall; if(p<0){ done=false; continue; } if(p>=1){ if(!b.l){ b.l=1; live[b.bin]++; } continue; } done=false;
         const tx=(b.bin+.5)*g.bw, e=p*p, land=g.baseY-(live[b.bin]/BALLS)*g.scale; const x=g.w/2+(tx-g.w/2)*Math.min(1,p*1.35)+Math.sin(b.jit+p*14)*5*(1-p); const y=8+(land-8)*e;
         c.fillStyle= b.bin<R?C.away:(b.bin>R?C.home:C.tie); c.fillRect(x-1.6,y-1.6,3.2,3.2); }
       if(!done) raf=requestAnimationFrame(step); else frame();
     })(start);
   }
-  frame(); $('galBtn').onclick=play; addEventListener('resize',()=>frame()); seen(cv,play);
+  frame(); $('galBtn').onclick=play; onResize(()=>frame()); seen(cv,play);
 })();
 
 /* ---------- 3. lines ---------- */
 (function(){
-  const mk=D.market, sp=mk.spread_home; const fav = sp<0?H:A, dog = sp<0?A:H, n=Math.abs(sp);
-  const pFav = sp<0?G.p_home_cover:G.p_away_cover, pDog = sp<0?G.p_away_cover:G.p_home_cover;
-  const lean=(p,txt)=> p>=.54?'<span class="tag lean">Lean '+txt+'</span>':'<span class="tag pass">Pass</span>';
-  const sideP=Math.max(pFav,pDog), sideT = pFav>pDog?fav+' -'+n:dog+' +'+n;
-  const ou=Math.max(G.p_over,G.p_under), ouT=(G.p_over>G.p_under?'Over ':'Under ')+mk.total;
-  const mlEdgeH=G.p_home-imp(mk.ml_home), mlEdgeA=G.p_away-imp(mk.ml_away); const mlBest=mlEdgeH>mlEdgeA?[H,mlEdgeH,mk.ml_home]:[A,mlEdgeA,mk.ml_away];
-  const mlTag = mlBest[1]>=.03?'<span class="tag lean">Lean '+mlBest[0]+' '+am(mlBest[2])+'</span>':'<span class="tag pass">Pass</span>';
+  const mk=D.market, sp=mk.spread_home, L=leans(D), fav=L.fav, dog=L.dog, n=L.n, pDog=L.pDog;
+  const mlTag=L.ml.tag;
+  const lean=x=>x.tag; const sideP=L.side, sideT=null, ou=L.tot, ouT=null;
   const ms=G.med_margin, modelSpread=(ms===0?'Pick':(ms>0?H:A)+' -'+Math.abs(ms));
   $('lineT').innerHTML='<tr><th></th><th>Model</th><th>Book</th><th>Call</th></tr>'+
    '<tr><td>Score</td><td>'+A+' '+G.mean_away.toFixed(1)+'<br>'+H+' '+G.mean_home.toFixed(1)+'</td><td class="dimtxt">'+A+' '+((mk.total+sp)/2).toFixed(1)+'<br>'+H+' '+((mk.total-sp)/2).toFixed(1)+'</td><td></td></tr>'+
    '<tr><td>Winner</td><td>'+H+' '+pct(G.p_home,1)+'<br><span class="dimtxt">fair '+am(G.fair_ml_home)+' / '+am(G.fair_ml_away)+'</span></td><td class="dimtxt">'+H+' '+pct(G.mkt_nv_home,1)+'<br>'+am(mk.ml_home)+' / '+am(mk.ml_away)+'</td><td>'+mlTag+'</td></tr>'+
-   '<tr><td>Spread</td><td>'+modelSpread+'<br><span class="dimtxt">'+dog+' +'+n+' covers '+pct(pDog,1)+'</span></td><td class="dimtxt">'+fav+' -'+n+'</td><td>'+lean(sideP,sideT)+'</td></tr>'+
-   '<tr><td>Total</td><td>'+G.med_total+'<br><span class="dimtxt">under '+pct(G.p_under,1)+'</span></td><td class="dimtxt">'+mk.total+'</td><td>'+lean(ou,ouT)+'</td></tr>';
+   '<tr><td>Spread</td><td>'+modelSpread+'<br><span class="dimtxt">'+dog+' +'+n+' covers '+pct(pDog,1)+'</span></td><td class="dimtxt">'+fav+' -'+n+'</td><td>'+L.side.tag+'</td></tr>'+
+   '<tr><td>Total</td><td>'+G.med_total+'<br><span class="dimtxt">under '+pct(G.p_under,1)+'</span></td><td class="dimtxt">'+mk.total+'</td><td>'+L.tot.tag+'</td></tr>';
   const b=D.backtest;
-  $('lineNote').innerHTML='Book = '+esc(mk.book)+'. Totals elsewhere: '+mk.others.map(o=>esc(o.book)+' '+o.total).join(', ')+'. Game lines never get more than a Lean here, because over '+b.games+' past games this model went '+b.ats_0[0]+'-'+b.ats_0[1]+' against the closing spread and '+b.ou_0[0]+'-'+b.ou_0[1]+' on totals. The book has been the better predictor of the final score.';
+  $('lineNote').innerHTML='Book = '+esc(mk.book)+'. '+((mk.others||[]).length?'Totals elsewhere: '+mk.others.map(o=>esc(o.book)+' '+o.total).join(', ')+'. ':'')+(L.gated?'No lean here because a quarterback situation is unsettled. ':'')+'Game lines never get more than a Lean here, because over '+b.games+' past games this model went '+b.ats_0[0]+'-'+b.ats_0[1]+' against the closing spread and '+b.ou_0[0]+'-'+b.ou_0[1]+' on totals. The book has been the better predictor of the final score.';
 })();
 
 /* ---------- 4. typical game ---------- */
@@ -408,20 +485,20 @@ $('h1').innerHTML = esc(M.away_name)+' at '+esc(M.home_name);
   function show(i,p){ idx=i; draw(i,p); $('fldPos').textContent = i<0 ? 'Final' : 'Score '+(i+1)+' of '+ev.length; }
   function stop(){ playing=false; cancelAnimationFrame(raf); $('fldBtn').textContent='Play the game'; }
   function play(){ if(reduce){ show(-1,1); return; } stop(); playing=true; $('fldBtn').textContent='Pause'; const per=2900, t0=performance.now();
-    (function step(now){ if(!playing) return; const el=now-t0, i=Math.floor(el/per); if(i>=ev.length){ stop(); show(-1,1); return; } show(i,(el-i*per)/per); raf=requestAnimationFrame(step); })(t0); }
+    (function step(now){ if(!playing||!alive()) return; const el=now-t0, i=Math.floor(el/per); if(i>=ev.length){ stop(); show(-1,1); return; } show(i,(el-i*per)/per); raf=requestAnimationFrame(step); })(t0); }
   $('fldBtn').onclick=()=> playing?stop():play();
   $('fldPrev').onclick=()=>{ stop(); show(idx<0?ev.length-1:Math.max(0,idx-1),1); };
   $('fldNext').onclick=()=>{ stop(); show(idx<0?0:(idx+1>=ev.length?-1:idx+1),1); };
-  show(-1,1); addEventListener('resize',()=>draw(idx,1)); seen(cv,play);
+  show(-1,1); onResize(()=>draw(idx,1)); seen(cv,play);
 })();
 
 /* ---------- 5. TD board ---------- */
 const P = D.players.slice();
-function tdCall(p){ if(!p.td_mkt) return ['pass','No price']; const e=p.td_edge; if(e>=.03 && p.p_td>=.10) return ['play','Play']; if(e>=.015 && p.p_td>=.10) return ['lean','Lean']; if(e<=-.05) return ['fade','Fade']; return ['pass','Pass']; }
+const call = p => tdCall(D,p);
 (function(){
   const withM=P.filter(p=>p.td_mkt && Math.max(p.p_td,p.td_mkt.implied)>=.12).sort((a,b)=>b.td_mkt.implied-a.td_mkt.implied);
-  const MAX=.70, bd=$('tdBoard'); const pos=v=>(Math.min(v,MAX)/MAX*100*.9+2);
-  withM.forEach(p=>{ const call=tdCall(p)[0]; const r=el('div','tdrow'+(call==='play'||call==='lean'?' hot':'')); const m=p.td_mkt.implied, s=p.p_td;
+  const MAX=Math.min(.95,Math.max(.70,Math.ceil((Math.max.apply(null,withM.map(p=>Math.max(p.p_td,p.td_mkt.implied)).concat([0]))+.08)*10)/10)), bd=$('tdBoard'); const pos=v=>(Math.min(v,MAX)/MAX*100*.9+2);
+  withM.forEach(p=>{ const cc=call(p).cls; const r=el('div','tdrow'+(cc==='play'||cc==='lean'?' hot':'')); const m=p.td_mkt.implied, s=p.p_td;
     const right = m>s; const tight = right && pos(s)<26; // label placement so they do not collide or clip
     r.innerHTML='<div class="tdname" style="border-left-color:'+M.colors[p.team]+'">'+esc(p.name)+'</div>'+
       '<div class="flag" style="left:'+pos(m)+'%"></div>'+
@@ -429,16 +506,18 @@ function tdCall(p){ if(!p.td_mkt) return ['pass','No price']; const e=p.td_edge;
       '<div class="dot" style="left:'+pos(s)+'%;background:'+M.colors[p.team]+'"></div>'+
       '<div class="siml" style="'+(tight?'left:calc('+pos(m)+'% + 60px)':right?'right:calc('+(100-pos(s))+'% + 10px)':'left:calc('+pos(s)+'% + 10px)')+'">SIM '+pct(s)+'</div>';
     bd.appendChild(r); });
-  const ax=el('div','axis'); [10,20,30,40,50,60,70].forEach(v=>{ const sp=el('span',null,v+'%'); sp.style.left=pos(v/100)+'%'; ax.appendChild(sp); }); bd.appendChild(ax);
-  const plays=P.filter(p=>['play','lean'].includes(tdCall(p)[0])).sort((a,b)=>b.td_edge-a.td_edge);
-  const fades=P.filter(p=>tdCall(p)[0]==='fade' && p.td_mkt.implied>=.2).sort((a,b)=>a.td_edge-b.td_edge).slice(0,3);
+  const ax=el('div','axis'); [10,20,30,40,50,60,70,80,90].filter(v=>v/100<=MAX+.001).forEach(v=>{ const sp=el('span',null,v+'%'); sp.style.left=pos(v/100)+'%'; ax.appendChild(sp); }); bd.appendChild(ax);
+  const plays=P.filter(p=>['play','lean'].includes(call(p).cls)).sort((a,b)=>b.td_edge-a.td_edge);
+  const pend=P.filter(p=>call(p).pending && ['play','lean'].includes(call(p).base)).sort((a,b)=>b.td_edge-a.td_edge);
+  const fades=P.filter(p=>call(p).cls==='fade' && p.td_mkt.implied>=.2).sort((a,b)=>a.td_edge-b.td_edge).slice(0,3);
   const v=$('tdVerd');
-  if(!plays.length) v.appendChild(el('div','verdict','<div class="who">No anytime TD price clears the bar</div><div class="num">Pass on TD scorers</div>'));
-  plays.forEach(p=>v.appendChild(el('div','verdict','<div class="who">'+esc(p.name)+' · '+tdCall(p)[1]+' at '+am(p.td_mkt.price)+' or longer ('+esc(p.td_mkt.book)+' had it) · break-even '+am(p.fair_td)+'</div><div class="num"><span class="m">Market '+pct(p.td_mkt.implied,1)+'</span> → <span class="s">Sim '+pct(p.p_td,1)+'</span><small>'+(p.td_edge>0?'+':'')+(100*p.td_edge).toFixed(1)+' pts</small></div>')));
+  if(!plays.length && !pend.length) v.appendChild(el('div','verdict','<div class="who">No anytime TD price clears the bar</div><div class="num">Pass on TD scorers</div>'));
+  pend.forEach(p=>v.appendChild(el('div','verdict','<div class="who">'+esc(p.name)+' · on hold until the injury report is final · needs '+am(p.td_mkt.price)+' or longer</div><div class="num" style="opacity:.75"><span class="m">Market '+pct(p.td_mkt.implied,1)+'</span> → <span class="s">Sim '+pct(p.p_td,1)+'</span><small>'+(p.td_edge>0?'+':'')+(100*p.td_edge).toFixed(1)+' pts</small></div>')));
+  plays.forEach(p=>v.appendChild(el('div','verdict','<div class="who">'+esc(p.name)+' · '+call(p).label+' at '+am(p.td_mkt.price)+' or longer ('+esc(p.td_mkt.book)+' had it) · break-even '+am(p.fair_td)+'</div><div class="num"><span class="m">Market '+pct(p.td_mkt.implied,1)+'</span> → <span class="s">Sim '+pct(p.p_td,1)+'</span><small>'+(p.td_edge>0?'+':'')+(100*p.td_edge).toFixed(1)+' pts</small></div>')));
   fades.forEach(p=>v.appendChild(el('div','verdict fadev','<div class="who">'+esc(p.name)+' · Fade, the price is too short</div><div class="num"><span class="m">Market '+pct(p.td_mkt.implied,1)+'</span> → <span class="s">Sim '+pct(p.p_td,1)+'</span><small>'+(100*p.td_edge).toFixed(1)+' pts</small></div>')));
   const rows=P.filter(p=>p.p_td>=.03||p.td_mkt).sort((a,b)=>b.p_td-a.p_td);
-  $('tdT').innerHTML='<tr><th>Player</th><th>Sim</th><th>Best price</th><th>Edge</th><th>Call</th></tr>'+rows.map(p=>{ const c=tdCall(p); return '<tr><td><b style="color:'+M.colors[p.team]+'">'+p.team+'</b> '+esc(p.name)+'<br><span class="dimtxt">'+p.pos+' · fair '+am(p.fair_td)+'</span></td><td>'+pct(p.p_td,1)+'</td><td>'+(p.td_mkt?am(p.td_mkt.price)+'<br><span class="dimtxt">'+pct(p.td_mkt.implied,1)+' '+esc(p.td_mkt.book)+'</span>':'<span class="dimtxt">none found</span>')+'</td><td class="'+(p.td_edge>0?'pos':'neg')+'">'+(p.td_mkt?(p.td_edge>0?'+':'')+(100*p.td_edge).toFixed(1):'')+'</td><td><span class="tag '+c[0]+'">'+c[1]+'</span></td></tr>'; }).join('');
-  $('tdNote').innerHTML='Market = the implied chance from the best price I could find for each player on Nov 12 to 13, across several books. Anytime TD is a one-sided market, so that number still carries some of the book’s margin and the true no-vig chance is a little lower. Play = sim beats the price by 3 points or more, Lean = 1.5 to 3, Fade = the sim is 5 or more points under. Longshots under a 10% sim chance never get a Play.';
+  $('tdT').innerHTML='<tr><th>Player</th><th>Sim</th><th>Best price</th><th>Edge</th><th>Call</th></tr>'+rows.map(p=>{ const cc=call(p), c=[cc.cls,cc.label]; return '<tr><td><b style="color:'+M.colors[p.team]+'">'+p.team+'</b> '+esc(p.name)+'<br><span class="dimtxt">'+p.pos+' · fair '+am(p.fair_td)+'</span></td><td>'+pct(p.p_td,1)+'</td><td>'+(p.td_mkt?am(p.td_mkt.price)+'<br><span class="dimtxt">'+pct(p.td_mkt.implied,1)+' '+esc(p.td_mkt.book)+'</span>':'<span class="dimtxt">none found</span>')+'</td><td class="'+(p.td_edge>0?'pos':'neg')+'">'+(p.td_mkt?(p.td_edge>0?'+':'')+(100*p.td_edge).toFixed(1):'')+'</td><td><span class="tag '+c[0]+'">'+c[1]+'</span></td></tr>'; }).join('');
+  $('tdNote').innerHTML=esc(M.td_note||'Market = the implied chance from the best price found for each player.')+' Play = sim beats the price by 3 points or more, Lean = 1.5 to 3, Fade = the sim is 5 or more points under. Longshots under a 10% sim chance never get a Play. Players without a quoted price show the sim number only.';
 })();
 
 /* ---------- 6. yardage ---------- */
@@ -470,8 +549,8 @@ function tdCall(p){ if(!p.td_mkt) return ['pass','No price']; const e=p.td_edge;
   cP.onchange=stats; cS.onchange=()=>{ const p=elig.find(x=>x.id===cP.value); cL.value=(Math.round(qv(p[cS.value].q,.5))+.5)-1; calc(); }; cL.oninput=calc; cO.oninput=calc; $('calc').onsubmit=e=>e.preventDefault(); stats();
   // lines actually found
   const f=$('ydFound'); const nm={rec:'receiving yards',rush:'rushing yards',pass:'passing yards',recs:'receptions'};
-  P.filter(p=>p.lines).forEach(p=>p.lines.forEach(L=>{ const side=L.p_over>=.5?'over':'under', pr=Math.max(L.p_over,1-L.p_over); const be=L.over!=null?imp(L.over):.524; const e=pr-be;
-    f.appendChild(el('div','verdict'+(e<.02?' fadev':''),'<div class="who">'+esc(p.name)+' '+nm[L.stat]+' '+L.line+' · '+esc(L.book)+(L.over!=null?' · over '+am(L.over):'')+'</div><div class="num" style="font-size:22px">Sim: '+side+' '+pct(pr,1)+' <small style="color:'+(e>=.02?'var(--money)':'var(--dim)')+'">'+(e>=.04?'Play':e>=.02?'Lean':'Pass')+'</small></div>')); }));
+  P.filter(p=>p.lines).forEach(p=>p.lines.forEach(L=>{ const c=lineCall(D,p,L); const live=!c.gate && c.base!=='pass';
+    f.appendChild(el('div','verdict'+(live?'':' fadev'),'<div class="who">'+esc(p.name)+' '+nm[L.stat]+' '+L.line+' · '+esc(L.book)+(c.price!=null?' · '+c.side+' '+am(c.price):'')+'</div><div class="num" style="font-size:22px">Sim: '+c.side+' '+pct(c.pr,1)+' <small style="color:'+(live?'var(--money)':'var(--dim)')+'">'+(c.gate?c.gate:{play:'Play',lean:'Lean',pass:'Pass'}[c.base])+'</small></div>')); }));
 })();
 
 /* ---------- 7. matchup ---------- */
@@ -499,11 +578,60 @@ function tdCall(p){ if(!p.td_mkt) return ['pass','No price']; const e=p.td_edge;
     c.strokeStyle=C.money; c.lineWidth=2; c.beginPath(); b.cal_td.forEach((p,i)=>{ const x=L+p[0]/mx*pw, y=T+ph-p[1]/mx*ph; i?c.lineTo(x,y):c.moveTo(x,y); }); c.stroke();
     b.cal_td.forEach(p=>{ const x=L+p[0]/mx*pw, y=T+ph-p[1]/mx*ph; c.fillStyle=C.money; c.beginPath(); c.arc(x,y,3.5,0,7); c.fill(); });
     c.fillStyle='#cbb0aa'; c.textAlign='left'; c.fillText('scored',L+4,T+10); c.textAlign='right'; c.fillText('sim said',L+pw,T+ph-6); }
-  draw(); addEventListener('resize',draw);
+  draw(); onResize(draw);
   $('btP1').innerHTML='Read this before betting on anything above. On winners, spreads and totals the sportsbook line was more accurate than this model, and the model did not beat the spread. Where it holds up is touchdown chances: when it said 25%, players scored about 25% of the time, across '+b.td_n.toLocaleString('en-US')+' player-games.';
   $('btP2').innerHTML='Being well calibrated is not the same as beating a price. I had no archive of past TD or yardage odds, so the edges on this page are untested against real lines. I also tested the model with and without position-vs-defence and head-to-head history. Neither one improved accuracy, so both are in at low weight and shown mainly as context. Roster moves and injuries after '+esc(M.generated)+' are not included.';
   D.sources.forEach(s=>{ const li=el('li'); li.innerHTML='<a href="'+s.url+'" target="_blank" rel="noopener">'+esc(s.label)+'</a>'; $('src').appendChild(li); });
   $('foot').textContent='MartyMakesMoneyModel · '+A+' at '+H+' · model estimates, not guarantees.';
+})();
+} // end render
+
+/* ---------- slate ---------- */
+let cur = 0;
+const keyOf = D => D.meta.away+'-'+D.meta.home;
+function show(i, scroll){
+  cur = (i+GAMES.length)%GAMES.length; const gen = ++GEN;
+  $('game').innerHTML = pristine;
+  render(GAMES[cur], () => gen===GEN);
+  if(GAMES.length>1){ $('gameSel').value = String(cur); document.querySelectorAll('.grow').forEach((b,k)=>b.setAttribute('aria-current', k===cur));
+    try{ if(location.hash.slice(1)!==keyOf(GAMES[cur])) history.replaceState(null,'','#'+keyOf(GAMES[cur])); }catch(e){}
+    if(scroll) $('picker').scrollIntoView({behavior: reduce?'auto':'smooth', block:'start'}); }
+}
+(function(){
+  const meta = ALL.meta || {};
+  if(GAMES.length===1){ $('slateLab').textContent = GAMES[0].meta.kickoff; show(0); return; }
+  $('slateLab').textContent = (meta.label||'')+' · '+GAMES.length+' games · run '+(meta.generated||'');
+  $('s-slate').hidden=false; $('picker').hidden=false;
+  $('slateH').textContent='Best calls'; $('slateS').textContent='Only where the price and the player are confirmed';
+  const live=[], pend=[]; let waiting=0, flagged=0;
+  GAMES.forEach((D,gi)=>{ if(!isFinal(D)) waiting++; if(lowConf(D).length) flagged++;
+    D.players.forEach(p=>{ const c=tdCall(D,p); const row={gi,D,p,edge:p.td_edge,kind:'td',c};
+      if(c.cls==='play'||c.cls==='lean') live.push(row); else if(c.pending && (c.base==='play'||c.base==='lean')) pend.push(row);
+      (p.lines||[]).forEach(L=>{ const lc=lineCall(D,p,L); const r2={gi,D,p,edge:lc.e,kind:'line',L,lc};
+        if(!lc.gate && lc.base!=='pass') live.push(r2); else if(lc.pending) pend.push(r2); }); }); });
+  const bc=$('bestCalls'); const nm={rec:'receiving yards',rush:'rushing yards',pass:'passing yards',recs:'receptions'};
+  function card(r, hold){ const g=r.D.meta.away+' at '+r.D.meta.home; let h;
+    if(r.kind==='td') h='<div class="who">'+esc(r.p.name)+' anytime TD · '+g+' · '+(hold?'on hold':r.c.label)+' · needs '+am(r.p.td_mkt.price)+' or longer</div><div class="num"'+(hold?' style="opacity:.75"':'')+'><span class="m">Market '+pct(r.p.td_mkt.implied,1)+'</span> → <span class="s">Sim '+pct(r.p.p_td,1)+'</span><small>+'+(100*r.edge).toFixed(1)+' pts</small></div>';
+    else h='<div class="who">'+esc(r.p.name)+' '+nm[r.L.stat]+' · '+g+' · '+(hold?'on hold':({play:'Play',lean:'Lean'}[r.lc.base]))+'</div><div class="num"'+(hold?' style="opacity:.75"':'')+'><span class="s">'+r.lc.side+' '+r.L.line+'</span> <span class="m">'+am(r.lc.price)+'</span><small>Sim '+pct(r.lc.pr,1)+'</small></div>';
+    const b=el('button','verdict',h); b.type='button'; b.style.cssText='text-align:left;border-top:0;border-right:0;border-bottom:0;cursor:pointer;color:inherit;font:inherit'; b.onclick=()=>show(r.gi,true); return b; }
+  live.sort((a,b)=>b.edge-a.edge).slice(0,8).forEach(r=>bc.appendChild(card(r,false)));
+  if(!live.length) bc.appendChild(el('div','verdict','<div class="who">Nothing is live yet</div><div class="num" style="font-size:23px">'+(waiting?'Waiting on final injury reports':'No confirmed price clears the bar')+'</div>'));
+  if(pend.length){ bc.appendChild(el('div','eyebrow','On hold until injury reports are final')); pend.sort((a,b)=>b.edge-a.edge).slice(0,6).forEach(r=>bc.appendChild(card(r,true))); }
+  $('slateNote').innerHTML='A call goes live only when four things are true: a sportsbook price was actually found, the final injury report is in, the player is not listed as questionable, and his team’s quarterback is settled. '+(waiting?waiting+' of '+GAMES.length+' games are still waiting on the final injury report. ':'')+(flagged?flagged+' games have an unsettled quarterback and get no calls. ':'')+'Always confirm the price in your own book: a call only holds at the price shown or longer.';
+  const list=$('slateList'), sel=$('gameSel');
+  GAMES.forEach((D,i)=>{ const M=D.meta, G=D.game, H=M.home, A=M.away, L=leans(D); const fav=G.p_home>=.5?H:A, pf=Math.max(G.p_home,G.p_away); const bfav=D.game.mkt_nv_home>=.5?H:A, bp=Math.max(G.mkt_nv_home,1-G.mkt_nv_home);
+    const tags=[]; L.list.forEach(t=>tags.push('<span class="tag lean">Lean '+esc(t)+'</span>'));
+    if(lowConf(D).length) tags.push('<span class="tag flag">QB unclear: '+lowConf(D).join(', ')+'</span>');
+    if(!isFinal(D)) tags.push('<span class="tag flag">Injuries not final</span>');
+    if(D.weather && D.weather.precip>=30) tags.push('<span class="tag fade">Rain '+D.weather.precip+'%</span>');
+    const n=D.players.filter(p=>p.td_mkt).length; tags.push('<span class="tag pass">'+n+' TD price'+(n===1?'':'s')+'</span>');
+    const b=el('button','grow','<div class="g1"><b><span style="color:'+M.colors[A]+'">'+A+'</span> at <span style="color:'+M.colors[H]+'">'+H+'</span></b><span>'+esc(M.time||'')+' ET</span></div><div class="g2">Model '+fav+' '+pct(pf)+' · '+A+' '+G.mean_away.toFixed(1)+', '+H+' '+G.mean_home.toFixed(1)+' · Book '+bfav+' '+pct(bp)+'</div><div class="g3">'+tags.join('')+'</div>');
+    b.type='button'; b.onclick=()=>show(i,true); list.appendChild(b);
+    const o=el('option',null,esc(A+' at '+H+' · '+(M.time||''))); o.value=String(i); sel.appendChild(o); });
+  sel.onchange=()=>show(+sel.value,false); $('gPrev').onclick=()=>show(cur-1,false); $('gNext').onclick=()=>show(cur+1,false);
+  const fromHash=()=>GAMES.findIndex(D=>keyOf(D)===location.hash.slice(1));
+  addEventListener('hashchange',()=>{ const k=fromHash(); if(k>=0 && k!==cur) show(k,false); });
+  show(Math.max(0,fromHash()),false);
 })();
 })();
 </script>

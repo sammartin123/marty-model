@@ -1,0 +1,112 @@
+{
+ "home": "TEN",
+ "away": "JAX",
+ "season": 2026,
+ "week": 10,
+ "asof": "2026-11-15",
+ "n_sims": 100000,
+ "seed": 20261115,
+ "neutral": false,
+ "qb": {
+  "TEN": "00-0040676",
+  "JAX": "00-0036971"
+ },
+ "out": [],
+ "status": {},
+ "out_json": "out/JAX_TEN.json",
+ "meta": {
+  "title": "Jaguars at Titans",
+  "home_name": "Titans",
+  "away_name": "Jaguars",
+  "home_city": "Tennessee",
+  "away_city": "Jacksonville",
+  "kickoff": "Sun Nov 15, 2026 \u00b7 1:00 PM ET",
+  "time": "1:00 PM",
+  "venue": "Nissan Stadium, Tennessee",
+  "generated": "Fri Nov 13, 2026",
+  "roof": "outdoors",
+  "lat": 36.166,
+  "lon": -86.771,
+  "data_through": "Week 10",
+  "td_note": "Market = the DraftKings anytime TD price quoted by ESPN on Nov 13. Only players with a quoted price get a call, and nobody listed as questionable gets one. Confirm the price in your own book first: the call only holds at the price shown or longer."
+ },
+ "market": {
+  "spread_home": 10.5,
+  "total": 46.5,
+  "ml_home": 440,
+  "ml_away": -600,
+  "book": "ESPN lines (DraftKings)",
+  "others": []
+ },
+ "weather": {
+  "summary": "Mild and dry",
+  "precip": 0,
+  "wind": null,
+  "rain_flag": false,
+  "note": "Nashville: about 11\u00b0C (low 50s \u00b0F), 0% chance of rain. Daily forecast only. No hourly or wind forecast was available, so wind is not adjusted for.",
+  "effect": "No weather adjustment."
+ },
+ "wx_model": {
+  "pass_mult": 1.0,
+  "cr_mult": 1.0,
+  "td_shift": 0.0,
+  "fg_shift": 0.0
+ },
+ "td_odds": {
+  "Bhayshul Tuten": {
+   "price": -130,
+   "book": "DraftKings",
+   "all": [
+    [
+     "DraftKings",
+     -130
+    ]
+   ]
+  },
+  "Parker Washington": {
+   "price": 135,
+   "book": "DraftKings",
+   "all": [
+    [
+     "DraftKings",
+     135
+    ]
+   ]
+  },
+  "Jakobi Meyers": {
+   "price": 230,
+   "book": "DraftKings",
+   "all": [
+    [
+     "DraftKings",
+     230
+    ]
+   ]
+  }
+ },
+ "yard_lines": {},
+ "injuries": [],
+ "inputs": {
+  "qbs": {
+   "TEN": "Cam Ward",
+   "JAX": "Trevor Lawrence"
+  },
+  "report_final": false,
+  "low_conf": {},
+  "notes": []
+ },
+ "sources": [
+  {
+   "label": "Play-by-play, rosters, depth charts, injuries, schedule (nflverse)",
+   "url": "https://github.com/nflverse/nflverse-data"
+  },
+  {
+   "label": "Game lines for every game (ESPN, updated Nov 12)",
+   "url": "https://abc7ny.com/post/nfl-week-10-betting-odds-lines-totals-every-game/20026536/"
+  },
+  {
+   "label": "DraftKings anytime TD and prop prices quoted by ESPN (Nov 13)",
+   "url": "https://www.espn.com/espn/betting/story/_/id/50463729/week-10-nfl-odds-touchdown-props-best-bets-sunday-games"
+  }
+ ]
+}

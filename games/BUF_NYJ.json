@@ -1,0 +1,111 @@
+{
+ "home": "NYJ",
+ "away": "BUF",
+ "season": 2026,
+ "week": 10,
+ "asof": "2026-11-15",
+ "n_sims": 100000,
+ "seed": 20261115,
+ "neutral": false,
+ "qb": {
+  "NYJ": "00-0030565",
+  "BUF": "00-0034857"
+ },
+ "out": [],
+ "status": {},
+ "out_json": "out/BUF_NYJ.json",
+ "meta": {
+  "title": "Bills at Jets",
+  "home_name": "Jets",
+  "away_name": "Bills",
+  "home_city": "New York",
+  "away_city": "Buffalo",
+  "kickoff": "Sun Nov 15, 2026 \u00b7 1:00 PM ET",
+  "time": "1:00 PM",
+  "venue": "MetLife Stadium, New York",
+  "generated": "Fri Nov 13, 2026",
+  "roof": "outdoors",
+  "lat": 40.813,
+  "lon": -74.074,
+  "data_through": "Week 10",
+  "td_note": "Market = the DraftKings anytime TD price quoted by ESPN on Nov 13. Only players with a quoted price get a call, and nobody listed as questionable gets one. Confirm the price in your own book first: the call only holds at the price shown or longer."
+ },
+ "market": {
+  "spread_home": 8.5,
+  "total": 50.5,
+  "ml_home": 340,
+  "ml_away": -440,
+  "book": "ESPN lines (DraftKings)",
+  "others": []
+ },
+ "weather": {
+  "summary": "Cool and dry",
+  "precip": 5,
+  "wind": null,
+  "rain_flag": false,
+  "note": "East Rutherford: about 9\u00b0C (upper 40s \u00b0F), 5% chance of rain for the day. Daily forecast only. No hourly or wind forecast was available, so wind is not adjusted for.",
+  "effect": "No weather adjustment."
+ },
+ "wx_model": {
+  "pass_mult": 1.0,
+  "cr_mult": 1.0,
+  "td_shift": 0.0,
+  "fg_shift": 0.0
+ },
+ "td_odds": {
+  "James Cook": {
+   "price": -170,
+   "book": "DraftKings",
+   "all": [
+    [
+     "DraftKings",
+     -170
+    ]
+   ]
+  },
+  "Josh Allen": {
+   "price": -170,
+   "book": "DraftKings",
+   "all": [
+    [
+     "DraftKings",
+     -170
+    ]
+   ]
+  }
+ },
+ "yard_lines": {
+  "Geno Smith": [
+   {
+    "stat": "pass",
+    "line": 220.5,
+    "over": -113,
+    "book": "DraftKings"
+   }
+  ]
+ },
+ "injuries": [],
+ "inputs": {
+  "qbs": {
+   "NYJ": "Geno Smith",
+   "BUF": "Josh Allen"
+  },
+  "report_final": false,
+  "low_conf": {},
+  "notes": []
+ },
+ "sources": [
+  {
+   "label": "Play-by-play, rosters, depth charts, injuries, schedule (nflverse)",
+   "url": "https://github.com/nflverse/nflverse-data"
+  },
+  {
+   "label": "Game lines for every game (ESPN, updated Nov 12)",
+   "url": "https://abc7ny.com/post/nfl-week-10-betting-odds-lines-totals-every-game/20026536/"
+  },
+  {
+   "label": "DraftKings anytime TD and prop prices quoted by ESPN (Nov 13)",
+   "url": "https://www.espn.com/espn/betting/story/_/id/50463729/week-10-nfl-odds-touchdown-props-best-bets-sunday-games"
+  }
+ ]
+}

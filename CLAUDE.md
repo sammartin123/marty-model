@@ -47,3 +47,12 @@ runbook for the weekly run and the rules that always apply.
 
 After any change to `src/model.py`, rerun the backtest (`cd src && python3 backtest.py 2024,2025,2026 2500`)
 and commit the refreshed `work/bt_report.json`. Report results honestly, including when a change does not help.
+
+## Sunday slate (every Sunday game on one page)
+
+Sam wants every Sunday game on the page, with calls only where the data is fully confirmed. See README
+"Run a whole slate". For a new week: copy the latest file in `slates/`, replace the games, then for each game
+fill in `market` (ESPN/DraftKings lines are fine), `td_odds` only for players whose price you actually found
+from a named book, `weather` for outdoor venues, and `sources`. Check every low-confidence quarterback flag
+the run prints against the news and add a short `notes` line explaining it. Never add a TD price you did not
+see quoted. Publish to the same artifact and push.

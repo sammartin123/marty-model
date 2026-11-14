@@ -82,6 +82,17 @@ record shown on the page. A player with no touch in the game is graded void.
 
 Game-line calls are capped at Lean on the page for that reason.
 
+## Research log
+
+- **Coverage matchups (Nov 2026): tested, not adopted.** `research/coverage_test.py` checks whether a player's
+  split against MOFC vs MOFO coverage (and man vs zone), combined with how often the opposing defence plays
+  each, improves receiving predictions. Walk-forward on 2024 and 2025 (4,343 WR and TE player-games, coverage
+  charting from nflverse `pbp_participation`). Result: no improvement in yards or targets for either position,
+  and in the strongest predicted matchups the coverage model pointed the right way under half the time.
+  Player splits barely persist year to year (correlation about 0.16, against 0.56 for overall yards per route).
+  Defensive tendencies do persist, but the league-wide effect is only a few percent. Results are saved in
+  `research/coverage_test_results_*.json`. Current-season coverage data is not free, so this is not worth buying.
+
 ## Call thresholds on the page
 
 - Anytime TD: Play = sim beats the best price by 3+ points and sim is at least 10%; Lean = 1.5 to 3; Fade = 5+ under.

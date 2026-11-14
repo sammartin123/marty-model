@@ -48,6 +48,12 @@ runbook for the weekly run and the rules that always apply.
 
 ## Changing the model
 
+Only adopt a change that beats the current model in a paired comparison on the same player-games
+(`python3 research/compare_bt.py <old bt_players.parquet> <new bt_players.parquet>`; run the backtest with
+`tag=NAME` to keep both). Log what was tested in the README research log, including what did not help.
+Player props depend on the config's `market` spread and total (they set team scoring), so a wrong line now
+shifts every prop: double-check both numbers.
+
 After any change to `src/model.py`, rerun the backtest (`cd src && python3 backtest.py 2024,2025,2026 2500`)
 and commit the refreshed `work/bt_report.json`. Report results honestly, including when a change does not help.
 

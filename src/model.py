@@ -28,6 +28,8 @@ CFG = dict(
     use_qb=True, ridge_qb=8.0, qb_min_games=4,   # quarterback effects in team strength
     qb_kappa=0.6, qb_kappa_pos=0.15,    # passing efficiency when the starter differs from recent passers
     qb_eff_pow=0.0, qb_k_att=150.0,     # (older YPA-ratio adjustment: tested, made things worse, left off)
+    td_hist=False,              # own share of the team's past TDs as a usage feature: tested, no gain, left off
+    qb_td_fix=True,             # quarterbacks score more rushing TDs than their carries suggest (sneaks, scrambles)
 )
 
 def sigmoid(x):
@@ -38,6 +40,7 @@ def logit(p):
 
 # ------------------------------------------------------------------ data
 class DB:
+    qb_fit_hi = 2025
     def __init__(self):
         self.drives = pd.read_parquet(os.path.join(WORK, 'drives.parquet'))
         self.pg = pd.read_parquet(os.path.join(WORK, 'player_games.parquet'))
@@ -92,8 +95,9 @@ class DB:
             pg['snap_pct'] = 0.5
         e1['u_snap'] = g['snap_pct'].transform(lambda s: s.ewm(alpha=a1, adjust=True).mean())
         e1['u_snapf'] = g['snap_pct'].transform(lambda s: s.ewm(alpha=a3, adjust=True).mean())
-        e2 = g[eff + ['targets', 'carries']].transform(lambda s: s.ewm(alpha=a2, adjust=True).mean())
-        e2.columns = ['e_' + c for c in eff + ['targets', 'carries']]
+        ecols = eff + ['targets', 'carries', 'rush_td', 'rec_td', 'T_rtd', 'T_ctd']
+        e2 = g[ecols].transform(lambda s: s.ewm(alpha=a2, adjust=True).mean())
+        e2.columns = ['e_' + c for c in ecols]
         e2['c_pass_att'] = g['pass_att'].cumsum()
         n = g.cumcount() + 1
         pg = pd.concat([pg, e1, e2], axis=1)
@@ -177,14 +181,12 @@ class DB:
         pg = self._alloc_frame(lo, hi)
         self.beta = {}
         for kind, feats, tot, y in [
-            ('rush', [('p_u_carries', 'p_u_T_car'), ('p_u_car_in10', 'p_u_T_in10'), ('p_u_car_in5', 'p_u_T_in5')],
-             'T_rtd', 'rush_td'),
-            ('rec', [('p_u_targets', 'p_u_T_tgt'), ('p_u_air', 'p_u_T_air'), ('p_u_tgt_rz', 'p_u_T_rz'),
-                     ('p_u_tgt_in10', 'p_u_T_in10t'), ('p_u_tgt_ez', 'p_u_T_ez')], 'T_ctd', 'rec_td')]:
+            ('rush', [('p_' + a, 'p_' + b) for a, b in rush_feats()], 'T_rtd', 'rush_td'),
+            ('rec', [('p_' + a, 'p_' + b) for a, b in rec_feats()], 'T_ctd', 'rec_td')]:
             X = []
             grp = pg.groupby(['game_id', 'team'])
             for num, den in feats:
-                s = (pg[num] / pg[den].clip(lower=0.25)).clip(0, 1.5)
+                s = (pg[num] / pg[den].clip(lower=0.25)).clip(0, 1.5).fillna(0)
                 tot_s = s.groupby([pg.game_id, pg.team]).transform('sum').clip(lower=1e-6)
                 X.append((s / tot_s).values)
             X.append((1.0 / grp[y].transform('size')).values)
@@ -193,6 +195,14 @@ class DB:
             m = T > 0
             b, _ = nnls(X[m] * T[m][:, None], pg[y].values[m])
             self.beta[kind] = b / b.sum()
+            if kind == 'rush':
+                # one multiplier so that quarterbacks' predicted share of rushing TDs matches what happened
+                s = X @ self.beta[kind]; qb = (pg.pos == 'QB').values & m & (pg.season <= self.qb_fit_hi).values
+                k = 1.0
+                for _ in range(30):
+                    pred = (T[qb] * k * s[qb] / (1 + (k - 1) * s[qb])).sum()
+                    k *= pg[y].values[qb].sum() / pred
+                self.qb_td_k = float(k)
 
     # ---- pass/rush volume vs game script
     def _fit_volume(self):
@@ -343,6 +353,10 @@ def team_params(fit, home, away, neutral=False, qbs=None):
 RUSH_F = [('u_carries', 'u_T_car'), ('u_car_in10', 'u_T_in10'), ('u_car_in5', 'u_T_in5')]
 REC_F = [('u_targets', 'u_T_tgt'), ('u_air', 'u_T_air'), ('u_tgt_rz', 'u_T_rz'), ('u_tgt_in10', 'u_T_in10t'),
          ('u_tgt_ez', 'u_T_ez')]
+def rush_feats():
+    return RUSH_F + ([('e_rush_td', 'e_T_rtd')] if CFG.get('td_hist') else [])
+def rec_feats():
+    return REC_F + ([('e_rec_td', 'e_T_ctd')] if CFG.get('td_hist') else [])
 
 def dvp_mult(db, defteam, asof, cfg=CFG):
     t = db.tpos[(db.tpos.opp == defteam) & (db.tpos.game_date < asof)]
@@ -386,10 +400,10 @@ def player_table(db, team, opp, asof, ids, qb_id=None, cfg=CFG, h2h=True):
             row[c] = v
         last = pd.concat([last, row], ignore_index=True)
     df = last[['pid', 'name', 'pos', 'gp']].copy()
-    for kind, feats in [('rush', RUSH_F), ('rec', REC_F)]:
+    for kind, feats in [('rush', rush_feats()), ('rec', rec_feats())]:
         S = []
         for num, den in feats:
-            s = (last[num] / last[den].clip(lower=0.25)).clip(0, 1.5).values
+            s = np.nan_to_num((last[num] / last[den].clip(lower=0.25)).clip(0, 1.5).values.astype(float))
             S.append(s / max(s.sum(), 1e-6))
         S.append(np.full(len(last), 1.0 / len(last)))
         S = np.array(S).T
@@ -460,6 +474,8 @@ def player_table(db, team, opp, asof, ids, qb_id=None, cfg=CFG, h2h=True):
     # TD allocation weights with defence-vs-position tilt
     wr = df.w_rush.values * df.m_rushtd.values; wc = df.w_rec.values * df.m_rectd.values
     wc = np.where(df.is_qb.values, wc * 0.15, wc)
+    if cfg.get('qb_td_fix'):
+        wr = np.where((df.pos == 'QB').values, wr * db.qb_td_k, wr)
     df['p_rush_td'] = wr / wr.sum(); df['p_rec_td'] = wc / wc.sum()
     sr = df.sh_rush.values; sc = np.where(df.is_qb.values, 0.0, df.sh_rec.values)
     df['car_share'] = sr / max(sr.sum(), 1e-9); df['tgt_share'] = sc / max(sc.sum(), 1e-9)

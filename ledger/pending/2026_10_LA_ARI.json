@@ -6,7 +6,7 @@
  "home": "ARI",
  "kickoff_utc": "2026-11-15T21:05:00+00:00",
  "book": "ESPN lines (DraftKings)",
- "logged_utc": "2026-11-14T20:10+00:00",
+ "logged_utc": "2026-11-14T20:26+00:00",
  "entries": [
   {
    "kind": "yards",
@@ -18,7 +18,7 @@
    "side": "under",
    "price": null,
    "book": "DraftKings",
-   "sim": 0.6179,
+   "sim": 0.6175,
    "call": "play",
    "live": false,
    "gate": "QB unclear"
@@ -30,7 +30,7 @@
    "team": "LA",
    "price": -150,
    "book": "DraftKings",
-   "sim": 0.5672,
+   "sim": 0.5639,
    "mkt": 0.6,
    "call": "pass",
    "live": false,
@@ -43,7 +43,7 @@
    "team": "LA",
    "price": 115,
    "book": "DraftKings",
-   "sim": 0.3596,
+   "sim": 0.3539,
    "mkt": 0.4651,
    "call": "fade",
    "live": false,

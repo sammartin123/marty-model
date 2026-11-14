@@ -6,7 +6,7 @@
  "home": "GB",
  "kickoff_utc": "2026-11-15T18:00:00+00:00",
  "book": "ESPN lines (DraftKings)",
- "logged_utc": "2026-11-14T20:09+00:00",
+ "logged_utc": "2026-11-14T20:26+00:00",
  "entries": [
   {
    "kind": "td",
@@ -15,7 +15,7 @@
    "team": "GB",
    "price": 170,
    "book": "DraftKings",
-   "sim": 0.3975,
+   "sim": 0.3981,
    "mkt": 0.3704,
    "call": "lean",
    "live": false,

@@ -6,7 +6,7 @@
  "home": "LV",
  "kickoff_utc": "2026-11-15T21:05:00+00:00",
  "book": "ESPN lines (DraftKings)",
- "logged_utc": "2026-11-14T20:10+00:00",
+ "logged_utc": "2026-11-14T20:26+00:00",
  "entries": [
   {
    "kind": "yards",
@@ -18,7 +18,7 @@
    "side": "under",
    "price": null,
    "book": "DraftKings",
-   "sim": 0.6014,
+   "sim": 0.6032,
    "call": "play",
    "live": false,
    "gate": "QB unclear"
@@ -30,7 +30,7 @@
    "team": "SEA",
    "price": 100,
    "book": "DraftKings",
-   "sim": 0.383,
+   "sim": 0.3815,
    "mkt": 0.5,
    "call": "fade",
    "live": false,
@@ -43,7 +43,7 @@
    "team": "SEA",
    "price": 125,
    "book": "DraftKings",
-   "sim": 0.2812,
+   "sim": 0.2764,
    "mkt": 0.4444,
    "call": "fade",
    "live": false,

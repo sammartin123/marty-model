@@ -35,6 +35,8 @@ def log_game(G, o):
         if p.get('td_mkt'):
             e = p['td_edge']
             base = 'play' if (e >= .03 and p['p_td'] >= .10) else 'lean' if (e >= .015 and p['p_td'] >= .10) else 'fade' if e <= -.05 else 'pass'
+            if base == 'fade' and p.get('is_qb'):
+                base = 'pass'            # same rule as the page: never fade a quarterback
             E.append(dict(kind='td', pid=p['id'], name=p['name'], team=p['team'], price=p['td_mkt']['price'], book=p['td_mkt']['book'],
                           sim=round(p['p_td'], 4), mkt=round(p['td_mkt']['implied'], 4), call=base, live=gate is None and base != 'pass', gate=gate))
         for L in p.get('lines', []):

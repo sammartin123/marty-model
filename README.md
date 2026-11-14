@@ -57,10 +57,14 @@ listed spread, total and moneyline. Before running, complete these by hand or by
 
 - `src/prep.py` turns play-by-play into drive, player-game and team-game tables.
 - `src/model.py`
-  - Team strength: opponent-adjusted TD and field-goal rates per drive (ridge logistic, recency weighted).
+  - Team strength: opponent-adjusted TD and field-goal rates per drive (ridge logistic, recency weighted),
+    with a separate rating for each regular quarterback so a change of starter moves the numbers.
   - Game sim: possession by possession with a clock, score effects (trailing teams press) and overtime.
   - Who scores: usage shares (carries, goal-line carries, targets, air yards, red-zone and end-zone targets)
-    weighted by how well each predicted TDs from 2015 to 2025.
+    weighted by how well each predicted TDs from 2015 to 2025, adjusted for snap-share trend, with a
+    fitted boost for quarterback rushing TDs.
+  - Player props use a second sim whose team scoring is anchored to the sportsbook's implied team totals
+    (from the spread and total in the config). Winner, spread and total stay the model's own view.
   - Yardage: pass and rush volume tied to the simulated game script, then targets, catches and yards per player.
   - Position vs defence and head-to-head history are included at low weight. In testing neither improved accuracy.
 - `src/run_game.py` runs 100,000 sims for one config and writes the JSON the page reads.
@@ -76,14 +80,37 @@ record shown on the page. A player with no touch in the game is graded void.
 
 ## Backtest (2024, 2025 and 2026 through Week 9: 681 games)
 
-- Winners picked: 64.5% (book favourite: 68.3%). Against the closing spread: 320-350. Totals: 339-339.
-- Anytime TD probabilities are well calibrated across 16,176 player-games.
+- Winners picked: 66.5% (book favourite: 68.3%). Against the closing spread: 332-338. Totals: 339-339.
+- Anytime TD probabilities are well calibrated across 16,898 player-games.
+- Known soft spots: the two goal-line rushing quarterbacks (Josh Allen, Jalen Hurts) still score more often than
+  the model says, and teams that have just changed quarterback score touchdowns a little less often than it says.
+  The page never fades a quarterback and makes no calls on games with an unproven starter.
 - No archive of past prop odds was available, so prop edges are untested against real prices.
 
 Game-line calls are capped at Lean on the page for that reason.
 
 ## Research log
 
+- **Four upgrades (Nov 2026): tested, adopted.** Each was compared with the previous model on the same
+  player-games across the 681 backtest games (`research/compare_bt.py`, bootstrap by game), and kept only
+  because it measurably helped.
+  1. *Props anchored to the game line* (`anchor`). Team scoring for player props is shifted to match the
+     sportsbook's implied team totals; the model then only splits the yards and touchdowns. Winner, spread and
+     total numbers stay the model's own view. TD log loss improved, most of all for teams with a new quarterback.
+  2. *Quarterback effects* (`use_qb`, `qb_kappa`). Every regular quarterback has his own rating in the team
+     strength fit, new or rarely used starters share one, and passing efficiency moves when the starter differs
+     from whoever has been throwing lately. Win-probability Brier 0.221 to 0.215 (book 0.208); in games with a
+     quarterback change 0.231 to 0.212. Passing-yard error in those games fell from 67 to 60 yards.
+  3. *Snap counts* (`snap_gamma`). Every player with an offensive snap gets a row, and a rising or falling snap
+     share nudges his usage. TD log loss improved; yardage unchanged.
+  4. *Quarterback rushing TDs* (`qb_td_fix`). Quarterbacks score about 1.5 times as many rushing touchdowns as
+     their carry shares imply (sneaks, scrambles). One fitted multiplier fixed most of a clear under-prediction
+     (quarterbacks: predicted 10.8%, actual 16.2%; now 14.5%).
+  All together against the old model on shared player-games: TD log loss 0.3958 to 0.3892, TD Brier 0.1234
+  to 0.1215, pass-yard error 57.8 to 56.5 (all clearly better); receiving and rushing yardage error no clear
+  difference; win-probability Brier 0.2214 to 0.2150 (book 0.2075).
+- **Also tested, not adopted:** a player's own share of his team's past touchdowns as a usage feature
+  (`td_hist`, no difference) and a yards-per-attempt ratio for backup quarterbacks (`qb_eff_pow`, made passing worse).
 - **Coverage matchups (Nov 2026): tested, not adopted.** `research/coverage_test.py` checks whether a player's
   split against MOFC vs MOFO coverage (and man vs zone), combined with how often the opposing defence plays
   each, improves receiving predictions. Walk-forward on 2024 and 2025 (4,343 WR and TE player-games, coverage

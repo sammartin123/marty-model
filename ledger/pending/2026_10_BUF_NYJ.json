@@ -6,7 +6,7 @@
  "home": "NYJ",
  "kickoff_utc": "2026-11-15T18:00:00+00:00",
  "book": "ESPN lines (DraftKings)",
- "logged_utc": "2026-11-14T20:09+00:00",
+ "logged_utc": "2026-11-14T20:26+00:00",
  "entries": [
   {
    "kind": "yards",
@@ -18,7 +18,7 @@
    "side": "under",
    "price": null,
    "book": "DraftKings",
-   "sim": 0.5958,
+   "sim": 0.5952,
    "call": "play",
    "live": false,
    "gate": "No price for that side"
@@ -30,10 +30,10 @@
    "team": "BUF",
    "price": -170,
    "book": "DraftKings",
-   "sim": 0.3224,
+   "sim": 0.4103,
    "mkt": 0.6296,
-   "call": "fade",
-   "live": true,
+   "call": "pass",
+   "live": false,
    "gate": null
   },
   {
@@ -43,10 +43,10 @@
    "team": "BUF",
    "price": -170,
    "book": "DraftKings",
-   "sim": 0.6841,
+   "sim": 0.6445,
    "mkt": 0.6296,
-   "call": "play",
-   "live": true,
+   "call": "pass",
+   "live": false,
    "gate": null
   },
   {

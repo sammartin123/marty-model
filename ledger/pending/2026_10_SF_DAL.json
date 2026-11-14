@@ -6,7 +6,7 @@
  "home": "DAL",
  "kickoff_utc": "2026-11-15T21:25:00+00:00",
  "book": "ESPN lines (DraftKings)",
- "logged_utc": "2026-11-13T19:58+00:00",
+ "logged_utc": "2026-11-14T20:10+00:00",
  "entries": [
   {
    "kind": "td",
@@ -15,11 +15,11 @@
    "team": "DAL",
    "price": -120,
    "book": "DraftKings",
-   "sim": 0.4406,
+   "sim": 0.4712,
    "mkt": 0.5455,
    "call": "fade",
-   "live": false,
-   "gate": "Injuries not final"
+   "live": true,
+   "gate": null
   },
   {
    "kind": "td",
@@ -28,11 +28,11 @@
    "team": "DAL",
    "price": -180,
    "book": "DraftKings",
-   "sim": 0.527,
+   "sim": 0.5399,
    "mkt": 0.6429,
    "call": "fade",
-   "live": false,
-   "gate": "Injuries not final"
+   "live": true,
+   "gate": null
   },
   {
    "kind": "td",
@@ -41,11 +41,11 @@
    "team": "SF",
    "price": -285,
    "book": "DraftKings",
-   "sim": 0.6717,
+   "sim": 0.6346,
    "mkt": 0.7403,
    "call": "fade",
-   "live": false,
-   "gate": "Injuries not final"
+   "live": true,
+   "gate": null
   },
   {
    "kind": "td",
@@ -54,11 +54,11 @@
    "team": "SF",
    "price": 105,
    "book": "DraftKings",
-   "sim": 0.2708,
+   "sim": 0.2696,
    "mkt": 0.4878,
    "call": "fade",
-   "live": false,
-   "gate": "Injuries not final"
+   "live": true,
+   "gate": null
   },
   {
    "kind": "spread",
@@ -68,26 +68,26 @@
    "team": "SF",
    "line": -3.5,
    "price": -110,
-   "sim": 0.5986
+   "sim": 0.6203
   },
   {
    "kind": "total",
-   "call": "pass",
-   "live": false,
+   "call": "lean",
+   "live": true,
    "gate": null,
    "side": "over",
    "line": 55.5,
    "price": -110,
-   "sim": 0.5294
+   "sim": 0.5649
   },
   {
    "kind": "ml",
-   "call": "pass",
-   "live": false,
+   "call": "lean",
+   "live": true,
    "gate": null,
    "team": "SF",
    "price": -205,
-   "sim": 0.699
+   "sim": 0.7175
   }
  ]
 }

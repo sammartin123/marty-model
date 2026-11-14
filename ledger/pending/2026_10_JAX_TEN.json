@@ -6,7 +6,7 @@
  "home": "TEN",
  "kickoff_utc": "2026-11-15T18:00:00+00:00",
  "book": "ESPN lines (DraftKings)",
- "logged_utc": "2026-11-13T19:58+00:00",
+ "logged_utc": "2026-11-14T20:10+00:00",
  "entries": [
   {
    "kind": "td",
@@ -15,11 +15,11 @@
    "team": "JAX",
    "price": 230,
    "book": "DraftKings",
-   "sim": 0.3141,
+   "sim": 0.3101,
    "mkt": 0.303,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "td",
@@ -28,11 +28,11 @@
    "team": "JAX",
    "price": 135,
    "book": "DraftKings",
-   "sim": 0.3931,
+   "sim": 0.4168,
    "mkt": 0.4255,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "td",
@@ -41,11 +41,11 @@
    "team": "JAX",
    "price": -130,
    "book": "DraftKings",
-   "sim": 0.4442,
+   "sim": 0.4527,
    "mkt": 0.5652,
    "call": "fade",
-   "live": false,
-   "gate": "Injuries not final"
+   "live": true,
+   "gate": null
   },
   {
    "kind": "spread",
@@ -55,7 +55,7 @@
    "team": "JAX",
    "line": -10.5,
    "price": -110,
-   "sim": 0.5579
+   "sim": 0.5541
   },
   {
    "kind": "total",
@@ -65,7 +65,7 @@
    "side": "under",
    "line": 46.5,
    "price": -110,
-   "sim": 0.5198
+   "sim": 0.5014
   },
   {
    "kind": "ml",
@@ -74,7 +74,7 @@
    "gate": null,
    "team": "JAX",
    "price": -600,
-   "sim": 0.8429
+   "sim": 0.8406
   }
  ]
 }

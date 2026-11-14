@@ -23,7 +23,7 @@
   "kickoff": "Sun Nov 15, 2026 \u00b7 1:00 PM ET",
   "time": "1:00 PM",
   "venue": "Huntington Bank Field, Cleveland",
-  "generated": "Fri Nov 13, 2026",
+  "generated": "Sat Nov 14, 2026",
   "roof": "outdoors",
   "lat": 41.506,
   "lon": -81.699,
@@ -101,7 +101,7 @@
    "CLE": "Deshaun Watson",
    "HOU": "C.J. Stroud"
   },
-  "report_final": false,
+  "report_final": true,
   "low_conf": {},
   "notes": [
    "Deshaun Watson is reported to return as the Browns starter after missing Week 9 (concussion). The coach had not confirmed it publicly."

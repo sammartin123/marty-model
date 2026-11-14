@@ -10,6 +10,10 @@ for y in $(seq 2014 "$Y"); do
   [ $(( y % 4 )) -eq 0 ] && wait
 done; wait
 curl -fsSL --retry 3 -o players.csv "$B/players/players.csv"
+for y in $(seq 2014 "$Y"); do
+  if [ "$y" -lt "$Y" ] && [ -s "snap_counts_$y.parquet" ]; then continue; fi
+  curl -fsSL --retry 3 --max-time 120 -o "snap_counts_$y.parquet" "$B/snap_counts/snap_counts_$y.parquet" || echo "no snap counts for $y"
+done
 for y in $(seq $((Y-3)) "$Y"); do curl -fsSL --retry 3 -o "roster_weekly_$y.csv" "$B/weekly_rosters/roster_weekly_$y.csv"; done
 curl -fsSL --retry 3 -o "depth_charts_$Y.csv" "$B/depth_charts/depth_charts_$Y.csv"
 curl -fsSL --retry 3 -o "injuries_$Y.csv" "$B/injuries/injuries_$Y.csv" || echo "no injuries file for $Y yet"

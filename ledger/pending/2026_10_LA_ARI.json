@@ -6,7 +6,7 @@
  "home": "ARI",
  "kickoff_utc": "2026-11-15T21:05:00+00:00",
  "book": "ESPN lines (DraftKings)",
- "logged_utc": "2026-11-13T19:58+00:00",
+ "logged_utc": "2026-11-14T20:10+00:00",
  "entries": [
   {
    "kind": "yards",
@@ -18,7 +18,7 @@
    "side": "under",
    "price": null,
    "book": "DraftKings",
-   "sim": 0.649,
+   "sim": 0.6179,
    "call": "play",
    "live": false,
    "gate": "QB unclear"
@@ -30,9 +30,9 @@
    "team": "LA",
    "price": -150,
    "book": "DraftKings",
-   "sim": 0.6306,
+   "sim": 0.5672,
    "mkt": 0.6,
-   "call": "play",
+   "call": "pass",
    "live": false,
    "gate": "QB unclear"
   },
@@ -43,7 +43,7 @@
    "team": "LA",
    "price": 115,
    "book": "DraftKings",
-   "sim": 0.3926,
+   "sim": 0.3596,
    "mkt": 0.4651,
    "call": "fade",
    "live": false,
@@ -51,13 +51,13 @@
   },
   {
    "kind": "spread",
-   "call": "pass",
+   "call": "lean",
    "live": false,
    "gate": "QB unclear",
-   "team": "ARI",
-   "line": 9.5,
+   "team": "LA",
+   "line": -9.5,
    "price": -110,
-   "sim": 0.5118
+   "sim": 0.664
   },
   {
    "kind": "total",
@@ -67,16 +67,16 @@
    "side": "over",
    "line": 39.5,
    "price": -110,
-   "sim": 0.7216
+   "sim": 0.5938
   },
   {
    "kind": "ml",
-   "call": "pass",
+   "call": "lean",
    "live": false,
    "gate": "QB unclear",
-   "team": "ARI",
-   "price": 390,
-   "sim": 0.2331
+   "team": "LA",
+   "price": -520,
+   "sim": 0.8867
   }
  ]
 }

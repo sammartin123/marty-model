@@ -322,6 +322,8 @@ $('h1').innerHTML = esc(M.away_name)+' at '+esc(M.home_name);
   rows.push('<div><b>Injuries:</b> '+(inj.length?inj.map(esc).join('; ')+'. Players listed Out or Doubtful are removed from the sim.':'no skill-position players with a game status so far.')+'</div>');
   if(I.report_final===false) rows.push('<div class="warn">The final injury report is not in yet, so every call on this game is on hold until the page refreshes.</div>');
   rows.push('<div><b>Lines:</b> '+esc(D.market.book)+'.</div>');
+  if(D.anchor){ const a=D.anchor; rows.push('<div><b>Player props:</b> team scoring is set to the book\'s game line, '+A+' '+a.away.toFixed(1)+' and '+H+' '+a.home.toFixed(1)+' points (the model alone had '+a.model_away.toFixed(1)+' and '+a.model_home.toFixed(1)+'). The model then decides who gets the yards and touchdowns.</div>'); }
+  const QM=D.qb_model||{}; [A,H].forEach(t=>{ const q=QM[t]; if(q && Math.abs(q.delta)>=0.1) rows.push('<div><b>'+t+' quarterback change:</b> '+esc(I.qbs?I.qbs[t]:'the starter')+' rates '+(q.delta<0?'below':'above')+' the passers '+t+' has used lately, so its scoring and passing are adjusted '+(q.delta<0?'down':'up')+'.</div>'); });
   $('inputs').innerHTML=rows.join(''); })();
 
 /* ---------- 1. grid ---------- */
@@ -588,7 +590,7 @@ const call = p => tdCall(D,p);
     c.fillStyle='#cbb0aa'; c.textAlign='left'; c.fillText('scored',L+4,T+10); c.textAlign='right'; c.fillText('sim said',L+pw,T+ph-6); }
   draw(); onResize(draw);
   $('btP1').innerHTML='Read this before betting on anything above. On winners, spreads and totals the sportsbook line was more accurate than this model, and the model did not beat the spread. Where it holds up is touchdown chances: when it said 25%, players scored about 25% of the time, across '+b.td_n.toLocaleString('en-US')+' player-games.';
-  $('btP2').innerHTML='Being well calibrated is not the same as beating a price. I had no archive of past TD or yardage odds, so the edges on this page are untested against real lines. I also tested the model with and without position-vs-defence and head-to-head history. Neither one improved accuracy, so both are in at low weight and shown mainly as context. Roster moves and injuries after '+esc(M.generated)+' are not included.';
+  $('btP2').innerHTML='Being well calibrated is not the same as beating a price. I had no archive of past TD or yardage odds, so the edges on this page are untested against real lines. Three upgrades were tested on the same past games and kept because each one measurably helped: player props now take team scoring from the sportsbook's game line, each quarterback has his own rating so a change of starter moves the numbers, and snap counts track who is actually on the field. Position-vs-defence, head-to-head history and coverage matchups were tested too and did not improve accuracy, so the first two are in at low weight as context and coverage is left out. One caution: when a team has just changed quarterback the model still runs a little hot on that team's touchdown chances, which is one reason no calls are made on games with an unproven starter. Roster moves and injuries after '+esc(M.generated)+' are not included.';
   D.sources.forEach(s=>{ const li=el('li'); li.innerHTML='<a href="'+s.url+'" target="_blank" rel="noopener">'+esc(s.label)+'</a>'; $('src').appendChild(li); });
   $('foot').textContent='MartyMakesMoneyModel · '+A+' at '+H+' · model estimates, not guarantees.';
 })();

@@ -6,7 +6,7 @@
  "home": "LV",
  "kickoff_utc": "2026-11-15T21:05:00+00:00",
  "book": "ESPN lines (DraftKings)",
- "logged_utc": "2026-11-13T19:58+00:00",
+ "logged_utc": "2026-11-14T20:10+00:00",
  "entries": [
   {
    "kind": "yards",
@@ -15,10 +15,10 @@
    "team": "LV",
    "stat": "rec",
    "line": 25.5,
-   "side": "over",
-   "price": -115,
+   "side": "under",
+   "price": null,
    "book": "DraftKings",
-   "sim": 0.5873,
+   "sim": 0.6014,
    "call": "play",
    "live": false,
    "gate": "QB unclear"
@@ -30,7 +30,7 @@
    "team": "SEA",
    "price": 100,
    "book": "DraftKings",
-   "sim": 0.4493,
+   "sim": 0.383,
    "mkt": 0.5,
    "call": "fade",
    "live": false,
@@ -43,7 +43,7 @@
    "team": "SEA",
    "price": 125,
    "book": "DraftKings",
-   "sim": 0.3386,
+   "sim": 0.2812,
    "mkt": 0.4444,
    "call": "fade",
    "live": false,
@@ -57,26 +57,26 @@
    "team": "SEA",
    "line": -6.5,
    "price": -110,
-   "sim": 0.5568
+   "sim": 0.7463
   },
   {
    "kind": "total",
-   "call": "lean",
+   "call": "pass",
    "live": false,
    "gate": "QB unclear",
-   "side": "over",
+   "side": "under",
    "line": 40.5,
    "price": -110,
-   "sim": 0.6475
+   "sim": 0.5193
   },
   {
    "kind": "ml",
-   "call": "pass",
+   "call": "lean",
    "live": false,
    "gate": "QB unclear",
    "team": "SEA",
    "price": -298,
-   "sim": 0.7508
+   "sim": 0.8909
   }
  ]
 }

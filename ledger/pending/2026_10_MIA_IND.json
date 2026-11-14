@@ -6,7 +6,7 @@
  "home": "IND",
  "kickoff_utc": "2026-11-15T18:00:00+00:00",
  "book": "ESPN lines (DraftKings)",
- "logged_utc": "2026-11-13T19:58+00:00",
+ "logged_utc": "2026-11-14T20:09+00:00",
  "entries": [
   {
    "kind": "yards",
@@ -18,7 +18,7 @@
    "side": "over",
    "price": null,
    "book": "DraftKings",
-   "sim": 0.573,
+   "sim": 0.5724,
    "call": "play",
    "live": false,
    "gate": "QB unclear"
@@ -30,9 +30,9 @@
    "team": "IND",
    "price": -120,
    "book": "DraftKings",
-   "sim": 0.5864,
+   "sim": 0.4882,
    "mkt": 0.5455,
-   "call": "play",
+   "call": "fade",
    "live": false,
    "gate": "QB unclear"
   },
@@ -46,7 +46,7 @@
    "side": "under",
    "price": null,
    "book": "DraftKings",
-   "sim": 0.597,
+   "sim": 0.6688,
    "call": "play",
    "live": false,
    "gate": "QB unclear"
@@ -58,7 +58,7 @@
    "team": "MIA",
    "price": 115,
    "book": "DraftKings",
-   "sim": 0.4078,
+   "sim": 0.3598,
    "mkt": 0.4651,
    "call": "fade",
    "live": false,
@@ -66,13 +66,13 @@
   },
   {
    "kind": "spread",
-   "call": "pass",
+   "call": "lean",
    "live": false,
    "gate": "QB unclear",
    "team": "IND",
    "line": -3.5,
    "price": -110,
-   "sim": 0.5061
+   "sim": 0.6844
   },
   {
    "kind": "total",
@@ -82,16 +82,16 @@
    "side": "over",
    "line": 38.5,
    "price": -110,
-   "sim": 0.7075
+   "sim": 0.5594
   },
   {
    "kind": "ml",
-   "call": "pass",
+   "call": "lean",
    "live": false,
    "gate": "QB unclear",
-   "team": "MIA",
-   "price": 170,
-   "sim": 0.3856
+   "team": "IND",
+   "price": -205,
+   "sim": 0.7786
   }
  ]
 }

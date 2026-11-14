@@ -23,7 +23,7 @@
   "kickoff": "Sun Nov 15, 2026 \u00b7 1:00 PM ET",
   "time": "1:00 PM",
   "venue": "MetLife Stadium, New York",
-  "generated": "Fri Nov 13, 2026",
+  "generated": "Sat Nov 14, 2026",
   "roof": "outdoors",
   "lat": 40.813,
   "lon": -74.074,
@@ -90,7 +90,7 @@
    "NYJ": "Geno Smith",
    "BUF": "Josh Allen"
   },
-  "report_final": false,
+  "report_final": true,
   "low_conf": {},
   "notes": []
  },

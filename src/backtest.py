@@ -26,34 +26,46 @@ def run(seasons, N=3000, cfg=None, seed=7, verbose=True, max_week=99):
         if d not in fits:
             fits = {d: M.fit_team(db, d, cfg)}
         fit = fits[d]
-        par = M.team_params(fit, gm.home_team, gm.away_team, neutral=(gm.location == 'Neutral'))
-        tabs, vols, ok = [], [], True
+        tabs, vols, ok, qbs, chg = [], [], True, [], []
         for team, opp in [(gm.home_team, gm.away_team), (gm.away_team, gm.home_team)]:
             ids = ros[(ros.season == gm.season) & (ros.week == gm.week) & (ros.team == team) & (ros.status == 'ACT')].gsis_id
             act = db.pg[(db.pg.game_id == gm.game_id) & (db.pg.team == team)]
             qb = act.sort_values('pass_att', ascending=False).pid.iloc[0] if len(act) else None
             ids = set(ids) | ({qb} if qb else set())
+            qbs.append(qb)
+            prev = db.pg[(db.pg.team == team) & (db.pg.game_date < d) & (db.pg.pass_att >= 10)].sort_values('game_date')
+            chg.append(bool(len(prev) and prev[prev.game_id == prev.game_id.iloc[-1]].sort_values('pass_att').pid.iloc[-1] != qb))
             t = M.player_table(db, team, opp, d, ids, qb_id=qb, cfg=cfg)
             if t is None or len(t) < 4:
                 ok = False; break
             tabs.append(t); vols.append(M.team_volume(db, team, d))
         if not ok:
             continue
-        o = M.simulate(db, par, tabs, vols, N, rng, cfg)
-        pts = o['pts']; mg = pts[:, 0] - pts[:, 1]
+        par = M.team_params(fit, gm.home_team, gm.away_team, neutral=(gm.location == 'Neutral'), qbs=tuple(qbs))
+        for ti_, team_ in enumerate([gm.home_team, gm.away_team]):
+            vols[ti_]['qb_delta'] = M.qb_delta(db, fit, team_, qbs[ti_], d)
+        if cfg.get('anchor') and pd.notna(gm.spread_line) and pd.notna(gm.total_line):
+            # game-level numbers stay pure model; props come from the sim anchored to the closing line
+            pure = M.simulate(db, par, None, None, N, rng, cfg)
+            th, ta = M.implied_totals(-gm.spread_line, gm.total_line)
+            o = M.simulate(db, M.anchor(db, par, th, ta, cfg, iters=4, n=5000), tabs, vols, N, rng, cfg)
+            pts = pure['pts']; mg = pts[:, 0] - pts[:, 1]
+        else:
+            o = M.simulate(db, par, tabs, vols, N, rng, cfg)
+            pts = o['pts']; mg = pts[:, 0] - pts[:, 1]
         G.append(dict(game_id=gm.game_id, season=gm.season, week=gm.week, home=gm.home_team, away=gm.away_team,
                       p_home=(mg > 0).mean() + 0.5 * (mg == 0).mean(), m_margin=mg.mean(), sd_margin=mg.std(),
                       m_total=pts.sum(1).mean(), sd_total=pts.sum(1).std(), m_home=pts[:, 0].mean(), m_away=pts[:, 1].mean(),
                       result=gm.result, total=gm.total, spread=gm.spread_line, total_line=gm.total_line,
-                      ml_home=gm.home_moneyline, ml_away=gm.away_moneyline))
+                      ml_home=gm.home_moneyline, ml_away=gm.away_moneyline, qb_change=any(chg)))
         for ti, team in enumerate([gm.home_team, gm.away_team]):
             t = tabs[ti]; s = o['stats'][ti]
             act = db.pg[(db.pg.game_id == gm.game_id) & (db.pg.team == team)].set_index('pid')
             td = (s['rtd'] + s['ctd']) > 0
             for i, pid in enumerate(t.pid.values):
                 a = act.loc[pid] if pid in act.index else None
-                P.append(dict(game_id=gm.game_id, season=gm.season, team=team, pid=pid, name=t.name[i], pos=t.pos[i],
-                              is_qb=bool(t.is_qb[i]), p_td=td[:, i].mean(),
+                P.append(dict(game_id=gm.game_id, season=gm.season, team=team, pid=pid, name=t.name[i], pos=t.pos[i], qb_change=chg[ti],
+                              is_qb=bool(t.is_qb[i]), p_td=td[:, i].mean(), qb_delta=vols[ti].get('qb_delta', 0.0), team_rec=float(s['pass_yds'].mean()),
                               m_rec=s['ryds'][:, i].mean(), q10_rec=np.quantile(s['ryds'][:, i], .1), q90_rec=np.quantile(s['ryds'][:, i], .9),
                               med_rec=np.median(s['ryds'][:, i]),
                               m_rush=s['uyds'][:, i].mean(), q10_rush=np.quantile(s['uyds'][:, i], .1), q90_rush=np.quantile(s['uyds'][:, i], .9),
@@ -111,6 +123,9 @@ def report(G, P, label=''):
     out['td_n'] = len(Q); out['td_brier'] = float(((Q.p_td - Q.a_td) ** 2).mean())
     out['td_brier_base'] = float(((Q.a_td.mean() - Q.a_td) ** 2).mean())
     eps = 1e-4
+    top = Q[Q.p_td >= .15]
+    out['td_brier_top'] = float(((top.p_td - top.a_td) ** 2).mean()); out['td_n_top'] = int(len(top))
+    out['td_bias_top'] = float((top.p_td - top.a_td).mean())
     out['td_logloss'] = float(-(Q.a_td * np.log(Q.p_td.clip(eps, 1 - eps)) + (1 - Q.a_td) * np.log((1 - Q.p_td).clip(eps, 1 - eps))).mean())
     cal = []
     bins = [0, .05, .1, .15, .2, .3, .4, .5, .6, 1.01]
@@ -136,12 +151,15 @@ if __name__ == '__main__':
     run.db = M.DB(); run.ros = load_rosters([2023, 2024, 2025, 2026])
     t = time.time()
     seasons = [int(x) for x in sys.argv[1].split(',')] if len(sys.argv) > 1 else [2024, 2025, 2026]
-    cfg = dict(M.CFG)
+    cfg = dict(M.CFG); tag = ''
     for kv in sys.argv[3:]:
-        k, v = kv.split('='); cfg[k] = (v == 'True') if v in ('True', 'False') else float(v)
+        k, v = kv.split('=')
+        if k == 'tag':
+            tag = '_' + v; continue
+        cfg[k] = (v == 'True') if v in ('True', 'False') else float(v)
     G, P = run(seasons, N=int(sys.argv[2]) if len(sys.argv) > 2 else 3000, cfg=cfg)
     print('time', round(time.time() - t, 1))
-    G.to_parquet(os.path.join(M.WORK, 'bt_games.parquet')); P.to_parquet(os.path.join(M.WORK, 'bt_players.parquet'))
+    G.to_parquet(os.path.join(M.WORK, f'bt_games{tag}.parquet')); P.to_parquet(os.path.join(M.WORK, f'bt_players{tag}.parquet'))
     r = report(G, P)
-    json.dump(r, open(os.path.join(M.WORK, 'bt_report.json'), 'w'))
+    json.dump(r, open(os.path.join(M.WORK, f'bt_report{tag}.json'), 'w'))
     print(json.dumps({k:(round(v,4) if isinstance(v,float) else v) for k,v in r.items()}))

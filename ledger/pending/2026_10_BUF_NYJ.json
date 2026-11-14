@@ -6,7 +6,7 @@
  "home": "NYJ",
  "kickoff_utc": "2026-11-15T18:00:00+00:00",
  "book": "ESPN lines (DraftKings)",
- "logged_utc": "2026-11-13T19:58+00:00",
+ "logged_utc": "2026-11-14T20:09+00:00",
  "entries": [
   {
    "kind": "yards",
@@ -18,10 +18,10 @@
    "side": "under",
    "price": null,
    "book": "DraftKings",
-   "sim": 0.5668,
+   "sim": 0.5958,
    "call": "play",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": "No price for that side"
   },
   {
    "kind": "td",
@@ -30,11 +30,11 @@
    "team": "BUF",
    "price": -170,
    "book": "DraftKings",
-   "sim": 0.3575,
+   "sim": 0.3224,
    "mkt": 0.6296,
    "call": "fade",
-   "live": false,
-   "gate": "Injuries not final"
+   "live": true,
+   "gate": null
   },
   {
    "kind": "td",
@@ -43,11 +43,11 @@
    "team": "BUF",
    "price": -170,
    "book": "DraftKings",
-   "sim": 0.7078,
+   "sim": 0.6841,
    "mkt": 0.6296,
    "call": "play",
-   "live": false,
-   "gate": "Injuries not final"
+   "live": true,
+   "gate": null
   },
   {
    "kind": "spread",
@@ -57,7 +57,7 @@
    "team": "BUF",
    "line": -8.5,
    "price": -110,
-   "sim": 0.6078
+   "sim": 0.6024
   },
   {
    "kind": "total",
@@ -67,7 +67,7 @@
    "side": "over",
    "line": 50.5,
    "price": -110,
-   "sim": 0.5556
+   "sim": 0.6092
   },
   {
    "kind": "ml",
@@ -76,7 +76,7 @@
    "gate": null,
    "team": "BUF",
    "price": -440,
-   "sim": 0.8317
+   "sim": 0.8282
   }
  ]
 }

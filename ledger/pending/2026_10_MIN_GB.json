@@ -6,7 +6,7 @@
  "home": "GB",
  "kickoff_utc": "2026-11-15T18:00:00+00:00",
  "book": "ESPN lines (DraftKings)",
- "logged_utc": "2026-11-13T19:58+00:00",
+ "logged_utc": "2026-11-14T20:09+00:00",
  "entries": [
   {
    "kind": "td",
@@ -15,9 +15,9 @@
    "team": "GB",
    "price": 170,
    "book": "DraftKings",
-   "sim": 0.3143,
+   "sim": 0.3975,
    "mkt": 0.3704,
-   "call": "fade",
+   "call": "lean",
    "live": false,
    "gate": "QB unclear"
   },
@@ -29,7 +29,7 @@
    "team": "MIN",
    "line": 3.0,
    "price": -110,
-   "sim": 0.5412
+   "sim": 0.6145
   },
   {
    "kind": "total",
@@ -39,7 +39,7 @@
    "side": "under",
    "line": 41.5,
    "price": -110,
-   "sim": 0.6292
+   "sim": 0.554
   },
   {
    "kind": "ml",
@@ -48,7 +48,7 @@
    "gate": "QB unclear",
    "team": "MIN",
    "price": 130,
-   "sim": 0.4862
+   "sim": 0.56
   }
  ]
 }

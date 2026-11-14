@@ -23,7 +23,7 @@
   "kickoff": "Sun Nov 15, 2026 \u00b7 1:00 PM ET",
   "time": "1:00 PM",
   "venue": "Lucas Oil Stadium, Indianapolis",
-  "generated": "Fri Nov 13, 2026",
+  "generated": "Sat Nov 14, 2026",
   "roof": "retractable",
   "lat": 39.76,
   "lon": -86.164,
@@ -98,7 +98,7 @@
    "IND": "Daniel Jones",
    "MIA": "Kyle McCord"
   },
-  "report_final": false,
+  "report_final": true,
   "low_conf": {
    "MIA": "Kyle McCord has 0 pass attempts for the Dolphins this season, so their numbers are low confidence."
   },

@@ -23,6 +23,11 @@ CFG = dict(
     k_rec=1.8, k_rush_shift=3.0, sd_carry=6.0,
     sig_eff_pass=0.09, sig_eff_rush=0.11,
     use_dvp=True, use_h2h=True, cr_cal=0.975, rush_cal=0.99,
+    anchor=True,                # props: team scoring matched to the sportsbook's implied team totals
+    snap_fast_hl=1.5, snap_gamma=1.0,   # playing-time trend from snap counts
+    use_qb=True, ridge_qb=8.0, qb_min_games=4,   # quarterback effects in team strength
+    qb_kappa=0.6, qb_kappa_pos=0.15,    # passing efficiency when the starter differs from recent passers
+    qb_eff_pow=0.0, qb_k_att=150.0,     # (older YPA-ratio adjustment: tested, made things worse, left off)
 )
 
 def sigmoid(x):
@@ -58,6 +63,10 @@ class DB:
         a = d.groupby(['game_id', 'posteam', 'defteam', 'season', 'week', 'game_date', 'is_home']).agg(
             n_all=('td', 'size'), n=('c', 'sum'), td=('ctd', 'sum'), fg=('cfg', 'sum'), rtd=('rush_td', 'sum'), fg_all=('fg', 'sum'),
             td_all=('td', 'sum'), opp=('opp_td', 'sum')).reset_index()
+        q = self.pg.sort_values('pass_att', ascending=False).drop_duplicates(['game_id', 'team'])[['game_id', 'team', 'pid', 'pass_att']]
+        q = q[q.pass_att >= 5].rename(columns={'team': 'posteam', 'pid': 'qb'})
+        a = a.merge(q[['game_id', 'posteam', 'qb']], on=['game_id', 'posteam'], how='left')
+        a['qb'] = a.qb.fillna('none')
         a['o'] = a.posteam.map(TI); a['d'] = a.defteam.map(TI)
         self.tdrive = a.dropna(subset=['o', 'd']).copy()
         self.tdrive[['o', 'd']] = self.tdrive[['o', 'd']].astype(int)
@@ -73,18 +82,24 @@ class DB:
         pg = pg.merge(team_tot, on=['game_id', 'team'], how='left')
         use = ['carries', 'car_in5', 'car_in10', 'targets', 'tgt_rz', 'tgt_in10', 'tgt_ez', 'air',
                'T_car', 'T_in5', 'T_in10', 'T_tgt', 'T_rz', 'T_in10t', 'T_ez', 'T_air', 'pass_att']
-        eff = ['rec', 'rec_yds', 'rush_yds']
+        eff = ['rec', 'rec_yds', 'rush_yds', 'pass_yds', 'pass_att']
         g = pg.groupby('pid', sort=False)
         a1 = 1 - 0.5 ** (1 / CFG['player_hl']); a2 = 1 - 0.5 ** (1 / CFG['eff_hl'])
         e1 = g[use].transform(lambda s: s.ewm(alpha=a1, adjust=True).mean())
         e1.columns = ['u_' + c for c in use]
+        a3 = 1 - 0.5 ** (1 / CFG['snap_fast_hl'])
+        if 'snap_pct' not in pg:
+            pg['snap_pct'] = 0.5
+        e1['u_snap'] = g['snap_pct'].transform(lambda s: s.ewm(alpha=a1, adjust=True).mean())
+        e1['u_snapf'] = g['snap_pct'].transform(lambda s: s.ewm(alpha=a3, adjust=True).mean())
         e2 = g[eff + ['targets', 'carries']].transform(lambda s: s.ewm(alpha=a2, adjust=True).mean())
         e2.columns = ['e_' + c for c in eff + ['targets', 'carries']]
+        e2['c_pass_att'] = g['pass_att'].cumsum()
         n = g.cumcount() + 1
         pg = pd.concat([pg, e1, e2], axis=1)
         pg['W2'] = (1 - (1 - a2) ** n) / a2
         pg['gp'] = n
-        post = [c for c in pg.columns if c.startswith('u_') or c.startswith('e_')] + ['W2', 'gp']
+        post = [c for c in pg.columns if c.startswith('u_') or c.startswith('e_') or c.startswith('c_')] + ['W2', 'gp']
         prior = pg.groupby('pid', sort=False)[post].shift(1)
         prior.columns = ['p_' + c for c in post]
         self.pg = pd.concat([pg, prior], axis=1)
@@ -97,6 +112,11 @@ class DB:
             self.pri[pos] = dict(cr=x.rec.sum() / max(x.targets.sum(), 1), ypr=x.rec_yds.sum() / max(x.rec.sum(), 1),
                                  ypc=x.rush_yds.sum() / max(x.carries.sum(), 1))
         self.pri['OTH'] = self.pri['WR']
+        qg = self.pg[(self.pg.season >= 2018) & (self.pg.pass_att >= 10)]
+        prior_att = qg.p_c_pass_att.fillna(0)
+        self.ypa_league = float(qg.pass_yds.sum() / qg.pass_att.sum())
+        nq = qg[prior_att < 150]
+        self.ypa_new = float(nq.pass_yds.sum() / nq.pass_att.sum())
 
     # ---- team volume states and defence-vs-position states
     def _prep_team_states(self):
@@ -260,10 +280,23 @@ def fit_team(db, asof, cfg=CFG):
     X[np.arange(len(a)), 2 + nT + a.d.values] = 1
     pen = np.r_[0, 0, np.full(2 * nT, cfg['ridge'])]
     out = {}
+    if cfg.get('use_qb'):
+        # quarterback columns: regulars get their own effect, everyone else shares a "new or backup" effect
+        gw = pd.Series(w, index=a.index).groupby(a.qb.values).sum()
+        regs = [q for q in gw.index if q != 'none' and gw[q] >= cfg['qb_min_games'] * 0.5]
+        qi = {q: i for i, q in enumerate(regs)}
+        XQ = np.zeros((len(a), len(regs) + 1))
+        col = a.qb.map(qi).fillna(len(regs)).astype(int).values
+        XQ[np.arange(len(a)), col] = 1
+        X = np.hstack([X, XQ])
+        pen = np.r_[pen, np.full(len(regs), cfg['ridge_qb']), 0.5]
+        out['qb_index'] = qi; out['qb_base'] = 2 + 2 * nT
     out['td'] = ridge_binom(X, a.td.values, a.n.values, w, pen)
     out['fg'] = ridge_binom(X, a.fg.values, (a.n - a.td).values, w, pen)
     m = a.td_all.values > 0
-    out['rush'] = ridge_binom(X[m], a.rtd.values[m], a.td_all.values[m], w[m], np.r_[0, 0, np.full(2 * nT, cfg['ridge'] * 0.6)])
+    Xr = X[:, :2 + 2 * nT]
+    out['rush'] = ridge_binom(Xr[m], a.rtd.values[m], a.td_all.values[m], w[m], np.r_[0, 0, np.full(2 * nT, cfg['ridge'] * 0.6)])
+    X = Xr
     # pace: drives per game, ridge linear
     yv = a.n_all.values.astype(float)
     mu = (w * yv).sum() / w.sum()
@@ -274,7 +307,23 @@ def fit_team(db, asof, cfg=CFG):
     out['asof'] = asof
     return out
 
-def team_params(fit, home, away, neutral=False):
+def qb_delta(db, fit, team, qb_id, asof):
+    """Fitted quality of the named starter minus that of whoever threw the team's passes in its last six games.
+    Zero when the same quarterback has been playing. Feeds the passing-efficiency adjustment."""
+    if 'qb_index' not in fit or qb_id is None:
+        return 0.0
+    qi, base, b = fit['qb_index'], fit['qb_base'], fit['td']
+    eff = lambda q: float(b[base + qi.get(q, len(qi))])
+    asof = pd.Timestamp(asof)
+    tg = db.tg[(db.tg.team == team) & (db.tg.game_date < asof)].game_id.values[-6:]
+    pa = db.pg[db.pg.game_id.isin(tg) & (db.pg.team == team) & (db.pg.pass_att > 0)].groupby('pid').pass_att.sum()
+    if pa.sum() < 30:
+        return 0.0
+    recent = sum(eff(q) * a for q, a in pa.items()) / pa.sum()
+    return eff(qb_id) - recent
+
+def team_params(fit, home, away, neutral=False, qbs=None):
+    """qbs: (home starter id, away starter id). Used only when the fit has quarterback effects."""
     nT = len(TEAMS)
     h, a = TI[home], TI[away]
     par = {}
@@ -282,6 +331,9 @@ def team_params(fit, home, away, neutral=False):
         b = fit[k]
         hfa = 0.0 if neutral else b[1]
         par[k] = np.array([b[0] + hfa + b[2 + h] + b[2 + nT + a], b[0] + b[2 + a] + b[2 + nT + h]])
+        if k != 'rush' and 'qb_index' in fit and qbs is not None:
+            qi, base = fit['qb_index'], fit['qb_base']
+            par[k] = par[k] + np.array([b[base + qi.get(q, len(qi))] for q in qbs])
     mu, bd = fit['drives']
     par['mu_drives'] = mu + 0.5 * (bd[h] + bd[nT + a] + bd[a] + bd[nT + h])
     return par
@@ -324,6 +376,9 @@ def player_table(db, team, opp, asof, ids, qb_id=None, cfg=CFG, h2h=True):
             if c.startswith(('u_', 'e_', 'p_')):
                 row[c] = 0.0
         row['pid'] = qb_id; row['pos'] = 'QB'; row['gp'] = 0; row['W2'] = 0.0
+        for c in row.columns:
+            if c.startswith('c_'):
+                row[c] = 0.0
         row['name'] = (db.pnames.get(qb_id) or 'Starting QB')
         row['game_date'] = asof - pd.Timedelta(days=1)
         for c, v in dict(u_carries=1.7, u_T_car=26.0, u_car_in10=0.15, u_T_in10=3.0, u_car_in5=0.08, u_T_in5=1.5, u_pass_att=32.0,
@@ -348,6 +403,14 @@ def player_table(db, team, opp, asof, ids, qb_id=None, cfg=CFG, h2h=True):
     touches = (last.u_targets + last.u_carries).values
     adj = rate + (1 - rate) * np.minimum(1.0, touches / 5.0)
     adj = np.where(df.pid.values == qb_id, 1.0, adj)
+    # playing-time trend: recent snap share against the longer-run share flags a growing or shrinking role
+    g_ = cfg.get('snap_gamma', 0.0)
+    if g_ > 0 and 'u_snapf' in last:
+        trend = np.clip((last.u_snapf.values + 0.05) / (last.u_snap.values + 0.05), 0.5, 1.6) ** g_
+        trend = np.where(df.pid.values == qb_id, 1.0, trend)
+        adj = adj * trend
+        df['snap_trend'] = trend
+    df['snap_recent'] = last.u_snapf.values if 'u_snapf' in last else np.nan
     for c in ['w_rush', 'sh_rush', 'w_rec', 'sh_rec']:
         df[c] = df[c].values * adj
     df['avail'] = adj
@@ -359,6 +422,19 @@ def player_table(db, team, opp, asof, ids, qb_id=None, cfg=CFG, h2h=True):
     df['ypr'] = (ry + 15 * np.array([x['ypr'] for x in pri])) / (rec + 15)
     df['ypc'] = (ruy + 50 * np.array([x['ypc'] for x in pri])) / (car + 50)
     df['is_qb'] = (df.pid == qb_id).values
+    qmult = 1.0
+    if cfg.get('use_qb') and qb_id is not None:
+        tq = pg[pg.game_id.isin(tgs) & (pg.team == team) & (pg.pass_att > 0)]
+        tot_att = tq.pass_att.sum()
+        if tot_att >= 30:
+            share = tq[tq.pid == qb_id].pass_att.sum() / tot_att
+            qr = last[last.pid == qb_id].iloc[0]
+            att = qr.e_pass_att * qr.W2; yds = qr.e_pass_yds * qr.W2
+            prior = db.ypa_league if (qr.c_pass_att if pd.notna(qr.c_pass_att) else 0) >= 150 else db.ypa_new
+            ypa_qb = (yds + cfg['qb_k_att'] * prior) / (att + cfg['qb_k_att'])
+            ypa_team = tq.pass_yds.sum() / tot_att
+            qmult = float(np.clip(1 + (1 - share) * ((ypa_qb / ypa_team) ** cfg['qb_eff_pow'] - 1), 0.8, 1.2))
+    df['qb_mult'] = qmult
     # ---- defence vs position
     m = dvp_mult(db, opp, asof, cfg) if cfg['use_dvp'] else {c: 1.0 for c in db.dvp_stats}
     posk = df.pos.where(df.pos.isin(['WR', 'TE', 'RB']), 'WR')
@@ -396,6 +472,24 @@ def team_volume(db, team, asof):
     r = t.iloc[-1]
     return dict(pa=float(r.ew_pass_att), ra=float(r.ew_rush_att), margin=float(r.ew_margin))
 
+
+# ------------------------------------------------------------------ market anchoring
+def anchor(db, par, tgt_home, tgt_away, cfg=CFG, wx=None, iters=6, n=20000):
+    """Shift each team's scoring so the sim's average points match the sportsbook's implied team totals.
+    The book is the better predictor of game scores; the model then only decides who gets the touches."""
+    par = {k: (v.copy() if hasattr(v, 'copy') else v) for k, v in par.items()}
+    tgt = np.array([tgt_home, tgt_away], dtype=float)
+    for _ in range(iters):
+        o = simulate(db, par, None, None, n, np.random.default_rng(4242), cfg, wx=wx)
+        d = (tgt - o['pts'].mean(0)) / 14.0
+        if np.abs(d).max() < 0.004:
+            break
+        par['td'] = par['td'] + d; par['fg'] = par['fg'] + 0.3 * d
+    return par
+
+def implied_totals(spread_home, total):
+    """spread_home is negative when the home team is favoured."""
+    return total / 2 - spread_home / 2, total / 2 + spread_home / 2
 
 # ------------------------------------------------------------------ simulator
 MAXH = 24
@@ -484,7 +578,7 @@ def simulate(db, par, players, vols, N, rng, cfg=CFG, wx=None, keep=False):
         PA = np.rint(bp[0] + bp[1] * v['pa'] + bp[2] * (mg - v['margin']) + db.vol['pass_att']['sd'] * e1).clip(12, 65).astype(int)
         RA = np.rint(br[0] + br[1] * v['ra'] + br[2] * (mg - v['margin']) + db.vol['rush_att']['sd'] * e2).clip(8, 55).astype(int)
         st = np.sqrt(s ** 2 + cfg.get('s_common', 0.0) ** 2)
-        effp = np.exp(cfg['sig_eff_pass'] * z[:, t] / st - cfg['sig_eff_pass'] ** 2 / 2) * wx['pass_mult']
+        effp = np.exp(cfg['sig_eff_pass'] * z[:, t] / st - cfg['sig_eff_pass'] ** 2 / 2) * wx['pass_mult'] * float(np.exp(cfg.get('qb_kappa', 0.0) * min(v.get('qb_delta', 0.0), 0.0) + cfg.get('qb_kappa_pos', 0.0) * max(v.get('qb_delta', 0.0), 0.0)))
         effr = np.exp(cfg['sig_eff_rush'] * z[:, t] / st - cfg['sig_eff_rush'] ** 2 / 2) * wx.get('rush_mult', 1.0)
         # targets
         T = rng.binomial(PA, db.tgt_frac)
@@ -495,7 +589,7 @@ def simulate(db, par, players, vols, N, rng, cfg=CFG, wx=None, keep=False):
         cr = np.clip(df.cr.values * wx['cr_mult'] * cfg.get('cr_cal', 1.0), 0.2, 0.95)
         recs = rng.binomial(tgts, cr[None, :])
         k = cfg['k_rec']
-        mean_ypr = (df.ypr.values * df.m_rec.values * df.h2h_rec.values)[None, :] * effp[:, None]
+        mean_ypr = (df.ypr.values * df.m_rec.values * df.h2h_rec.values * (df.qb_mult.values if 'qb_mult' in df else 1.0))[None, :] * effp[:, None]
         ryds = rng.gamma(np.maximum(recs * k, 1e-6), mean_ypr / k)
         ryds = np.where(recs > 0, ryds, 0.0)
         # carries

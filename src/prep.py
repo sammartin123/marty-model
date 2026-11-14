@@ -100,6 +100,42 @@ players = players[[pcol, 'display_name', 'position']].dropna(subset=[pcol]).drop
 pg = pg.merge(players.rename(columns={pcol: 'pid', 'display_name': 'name', 'position': 'pos'}), on='pid', how='left')
 pg['pos'] = pg.pos.replace({'FB': 'RB', 'HB': 'RB'}).fillna('OTH')
 pg.loc[~pg.pos.isin(['QB', 'RB', 'WR', 'TE']), 'pos'] = 'OTH'
+# ---------------- snap counts: every skill player who took an offensive snap gets a row, touches or not ----------------
+snap_files = sorted(glob.glob(os.path.join(DATA, 'snap_counts_*.parquet')))
+if snap_files:
+    sn = pd.concat([pq.read_table(f, columns=['game_id', 'pfr_player_id', 'position', 'team', 'opponent', 'offense_snaps', 'offense_pct', 'game_type', 'season', 'week']).to_pandas() for f in snap_files])
+    sn = sn[sn.position.isin(['QB', 'RB', 'WR', 'TE', 'FB']) & (sn.offense_snaps > 0)].copy()
+    allp = pd.read_csv(os.path.join(DATA, 'players.csv'), low_memory=False, usecols=['gsis_id', 'pfr_id', 'display_name', 'position'])
+    pfr = allp.dropna(subset=['pfr_id', 'gsis_id']).drop_duplicates('pfr_id')
+    sn['pid'] = sn.pfr_player_id.map(dict(zip(pfr.pfr_id, pfr.gsis_id)))
+    sn = sn.dropna(subset=['pid'])
+    for c in ['team', 'opponent']:
+        sn[c] = sn[c].replace({'OAK': 'LV', 'SD': 'LAC', 'STL': 'LA', 'LAR': 'LA'})
+    sn = sn.rename(columns={'opponent': 'opp', 'offense_snaps': 'snaps', 'offense_pct': 'snap_pct'})
+    sn = sn.drop_duplicates(['game_id', 'pid'])
+    stat_cols = [c for c in pg.columns if c not in ('game_id', 'season', 'week', 'reg', 'game_date', 'team', 'opp', 'is_home', 'pid', 'name', 'pos')]
+    pg = pg.merge(sn[['game_id', 'pid', 'team', 'opp', 'snaps', 'snap_pct', 'season', 'week', 'game_type']], on=['game_id', 'pid'], how='outer', suffixes=('', '_s'))
+    new = pg.team.isna()
+    gmeta = games.set_index('game_id')
+    for c in ['team', 'opp', 'season', 'week']:
+        pg[c] = pg[c].where(~new, pg[c + '_s'])
+    pg.loc[new, 'reg'] = (pg.loc[new, 'game_type'] == 'REG').astype(int)
+    pg.loc[new, 'game_date'] = pd.to_datetime(gmeta.gameday.reindex(pg.loc[new, 'game_id']).values)
+    pg.loc[new, 'is_home'] = (gmeta.home_team.reindex(pg.loc[new, 'game_id']).values == pg.loc[new, 'team'].values).astype(int)
+    pg[stat_cols] = pg[stat_cols].fillna(0)
+    nm = allp.dropna(subset=['gsis_id']).drop_duplicates('gsis_id').set_index('gsis_id')
+    pg.loc[new, 'name'] = nm.display_name.reindex(pg.loc[new, 'pid']).values
+    npos = nm.position.reindex(pg.loc[new, 'pid']).replace({'FB': 'RB', 'HB': 'RB'}).values
+    pg.loc[new, 'pos'] = np.where(pd.Series(npos).isin(['QB', 'RB', 'WR', 'TE']), npos, 'OTH')
+    pg = pg.drop(columns=[c for c in pg.columns if c.endswith('_s')] + ['game_type'])
+    pg = pg[pg.game_date.notna()].copy()
+    pg['game_date'] = pd.to_datetime(pg.game_date)
+    for c in ['season', 'week', 'reg', 'is_home']:
+        pg[c] = pg[c].astype(int)
+    # touches without a snap record (rare id mismatches): assume a part-time role
+    pg['snap_pct'] = pg.snap_pct.fillna(0.25); pg['snaps'] = pg.snaps.fillna(15)
+else:
+    pg['snap_pct'] = 0.5; pg['snaps'] = 30
 pg.to_parquet(os.path.join(WORK, 'player_games.parquet'))
 
 # ---------------- team games ----------------

@@ -24,10 +24,23 @@ def run(G, db=None, quiet=False, record=True):
         tabs.append(t); vols.append(M.team_volume(db, team, asof))
 
     fit = M.fit_team(db, asof, cfg)
-    par = M.team_params(fit, home, away, neutral=bool(G.get('neutral')))
+    par = M.team_params(fit, home, away, neutral=bool(G.get('neutral')), qbs=(G['qb'][home], G['qb'][away]))
+    for t, team in enumerate([home, away]):
+        vols[t]['qb_delta'] = M.qb_delta(db, fit, team, G['qb'][team], asof)
     wx = G.get('wx_model', dict(pass_mult=1.0, td_shift=0.0, fg_shift=0.0, cr_mult=1.0))
+    # Game-level numbers (winner, spread, total, the typical game) are the model's own view.
     o = M.simulate(db, par, tabs, vols, N, rng, cfg, wx=wx, keep=True)
     pts = o['pts']; mg = pts[:, 0] - pts[:, 1]; tot = pts.sum(1)
+    # Player props: team scoring is matched to the sportsbook's implied team totals (the book predicts game
+    # scores better than the model does), so the model only decides who gets the yards and touchdowns.
+    mk0 = G.get('market') or {}
+    anchor = None; op = o
+    if cfg.get('anchor') and mk0.get('spread_home') is not None and mk0.get('total') is not None:
+        th, ta = M.implied_totals(mk0['spread_home'], mk0['total'])
+        par_a = M.anchor(db, par, th, ta, cfg, wx=wx)
+        op = M.simulate(db, par_a, tabs, vols, N, np.random.default_rng(G.get('seed', 20261115) + 1), cfg, wx=wx)
+        anchor = dict(home=float(th), away=float(ta), sim_home=float(op['pts'][:, 0].mean()), sim_away=float(op['pts'][:, 1].mean()),
+                      model_home=float(pts[:, 0].mean()), model_away=float(pts[:, 1].mean()))
 
     def american(p):
         p = float(np.clip(p, 1e-4, 1 - 1e-4))
@@ -167,7 +180,7 @@ def run(G, db=None, quiet=False, record=True):
     pg = db.pg
     players = []
     for t, (team, opp) in enumerate([(home, away), (away, home)]):
-        s = o['stats'][t]; df = tabs[t]
+        s = op['stats'][t]; df = tabs[t]
         anytd = (s['rtd'] + s['ctd']) > 0
         for j in range(len(df)):
             pid = df.pid[j]; pos = df.pos[j]
@@ -239,8 +252,15 @@ def run(G, db=None, quiet=False, record=True):
         return int(s[t])
     strength = {}
     for t in (home, away):
-        strength[t] = dict(off_td_rank=rk(fit['td'][2:2 + nT], t, True), def_td_rank=rk(fit['td'][2 + nT:], t, False),
+        strength[t] = dict(off_td_rank=rk(fit['td'][2:2 + nT], t, True), def_td_rank=rk(fit['td'][2 + nT:2 + 2 * nT], t, False),
                            off_fg_rank=rk(fit['fg'][2:2 + nT], t, True))
+    qb_info = {}
+    if 'qb_index' in fit:
+        qi, base = fit['qb_index'], fit['qb_base']
+        for t, team in enumerate([home, away]):
+            q_ = G['qb'][team]
+            qb_info[team] = dict(effect=float(fit['td'][base + qi.get(q_, len(qi))]), own=bool(q_ in qi),
+                                 delta=float(vols[t]['qb_delta']))
     bt = json.load(open(os.path.join(M.WORK, 'bt_report.json')))
     unmatched = sorted((set(odds) | set(ylines)) - matched)
     outj = dict(meta=G['meta'] | dict(home=home, away=away, n_sims=N, asof=str(asof.date()), season=G['season'], week=G['week']),
@@ -248,7 +268,8 @@ def run(G, db=None, quiet=False, record=True):
                 sample=[[int(a), int(b)] for a, b in pts[samp]], strength=strength, backtest=bt, weather=G.get('weather', {}),
                 sources=G.get('sources', []), injuries=G.get('injuries', []), inputs=dict(G.get('inputs', {}), unmatched=unmatched),
                 per_drive=dict(td=[float(x) for x in M.sigmoid(par['td'])], fg=[float(x) for x in M.sigmoid(par['fg'])],
-                               rush_share=[float(x) for x in M.sigmoid(par['rush'])]))
+                               rush_share=[float(x) for x in M.sigmoid(par['rush'])]),
+                anchor=anchor, qb_model=qb_info)
     import ledger
     ledger.log_game(G, outj)
     if record:
@@ -262,6 +283,7 @@ def run(G, db=None, quiet=False, record=True):
         print(f"{away} @ {home}: {home} win {p_home:.3f} | mean {pts[:,1].mean():.1f}-{pts[:,0].mean():.1f} | med margin {np.median(mg)} | med total {np.median(tot)} | sd {mg.std():.1f}")
         print('market nv home', round(nv_home, 3), 'cover', round(p_home_cover, 3), 'over', round(p_over, 3))
         print('typical', typical['score'], 'share', round(typical['share'], 4))
+        print('props anchored to', anchor, '| qb', qb_info)
         for e in events:
             print(' ', e)
         for d in sorted(players, key=lambda x: -x['p_td']):

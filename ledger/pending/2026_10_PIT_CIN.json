@@ -6,34 +6,8 @@
  "home": "CIN",
  "kickoff_utc": "2026-11-16T01:20:00+00:00",
  "book": "DraftKings (the lines ESPN shows)",
- "logged_utc": "2026-11-13T19:58+00:00",
+ "logged_utc": "2026-11-14T20:10+00:00",
  "entries": [
-  {
-   "kind": "td",
-   "pid": "00-0041069",
-   "name": "Colbie Young",
-   "team": "CIN",
-   "price": 2250,
-   "book": "Hard Rock",
-   "sim": 0.0152,
-   "mkt": 0.0426,
-   "call": "pass",
-   "live": false,
-   "gate": "Injuries not final"
-  },
-  {
-   "kind": "td",
-   "pid": "00-0035631",
-   "name": "Drew Sample",
-   "team": "CIN",
-   "price": 900,
-   "book": "Fanatics",
-   "sim": 0.0541,
-   "mkt": 0.1,
-   "call": "pass",
-   "live": false,
-   "gate": "Injuries not final"
-  },
   {
    "kind": "td",
    "pid": "00-0040208",
@@ -41,11 +15,11 @@
    "team": "CIN",
    "price": 7500,
    "book": "Hard Rock",
-   "sim": 0.0411,
+   "sim": 0.043,
    "mkt": 0.0132,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "td",
@@ -54,11 +28,11 @@
    "team": "CIN",
    "price": 265,
    "book": "BetRivers",
-   "sim": 0.1784,
+   "sim": 0.19,
    "mkt": 0.274,
    "call": "fade",
-   "live": false,
-   "gate": "Injuries not final"
+   "live": true,
+   "gate": null
   },
   {
    "kind": "td",
@@ -67,11 +41,24 @@
    "team": "CIN",
    "price": 270,
    "book": "Fanatics",
-   "sim": 0.1817,
+   "sim": 0.2015,
    "mkt": 0.2703,
    "call": "fade",
-   "live": false,
-   "gate": "Injuries not final"
+   "live": true,
+   "gate": null
+  },
+  {
+   "kind": "td",
+   "pid": "00-0035631",
+   "name": "Drew Sample",
+   "team": "CIN",
+   "price": 900,
+   "book": "Fanatics",
+   "sim": 0.0491,
+   "mkt": 0.1,
+   "call": "fade",
+   "live": true,
+   "gate": null
   },
   {
    "kind": "td",
@@ -80,11 +67,11 @@
    "team": "CIN",
    "price": 122,
    "book": "NoVig",
-   "sim": 0.4074,
+   "sim": 0.4421,
    "mkt": 0.4505,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "td",
@@ -93,11 +80,11 @@
    "team": "CIN",
    "price": 700,
    "book": "Fanatics",
-   "sim": 0.0887,
+   "sim": 0.094,
    "mkt": 0.125,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "td",
@@ -106,11 +93,11 @@
    "team": "CIN",
    "price": -110,
    "book": "Fanatics",
-   "sim": 0.4696,
+   "sim": 0.5069,
    "mkt": 0.5238,
-   "call": "fade",
+   "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "td",
@@ -119,11 +106,24 @@
    "team": "CIN",
    "price": 108,
    "book": "NoVig",
-   "sim": 0.3706,
+   "sim": 0.3891,
    "mkt": 0.4808,
    "call": "fade",
+   "live": true,
+   "gate": null
+  },
+  {
+   "kind": "td",
+   "pid": "00-0041069",
+   "name": "Colbie Young",
+   "team": "CIN",
+   "price": 2250,
+   "book": "Hard Rock",
+   "sim": 0.0163,
+   "mkt": 0.0426,
+   "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "td",
@@ -132,24 +132,11 @@
    "team": "CIN",
    "price": 1150,
    "book": "BetMGM",
-   "sim": 0.0323,
+   "sim": 0.0321,
    "mkt": 0.08,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
-  },
-  {
-   "kind": "td",
-   "pid": "00-0036775",
-   "name": "Brandon Smith",
-   "team": "PIT",
-   "price": 1200,
-   "book": "BetMGM",
-   "sim": 0.0532,
-   "mkt": 0.0769,
-   "call": "pass",
-   "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "td",
@@ -158,11 +145,11 @@
    "team": "PIT",
    "price": 1700,
    "book": "Fanatics",
-   "sim": 0.0184,
+   "sim": 0.0188,
    "mkt": 0.0556,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "td",
@@ -171,11 +158,11 @@
    "team": "PIT",
    "price": 190,
    "book": "NoVig",
-   "sim": 0.3751,
+   "sim": 0.3906,
    "mkt": 0.3448,
    "call": "play",
-   "live": false,
-   "gate": "Injuries not final"
+   "live": true,
+   "gate": null
   },
   {
    "kind": "td",
@@ -184,11 +171,11 @@
    "team": "PIT",
    "price": 194,
    "book": "NoVig",
-   "sim": 0.3056,
+   "sim": 0.2979,
    "mkt": 0.3401,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "yards",
@@ -200,10 +187,23 @@
    "side": "over",
    "price": -114,
    "book": "DraftKings",
-   "sim": 0.5319,
+   "sim": 0.5289,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
+  },
+  {
+   "kind": "td",
+   "pid": "00-0036775",
+   "name": "Brandon Smith",
+   "team": "PIT",
+   "price": 1200,
+   "book": "BetMGM",
+   "sim": 0.0237,
+   "mkt": 0.0769,
+   "call": "fade",
+   "live": true,
+   "gate": null
   },
   {
    "kind": "td",
@@ -212,11 +212,11 @@
    "team": "PIT",
    "price": 330,
    "book": "Fanatics",
-   "sim": 0.2168,
+   "sim": 0.2162,
    "mkt": 0.2326,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "td",
@@ -225,11 +225,11 @@
    "team": "PIT",
    "price": 113,
    "book": "NoVig",
-   "sim": 0.3836,
+   "sim": 0.4106,
    "mkt": 0.4695,
    "call": "fade",
-   "live": false,
-   "gate": "Injuries not final"
+   "live": true,
+   "gate": null
   },
   {
    "kind": "yards",
@@ -238,13 +238,13 @@
    "team": "PIT",
    "stat": "rec",
    "line": 25.5,
-   "side": "under",
+   "side": "over",
    "price": null,
    "book": "DraftKings",
-   "sim": 0.5466,
-   "call": "lean",
+   "sim": 0.5085,
+   "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": "No price for that side"
   },
   {
    "kind": "td",
@@ -253,11 +253,11 @@
    "team": "PIT",
    "price": 266,
    "book": "Kalshi",
-   "sim": 0.1766,
+   "sim": 0.1754,
    "mkt": 0.2732,
    "call": "fade",
-   "live": false,
-   "gate": "Injuries not final"
+   "live": true,
+   "gate": null
   },
   {
    "kind": "td",
@@ -266,40 +266,40 @@
    "team": "PIT",
    "price": 285,
    "book": "Fanatics",
-   "sim": 0.2482,
+   "sim": 0.2691,
    "mkt": 0.2597,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "spread",
-   "call": "lean",
-   "live": true,
+   "call": "pass",
+   "live": false,
    "gate": null,
-   "team": "PIT",
-   "line": 3.5,
+   "team": "CIN",
+   "line": -3.5,
    "price": -110,
-   "sim": 0.5466
+   "sim": 0.5242
   },
   {
    "kind": "total",
    "call": "pass",
    "live": false,
    "gate": null,
-   "side": "under",
+   "side": "over",
    "line": 47.5,
    "price": -110,
-   "sim": 0.54
+   "sim": 0.52
   },
   {
    "kind": "ml",
-   "call": "lean",
-   "live": true,
+   "call": "pass",
+   "live": false,
    "gate": null,
    "team": "PIT",
    "price": 164,
-   "sim": 0.44
+   "sim": 0.3709
   }
  ]
 }

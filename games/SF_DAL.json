@@ -23,7 +23,7 @@
   "kickoff": "Sun Nov 15, 2026 \u00b7 4:25 PM ET",
   "time": "4:25 PM",
   "venue": "AT&T Stadium, Dallas",
-  "generated": "Fri Nov 13, 2026",
+  "generated": "Sat Nov 14, 2026",
   "roof": "retractable",
   "lat": 32.748,
   "lon": -97.093,
@@ -101,7 +101,7 @@
    "DAL": "Dak Prescott",
    "SF": "Brock Purdy"
   },
-  "report_final": false,
+  "report_final": true,
   "low_conf": {},
   "notes": []
  },

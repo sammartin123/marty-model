@@ -25,7 +25,7 @@
   "kickoff": "Sun Nov 15, 2026 \u00b7 1:00 PM ET",
   "time": "1:00 PM",
   "venue": "Lambeau Field, Green Bay",
-  "generated": "Fri Nov 13, 2026",
+  "generated": "Sat Nov 14, 2026",
   "roof": "outdoors",
   "lat": 44.501,
   "lon": -88.062,
@@ -75,7 +75,7 @@
    "GB": "Jordan Love",
    "MIN": "Kirk Cousins"
   },
-  "report_final": false,
+  "report_final": true,
   "low_conf": {
    "MIN": "Kirk Cousins has 0 pass attempts for the Vikings this season, so their numbers are low confidence."
   },

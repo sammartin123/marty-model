@@ -23,7 +23,7 @@
   "kickoff": "Sun Nov 15, 2026 \u00b7 4:05 PM ET",
   "time": "4:05 PM",
   "venue": "Allegiant Stadium, Las Vegas",
-  "generated": "Fri Nov 13, 2026",
+  "generated": "Sat Nov 14, 2026",
   "roof": "dome",
   "lat": 36.091,
   "lon": -115.184,
@@ -90,7 +90,7 @@
    "LV": "Fernando Mendoza",
    "SEA": "Sam Darnold"
   },
-  "report_final": false,
+  "report_final": true,
   "low_conf": {
    "LV": "Fernando Mendoza has 8 pass attempts for the Raiders this season, so their numbers are low confidence.",
    "SEA": "Sam Darnold has not practised this week, so the Seahawks quarterback is not certain."

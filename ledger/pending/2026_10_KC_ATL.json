@@ -6,7 +6,7 @@
  "home": "ATL",
  "kickoff_utc": "2026-11-15T18:00:00+00:00",
  "book": "ESPN lines (DraftKings)",
- "logged_utc": "2026-11-13T19:57+00:00",
+ "logged_utc": "2026-11-14T20:09+00:00",
  "entries": [
   {
    "kind": "td",
@@ -15,11 +15,11 @@
    "team": "ATL",
    "price": -210,
    "book": "DraftKings",
-   "sim": 0.4949,
+   "sim": 0.5643,
    "mkt": 0.6774,
    "call": "fade",
-   "live": false,
-   "gate": "Injuries not final"
+   "live": true,
+   "gate": null
   },
   {
    "kind": "td",
@@ -28,11 +28,11 @@
    "team": "KC",
    "price": -205,
    "book": "DraftKings",
-   "sim": 0.5969,
+   "sim": 0.6288,
    "mkt": 0.6721,
-   "call": "fade",
+   "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "spread",
@@ -42,26 +42,26 @@
    "team": "KC",
    "line": -3.0,
    "price": -110,
-   "sim": 0.5174
+   "sim": 0.4934
   },
   {
    "kind": "total",
-   "call": "lean",
-   "live": true,
+   "call": "pass",
+   "live": false,
    "gate": null,
    "side": "under",
    "line": 46.5,
    "price": -110,
-   "sim": 0.5886
+   "sim": 0.5156
   },
   {
    "kind": "ml",
    "call": "pass",
    "live": false,
    "gate": null,
-   "team": "KC",
-   "price": -180,
-   "sim": 0.6246
+   "team": "ATL",
+   "price": 150,
+   "sim": 0.3993
   }
  ]
 }

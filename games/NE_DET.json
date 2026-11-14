@@ -31,7 +31,7 @@
   "kickoff": "Sun Nov 15, 2026 \u00b7 9:30 AM ET",
   "time": "9:30 AM",
   "venue": "FC Bayern Munich Stadium, Munich",
-  "generated": "Fri Nov 13, 2026",
+  "generated": "Sat Nov 14, 2026",
   "roof": "outdoors",
   "lat": 48.219,
   "lon": 11.625,
@@ -95,7 +95,7 @@
    "DET": "Jared Goff",
    "NE": "Drake Maye"
   },
-  "report_final": false,
+  "report_final": true,
   "low_conf": {},
   "notes": []
  },

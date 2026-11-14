@@ -6,7 +6,7 @@
  "home": "DET",
  "kickoff_utc": "2026-11-15T14:30:00+00:00",
  "book": "ESPN lines (DraftKings)",
- "logged_utc": "2026-11-13T19:57+00:00",
+ "logged_utc": "2026-11-14T20:09+00:00",
  "entries": [
   {
    "kind": "td",
@@ -15,11 +15,11 @@
    "team": "DET",
    "price": -110,
    "book": "DraftKings",
-   "sim": 0.44,
+   "sim": 0.4959,
    "mkt": 0.5238,
-   "call": "fade",
+   "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "td",
@@ -28,11 +28,11 @@
    "team": "DET",
    "price": -280,
    "book": "DraftKings",
-   "sim": 0.5946,
+   "sim": 0.6512,
    "mkt": 0.7368,
    "call": "fade",
-   "live": false,
-   "gate": "Injuries not final"
+   "live": true,
+   "gate": null
   },
   {
    "kind": "spread",
@@ -42,17 +42,17 @@
    "team": "NE",
    "line": 3.0,
    "price": -110,
-   "sim": 0.5813
+   "sim": 0.5654
   },
   {
    "kind": "total",
-   "call": "lean",
-   "live": true,
+   "call": "pass",
+   "live": false,
    "gate": null,
    "side": "under",
    "line": 51.5,
    "price": -110,
-   "sim": 0.5483
+   "sim": 0.5352
   },
   {
    "kind": "ml",
@@ -61,7 +61,7 @@
    "gate": null,
    "team": "NE",
    "price": 130,
-   "sim": 0.5285
+   "sim": 0.512
   }
  ]
 }

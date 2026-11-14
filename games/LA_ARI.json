@@ -23,7 +23,7 @@
   "kickoff": "Sun Nov 15, 2026 \u00b7 4:05 PM ET",
   "time": "4:05 PM",
   "venue": "State Farm Stadium, Arizona",
-  "generated": "Fri Nov 13, 2026",
+  "generated": "Sat Nov 14, 2026",
   "roof": "retractable",
   "lat": 33.528,
   "lon": -112.263,
@@ -90,7 +90,7 @@
    "ARI": "Carson Beck",
    "LA": "Matthew Stafford"
   },
-  "report_final": false,
+  "report_final": true,
   "low_conf": {
    "ARI": "Carson Beck has 0 pass attempts for the Cardinals this season, so their numbers are low confidence."
   },

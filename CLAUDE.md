@@ -62,6 +62,8 @@ and commit the refreshed `work/bt_report.json`. Report results honestly, includi
 Sam wants every Sunday game on the page, with calls only where the data is fully confirmed. See README
 "Run a whole slate". For a new week: copy the latest file in `slates/`, replace the games, then for each game
 fill in `market` (ESPN/DraftKings lines are fine), `td_odds` only for players whose price you actually found
-from a named book, `weather` for outdoor venues, and `sources`. Check every low-confidence quarterback flag
+from a named book, `weather` for outdoor venues, and `sources`. The data's injury file is the Friday report, so search for Saturday downgrades and additions (one
+search like "NFL Week N injury downgrades ruled out Saturday", plus each team's questionable skill players)
+and add them to the game as `out_names` or `q_names` with a note and source. Check every low-confidence quarterback flag
 the run prints against the news and add a short `notes` line explaining it. Never add a TD price you did not
 see quoted. Publish to the same artifact and push.

@@ -6,7 +6,7 @@
  "home": "ATL",
  "kickoff_utc": "2026-11-15T18:00:00+00:00",
  "book": "bet365 (Sat Nov 14, via VegasInsider)",
- "logged_utc": "2026-11-15T02:20+00:00",
+ "logged_utc": "2026-11-15T02:34+00:00",
  "entries": [
   {
    "kind": "td",
@@ -15,24 +15,11 @@
    "team": "ATL",
    "price": -210,
    "book": "DraftKings",
-   "sim": 0.5648,
+   "sim": 0.5682,
    "mkt": 0.6774,
    "call": "fade",
    "live": true,
    "gate": null
-  },
-  {
-   "kind": "td",
-   "pid": "00-0038134",
-   "name": "Kenneth Walker III",
-   "team": "KC",
-   "price": -205,
-   "book": "DraftKings",
-   "sim": 0.6289,
-   "mkt": 0.6721,
-   "call": "pass",
-   "live": false,
-   "gate": "Questionable"
   },
   {
    "kind": "spread",

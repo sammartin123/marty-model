@@ -6,7 +6,7 @@
  "home": "DET",
  "kickoff_utc": "2026-11-15T14:30:00+00:00",
  "book": "bet365 (Sat Nov 14, via VegasInsider)",
- "logged_utc": "2026-11-15T02:20+00:00",
+ "logged_utc": "2026-11-15T02:34+00:00",
  "entries": [
   {
    "kind": "td",
@@ -15,7 +15,7 @@
    "team": "DET",
    "price": -110,
    "book": "DraftKings",
-   "sim": 0.4742,
+   "sim": 0.474,
    "mkt": 0.5238,
    "call": "pass",
    "live": false,
@@ -28,7 +28,7 @@
    "team": "DET",
    "price": -280,
    "book": "DraftKings",
-   "sim": 0.6166,
+   "sim": 0.6162,
    "mkt": 0.7368,
    "call": "fade",
    "live": true,

@@ -6,7 +6,7 @@
  "home": "ARI",
  "kickoff_utc": "2026-11-15T21:05:00+00:00",
  "book": "bet365 (Sat Nov 14, via VegasInsider)",
- "logged_utc": "2026-11-15T02:21+00:00",
+ "logged_utc": "2026-11-15T02:35+00:00",
  "entries": [
   {
    "kind": "yards",
@@ -18,7 +18,7 @@
    "side": "under",
    "price": null,
    "book": "DraftKings",
-   "sim": 0.6175,
+   "sim": 0.617,
    "call": "play",
    "live": false,
    "gate": "QB unclear"
@@ -30,7 +30,7 @@
    "team": "LA",
    "price": -150,
    "book": "DraftKings",
-   "sim": 0.5639,
+   "sim": 0.563,
    "mkt": 0.6,
    "call": "pass",
    "live": false,
@@ -43,7 +43,7 @@
    "team": "LA",
    "price": 115,
    "book": "DraftKings",
-   "sim": 0.3539,
+   "sim": 0.3555,
    "mkt": 0.4651,
    "call": "fade",
    "live": false,

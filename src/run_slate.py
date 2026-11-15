@@ -2,7 +2,7 @@
 usage: python3 src/run_slate.py slates/2026-W10.json   ->  out/slate.json (+ games/<AWAY_HOME>.json per game)
 
 A slate file lists the games as "AWAY_HOME" keys. Each may override market, td_odds, yard_lines, weather,
-wx_model, out, qb and sources; everything else (teams, kickoff, venue, injuries, starting QBs) is built
+wx_model, out, qb and sources (out_names / q_names for late injury changes); everything else (teams, kickoff, venue, injuries, starting QBs) is built
 automatically from the data files. "use_existing" points at a hand-finished game config to reuse."""
 import sys, os, json, datetime as dt
 import pandas as pd
@@ -33,8 +33,16 @@ def main(path):
         def pid_of(nm, team):
             x = ros[(ros.name == nm) & (ros.team == team)]
             return x.pid.iloc[0] if len(x) else names.get(nm)
-        for nm, team in ov.get('out_names', []):
-            G['out'].append(pid_of(nm, team)); G['injuries'].append(f"{team} {nm}: Out (from news reports)")
+        # Late changes after the final report (e.g. a Saturday downgrade), taken from named news sources
+        for key2, stat in (('out_names', 'Out'), ('q_names', 'Questionable')):
+            for nm, team in ov.get(key2, []):
+                pid = pid_of(nm, team)
+                if pid is None:
+                    print(f'  WARNING: {nm} ({team}) not found in the data; fix the spelling'); continue
+                if stat == 'Out':
+                    G['out'].append(pid)
+                G.setdefault('status', {})[pid] = stat
+                G['injuries'] = [x for x in G['injuries'] if not x.startswith(f"{team} {nm} (")] + [f"{team} {nm}: {stat} (late change, from news reports)"]
         for team, nm in ov.get('qb_names', {}).items():
             G['qb'][team] = pid_of(nm, team); G['inputs']['qbs'][team] = nm
             G['inputs']['low_conf'].pop(team, None)

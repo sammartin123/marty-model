@@ -109,6 +109,11 @@ Game-line calls are capped at Lean on the page for that reason.
   All together against the old model on shared player-games: TD log loss 0.3958 to 0.3892, TD Brier 0.1234
   to 0.1215, pass-yard error 57.8 to 56.5 (all clearly better); receiving and rushing yardage error no clear
   difference; win-probability Brier 0.2214 to 0.2150 (book 0.2075).
+- **Carries left by injured players go to the running backs (Nov 14 2026): tested, adopted** (`vacate_rb`).
+  When a lead back was ruled out, his share used to be spread pro rata over everyone left, which could hand a
+  quarterback 40% of the carries (Mahomes with Kenneth Walker III out). Now the vacated share goes to the
+  remaining backs. Paired backtest: rushing-yard error 23.55 to 23.40 and squared error both clearly better,
+  TD and every other metric no clear difference.
 - **Also tested, not adopted:** a player's own share of his team's past touchdowns as a usage feature
   (`td_hist`, no difference) and a yards-per-attempt ratio for backup quarterbacks (`qb_eff_pow`, made passing worse).
 - **Coverage matchups (Nov 2026): tested, not adopted.** `research/coverage_test.py` checks whether a player's

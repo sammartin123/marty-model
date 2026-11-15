@@ -29,6 +29,7 @@ CFG = dict(
     qb_kappa=0.6, qb_kappa_pos=0.15,    # passing efficiency when the starter differs from recent passers
     qb_eff_pow=0.0, qb_k_att=150.0,     # (older YPA-ratio adjustment: tested, made things worse, left off)
     td_hist=False,              # own share of the team's past TDs as a usage feature: tested, no gain, left off
+    vacate_rb=True,             # carries vacated by absent players go to the running backs, not pro rata to the QB
     qb_td_fix=True,             # quarterbacks score more rushing TDs than their carries suggest (sneaks, scrambles)
 )
 
@@ -404,6 +405,12 @@ def player_table(db, team, opp, asof, ids, qb_id=None, cfg=CFG, h2h=True):
         S = []
         for num, den in feats:
             s = np.nan_to_num((last[num] / last[den].clip(lower=0.25)).clip(0, 1.5).values.astype(float))
+            if kind == 'rush' and cfg.get('vacate_rb'):
+                # carries left by players who are out go to the running backs, not pro rata to the QB and receivers
+                vac = max(0.0, 1.0 - s.sum()); rb = last.pos.values == 'RB'
+                if vac > 0 and rb.any():
+                    base = s[rb] + 0.02
+                    s = s.copy(); s[rb] = s[rb] + vac * base / base.sum()
             S.append(s / max(s.sum(), 1e-6))
         S.append(np.full(len(last), 1.0 / len(last)))
         S = np.array(S).T

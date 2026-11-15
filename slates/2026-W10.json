@@ -87,16 +87,6 @@
     ]
    },
    "td_odds": {
-    "Kenneth Walker III": {
-     "price": -205,
-     "book": "DraftKings",
-     "all": [
-      [
-       "DraftKings",
-       -205
-      ]
-     ]
-    },
     "Bijan Robinson": {
      "price": -210,
      "book": "DraftKings",
@@ -124,7 +114,28 @@
     {
      "label": "DraftKings anytime TD and prop prices quoted by ESPN (Nov 13)",
      "url": "https://www.espn.com/espn/betting/story/_/id/50463729/week-10-nfl-odds-touchdown-props-best-bets-sunday-games"
+    },
+    {
+     "label": "Walker ruled out (Yahoo Sports, Sat Nov 14)",
+     "url": "https://sports.yahoo.com/nfl/breaking-news/article/chiefs-rb-kenneth-walker-iii-ruled-out-for-week-10-matchup-against-falcons-with-groin-injury-170331364.html"
+    },
+    {
+     "label": "Ott out, Carter elevated (Heavy via Yahoo, Sat Nov 14)",
+     "url": "https://sports.yahoo.com/articles/chiefs-quickly-add-2-players-210009157.html"
     }
+   ],
+   "out_names": [
+    [
+     "Kenneth Walker III",
+     "KC"
+    ],
+    [
+     "Jaydn Ott",
+     "KC"
+    ]
+   ],
+   "notes": [
+    "Kenneth Walker III (groin) was downgraded to Out on Saturday after the final report listed him questionable. Rookie Emmett Johnson starts, and Jaydn Ott (hamstring) is also out."
    ]
   },
   "HOU_CLE": {
@@ -215,17 +226,28 @@
     {
      "label": "Cleveland hourly forecast (Wunderground, Sat Nov 14)",
      "url": "https://www.wunderground.com/hourly/us/oh/cleveland"
+    },
+    {
+     "label": "Montgomery ruled out (USA Today via Yahoo, Sat Nov 14)",
+     "url": "https://sports.yahoo.com/articles/david-montgomery-downgraded-week-10-191740936.html"
     }
    ],
    "notes": [
-    "Deshaun Watson starts after clearing concussion protocol; coach Todd Monken confirmed it Wednesday."
+    "Deshaun Watson starts after clearing concussion protocol; coach Todd Monken confirmed it Wednesday.",
+    "Texans RB David Montgomery (groin) was ruled out on Saturday; Woody Marks leads the backfield."
    ],
    "wx_model": {
     "pass_mult": 0.969,
     "cr_mult": 0.915,
     "td_shift": -0.22,
     "fg_shift": -0.15
-   }
+   },
+   "out_names": [
+    [
+     "David Montgomery",
+     "HOU"
+    ]
+   ]
   },
   "MIN_GB": {
    "market": {
@@ -852,6 +874,10 @@
     {
      "label": "DraftKings prop lines quoted by ESPN",
      "url": "https://www.espn.com/espn/betting/story/_/id/50463729/week-10-nfl-odds-touchdown-props-best-bets-sunday-games"
+    },
+    {
+     "label": "Week 10 injury report with Saturday additions (NBC Sports)",
+     "url": "https://www.nbcsports.com/fantasy/football/news/nfl-week-10-injury-report-pats-backfield-in-flux-plus-gardner-minshew-michael-wilson-puka-nacua-injuries"
     }
    ],
    "weather": {
@@ -868,7 +894,16 @@
     "cr_mult": 0.982,
     "td_shift": -0.03,
     "fg_shift": -0.055
-   }
+   },
+   "q_names": [
+    [
+     "Pat Freiermuth",
+     "PIT"
+    ]
+   ],
+   "notes": [
+    "Steelers TE Pat Freiermuth was added to the injury report Saturday as questionable (illness), so he gets no call."
+   ]
   }
  }
 }

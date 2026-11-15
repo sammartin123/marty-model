@@ -13,13 +13,14 @@
  },
  "out": [
   "00-0031595",
+  "00-0035685",
   "00-0036556",
   "00-0039849"
  ],
  "status": {
   "00-0031595": "Out",
   "00-0041037": "Questionable",
-  "00-0035685": "Questionable",
+  "00-0035685": "Out",
   "00-0036556": "Out",
   "00-0039849": "Out"
  },
@@ -117,9 +118,9 @@
  "injuries": [
   "CLE Michael Burton (FB): Out, Calf",
   "CLE Denzel Boston (WR): Questionable, Toe",
-  "HOU David Montgomery (RB): Questionable, Groin",
   "HOU Brevin Jordan (TE): Out, Finger",
-  "HOU Marvin Harrison Jr. (WR): Out, Hamstring"
+  "HOU Marvin Harrison Jr. (WR): Out, Hamstring",
+  "HOU David Montgomery: Out (late change, from news reports)"
  ],
  "inputs": {
   "qbs": {
@@ -129,7 +130,8 @@
   "report_final": true,
   "low_conf": {},
   "notes": [
-   "Deshaun Watson starts after clearing concussion protocol; coach Todd Monken confirmed it Wednesday."
+   "Deshaun Watson starts after clearing concussion protocol; coach Todd Monken confirmed it Wednesday.",
+   "Texans RB David Montgomery (groin) was ruled out on Saturday; Woody Marks leads the backfield."
   ]
  },
  "sources": [
@@ -156,6 +158,10 @@
   {
    "label": "Cleveland hourly forecast (Wunderground, Sat Nov 14)",
    "url": "https://www.wunderground.com/hourly/us/oh/cleveland"
+  },
+  {
+   "label": "Montgomery ruled out (USA Today via Yahoo, Sat Nov 14)",
+   "url": "https://sports.yahoo.com/articles/david-montgomery-downgraded-week-10-191740936.html"
   }
  ]
 }

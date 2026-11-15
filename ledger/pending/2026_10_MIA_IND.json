@@ -6,7 +6,7 @@
  "home": "IND",
  "kickoff_utc": "2026-11-15T18:00:00+00:00",
  "book": "bet365 (Sat Nov 14, via VegasInsider)",
- "logged_utc": "2026-11-15T02:21+00:00",
+ "logged_utc": "2026-11-15T02:34+00:00",
  "entries": [
   {
    "kind": "yards",
@@ -46,7 +46,7 @@
    "side": "under",
    "price": null,
    "book": "DraftKings",
-   "sim": 0.5838,
+   "sim": 0.5854,
    "call": "play",
    "live": false,
    "gate": "QB unclear"
@@ -58,7 +58,7 @@
    "team": "MIA",
    "price": 115,
    "book": "DraftKings",
-   "sim": 0.3595,
+   "sim": 0.3621,
    "mkt": 0.4651,
    "call": "fade",
    "live": false,

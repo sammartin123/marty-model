@@ -11,8 +11,12 @@
   "CIN": "00-0036442",
   "PIT": "00-0023459"
  },
- "out": [],
- "status": {},
+ "out": [
+  "00-0038619"
+ ],
+ "status": {
+  "00-0038619": "Doubtful"
+ },
  "out_json": "out/PIT_CIN.json",
  "meta": {
   "title": "Steelers at Bengals",
@@ -32,50 +36,34 @@
  },
  "market": {
   "spread_home": -3.5,
-  "total": 47.5,
-  "ml_home": -198,
-  "ml_away": 164,
-  "book": "DraftKings (the lines ESPN shows)",
+  "total": 49.5,
+  "ml_home": -187,
+  "ml_away": 157,
+  "book": "bet365 (Sat Nov 14, via VegasInsider)",
   "others": [
    {
-    "book": "Fanatics",
+    "book": "DraftKings (Sat Nov 14)",
     "spread_home": -3.5,
-    "total": 48.5,
-    "ml_home": -195,
-    "ml_away": 160
-   },
-   {
-    "book": "BetMGM",
-    "spread_home": -4,
-    "total": 48.5,
-    "ml_home": -190,
-    "ml_away": 160
-   },
-   {
-    "book": "FanDuel (open)",
-    "spread_home": -3.5,
-    "total": 47.5,
-    "ml_home": -200,
-    "ml_away": 168
+    "total": 49.5,
+    "ml_home": -185,
+    "ml_away": 154
    }
   ]
  },
  "weather": {
-  "summary": "Cold and mostly dry",
-  "temp_f": 38,
-  "high_c": 9.2,
-  "low_c": 0.4,
-  "precip": 15,
+  "summary": "Chilly and dry",
+  "precip": 10,
   "wind": null,
   "rain_flag": false,
-  "note": "Daily forecast only: 15% chance of precipitation Sunday, high 9\u00b0C, low 0\u00b0C. Kickoff is 8:20 PM, so expect roughly 3 to 4\u00b0C (high 30s \u00b0F). No hourly or wind forecast was available.",
-  "effect": "Rain chance is under the 30% line, so no prop type is ruled out. The sim trims passing efficiency and scoring slightly for the cold."
+  "temp_f": 41,
+  "note": "Cincinnati, 8:20 PM kickoff: high 8\u00b0C, low 3\u00b0C, 10% chance of rain, so roughly 40 to 43\u00b0F at kickoff, right on the 40\u00b0F cold line. Daily forecast only; no hourly or wind forecast was found.",
+  "effect": "Rain chance is under the 30% line. Half the measured cold effect is applied because kickoff sits right at 40\u00b0F."
  },
  "wx_model": {
-  "pass_mult": 0.987,
-  "cr_mult": 0.964,
-  "td_shift": -0.06,
-  "fg_shift": -0.11
+  "pass_mult": 0.9935,
+  "cr_mult": 0.982,
+  "td_shift": -0.03,
+  "fg_shift": -0.055
  },
  "td_odds": {
   "Ja'Marr Chase": {
@@ -376,7 +364,9 @@
    }
   ]
  },
- "injuries": [],
+ "injuries": [
+  "CIN Andrei Iosivas (WR): Doubtful, Thumb"
+ ],
  "inputs": {
   "qbs": {
    "CIN": "Joe Burrow",
@@ -390,6 +380,10 @@
   {
    "label": "Play-by-play, rosters, depth charts, injuries, schedule (nflverse)",
    "url": "https://github.com/nflverse/nflverse-data"
+  },
+  {
+   "label": "Game lines: bet365 and DraftKings spreads, totals and moneylines (VegasInsider odds board, Sat Nov 14)",
+   "url": "https://www.vegasinsider.com/nfl/odds/las-vegas/"
   },
   {
    "label": "Game lines and anytime TD prices (Fanatics, Nov 13)",

@@ -5,8 +5,8 @@
  "away": "CAR",
  "home": "NO",
  "kickoff_utc": "2026-11-15T18:00:00+00:00",
- "book": "ESPN lines (DraftKings)",
- "logged_utc": "2026-11-14T20:26+00:00",
+ "book": "bet365 (Sat Nov 14, via VegasInsider)",
+ "logged_utc": "2026-11-15T02:21+00:00",
  "entries": [
   {
    "kind": "td",
@@ -15,7 +15,7 @@
    "team": "NO",
    "price": 120,
    "book": "DraftKings",
-   "sim": 0.4214,
+   "sim": 0.447,
    "mkt": 0.4545,
    "call": "pass",
    "live": false,
@@ -28,7 +28,7 @@
    "team": "CAR",
    "price": -160,
    "book": "DraftKings",
-   "sim": 0.5248,
+   "sim": 0.525,
    "mkt": 0.6154,
    "call": "fade",
    "live": true,
@@ -41,7 +41,7 @@
    "team": "CAR",
    "price": 140,
    "book": "DraftKings",
-   "sim": 0.3119,
+   "sim": 0.3098,
    "mkt": 0.4167,
    "call": "fade",
    "live": true,
@@ -73,7 +73,7 @@
    "live": true,
    "gate": null,
    "team": "CAR",
-   "price": 110,
+   "price": 119,
    "sim": 0.572
   }
  ]

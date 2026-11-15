@@ -11,8 +11,13 @@
   "TEN": "00-0040676",
   "JAX": "00-0036971"
  },
- "out": [],
- "status": {},
+ "out": [
+  "00-0041438"
+ ],
+ "status": {
+  "00-0039032": "Questionable",
+  "00-0041438": "Out"
+ },
  "out_json": "out/JAX_TEN.json",
  "meta": {
   "title": "Jaguars at Titans",
@@ -33,17 +38,25 @@
  "market": {
   "spread_home": 10.5,
   "total": 46.5,
-  "ml_home": 440,
+  "ml_home": 450,
   "ml_away": -600,
-  "book": "ESPN lines (DraftKings)",
-  "others": []
+  "book": "bet365 (Sat Nov 14, via VegasInsider)",
+  "others": [
+   {
+    "book": "DraftKings (Sat Nov 14)",
+    "spread_home": 10.5,
+    "total": 46.5,
+    "ml_home": 500,
+    "ml_away": -700
+   }
+  ]
  },
  "weather": {
   "summary": "Mild and dry",
-  "precip": 0,
+  "precip": 10,
   "wind": null,
   "rain_flag": false,
-  "note": "Nashville: about 11\u00b0C (low 50s \u00b0F), 0% chance of rain. Daily forecast only. No hourly or wind forecast was available, so wind is not adjusted for.",
+  "note": "Nashville: high about 12\u00b0C (mid 50s \u00b0F), 10% chance of rain. Daily forecast only; no current hourly or wind forecast was found.",
   "effect": "No weather adjustment."
  },
  "wx_model": {
@@ -85,7 +98,10 @@
   }
  },
  "yard_lines": {},
- "injuries": [],
+ "injuries": [
+  "TEN Tyjae Spears (RB): Questionable, Knee",
+  "TEN Carnell Tate (WR): Out, Shoulder"
+ ],
  "inputs": {
   "qbs": {
    "TEN": "Cam Ward",
@@ -101,8 +117,8 @@
    "url": "https://github.com/nflverse/nflverse-data"
   },
   {
-   "label": "Game lines for every game (ESPN, updated Nov 12)",
-   "url": "https://abc7ny.com/post/nfl-week-10-betting-odds-lines-totals-every-game/20026536/"
+   "label": "Game lines: bet365 and DraftKings spreads, totals and moneylines (VegasInsider odds board, Sat Nov 14)",
+   "url": "https://www.vegasinsider.com/nfl/odds/las-vegas/"
   },
   {
    "label": "DraftKings anytime TD and prop prices quoted by ESPN (Nov 13)",

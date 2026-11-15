@@ -5,8 +5,8 @@
  "away": "NE",
  "home": "DET",
  "kickoff_utc": "2026-11-15T14:30:00+00:00",
- "book": "ESPN lines (DraftKings)",
- "logged_utc": "2026-11-14T20:25+00:00",
+ "book": "bet365 (Sat Nov 14, via VegasInsider)",
+ "logged_utc": "2026-11-15T02:20+00:00",
  "entries": [
   {
    "kind": "td",
@@ -15,11 +15,11 @@
    "team": "DET",
    "price": -110,
    "book": "DraftKings",
-   "sim": 0.4955,
+   "sim": 0.4742,
    "mkt": 0.5238,
    "call": "pass",
    "live": false,
-   "gate": null
+   "gate": "Questionable"
   },
   {
    "kind": "td",
@@ -28,7 +28,7 @@
    "team": "DET",
    "price": -280,
    "book": "DraftKings",
-   "sim": 0.6386,
+   "sim": 0.6166,
    "mkt": 0.7368,
    "call": "fade",
    "live": true,
@@ -40,7 +40,7 @@
    "live": true,
    "gate": null,
    "team": "NE",
-   "line": 3.0,
+   "line": 2.5,
    "price": -110,
    "sim": 0.5654
   },
@@ -49,10 +49,10 @@
    "call": "pass",
    "live": false,
    "gate": null,
-   "side": "under",
-   "line": 51.5,
+   "side": "over",
+   "line": 49.5,
    "price": -110,
-   "sim": 0.5352
+   "sim": 0.5317
   },
   {
    "kind": "ml",
@@ -60,7 +60,7 @@
    "live": true,
    "gate": null,
    "team": "NE",
-   "price": 130,
+   "price": 127,
    "sim": 0.512
   }
  ]

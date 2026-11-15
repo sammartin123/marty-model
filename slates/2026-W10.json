@@ -7,12 +7,20 @@
  "games": {
   "NE_DET": {
    "market": {
-    "spread_home": -3.0,
-    "total": 51.5,
-    "ml_home": -155,
-    "ml_away": 130,
-    "book": "ESPN lines (DraftKings)",
-    "others": []
+    "spread_home": -2.5,
+    "total": 49.5,
+    "ml_home": -152,
+    "ml_away": 127,
+    "book": "bet365 (Sat Nov 14, via VegasInsider)",
+    "others": [
+     {
+      "book": "DraftKings (Sat Nov 14)",
+      "spread_home": -2.5,
+      "total": 49.5,
+      "ml_home": -148,
+      "ml_away": 124
+     }
+    ]
    },
    "td_odds": {
     "Jahmyr Gibbs": {
@@ -41,28 +49,42 @@
     "precip": 10,
     "wind": null,
     "rain_flag": false,
-    "note": "Munich, 3:30 PM local kickoff: about 7\u00b0C (mid 40s \u00b0F), 10% chance of rain for the day. Daily forecast only. No hourly or wind forecast was available, so wind is not adjusted for.",
+    "note": "Munich, 3:30 PM local kickoff: high about 8\u00b0C (mid 40s \u00b0F), 10% chance of rain. Daily forecast only; no hourly or wind forecast was found.",
     "effect": "No weather adjustment."
    },
    "sources": [
     {
-     "label": "Game lines for every game (ESPN, updated Nov 12)",
-     "url": "https://abc7ny.com/post/nfl-week-10-betting-odds-lines-totals-every-game/20026536/"
+     "label": "Game lines: bet365 and DraftKings spreads, totals and moneylines (VegasInsider odds board, Sat Nov 14)",
+     "url": "https://www.vegasinsider.com/nfl/odds/las-vegas/"
     },
     {
      "label": "DraftKings anytime TD and prop prices quoted by ESPN (Nov 13)",
      "url": "https://www.espn.com/espn/betting/story/_/id/50463729/week-10-nfl-odds-touchdown-props-best-bets-sunday-games"
     }
-   ]
+   ],
+   "wx_model": {
+    "pass_mult": 1.0,
+    "cr_mult": 1.0,
+    "td_shift": 0.0,
+    "fg_shift": 0.0
+   }
   },
   "KC_ATL": {
    "market": {
-    "spread_home": 3.0,
-    "total": 46.5,
-    "ml_home": 150,
-    "ml_away": -180,
-    "book": "ESPN lines (DraftKings)",
-    "others": []
+    "spread_home": 3.5,
+    "total": 47.5,
+    "ml_home": 142,
+    "ml_away": -167,
+    "book": "bet365 (Sat Nov 14, via VegasInsider)",
+    "others": [
+     {
+      "book": "DraftKings (Sat Nov 14)",
+      "spread_home": 3.0,
+      "total": 47.5,
+      "ml_home": 145,
+      "ml_away": -175
+     }
+    ]
    },
    "td_odds": {
     "Kenneth Walker III": {
@@ -96,8 +118,8 @@
    },
    "sources": [
     {
-     "label": "Game lines for every game (ESPN, updated Nov 12)",
-     "url": "https://abc7ny.com/post/nfl-week-10-betting-odds-lines-totals-every-game/20026536/"
+     "label": "Game lines: bet365 and DraftKings spreads, totals and moneylines (VegasInsider odds board, Sat Nov 14)",
+     "url": "https://www.vegasinsider.com/nfl/odds/las-vegas/"
     },
     {
      "label": "DraftKings anytime TD and prop prices quoted by ESPN (Nov 13)",
@@ -109,10 +131,18 @@
    "market": {
     "spread_home": 4.5,
     "total": 40.5,
-    "ml_home": 185,
-    "ml_away": -225,
-    "book": "ESPN lines (DraftKings)",
-    "others": []
+    "ml_home": 190,
+    "ml_away": -235,
+    "book": "bet365 (Sat Nov 14, via VegasInsider)",
+    "others": [
+     {
+      "book": "DraftKings (Sat Nov 14)",
+      "spread_home": 4.5,
+      "total": 40.5,
+      "ml_home": 195,
+      "ml_away": -238
+     }
+    ]
    },
    "td_odds": {
     "Quinshon Judkins": {
@@ -157,17 +187,18 @@
     }
    },
    "weather": {
-    "summary": "Cool, small rain chance",
-    "precip": 20,
-    "wind": null,
-    "rain_flag": false,
-    "note": "Cleveland: about 7\u00b0C (mid 40s \u00b0F), 20% chance of rain for the day. Daily forecast only. No hourly or wind forecast was available, so wind is not adjusted for.",
-    "effect": "Rain chance is under the 30% line, so no adjustment."
+    "summary": "Rain likely, breezy",
+    "precip": 50,
+    "wind": "NNW 10 to 20 mph",
+    "rain_flag": true,
+    "temp_f": 45,
+    "note": "Cleveland, 1 PM kickoff: about 45\u00b0F. Wunderground\u2019s hourly forecast has roughly a 40 to 60% chance of rain through the game window and 60% for the day, with NNW winds of 10 to 20 mph. The daily weather tool is lower at 35%. Either way it is over the 30% line.",
+    "effect": "Real rain risk: steer away from receiving-yard overs, especially secondary targets, and toward rushing volume, receptions or unders. The sim trims passing and scoring for rain at about half weight plus some wind."
    },
    "sources": [
     {
-     "label": "Game lines for every game (ESPN, updated Nov 12)",
-     "url": "https://abc7ny.com/post/nfl-week-10-betting-odds-lines-totals-every-game/20026536/"
+     "label": "Game lines: bet365 and DraftKings spreads, totals and moneylines (VegasInsider odds board, Sat Nov 14)",
+     "url": "https://www.vegasinsider.com/nfl/odds/las-vegas/"
     },
     {
      "label": "DraftKings anytime TD and prop prices quoted by ESPN (Nov 13)",
@@ -176,20 +207,42 @@
     {
      "label": "Browns expected to start Deshaun Watson (Field Level Media, Nov 9)",
      "url": "https://fieldlevelmedia.com/news/browns-expected-to-start-deshaun-watson-vs-texans/"
+    },
+    {
+     "label": "Watson to start vs Texans (Lineups.com, Nov 11)",
+     "url": "https://www.lineups.com/articles/deshaun-watson-will-start-for-browns-against-texans-in-week-10/"
+    },
+    {
+     "label": "Cleveland hourly forecast (Wunderground, Sat Nov 14)",
+     "url": "https://www.wunderground.com/hourly/us/oh/cleveland"
     }
    ],
    "notes": [
-    "Deshaun Watson is reported to return as the Browns starter after missing Week 9 (concussion). The coach had not confirmed it publicly."
-   ]
+    "Deshaun Watson starts after clearing concussion protocol; coach Todd Monken confirmed it Wednesday."
+   ],
+   "wx_model": {
+    "pass_mult": 0.969,
+    "cr_mult": 0.915,
+    "td_shift": -0.22,
+    "fg_shift": -0.15
+   }
   },
   "MIN_GB": {
    "market": {
-    "spread_home": -3.0,
-    "total": 41.5,
-    "ml_home": -155,
-    "ml_away": 130,
-    "book": "ESPN lines (DraftKings)",
-    "others": []
+    "spread_home": -2.5,
+    "total": 42.5,
+    "ml_home": -154,
+    "ml_away": 129,
+    "book": "bet365 (Sat Nov 14, via VegasInsider)",
+    "others": [
+     {
+      "book": "DraftKings (Sat Nov 14)",
+      "spread_home": -2.5,
+      "total": 42.5,
+      "ml_home": -148,
+      "ml_away": 124
+     }
+    ]
    },
    "td_odds": {
     "Matthew Golden": {
@@ -204,46 +257,59 @@
     }
    },
    "weather": {
-    "summary": "Cool and dry",
-    "precip": 0,
-    "wind": null,
+    "summary": "Sunny, light wind",
+    "precip": 8,
+    "wind": "Light and variable",
     "rain_flag": false,
-    "note": "Green Bay: about 6\u00b0C (low 40s \u00b0F) at kickoff, 0% chance of precipitation. Daily forecast only. No hourly or wind forecast was available, so wind is not adjusted for.",
+    "temp_f": 45,
+    "note": "Green Bay, noon CT kickoff: Wunderground\u2019s hourly forecast has 44 to 47\u00b0F through the game, mainly sunny, 8% chance of rain and light winds.",
     "effect": "No weather adjustment."
    },
    "sources": [
     {
-     "label": "Game lines for every game (ESPN, updated Nov 12)",
-     "url": "https://abc7ny.com/post/nfl-week-10-betting-odds-lines-totals-every-game/20026536/"
+     "label": "Game lines: bet365 and DraftKings spreads, totals and moneylines (VegasInsider odds board, Sat Nov 14)",
+     "url": "https://www.vegasinsider.com/nfl/odds/las-vegas/"
     },
     {
      "label": "DraftKings anytime TD and prop prices quoted by ESPN (Nov 13)",
      "url": "https://www.espn.com/espn/betting/story/_/id/50463729/week-10-nfl-odds-touchdown-props-best-bets-sunday-games"
     },
     {
-     "label": "Josh Jacobs status (Sportsnaut preview)",
-     "url": "https://sportsnaut.com/nfl/green-bay-packers-predictions-vs-minnesota-vikings"
+     "label": "Vikings won\u2019t commit to Cousins starting (NFL.com)",
+     "url": "https://www.nfl.com/news/vikings-wont-commit-to-kirk-cousins-starting-packers"
+    },
+    {
+     "label": "Green Bay hourly forecast (Wunderground, Sat Nov 14)",
+     "url": "https://www.wunderground.com/hourly/us/wi/green-bay/54311"
     }
    ],
-   "out_names": [
-    [
-     "Josh Jacobs",
-     "GB"
-    ]
-   ],
    "notes": [
-    "Kirk Cousins joined the Vikings this week and tops their depth chart. Kyler Murray (hamstring) has not practised.",
-    "Packers RB Josh Jacobs (finger) is reported out."
-   ]
+    "Kyler Murray (hamstring) is out. Kirk Cousins, acquired from the Raiders on Tuesday, is expected to start, but Kevin O\u2019Connell had not formally named him as of the last reports found; Carson Wentz is the alternative. Calls are held until the starter is confirmed.",
+    "Packers RB Josh Jacobs (finger) is out on the final report."
+   ],
+   "wx_model": {
+    "pass_mult": 1.0,
+    "cr_mult": 1.0,
+    "td_shift": 0.0,
+    "fg_shift": 0.0
+   }
   },
   "MIA_IND": {
    "market": {
     "spread_home": -3.5,
     "total": 38.5,
-    "ml_home": -205,
-    "ml_away": 170,
-    "book": "ESPN lines (DraftKings)",
-    "others": []
+    "ml_home": -220,
+    "ml_away": 180,
+    "book": "bet365 (Sat Nov 14, via VegasInsider)",
+    "others": [
+     {
+      "book": "DraftKings (Sat Nov 14)",
+      "spread_home": -3.5,
+      "total": 38.5,
+      "ml_home": -218,
+      "ml_away": 180
+     }
+    ]
    },
    "td_odds": {
     "Jonathan Taylor": {
@@ -295,8 +361,8 @@
    },
    "sources": [
     {
-     "label": "Game lines for every game (ESPN, updated Nov 12)",
-     "url": "https://abc7ny.com/post/nfl-week-10-betting-odds-lines-totals-every-game/20026536/"
+     "label": "Game lines: bet365 and DraftKings spreads, totals and moneylines (VegasInsider odds board, Sat Nov 14)",
+     "url": "https://www.vegasinsider.com/nfl/odds/las-vegas/"
     },
     {
      "label": "DraftKings anytime TD and prop prices quoted by ESPN (Nov 13)",
@@ -308,17 +374,25 @@
     }
    ],
    "notes": [
-    "Dolphins QB Malik Willis is on injured reserve. Kyle McCord makes his first NFL start."
+    "Dolphins QB Malik Willis is on injured reserve. Kyle McCord makes his first NFL start. No calls on this game."
    ]
   },
   "CAR_NO": {
    "market": {
     "spread_home": -2.5,
     "total": 48.5,
-    "ml_home": -130,
-    "ml_away": 110,
-    "book": "ESPN lines (DraftKings)",
-    "others": []
+    "ml_home": -139,
+    "ml_away": 119,
+    "book": "bet365 (Sat Nov 14, via VegasInsider)",
+    "others": [
+     {
+      "book": "DraftKings (Sat Nov 14)",
+      "spread_home": -2.5,
+      "total": 48.5,
+      "ml_home": -135,
+      "ml_away": 114
+     }
+    ]
    },
    "td_odds": {
     "Chuba Hubbard": {
@@ -354,8 +428,8 @@
    },
    "sources": [
     {
-     "label": "Game lines for every game (ESPN, updated Nov 12)",
-     "url": "https://abc7ny.com/post/nfl-week-10-betting-odds-lines-totals-every-game/20026536/"
+     "label": "Game lines: bet365 and DraftKings spreads, totals and moneylines (VegasInsider odds board, Sat Nov 14)",
+     "url": "https://www.vegasinsider.com/nfl/odds/las-vegas/"
     },
     {
      "label": "DraftKings anytime TD and prop prices quoted by ESPN (Nov 13)",
@@ -365,12 +439,20 @@
   },
   "BUF_NYJ": {
    "market": {
-    "spread_home": 8.5,
+    "spread_home": 7.5,
     "total": 50.5,
     "ml_home": 340,
     "ml_away": -440,
-    "book": "ESPN lines (DraftKings)",
-    "others": []
+    "book": "bet365 (Sat Nov 14, via VegasInsider)",
+    "others": [
+     {
+      "book": "DraftKings (Sat Nov 14)",
+      "spread_home": 8.5,
+      "total": 50.5,
+      "ml_home": 330,
+      "ml_away": -425
+     }
+    ]
    },
    "td_odds": {
     "James Cook": {
@@ -409,28 +491,42 @@
     "precip": 5,
     "wind": null,
     "rain_flag": false,
-    "note": "East Rutherford: about 9\u00b0C (upper 40s \u00b0F), 5% chance of rain for the day. Daily forecast only. No hourly or wind forecast was available, so wind is not adjusted for.",
+    "note": "East Rutherford: high about 10\u00b0C (50\u00b0F), 5% chance of rain for the day. Daily forecast only; no current hourly or wind forecast was found, so wind is not adjusted for.",
     "effect": "No weather adjustment."
    },
    "sources": [
     {
-     "label": "Game lines for every game (ESPN, updated Nov 12)",
-     "url": "https://abc7ny.com/post/nfl-week-10-betting-odds-lines-totals-every-game/20026536/"
+     "label": "Game lines: bet365 and DraftKings spreads, totals and moneylines (VegasInsider odds board, Sat Nov 14)",
+     "url": "https://www.vegasinsider.com/nfl/odds/las-vegas/"
     },
     {
      "label": "DraftKings anytime TD and prop prices quoted by ESPN (Nov 13)",
      "url": "https://www.espn.com/espn/betting/story/_/id/50463729/week-10-nfl-odds-touchdown-props-best-bets-sunday-games"
     }
-   ]
+   ],
+   "wx_model": {
+    "pass_mult": 1.0,
+    "cr_mult": 1.0,
+    "td_shift": 0.0,
+    "fg_shift": 0.0
+   }
   },
   "JAX_TEN": {
    "market": {
     "spread_home": 10.5,
     "total": 46.5,
-    "ml_home": 440,
+    "ml_home": 450,
     "ml_away": -600,
-    "book": "ESPN lines (DraftKings)",
-    "others": []
+    "book": "bet365 (Sat Nov 14, via VegasInsider)",
+    "others": [
+     {
+      "book": "DraftKings (Sat Nov 14)",
+      "spread_home": 10.5,
+      "total": 46.5,
+      "ml_home": 500,
+      "ml_away": -700
+     }
+    ]
    },
    "td_odds": {
     "Bhayshul Tuten": {
@@ -466,31 +562,45 @@
    },
    "weather": {
     "summary": "Mild and dry",
-    "precip": 0,
+    "precip": 10,
     "wind": null,
     "rain_flag": false,
-    "note": "Nashville: about 11\u00b0C (low 50s \u00b0F), 0% chance of rain. Daily forecast only. No hourly or wind forecast was available, so wind is not adjusted for.",
+    "note": "Nashville: high about 12\u00b0C (mid 50s \u00b0F), 10% chance of rain. Daily forecast only; no current hourly or wind forecast was found.",
     "effect": "No weather adjustment."
    },
    "sources": [
     {
-     "label": "Game lines for every game (ESPN, updated Nov 12)",
-     "url": "https://abc7ny.com/post/nfl-week-10-betting-odds-lines-totals-every-game/20026536/"
+     "label": "Game lines: bet365 and DraftKings spreads, totals and moneylines (VegasInsider odds board, Sat Nov 14)",
+     "url": "https://www.vegasinsider.com/nfl/odds/las-vegas/"
     },
     {
      "label": "DraftKings anytime TD and prop prices quoted by ESPN (Nov 13)",
      "url": "https://www.espn.com/espn/betting/story/_/id/50463729/week-10-nfl-odds-touchdown-props-best-bets-sunday-games"
     }
-   ]
+   ],
+   "wx_model": {
+    "pass_mult": 1.0,
+    "cr_mult": 1.0,
+    "td_shift": 0.0,
+    "fg_shift": 0.0
+   }
   },
   "LA_ARI": {
    "market": {
     "spread_home": 9.5,
     "total": 39.5,
-    "ml_home": 390,
-    "ml_away": -520,
-    "book": "ESPN lines (DraftKings)",
-    "others": []
+    "ml_home": 375,
+    "ml_away": -500,
+    "book": "bet365 (Sat Nov 14, via VegasInsider)",
+    "others": [
+     {
+      "book": "DraftKings (Sat Nov 14)",
+      "spread_home": 9.5,
+      "total": 39.5,
+      "ml_home": 380,
+      "ml_away": -500
+     }
+    ]
    },
    "td_odds": {
     "Kyren Williams": {
@@ -534,8 +644,8 @@
    },
    "sources": [
     {
-     "label": "Game lines for every game (ESPN, updated Nov 12)",
-     "url": "https://abc7ny.com/post/nfl-week-10-betting-odds-lines-totals-every-game/20026536/"
+     "label": "Game lines: bet365 and DraftKings spreads, totals and moneylines (VegasInsider odds board, Sat Nov 14)",
+     "url": "https://www.vegasinsider.com/nfl/odds/las-vegas/"
     },
     {
      "label": "DraftKings anytime TD and prop prices quoted by ESPN (Nov 13)",
@@ -543,7 +653,7 @@
     }
    ],
    "notes": [
-    "Cardinals rookie Carson Beck tops the depth chart after Jacoby Brissett was released and Gardner Minshew went on reserve."
+    "Cardinals rookie Carson Beck was named the Week 10 starter on Wednesday and makes his first NFL start (Jacoby Brissett released, Gardner Minshew on reserve). No calls on this game."
    ]
   },
   "SEA_LV": {
@@ -551,9 +661,17 @@
     "spread_home": 6.5,
     "total": 40.5,
     "ml_home": 240,
-    "ml_away": -298,
-    "book": "ESPN lines (DraftKings)",
-    "others": []
+    "ml_away": -300,
+    "book": "bet365 (Sat Nov 14, via VegasInsider)",
+    "others": [
+     {
+      "book": "DraftKings (Sat Nov 14)",
+      "spread_home": 6.5,
+      "total": 40.5,
+      "ml_home": 245,
+      "ml_away": -305
+     }
+    ]
    },
    "td_odds": {
     "Jaxon Smith-Njigba": {
@@ -589,27 +707,43 @@
    },
    "sources": [
     {
-     "label": "Game lines for every game (ESPN, updated Nov 12)",
-     "url": "https://abc7ny.com/post/nfl-week-10-betting-odds-lines-totals-every-game/20026536/"
+     "label": "Game lines: bet365 and DraftKings spreads, totals and moneylines (VegasInsider odds board, Sat Nov 14)",
+     "url": "https://www.vegasinsider.com/nfl/odds/las-vegas/"
     },
     {
      "label": "DraftKings anytime TD and prop prices quoted by ESPN (Nov 13)",
      "url": "https://www.espn.com/espn/betting/story/_/id/50463729/week-10-nfl-odds-touchdown-props-best-bets-sunday-games"
+    },
+    {
+     "label": "Darnold out, Lock to start (ABC7/ESPN, Nov 9)",
+     "url": "https://abc7news.com/post/seahawks-start-qb-drew-lock-raiders-giving-sam-darnold-more-time-heal/20027067/"
+    },
+    {
+     "label": "Raiders name Mendoza starter (ABC30/ESPN, Nov 11)",
+     "url": "https://abc30.com/post/raiders-name-fernando-mendoza-starting-qb-trading-away-kirk-cousins/20031696/"
     }
    ],
    "notes": [
-    "Seahawks QB Sam Darnold missed Week 9 and has not practised this week (ribs). If he is ruled out, Drew Lock starts.",
-    "Raiders rookie Fernando Mendoza now tops the depth chart after Kirk Cousins left."
+    "Seahawks QB Sam Darnold (quad, ribs) is out; Drew Lock starts, confirmed by Mike Macdonald.",
+    "Raiders rookie Fernando Mendoza, the No. 1 pick, makes his first NFL start after Kirk Cousins was traded to Minnesota. No calls on this game because Mendoza has almost no NFL sample."
    ]
   },
   "SF_DAL": {
    "market": {
-    "spread_home": 3.5,
+    "spread_home": 4.5,
     "total": 55.5,
-    "ml_home": 170,
-    "ml_away": -205,
-    "book": "ESPN lines (DraftKings)",
-    "others": []
+    "ml_home": 180,
+    "ml_away": -220,
+    "book": "bet365 (Sat Nov 14, via VegasInsider)",
+    "others": [
+     {
+      "book": "DraftKings (Sat Nov 14)",
+      "spread_home": 4.5,
+      "total": 55.5,
+      "ml_home": 180,
+      "ml_away": -218
+     }
+    ]
    },
    "td_odds": {
     "Christian McCaffrey": {
@@ -663,8 +797,8 @@
    },
    "sources": [
     {
-     "label": "Game lines for every game (ESPN, updated Nov 12)",
-     "url": "https://abc7ny.com/post/nfl-week-10-betting-odds-lines-totals-every-game/20026536/"
+     "label": "Game lines: bet365 and DraftKings spreads, totals and moneylines (VegasInsider odds board, Sat Nov 14)",
+     "url": "https://www.vegasinsider.com/nfl/odds/las-vegas/"
     },
     {
      "label": "DraftKings anytime TD and prop prices quoted by ESPN (Nov 13)",
@@ -673,7 +807,68 @@
    ]
   },
   "PIT_CIN": {
-   "use_existing": "games/PIT_CIN.json"
+   "use_existing": "games/PIT_CIN.json",
+   "market": {
+    "spread_home": -3.5,
+    "total": 49.5,
+    "ml_home": -187,
+    "ml_away": 157,
+    "book": "bet365 (Sat Nov 14, via VegasInsider)",
+    "others": [
+     {
+      "book": "DraftKings (Sat Nov 14)",
+      "spread_home": -3.5,
+      "total": 49.5,
+      "ml_home": -185,
+      "ml_away": 154
+     }
+    ]
+   },
+   "sources": [
+    {
+     "label": "Game lines: bet365 and DraftKings spreads, totals and moneylines (VegasInsider odds board, Sat Nov 14)",
+     "url": "https://www.vegasinsider.com/nfl/odds/las-vegas/"
+    },
+    {
+     "label": "Game lines and anytime TD prices (Fanatics, Nov 13)",
+     "url": "https://betfanatics.com/blog/steelers-vs-bengals-odds-spreads-and-lines"
+    },
+    {
+     "label": "Anytime TD prices (BetMGM, Nov 12)",
+     "url": "https://sports.betmgm.com/en/blog/nfl/steelers-bengals-first-anytime-td-odds-picks-week-10-gaa/"
+    },
+    {
+     "label": "Best anytime TD price across books (OddsShopper, Nov 13)",
+     "url": "https://www.oddsshopper.com/articles/expert-picks/pittsburgh-steelers-vs-cincinnati-bengals-anytime-td-picks-2026-11-15"
+    },
+    {
+     "label": "Anytime TD prices by book (Covers)",
+     "url": "https://www.covers.com/sport/football/nfl/teams/main/pittsburgh-steelers/odds"
+    },
+    {
+     "label": "DraftKings game line (StatSniper)",
+     "url": "https://statsniper.com/leagues/nfl/game/2026/week-10/pit-vs-cin/"
+    },
+    {
+     "label": "DraftKings prop lines quoted by ESPN",
+     "url": "https://www.espn.com/espn/betting/story/_/id/50463729/week-10-nfl-odds-touchdown-props-best-bets-sunday-games"
+    }
+   ],
+   "weather": {
+    "summary": "Chilly and dry",
+    "precip": 10,
+    "wind": null,
+    "rain_flag": false,
+    "temp_f": 41,
+    "note": "Cincinnati, 8:20 PM kickoff: high 8\u00b0C, low 3\u00b0C, 10% chance of rain, so roughly 40 to 43\u00b0F at kickoff, right on the 40\u00b0F cold line. Daily forecast only; no hourly or wind forecast was found.",
+    "effect": "Rain chance is under the 30% line. Half the measured cold effect is applied because kickoff sits right at 40\u00b0F."
+   },
+   "wx_model": {
+    "pass_mult": 0.9935,
+    "cr_mult": 0.982,
+    "td_shift": -0.03,
+    "fg_shift": -0.055
+   }
   }
  }
 }

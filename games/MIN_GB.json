@@ -12,9 +12,22 @@
   "MIN": "00-0029604"
  },
  "out": [
-  "00-0035700"
+  "00-0035228",
+  "00-0035229",
+  "00-0035700",
+  "00-0036259",
+  "00-0038589"
  ],
- "status": {},
+ "status": {
+  "00-0035700": "Out",
+  "00-0038090": "Questionable",
+  "00-0038589": "Out",
+  "00-0038685": "Questionable",
+  "00-0035228": "Out",
+  "00-0035229": "Out",
+  "00-0036259": "Out",
+  "00-0038994": "Questionable"
+ },
  "out_json": "out/MIN_GB.json",
  "meta": {
   "title": "Vikings at Packers",
@@ -33,19 +46,28 @@
   "td_note": "Market = the DraftKings anytime TD price quoted by ESPN on Nov 13. Only players with a quoted price get a call, and nobody listed as questionable gets one. Confirm the price in your own book first: the call only holds at the price shown or longer."
  },
  "market": {
-  "spread_home": -3.0,
-  "total": 41.5,
-  "ml_home": -155,
-  "ml_away": 130,
-  "book": "ESPN lines (DraftKings)",
-  "others": []
+  "spread_home": -2.5,
+  "total": 42.5,
+  "ml_home": -154,
+  "ml_away": 129,
+  "book": "bet365 (Sat Nov 14, via VegasInsider)",
+  "others": [
+   {
+    "book": "DraftKings (Sat Nov 14)",
+    "spread_home": -2.5,
+    "total": 42.5,
+    "ml_home": -148,
+    "ml_away": 124
+   }
+  ]
  },
  "weather": {
-  "summary": "Cool and dry",
-  "precip": 0,
-  "wind": null,
+  "summary": "Sunny, light wind",
+  "precip": 8,
+  "wind": "Light and variable",
   "rain_flag": false,
-  "note": "Green Bay: about 6\u00b0C (low 40s \u00b0F) at kickoff, 0% chance of precipitation. Daily forecast only. No hourly or wind forecast was available, so wind is not adjusted for.",
+  "temp_f": 45,
+  "note": "Green Bay, noon CT kickoff: Wunderground\u2019s hourly forecast has 44 to 47\u00b0F through the game, mainly sunny, 8% chance of rain and light winds.",
   "effect": "No weather adjustment."
  },
  "wx_model": {
@@ -68,7 +90,14 @@
  },
  "yard_lines": {},
  "injuries": [
-  "GB Josh Jacobs: Out (from news reports)"
+  "GB Josh Jacobs (RB): Out, Finger",
+  "GB Skyy Moore (WR): Questionable, Ankle",
+  "GB Josh Whyle (TE): Out, Concussion",
+  "GB Chris Brooks (RB): Questionable, Ankle",
+  "MIN Kyler Murray (QB): Out, Hamstring",
+  "MIN T.J. Hockenson (TE): Out, Wrist",
+  "MIN Jauan Jennings (WR): Out, Calf",
+  "MIN Jordan Addison (WR): Questionable, Thumb"
  ],
  "inputs": {
   "qbs": {
@@ -80,8 +109,8 @@
    "MIN": "Kirk Cousins has 0 pass attempts for the Vikings this season, so their numbers are low confidence."
   },
   "notes": [
-   "Kirk Cousins joined the Vikings this week and tops their depth chart. Kyler Murray (hamstring) has not practised.",
-   "Packers RB Josh Jacobs (finger) is reported out."
+   "Kyler Murray (hamstring) is out. Kirk Cousins, acquired from the Raiders on Tuesday, is expected to start, but Kevin O\u2019Connell had not formally named him as of the last reports found; Carson Wentz is the alternative. Calls are held until the starter is confirmed.",
+   "Packers RB Josh Jacobs (finger) is out on the final report."
   ]
  },
  "sources": [
@@ -90,16 +119,20 @@
    "url": "https://github.com/nflverse/nflverse-data"
   },
   {
-   "label": "Game lines for every game (ESPN, updated Nov 12)",
-   "url": "https://abc7ny.com/post/nfl-week-10-betting-odds-lines-totals-every-game/20026536/"
+   "label": "Game lines: bet365 and DraftKings spreads, totals and moneylines (VegasInsider odds board, Sat Nov 14)",
+   "url": "https://www.vegasinsider.com/nfl/odds/las-vegas/"
   },
   {
    "label": "DraftKings anytime TD and prop prices quoted by ESPN (Nov 13)",
    "url": "https://www.espn.com/espn/betting/story/_/id/50463729/week-10-nfl-odds-touchdown-props-best-bets-sunday-games"
   },
   {
-   "label": "Josh Jacobs status (Sportsnaut preview)",
-   "url": "https://sportsnaut.com/nfl/green-bay-packers-predictions-vs-minnesota-vikings"
+   "label": "Vikings won\u2019t commit to Cousins starting (NFL.com)",
+   "url": "https://www.nfl.com/news/vikings-wont-commit-to-kirk-cousins-starting-packers"
+  },
+  {
+   "label": "Green Bay hourly forecast (Wunderground, Sat Nov 14)",
+   "url": "https://www.wunderground.com/hourly/us/wi/green-bay/54311"
   }
  ]
 }

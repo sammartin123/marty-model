@@ -5,8 +5,8 @@
  "away": "SF",
  "home": "DAL",
  "kickoff_utc": "2026-11-15T21:25:00+00:00",
- "book": "ESPN lines (DraftKings)",
- "logged_utc": "2026-11-14T20:26+00:00",
+ "book": "bet365 (Sat Nov 14, via VegasInsider)",
+ "logged_utc": "2026-11-15T02:21+00:00",
  "entries": [
   {
    "kind": "td",
@@ -15,10 +15,10 @@
    "team": "DAL",
    "price": -120,
    "book": "DraftKings",
-   "sim": 0.4704,
+   "sim": 0.5188,
    "mkt": 0.5455,
-   "call": "fade",
-   "live": true,
+   "call": "pass",
+   "live": false,
    "gate": null
   },
   {
@@ -28,7 +28,7 @@
    "team": "DAL",
    "price": -180,
    "book": "DraftKings",
-   "sim": 0.5187,
+   "sim": 0.5744,
    "mkt": 0.6429,
    "call": "fade",
    "live": true,
@@ -41,7 +41,7 @@
    "team": "SF",
    "price": -285,
    "book": "DraftKings",
-   "sim": 0.6197,
+   "sim": 0.6472,
    "mkt": 0.7403,
    "call": "fade",
    "live": true,
@@ -54,7 +54,7 @@
    "team": "SF",
    "price": 105,
    "book": "DraftKings",
-   "sim": 0.2689,
+   "sim": 0.3157,
    "mkt": 0.4878,
    "call": "fade",
    "live": true,
@@ -66,9 +66,9 @@
    "live": true,
    "gate": null,
    "team": "SF",
-   "line": -3.5,
+   "line": -4.5,
    "price": -110,
-   "sim": 0.6203
+   "sim": 0.5824
   },
   {
    "kind": "total",
@@ -82,11 +82,11 @@
   },
   {
    "kind": "ml",
-   "call": "lean",
-   "live": true,
+   "call": "pass",
+   "live": false,
    "gate": null,
    "team": "SF",
-   "price": -205,
+   "price": -220,
    "sim": 0.7175
   }
  ]

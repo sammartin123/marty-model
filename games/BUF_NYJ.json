@@ -12,7 +12,12 @@
   "BUF": "00-0034857"
  },
  "out": [],
- "status": {},
+ "status": {
+  "00-0038679": "Questionable",
+  "00-0037740": "Questionable",
+  "00-0039890": "Questionable",
+  "00-0041511": "Questionable"
+ },
  "out_json": "out/BUF_NYJ.json",
  "meta": {
   "title": "Bills at Jets",
@@ -31,19 +36,27 @@
   "td_note": "Market = the DraftKings anytime TD price quoted by ESPN on Nov 13. Only players with a quoted price get a call, and nobody listed as questionable gets one. Confirm the price in your own book first: the call only holds at the price shown or longer."
  },
  "market": {
-  "spread_home": 8.5,
+  "spread_home": 7.5,
   "total": 50.5,
   "ml_home": 340,
   "ml_away": -440,
-  "book": "ESPN lines (DraftKings)",
-  "others": []
+  "book": "bet365 (Sat Nov 14, via VegasInsider)",
+  "others": [
+   {
+    "book": "DraftKings (Sat Nov 14)",
+    "spread_home": 8.5,
+    "total": 50.5,
+    "ml_home": 330,
+    "ml_away": -425
+   }
+  ]
  },
  "weather": {
   "summary": "Cool and dry",
   "precip": 5,
   "wind": null,
   "rain_flag": false,
-  "note": "East Rutherford: about 9\u00b0C (upper 40s \u00b0F), 5% chance of rain for the day. Daily forecast only. No hourly or wind forecast was available, so wind is not adjusted for.",
+  "note": "East Rutherford: high about 10\u00b0C (50\u00b0F), 5% chance of rain for the day. Daily forecast only; no current hourly or wind forecast was found, so wind is not adjusted for.",
   "effect": "No weather adjustment."
  },
  "wx_model": {
@@ -84,7 +97,12 @@
    }
   ]
  },
- "injuries": [],
+ "injuries": [
+  "BUF Tyrell Shavers (WR): Questionable, Knee",
+  "NYJ Garrett Wilson (WR): Questionable, Concussion",
+  "NYJ Adonai Mitchell (WR): Questionable, Knee",
+  "NYJ Omar Cooper Jr. (WR): Questionable, Ankle"
+ ],
  "inputs": {
   "qbs": {
    "NYJ": "Geno Smith",
@@ -100,8 +118,8 @@
    "url": "https://github.com/nflverse/nflverse-data"
   },
   {
-   "label": "Game lines for every game (ESPN, updated Nov 12)",
-   "url": "https://abc7ny.com/post/nfl-week-10-betting-odds-lines-totals-every-game/20026536/"
+   "label": "Game lines: bet365 and DraftKings spreads, totals and moneylines (VegasInsider odds board, Sat Nov 14)",
+   "url": "https://www.vegasinsider.com/nfl/odds/las-vegas/"
   },
   {
    "label": "DraftKings anytime TD and prop prices quoted by ESPN (Nov 13)",

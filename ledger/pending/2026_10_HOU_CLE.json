@@ -5,8 +5,8 @@
  "away": "HOU",
  "home": "CLE",
  "kickoff_utc": "2026-11-15T18:00:00+00:00",
- "book": "ESPN lines (DraftKings)",
- "logged_utc": "2026-11-14T20:25+00:00",
+ "book": "bet365 (Sat Nov 14, via VegasInsider)",
+ "logged_utc": "2026-11-15T02:20+00:00",
  "entries": [
   {
    "kind": "td",
@@ -15,7 +15,7 @@
    "team": "CLE",
    "price": 160,
    "book": "DraftKings",
-   "sim": 0.31,
+   "sim": 0.3198,
    "mkt": 0.3846,
    "call": "fade",
    "live": true,
@@ -28,11 +28,11 @@
    "team": "CLE",
    "price": 255,
    "book": "DraftKings",
-   "sim": 0.2771,
+   "sim": 0.2798,
    "mkt": 0.2817,
    "call": "pass",
    "live": false,
-   "gate": null
+   "gate": "Questionable"
   },
   {
    "kind": "td",
@@ -41,7 +41,7 @@
    "team": "HOU",
    "price": 170,
    "book": "DraftKings",
-   "sim": 0.2481,
+   "sim": 0.2797,
    "mkt": 0.3704,
    "call": "fade",
    "live": true,
@@ -54,7 +54,7 @@
    "team": "HOU",
    "price": 120,
    "book": "DraftKings",
-   "sim": 0.3134,
+   "sim": 0.3224,
    "mkt": 0.4545,
    "call": "fade",
    "live": true,
@@ -62,32 +62,32 @@
   },
   {
    "kind": "spread",
-   "call": "lean",
-   "live": true,
+   "call": "pass",
+   "live": false,
    "gate": null,
    "team": "HOU",
    "line": -4.5,
    "price": -110,
-   "sim": 0.5418
+   "sim": 0.5305
   },
   {
    "kind": "total",
-   "call": "pass",
-   "live": false,
+   "call": "lean",
+   "live": true,
    "gate": null,
    "side": "under",
    "line": 40.5,
    "price": -110,
-   "sim": 0.5114
+   "sim": 0.6511
   },
   {
    "kind": "ml",
    "call": "pass",
    "live": false,
    "gate": null,
-   "team": "HOU",
-   "price": -225,
-   "sim": 0.6791
+   "team": "CLE",
+   "price": 190,
+   "sim": 0.3251
   }
  ]
 }

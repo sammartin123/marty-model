@@ -15,6 +15,8 @@
   "00-0040734"
  ],
  "status": {
+  "00-0036963": "Questionable",
+  "00-0039364": "Questionable",
   "00-0035676": "Questionable",
   "00-0036187": "Questionable",
   "00-0036875": "Questionable",
@@ -39,19 +41,27 @@
   "td_note": "Market = the DraftKings anytime TD price quoted by ESPN on Nov 13. Only players with a quoted price get a call, and nobody listed as questionable gets one. Confirm the price in your own book first: the call only holds at the price shown or longer."
  },
  "market": {
-  "spread_home": -3.0,
-  "total": 51.5,
-  "ml_home": -155,
-  "ml_away": 130,
-  "book": "ESPN lines (DraftKings)",
-  "others": []
+  "spread_home": -2.5,
+  "total": 49.5,
+  "ml_home": -152,
+  "ml_away": 127,
+  "book": "bet365 (Sat Nov 14, via VegasInsider)",
+  "others": [
+   {
+    "book": "DraftKings (Sat Nov 14)",
+    "spread_home": -2.5,
+    "total": 49.5,
+    "ml_home": -148,
+    "ml_away": 124
+   }
+  ]
  },
  "weather": {
   "summary": "Cool and dry",
   "precip": 10,
   "wind": null,
   "rain_flag": false,
-  "note": "Munich, 3:30 PM local kickoff: about 7\u00b0C (mid 40s \u00b0F), 10% chance of rain for the day. Daily forecast only. No hourly or wind forecast was available, so wind is not adjusted for.",
+  "note": "Munich, 3:30 PM local kickoff: high about 8\u00b0C (mid 40s \u00b0F), 10% chance of rain. Daily forecast only; no hourly or wind forecast was found.",
   "effect": "No weather adjustment."
  },
  "wx_model": {
@@ -84,6 +94,8 @@
  },
  "yard_lines": {},
  "injuries": [
+  "DET Amon-Ra St. Brown (WR): Questionable, Rib",
+  "DET Sione Vaki (RB): Questionable, Ankle",
   "NE A.J. Brown (WR): Questionable, Ankle",
   "NE Reggie Gilliam (FB): Questionable, Knee",
   "NE Rhamondre Stevenson (RB): Questionable, Knee",
@@ -105,8 +117,8 @@
    "url": "https://github.com/nflverse/nflverse-data"
   },
   {
-   "label": "Game lines for every game (ESPN, updated Nov 12)",
-   "url": "https://abc7ny.com/post/nfl-week-10-betting-odds-lines-totals-every-game/20026536/"
+   "label": "Game lines: bet365 and DraftKings spreads, totals and moneylines (VegasInsider odds board, Sat Nov 14)",
+   "url": "https://www.vegasinsider.com/nfl/odds/las-vegas/"
   },
   {
    "label": "DraftKings anytime TD and prop prices quoted by ESPN (Nov 13)",

@@ -11,8 +11,18 @@
   "DAL": "00-0033077",
   "SF": "00-0037834"
  },
- "out": [],
- "status": {},
+ "out": [
+  "00-0031408",
+  "00-0037120",
+  "00-0038041",
+  "00-0039062"
+ ],
+ "status": {
+  "00-0037120": "Out",
+  "00-0038041": "Out",
+  "00-0039062": "Out",
+  "00-0031408": "Out"
+ },
  "out_json": "out/SF_DAL.json",
  "meta": {
   "title": "49ers at Cowboys",
@@ -31,12 +41,20 @@
   "td_note": "Market = the DraftKings anytime TD price quoted by ESPN on Nov 13. Only players with a quoted price get a call, and nobody listed as questionable gets one. Confirm the price in your own book first: the call only holds at the price shown or longer."
  },
  "market": {
-  "spread_home": 3.5,
+  "spread_home": 4.5,
   "total": 55.5,
-  "ml_home": 170,
-  "ml_away": -205,
-  "book": "ESPN lines (DraftKings)",
-  "others": []
+  "ml_home": 180,
+  "ml_away": -220,
+  "book": "bet365 (Sat Nov 14, via VegasInsider)",
+  "others": [
+   {
+    "book": "DraftKings (Sat Nov 14)",
+    "spread_home": 4.5,
+    "total": 55.5,
+    "ml_home": 180,
+    "ml_away": -218
+   }
+  ]
  },
  "weather": {
   "summary": "Retractable roof",
@@ -95,7 +113,12 @@
   }
  },
  "yard_lines": {},
- "injuries": [],
+ "injuries": [
+  "DAL Tyler Goodson (RB): Out, Ankle",
+  "DAL Jake Ferguson (TE): Out, Knee",
+  "DAL Jonathan Mingo (WR): Out, Ankle",
+  "SF Mike Evans (WR): Out, Achilles"
+ ],
  "inputs": {
   "qbs": {
    "DAL": "Dak Prescott",
@@ -111,8 +134,8 @@
    "url": "https://github.com/nflverse/nflverse-data"
   },
   {
-   "label": "Game lines for every game (ESPN, updated Nov 12)",
-   "url": "https://abc7ny.com/post/nfl-week-10-betting-odds-lines-totals-every-game/20026536/"
+   "label": "Game lines: bet365 and DraftKings spreads, totals and moneylines (VegasInsider odds board, Sat Nov 14)",
+   "url": "https://www.vegasinsider.com/nfl/odds/las-vegas/"
   },
   {
    "label": "DraftKings anytime TD and prop prices quoted by ESPN (Nov 13)",

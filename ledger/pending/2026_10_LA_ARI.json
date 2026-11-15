@@ -5,8 +5,8 @@
  "away": "LA",
  "home": "ARI",
  "kickoff_utc": "2026-11-15T21:05:00+00:00",
- "book": "ESPN lines (DraftKings)",
- "logged_utc": "2026-11-14T20:26+00:00",
+ "book": "bet365 (Sat Nov 14, via VegasInsider)",
+ "logged_utc": "2026-11-15T02:21+00:00",
  "entries": [
   {
    "kind": "yards",
@@ -75,7 +75,7 @@
    "live": false,
    "gate": "QB unclear",
    "team": "LA",
-   "price": -520,
+   "price": -500,
    "sim": 0.8867
   }
  ]

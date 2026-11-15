@@ -5,8 +5,8 @@
  "away": "SEA",
  "home": "LV",
  "kickoff_utc": "2026-11-15T21:05:00+00:00",
- "book": "ESPN lines (DraftKings)",
- "logged_utc": "2026-11-14T20:26+00:00",
+ "book": "bet365 (Sat Nov 14, via VegasInsider)",
+ "logged_utc": "2026-11-15T02:21+00:00",
  "entries": [
   {
    "kind": "yards",
@@ -18,7 +18,7 @@
    "side": "under",
    "price": null,
    "book": "DraftKings",
-   "sim": 0.6032,
+   "sim": 0.5998,
    "call": "play",
    "live": false,
    "gate": "QB unclear"
@@ -30,7 +30,7 @@
    "team": "SEA",
    "price": 100,
    "book": "DraftKings",
-   "sim": 0.3815,
+   "sim": 0.3931,
    "mkt": 0.5,
    "call": "fade",
    "live": false,
@@ -43,7 +43,7 @@
    "team": "SEA",
    "price": 125,
    "book": "DraftKings",
-   "sim": 0.2764,
+   "sim": 0.2899,
    "mkt": 0.4444,
    "call": "fade",
    "live": false,
@@ -57,7 +57,7 @@
    "team": "SEA",
    "line": -6.5,
    "price": -110,
-   "sim": 0.7463
+   "sim": 0.746
   },
   {
    "kind": "total",
@@ -67,7 +67,7 @@
    "side": "under",
    "line": 40.5,
    "price": -110,
-   "sim": 0.5193
+   "sim": 0.5134
   },
   {
    "kind": "ml",
@@ -75,8 +75,8 @@
    "live": false,
    "gate": "QB unclear",
    "team": "SEA",
-   "price": -298,
-   "sim": 0.8909
+   "price": -300,
+   "sim": 0.8896
   }
  ]
 }

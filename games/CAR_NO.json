@@ -11,8 +11,16 @@
   "NO": "00-0040743",
   "CAR": "00-0039150"
  },
- "out": [],
- "status": {},
+ "out": [
+  "00-0039344",
+  "00-0041326"
+ ],
+ "status": {
+  "00-0039342": "Questionable",
+  "00-0039344": "Doubtful",
+  "00-0036973": "Questionable",
+  "00-0041326": "Out"
+ },
  "out_json": "out/CAR_NO.json",
  "meta": {
   "title": "Panthers at Saints",
@@ -33,10 +41,18 @@
  "market": {
   "spread_home": -2.5,
   "total": 48.5,
-  "ml_home": -130,
-  "ml_away": 110,
-  "book": "ESPN lines (DraftKings)",
-  "others": []
+  "ml_home": -139,
+  "ml_away": 119,
+  "book": "bet365 (Sat Nov 14, via VegasInsider)",
+  "others": [
+   {
+    "book": "DraftKings (Sat Nov 14)",
+    "spread_home": -2.5,
+    "total": 48.5,
+    "ml_home": -135,
+    "ml_away": 114
+   }
+  ]
  },
  "weather": {
   "summary": "Indoors",
@@ -85,7 +101,12 @@
   }
  },
  "yard_lines": {},
- "injuries": [],
+ "injuries": [
+  "CAR Xavier Legette (WR): Questionable, Knee",
+  "CAR Jonathon Brooks (RB): Doubtful, Groin",
+  "NO Travis Etienne (RB): Questionable, Hamstring",
+  "NO CJ Donaldson (RB): Out, Shoulder"
+ ],
  "inputs": {
   "qbs": {
    "NO": "Tyler Shough",
@@ -101,8 +122,8 @@
    "url": "https://github.com/nflverse/nflverse-data"
   },
   {
-   "label": "Game lines for every game (ESPN, updated Nov 12)",
-   "url": "https://abc7ny.com/post/nfl-week-10-betting-odds-lines-totals-every-game/20026536/"
+   "label": "Game lines: bet365 and DraftKings spreads, totals and moneylines (VegasInsider odds board, Sat Nov 14)",
+   "url": "https://www.vegasinsider.com/nfl/odds/las-vegas/"
   },
   {
    "label": "DraftKings anytime TD and prop prices quoted by ESPN (Nov 13)",

@@ -11,8 +11,17 @@
   "IND": "00-0035710",
   "MIA": "00-0040014"
  },
- "out": [],
- "status": {},
+ "out": [
+  "00-0033217",
+  "00-0038728",
+  "00-0041525"
+ ],
+ "status": {
+  "00-0033217": "Out",
+  "00-0038394": "Questionable",
+  "00-0038728": "Out",
+  "00-0041525": "Doubtful"
+ },
  "out_json": "out/MIA_IND.json",
  "meta": {
   "title": "Dolphins at Colts",
@@ -33,10 +42,18 @@
  "market": {
   "spread_home": -3.5,
   "total": 38.5,
-  "ml_home": -205,
-  "ml_away": 170,
-  "book": "ESPN lines (DraftKings)",
-  "others": []
+  "ml_home": -220,
+  "ml_away": 180,
+  "book": "bet365 (Sat Nov 14, via VegasInsider)",
+  "others": [
+   {
+    "book": "DraftKings (Sat Nov 14)",
+    "spread_home": -3.5,
+    "total": 38.5,
+    "ml_home": -218,
+    "ml_away": 180
+   }
+  ]
  },
  "weather": {
   "summary": "Retractable roof",
@@ -92,7 +109,12 @@
    }
   ]
  },
- "injuries": [],
+ "injuries": [
+  "IND Mo Alie-Cox (TE): Out, Groin",
+  "IND Will Mallory (TE): Questionable, Hamstring",
+  "MIA Jared Wayne (WR): Out, Quadricep",
+  "MIA Chris Bell (WR): Doubtful, Knee"
+ ],
  "inputs": {
   "qbs": {
    "IND": "Daniel Jones",
@@ -103,7 +125,7 @@
    "MIA": "Kyle McCord has 0 pass attempts for the Dolphins this season, so their numbers are low confidence."
   },
   "notes": [
-   "Dolphins QB Malik Willis is on injured reserve. Kyle McCord makes his first NFL start."
+   "Dolphins QB Malik Willis is on injured reserve. Kyle McCord makes his first NFL start. No calls on this game."
   ]
  },
  "sources": [
@@ -112,8 +134,8 @@
    "url": "https://github.com/nflverse/nflverse-data"
   },
   {
-   "label": "Game lines for every game (ESPN, updated Nov 12)",
-   "url": "https://abc7ny.com/post/nfl-week-10-betting-odds-lines-totals-every-game/20026536/"
+   "label": "Game lines: bet365 and DraftKings spreads, totals and moneylines (VegasInsider odds board, Sat Nov 14)",
+   "url": "https://www.vegasinsider.com/nfl/odds/las-vegas/"
   },
   {
    "label": "DraftKings anytime TD and prop prices quoted by ESPN (Nov 13)",

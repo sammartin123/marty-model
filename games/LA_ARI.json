@@ -11,8 +11,14 @@
   "ARI": "00-0041561",
   "LA": "00-0026498"
  },
- "out": [],
- "status": {},
+ "out": [
+  "00-0040737"
+ ],
+ "status": {
+  "00-0037004": "Questionable",
+  "00-0039074": "Questionable",
+  "00-0040737": "Out"
+ },
  "out_json": "out/LA_ARI.json",
  "meta": {
   "title": "Rams at Cardinals",
@@ -33,10 +39,18 @@
  "market": {
   "spread_home": 9.5,
   "total": 39.5,
-  "ml_home": 390,
-  "ml_away": -520,
-  "book": "ESPN lines (DraftKings)",
-  "others": []
+  "ml_home": 375,
+  "ml_away": -500,
+  "book": "bet365 (Sat Nov 14, via VegasInsider)",
+  "others": [
+   {
+    "book": "DraftKings (Sat Nov 14)",
+    "spread_home": 9.5,
+    "total": 39.5,
+    "ml_home": 380,
+    "ml_away": -500
+   }
+  ]
  },
  "weather": {
   "summary": "Retractable roof",
@@ -84,7 +98,11 @@
    }
   ]
  },
- "injuries": [],
+ "injuries": [
+  "ARI Hunter Long (TE): Questionable, Knee",
+  "LA Davis Allen (TE): Questionable, Oblique",
+  "LA Terrance Ferguson (TE): Out, Ankle"
+ ],
  "inputs": {
   "qbs": {
    "ARI": "Carson Beck",
@@ -95,7 +113,7 @@
    "ARI": "Carson Beck has 0 pass attempts for the Cardinals this season, so their numbers are low confidence."
   },
   "notes": [
-   "Cardinals rookie Carson Beck tops the depth chart after Jacoby Brissett was released and Gardner Minshew went on reserve."
+   "Cardinals rookie Carson Beck was named the Week 10 starter on Wednesday and makes his first NFL start (Jacoby Brissett released, Gardner Minshew on reserve). No calls on this game."
   ]
  },
  "sources": [
@@ -104,8 +122,8 @@
    "url": "https://github.com/nflverse/nflverse-data"
   },
   {
-   "label": "Game lines for every game (ESPN, updated Nov 12)",
-   "url": "https://abc7ny.com/post/nfl-week-10-betting-odds-lines-totals-every-game/20026536/"
+   "label": "Game lines: bet365 and DraftKings spreads, totals and moneylines (VegasInsider odds board, Sat Nov 14)",
+   "url": "https://www.vegasinsider.com/nfl/odds/las-vegas/"
   },
   {
    "label": "DraftKings anytime TD and prop prices quoted by ESPN (Nov 13)",

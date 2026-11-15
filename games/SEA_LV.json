@@ -9,10 +9,15 @@
  "neutral": false,
  "qb": {
   "LV": "00-0041562",
-  "SEA": "00-0034869"
+  "SEA": "00-0035704"
  },
- "out": [],
- "status": {},
+ "out": [
+  "00-0034869"
+ ],
+ "status": {
+  "00-0040581": "Questionable",
+  "00-0034869": "Out"
+ },
  "out_json": "out/SEA_LV.json",
  "meta": {
   "title": "Seahawks at Raiders",
@@ -34,9 +39,17 @@
   "spread_home": 6.5,
   "total": 40.5,
   "ml_home": 240,
-  "ml_away": -298,
-  "book": "ESPN lines (DraftKings)",
-  "others": []
+  "ml_away": -300,
+  "book": "bet365 (Sat Nov 14, via VegasInsider)",
+  "others": [
+   {
+    "book": "DraftKings (Sat Nov 14)",
+    "spread_home": 6.5,
+    "total": 40.5,
+    "ml_home": 245,
+    "ml_away": -305
+   }
+  ]
  },
  "weather": {
   "summary": "Indoors",
@@ -84,20 +97,22 @@
    }
   ]
  },
- "injuries": [],
+ "injuries": [
+  "LV Dont'e Thornton Jr. (WR): Questionable, Back",
+  "SEA Sam Darnold (QB): Out, Ribs"
+ ],
  "inputs": {
   "qbs": {
    "LV": "Fernando Mendoza",
-   "SEA": "Sam Darnold"
+   "SEA": "Drew Lock"
   },
   "report_final": true,
   "low_conf": {
-   "LV": "Fernando Mendoza has 8 pass attempts for the Raiders this season, so their numbers are low confidence.",
-   "SEA": "Sam Darnold has not practised this week, so the Seahawks quarterback is not certain."
+   "LV": "Fernando Mendoza has 8 pass attempts for the Raiders this season, so their numbers are low confidence."
   },
   "notes": [
-   "Seahawks QB Sam Darnold missed Week 9 and has not practised this week (ribs). If he is ruled out, Drew Lock starts.",
-   "Raiders rookie Fernando Mendoza now tops the depth chart after Kirk Cousins left."
+   "Seahawks QB Sam Darnold (quad, ribs) is out; Drew Lock starts, confirmed by Mike Macdonald.",
+   "Raiders rookie Fernando Mendoza, the No. 1 pick, makes his first NFL start after Kirk Cousins was traded to Minnesota. No calls on this game because Mendoza has almost no NFL sample."
   ]
  },
  "sources": [
@@ -106,12 +121,20 @@
    "url": "https://github.com/nflverse/nflverse-data"
   },
   {
-   "label": "Game lines for every game (ESPN, updated Nov 12)",
-   "url": "https://abc7ny.com/post/nfl-week-10-betting-odds-lines-totals-every-game/20026536/"
+   "label": "Game lines: bet365 and DraftKings spreads, totals and moneylines (VegasInsider odds board, Sat Nov 14)",
+   "url": "https://www.vegasinsider.com/nfl/odds/las-vegas/"
   },
   {
    "label": "DraftKings anytime TD and prop prices quoted by ESPN (Nov 13)",
    "url": "https://www.espn.com/espn/betting/story/_/id/50463729/week-10-nfl-odds-touchdown-props-best-bets-sunday-games"
+  },
+  {
+   "label": "Darnold out, Lock to start (ABC7/ESPN, Nov 9)",
+   "url": "https://abc7news.com/post/seahawks-start-qb-drew-lock-raiders-giving-sam-darnold-more-time-heal/20027067/"
+  },
+  {
+   "label": "Raiders name Mendoza starter (ABC30/ESPN, Nov 11)",
+   "url": "https://abc30.com/post/raiders-name-fernando-mendoza-starting-qb-trading-away-kirk-cousins/20031696/"
   }
  ]
 }

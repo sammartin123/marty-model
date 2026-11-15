@@ -5,8 +5,8 @@
  "away": "MIA",
  "home": "IND",
  "kickoff_utc": "2026-11-15T18:00:00+00:00",
- "book": "ESPN lines (DraftKings)",
- "logged_utc": "2026-11-14T20:26+00:00",
+ "book": "bet365 (Sat Nov 14, via VegasInsider)",
+ "logged_utc": "2026-11-15T02:21+00:00",
  "entries": [
   {
    "kind": "yards",
@@ -18,7 +18,7 @@
    "side": "over",
    "price": null,
    "book": "DraftKings",
-   "sim": 0.57,
+   "sim": 0.5704,
    "call": "play",
    "live": false,
    "gate": "QB unclear"
@@ -30,7 +30,7 @@
    "team": "IND",
    "price": -120,
    "book": "DraftKings",
-   "sim": 0.4776,
+   "sim": 0.4799,
    "mkt": 0.5455,
    "call": "fade",
    "live": false,
@@ -46,7 +46,7 @@
    "side": "under",
    "price": null,
    "book": "DraftKings",
-   "sim": 0.6678,
+   "sim": 0.5838,
    "call": "play",
    "live": false,
    "gate": "QB unclear"
@@ -58,7 +58,7 @@
    "team": "MIA",
    "price": 115,
    "book": "DraftKings",
-   "sim": 0.3537,
+   "sim": 0.3595,
    "mkt": 0.4651,
    "call": "fade",
    "live": false,
@@ -90,7 +90,7 @@
    "live": false,
    "gate": "QB unclear",
    "team": "IND",
-   "price": -205,
+   "price": -220,
    "sim": 0.7786
   }
  ]

@@ -5,8 +5,8 @@
  "away": "MIN",
  "home": "GB",
  "kickoff_utc": "2026-11-15T18:00:00+00:00",
- "book": "ESPN lines (DraftKings)",
- "logged_utc": "2026-11-14T20:26+00:00",
+ "book": "bet365 (Sat Nov 14, via VegasInsider)",
+ "logged_utc": "2026-11-15T02:21+00:00",
  "entries": [
   {
    "kind": "td",
@@ -15,9 +15,9 @@
    "team": "GB",
    "price": 170,
    "book": "DraftKings",
-   "sim": 0.3981,
+   "sim": 0.4056,
    "mkt": 0.3704,
-   "call": "lean",
+   "call": "play",
    "live": false,
    "gate": "QB unclear"
   },
@@ -27,7 +27,7 @@
    "live": false,
    "gate": "QB unclear",
    "team": "MIN",
-   "line": 3.0,
+   "line": 2.5,
    "price": -110,
    "sim": 0.6145
   },
@@ -37,9 +37,9 @@
    "live": false,
    "gate": "QB unclear",
    "side": "under",
-   "line": 41.5,
+   "line": 42.5,
    "price": -110,
-   "sim": 0.554
+   "sim": 0.5755
   },
   {
    "kind": "ml",
@@ -47,7 +47,7 @@
    "live": false,
    "gate": "QB unclear",
    "team": "MIN",
-   "price": 130,
+   "price": 129,
    "sim": 0.56
   }
  ]

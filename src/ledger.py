@@ -31,7 +31,7 @@ def log_game(G, o):
     final = I.get('report_final', True); lowc = bool(I.get('low_conf'))
     E = []
     for p in o['players']:
-        gate = 'QB unclear' if lowc else ('Questionable' if p.get('status') == 'Questionable' else (None if final else 'Injuries not final'))
+        gate = 'QB unclear' if p.get('low_conf') else ('Questionable' if p.get('status') == 'Questionable' else (None if final else 'Injuries not final'))
         if p.get('td_mkt'):
             e = p['td_edge']
             base = 'play' if (e >= .03 and p['p_td'] >= .10) else 'lean' if (e >= .015 and p['p_td'] >= .10) else 'fade' if e <= -.05 else 'pass'

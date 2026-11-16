@@ -1,0 +1,176 @@
+{
+ "home": "BAL",
+ "away": "LAC",
+ "season": 2026,
+ "week": 10,
+ "asof": "2026-11-16",
+ "n_sims": 100000,
+ "seed": 20261116,
+ "neutral": false,
+ "qb": {
+  "BAL": "00-0033119",
+  "LAC": "00-0036355"
+ },
+ "out": [
+  "00-0041550",
+  "00-0039915"
+ ],
+ "status": {
+  "00-0040888": "Questionable",
+  "00-0033885": "Questionable",
+  "00-0039915": "Out",
+  "00-0041550": "Doubtful"
+ },
+ "out_json": "out/LAC_BAL.json",
+ "meta": {
+  "title": "Chargers at Ravens",
+  "home_name": "Ravens",
+  "away_name": "Chargers",
+  "home_city": "Baltimore",
+  "away_city": "Los Angeles",
+  "kickoff": "Mon Nov 16, 2026 \u00b7 8:15 PM ET",
+  "time": "8:15 PM",
+  "venue": "M&T Bank Stadium, Baltimore",
+  "generated": "Mon Nov 16, 2026",
+  "roof": "outdoors",
+  "lat": 39.278,
+  "lon": -76.623,
+  "data_through": "Week 10"
+ },
+ "market": {
+  "spread_home": -4.5,
+  "total": 38.5,
+  "ml_home": -230,
+  "ml_away": 185,
+  "book": "bet365 (Mon Nov 16, 9:00 AM ET, via Pickswise)",
+  "others": [
+   {
+    "book": "DraftKings (Mon Nov 16)",
+    "spread_home": -4.5,
+    "total": 38.5,
+    "ml_home": -225,
+    "ml_away": 185
+   }
+  ]
+ },
+ "weather": {
+  "summary": "Clear and cold",
+  "precip": 0,
+  "wind": "Light, about 6 mph",
+  "rain_flag": false,
+  "temp_f": 43,
+  "note": "Baltimore, 8:15 PM kickoff: clear, 0% chance of rain today, high 13\u00b0C and low 2.5\u00b0C. Covers put kickoff near 43\u00b0F with winds around 6 mph, falling toward 40\u00b0F late. No fresh hourly forecast could be loaded, so this is the daily forecast plus that estimate.",
+  "effect": "No rain or wind concern. Half the measured cold effect is applied because the game sits right at the 40\u00b0F line."
+ },
+ "wx_model": {
+  "pass_mult": 0.9935,
+  "cr_mult": 0.982,
+  "td_shift": -0.03,
+  "fg_shift": -0.055
+ },
+ "td_odds": {
+  "Derrick Henry": {
+   "price": -140,
+   "book": "DraftKings (Mon Nov 16)"
+  },
+  "Zay Flowers": {
+   "price": 165,
+   "book": "DraftKings (Mon Nov 16)"
+  },
+  "Omarion Hampton": {
+   "price": 300,
+   "book": "DraftKings (Mon Nov 16)"
+  },
+  "Oronde Gadsden II": {
+   "price": 500,
+   "book": "BetMGM (Sun Nov 15 night)"
+  },
+  "Mark Andrews": {
+   "price": 350,
+   "book": "BetMGM (Sun Nov 15)"
+  },
+  "Rashod Bateman": {
+   "price": 425,
+   "book": "BetMGM (Sun Nov 15)"
+  },
+  "Justice Hill": {
+   "price": 475,
+   "book": "BetMGM (Sun Nov 15)"
+  },
+  "Ja'Kobi Lane": {
+   "price": 475,
+   "book": "BetMGM (Sun Nov 15)"
+  },
+  "Jacoby Brissett": {
+   "price": 775,
+   "book": "BetMGM (Sun Nov 15)"
+  },
+  "Josh Cuevas": {
+   "price": 775,
+   "book": "BetMGM (Sun Nov 15)"
+  }
+ },
+ "yard_lines": {},
+ "injuries": [
+  "BAL Adam Randall (RB): Questionable, Neck",
+  "LAC David Njoku (TE): Questionable, Fibula",
+  "LAC Brenen Thompson (WR): Doubtful, Hamstring",
+  "LAC Ladd McConkey (WR): Out, back (downgraded Sunday, did not travel)"
+ ],
+ "inputs": {
+  "qbs": {
+   "BAL": "Jacoby Brissett",
+   "LAC": "Justin Herbert"
+  },
+  "report_final": true,
+  "low_conf": {
+   "BAL": "Jacoby Brissett has 0 pass attempts for the Ravens this season, so their numbers are low confidence."
+  },
+  "notes": [
+   "Jacoby Brissett makes his first Ravens start after last week\u2019s trade from Arizona (Lamar Jackson is on injured reserve). He has his own rating from his Cardinals games, but teams with a new quarterback run a little hot in testing, so Ravens players and the game lines get no calls.",
+   "Chargers WR Ladd McConkey (back) was downgraded to Out on Sunday. TE David Njoku (fibula) is questionable and must be activated from injured reserve to play; no activation had been reported as of Monday morning, so he is not in the sim."
+  ]
+ },
+ "sources": [
+  {
+   "label": "Game lines: bet365, Mon Nov 16 9:00 AM ET (Pickswise)",
+   "url": "https://www.pickswise.com/nfl/news/chargers-vs-ravens-predictions-picks-odds-betting-guide/"
+  },
+  {
+   "label": "Game lines and anytime TD prices: DraftKings (SI, Mon Nov 16)",
+   "url": "https://www.si.com/betting/chargers-vs-ravens-best-anytime-touchdown-scorer-picks-for-monday-night-football-in-nfl-week-10-2026"
+  },
+  {
+   "label": "DraftKings spread and moneyline (SI, Mon Nov 16)",
+   "url": "https://www.si.com/betting/chargers-vs-ravens-score-prediction-for-nfl-week-10-can-la-get-first-win-in-primetime-01m78fy9p1hz"
+  },
+  {
+   "label": "Anytime TD prices: BetMGM (Sun Nov 15, 9:36 AM)",
+   "url": "https://sports.betmgm.com/en/blog/nfl/chargers-ravens-first-anytime-td-odds-picks-week-10-gaa/"
+  },
+  {
+   "label": "Gadsden anytime TD +500 at BetMGM (Action Network via Yahoo, Sun night)",
+   "url": "https://sports.yahoo.com/articles/chargers-vs-ravens-player-props-030036407.html"
+  },
+  {
+   "label": "McConkey downgraded to Out (ClutchPoints, Sun Nov 15)",
+   "url": "https://clutchpoints.com/nfl/los-angeles-chargers/chargers-news-ladd-mcconkey-injury-update-deals-another-blow-mnf-ravens"
+  },
+  {
+   "label": "Njoku questionable, still on injured reserve (RotoBaller)",
+   "url": "https://www.rotoballer.com/player-news/david-njoku-questionable-for-week-10-still-on-injured-reserve/1994007"
+  },
+  {
+   "label": "Brissett to start for Baltimore (The Banner)",
+   "url": "https://www.thebanner.com/sports/ravens-nfl/ravens-chargers-jacoby-brissett-lamar-jackson-monday-night-football-72I62YXN35HEVPWR6SKUXVXMIQ/"
+  },
+  {
+   "label": "Kickoff weather estimate (Covers, Nov 14) and daily forecast (weather tool, Mon Nov 16)",
+   "url": "https://www.covers.com/nfl/chargers-vs-ravens-prediction-picks-nov-16-2026"
+  },
+  {
+   "label": "Stats, rosters, injury report and play-by-play: nflverse",
+   "url": "https://github.com/nflverse/nflverse-data/releases"
+  }
+ ]
+}

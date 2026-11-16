@@ -268,7 +268,7 @@ const isFinal = D => !D.inputs || D.inputs.report_final!==false;
    questionable and his team's quarterback situation is settled. */
 function tdCall(D,p){
   if(!p.td_mkt) return {cls:'pass',label:'No price',base:'none'};
-  if(lowConf(D).length) return {cls:'flag',label:'QB unclear',base:'none'};
+  if(p.low_conf) return {cls:'flag',label:'QB unclear',base:'none'};   // only his own team's quarterback holds a player call
   if(p.status==='Questionable') return {cls:'flag',label:'Questionable',base:'none'};
   const e=p.td_edge; let base='pass';
   if(e>=.03 && p.p_td>=.10) base='play'; else if(e>=.015 && p.p_td>=.10) base='lean'; else if(e<=-.05) base='fade';
@@ -281,7 +281,7 @@ function lineCall(D,p,L){
   const price = side==='over'?L.over:L.under; const be = price!=null?imp(price):.524; const e=pr-be;
   let base = e>=.04?'play':e>=.02?'lean':'pass', gate=null;
   if(price==null && base!=='pass') gate='No '+side+' price';
-  else if(lowConf(D).length) gate='QB unclear'; else if(p.status==='Questionable') gate='Questionable'; else if(!isFinal(D)&&base!=='pass') gate='Wait: injuries';
+  else if(p.low_conf) gate='QB unclear'; else if(p.status==='Questionable') gate='Questionable'; else if(!isFinal(D)&&base!=='pass') gate='Wait: injuries';
   return {side,pr,price,e,base,gate,pending:gate==='Wait: injuries'};
 }
 function leans(D){
@@ -317,7 +317,7 @@ $('h1').innerHTML = esc(M.away_name)+' at '+esc(M.home_name);
 ['100,000 simulations','Week '+M.week+', '+M.season,'Data through '+M.data_through,'Run '+M.generated].forEach(t=>$('chips').appendChild(el('span','chip',esc(t))));
 (function(){ const I=D.inputs||{}, rows=[];
   if(I.qbs) rows.push('<div><b>Quarterbacks:</b> '+esc(I.qbs[A])+' ('+A+') and '+esc(I.qbs[H])+' ('+H+').</div>');
-  Object.values(I.low_conf||{}).forEach(t=>rows.push('<div class="warn">'+esc(t)+' No calls are made on this game.</div>'));
+  Object.values(I.low_conf||{}).forEach(t=>rows.push('<div class="warn">'+esc(t)+' That team gets no player calls and the game gets no game-line calls.</div>'));
   (I.notes||[]).forEach(t=>rows.push('<div>'+esc(t)+'</div>'));
   const inj=D.injuries||[];
   rows.push('<div><b>Injuries:</b> '+(inj.length?inj.map(esc).join('; ')+'. Players listed Out or Doubtful are removed from the sim.':'no skill-position players with a game status so far.')+'</div>');
@@ -591,7 +591,7 @@ const call = p => tdCall(D,p);
     c.fillStyle='#cbb0aa'; c.textAlign='left'; c.fillText('scored',L+4,T+10); c.textAlign='right'; c.fillText('sim said',L+pw,T+ph-6); }
   draw(); onResize(draw);
   $('btP1').innerHTML='Read this before betting on anything above. On winners, spreads and totals the sportsbook line was more accurate than this model, and the model did not beat the spread. Where it holds up is touchdown chances: when it said 25%, players scored about 25% of the time, across '+b.td_n.toLocaleString('en-US')+' player-games.';
-  $('btP2').innerHTML='Being well calibrated is not the same as beating a price. I had no archive of past TD or yardage odds, so the edges on this page are untested against real lines. Four upgrades were tested on the same past games and kept because each one measurably helped: player props now take team scoring from the sportsbook game line, each quarterback has his own rating so a change of starter moves the numbers, snap counts track who is actually on the field, and quarterbacks get credit for scoring more rushing touchdowns than their carries alone suggest. Position-vs-defence, head-to-head history and coverage matchups were tested too and did not improve accuracy, so the first two are in at low weight as context and coverage is left out. One caution: when a team has just changed quarterback the model still runs a little hot on touchdown chances for that team, which is one reason no calls are made on games with an unproven starter. Roster moves and injuries after '+esc(M.generated)+' are not included.';
+  $('btP2').innerHTML='Being well calibrated is not the same as beating a price. I had no archive of past TD or yardage odds, so the edges on this page are untested against real lines. Four upgrades were tested on the same past games and kept because each one measurably helped: player props now take team scoring from the sportsbook game line, each quarterback has his own rating so a change of starter moves the numbers, snap counts track who is actually on the field, and quarterbacks get credit for scoring more rushing touchdowns than their carries alone suggest. Position-vs-defence, head-to-head history and coverage matchups were tested too and did not improve accuracy, so the first two are in at low weight as context and coverage is left out. One caution: when a team has just changed quarterback the model still runs a little hot on touchdown chances for that team, which is why that team gets no player calls and the game gets no game-line calls. Players on the other side are unaffected in testing, so their calls stay live. Roster moves and injuries after '+esc(M.generated)+' are not included.';
   D.sources.forEach(s=>{ const li=el('li'); li.innerHTML='<a href="'+s.url+'" target="_blank" rel="noopener">'+esc(s.label)+'</a>'; $('src').appendChild(li); });
   $('foot').textContent='MartyMakesMoneyModel · '+A+' at '+H+' · model estimates, not guarantees.';
 })();
@@ -644,7 +644,7 @@ function show(i, scroll){
   live.sort((a,b)=>b.edge-a.edge).slice(0,8).forEach(r=>bc.appendChild(card(r,false)));
   if(!live.length) bc.appendChild(el('div','verdict','<div class="who">Nothing is live yet</div><div class="num" style="font-size:23px">'+(waiting?'Waiting on final injury reports':'No confirmed price clears the bar')+'</div>'));
   if(pend.length){ bc.appendChild(el('div','eyebrow','On hold until injury reports are final')); pend.sort((a,b)=>b.edge-a.edge).slice(0,6).forEach(r=>bc.appendChild(card(r,true))); }
-  $('slateNote').innerHTML='A call goes live only when four things are true: a sportsbook price was actually found, the final injury report is in, the player is not listed as questionable, and his team’s quarterback is settled. '+(waiting?waiting+' of '+GAMES.length+' games are still waiting on the final injury report. ':'')+(flagged?flagged+' games have an unsettled quarterback and get no calls. ':'')+'Always confirm the price in your own book: a call only holds at the price shown or longer.';
+  $('slateNote').innerHTML='A call goes live only when four things are true: a sportsbook price was actually found, the final injury report is in, the player is not listed as questionable, and his team’s quarterback is settled. '+(waiting?waiting+' of '+GAMES.length+' games are still waiting on the final injury report. ':'')+(flagged?flagged+' games have an unsettled quarterback: no game-line calls there, and no player calls on that team. ':'')+'Always confirm the price in your own book: a call only holds at the price shown or longer.';
   const list=$('slateList'), sel=$('gameSel');
   GAMES.forEach((D,i)=>{ const M=D.meta, G=D.game, H=M.home, A=M.away, L=leans(D); const fav=G.p_home>=.5?H:A, pf=Math.max(G.p_home,G.p_away); const bfav=D.game.mkt_nv_home>=.5?H:A, bp=Math.max(G.mkt_nv_home,1-G.mkt_nv_home);
     const tags=[]; L.list.forEach(t=>tags.push('<span class="tag lean">Lean '+esc(t)+'</span>'));

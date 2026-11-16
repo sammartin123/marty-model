@@ -114,6 +114,10 @@ Game-line calls are capped at Lean on the page for that reason.
   quarterback 40% of the carries (Mahomes with Kenneth Walker III out). Now the vacated share goes to the
   remaining backs. Paired backtest: rushing-yard error 23.55 to 23.40 and squared error both clearly better,
   TD and every other metric no clear difference.
+- **Quarterback hold is per team for player calls (Nov 16 2026).** Backtest, players at 15%+ to score: when a
+  player's own team changed quarterback the model ran hot (predicted 27.7%, actual 24.0%); when only the
+  opponent changed, it did not (30.3% vs 32.1%). So a low-confidence quarterback holds his own team's player
+  calls and the game-line calls, and the other team's player calls stay live.
 - **Also tested, not adopted:** a player's own share of his team's past touchdowns as a usage feature
   (`td_hist`, no difference) and a yards-per-attempt ratio for backup quarterbacks (`qb_eff_pow`, made passing worse).
 - **Coverage matchups (Nov 2026): tested, not adopted.** `research/coverage_test.py` checks whether a player's

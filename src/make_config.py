@@ -82,5 +82,14 @@ if __name__ == '__main__':
     away, home = sys.argv[1].upper(), sys.argv[2].upper()
     cfg = build(away, home, int(sys.argv[3]) if len(sys.argv) > 3 else None)
     p = os.path.join(ROOT, 'games', f'{away}_{home}.json')
+    if os.path.exists(p) and '--fresh' not in sys.argv:
+        # an earlier run this week already researched this game: keep that research, refresh injuries and QBs
+        old = json.load(open(p))
+        if old.get('asof') == cfg['asof']:
+            for k in ('market', 'td_odds', 'yard_lines', 'weather', 'wx_model', 'sources'):
+                if old.get(k): cfg[k] = old[k]
+            for k in ('notes', 'hold_lines'):
+                if old.get('inputs', {}).get(k): cfg['inputs'][k] = old['inputs'][k]
+            print('kept earlier research from', p, '(lines, TD prices, weather, notes, sources); recheck them')
     json.dump(cfg, open(p, 'w'), indent=1)
     print('wrote', p, '| QBs', cfg['inputs']['qbs'], '| out', cfg['out'], '| line', cfg['market'])

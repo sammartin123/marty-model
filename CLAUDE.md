@@ -24,7 +24,10 @@ runbook for the weekly run and the rules that always apply.
    empty; on Thanksgiving, the one with the latest kickoff). If Sam named a different game in the task or in
    `games/NEXT.txt` (format `AWAY HOME`), use that instead and clear the file afterwards. If there is no game
    today, stop and tell Sam there was no Thursday game this week.
-3. `python3 src/make_config.py AWAY HOME` to start `games/AWAY_HOME.json`.
+3. `python3 src/make_config.py AWAY HOME` to start `games/AWAY_HOME.json`. If the file already exists from an earlier run
+   this week, it keeps that run's lines, TD prices, weather, notes and sources and rebuilds only injuries and
+   quarterbacks: recheck the prices, re-add any late `out` players the final report does not cover, and
+   rerun. Use `--fresh` to start over.
 4. Research and fill in the config (see README "What goes in a game config"):
    - Injuries: the final report for both teams (Wednesday for a Thursday game, Friday for a Sunday game). Put ruled-out skill players' gsis ids in `out`
      (look ids up in `data/roster_weekly_<season>.csv`). If a starting QB is out, set `qb` to the replacement's id.

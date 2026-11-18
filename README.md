@@ -118,6 +118,10 @@ Game-line calls are capped at Lean on the page for that reason.
   player's own team changed quarterback the model ran hot (predicted 27.7%, actual 24.0%); when only the
   opponent changed, it did not (30.3% vs 32.1%). So a low-confidence quarterback holds his own team's player
   calls and the game-line calls, and the other team's player calls stay live.
+- **Thursday final report timing fixed (Nov 18 2026).** `make_config` treated a Thursday game's injury report
+  as final from Tuesday evening; it now waits for Wednesday evening, like the NFL's final Thursday report.
+  `inputs.hold_lines` (a reason string) holds game-line calls when the model is far from the market for a
+  reason it cannot see, such as the Colts' deadline sell-off.
 - **Also tested, not adopted:** a player's own share of his team's past touchdowns as a usage feature
   (`td_hist`, no difference) and a yards-per-attempt ratio for backup quarterbacks (`qb_eff_pow`, made passing worse).
 - **Coverage matchups (Nov 2026): tested, not adopted.** `research/coverage_test.py` checks whether a player's

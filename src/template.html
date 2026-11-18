@@ -288,8 +288,8 @@ function leans(D){
   const G=D.game, mk=D.market, H=D.meta.home, A=D.meta.away, sp=mk.spread_home, n=Math.abs(sp);
   const fav = sp<0?H:A, dog = sp<0?A:H;
   const pFav = sp<0?G.p_home_cover:G.p_away_cover, pDog = sp<0?G.p_away_cover:G.p_home_cover;
-  const gated = lowConf(D).length>0;
-  const tag=(ok,txt)=> gated?'<span class="tag flag">QB unclear</span>': ok?'<span class="tag lean">Lean '+txt+'</span>':'<span class="tag pass">Pass</span>';
+  const hold = D.inputs&&D.inputs.hold_lines; const gated = lowConf(D).length>0 || !!hold;
+  const tag=(ok,txt)=> gated?'<span class="tag flag">'+(lowConf(D).length?'QB unclear':'Held')+'</span>': ok?'<span class="tag lean">Lean '+txt+'</span>':'<span class="tag pass">Pass</span>';
   const sideP=Math.max(pFav,pDog), sideT = pFav>pDog?fav+' -'+n:dog+' +'+n;
   const ou=Math.max(G.p_over,G.p_under), ouT=(G.p_over>G.p_under?'Over ':'Under ')+mk.total;
   const eH=G.p_home-imp(mk.ml_home), eA=G.p_away-imp(mk.ml_away); const mlB=eH>eA?[H,eH,mk.ml_home]:[A,eA,mk.ml_away];
@@ -422,7 +422,7 @@ $('h1').innerHTML = esc(M.away_name)+' at '+esc(M.home_name);
    '<tr><td>Spread</td><td>'+modelSpread+'<br><span class="dimtxt">'+dog+' +'+n+' covers '+pct(pDog,1)+'</span></td><td class="dimtxt">'+fav+' -'+n+'</td><td>'+L.side.tag+'</td></tr>'+
    '<tr><td>Total</td><td>'+G.med_total+'<br><span class="dimtxt">under '+pct(G.p_under,1)+'</span></td><td class="dimtxt">'+mk.total+'</td><td>'+L.tot.tag+'</td></tr>';
   const b=D.backtest;
-  $('lineNote').innerHTML='Book = '+esc(mk.book)+'. '+((mk.others||[]).length?'Totals elsewhere: '+mk.others.map(o=>esc(o.book)+' '+o.total).join(', ')+'. ':'')+(L.gated?'No lean here because a quarterback situation is unsettled. ':'')+'Game lines never get more than a Lean here, because over '+b.games+' past games this model went '+b.ats_0[0]+'-'+b.ats_0[1]+' against the closing spread and '+b.ou_0[0]+'-'+b.ou_0[1]+' on totals. The book has been the better predictor of the final score.';
+  $('lineNote').innerHTML='Book = '+esc(mk.book)+'. '+((mk.others||[]).length?'Totals elsewhere: '+mk.others.map(o=>esc(o.book)+' '+o.total).join(', ')+'. ':'')+(L.gated?(D.inputs&&D.inputs.hold_lines?'No lean here: '+esc(D.inputs.hold_lines)+' ':'No lean here because a quarterback situation is unsettled. '):'')+'Game lines never get more than a Lean here, because over '+b.games+' past games this model went '+b.ats_0[0]+'-'+b.ats_0[1]+' against the closing spread and '+b.ou_0[0]+'-'+b.ou_0[1]+' on totals. The book has been the better predictor of the final score.';
 })();
 
 /* ---------- 4. typical game ---------- */

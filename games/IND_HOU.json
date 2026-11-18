@@ -1,0 +1,203 @@
+{
+ "home": "HOU",
+ "away": "IND",
+ "season": 2026,
+ "week": 11,
+ "asof": "2026-11-19",
+ "n_sims": 100000,
+ "seed": 20261119,
+ "neutral": false,
+ "qb": {
+  "HOU": "00-0039163",
+  "IND": "00-0035710"
+ },
+ "out": [
+  "00-0040583",
+  "00-0039849"
+ ],
+ "status": {
+  "00-0040583": "Out",
+  "00-0039849": "Out",
+  "00-0036556": "Questionable"
+ },
+ "out_json": "out/IND_HOU.json",
+ "meta": {
+  "title": "Colts at Texans",
+  "home_name": "Texans",
+  "away_name": "Colts",
+  "home_city": "Houston",
+  "away_city": "Indianapolis",
+  "kickoff": "Thu Nov 19, 2026 \u00b7 8:15 PM ET",
+  "time": "8:15 PM",
+  "venue": "Reliant Stadium, Houston",
+  "generated": "Wed Nov 18, 2026",
+  "roof": "retractable",
+  "lat": 29.685,
+  "lon": -95.411,
+  "data_through": "Week 10"
+ },
+ "market": {
+  "spread_home": -12.5,
+  "total": 44.5,
+  "ml_home": -675,
+  "ml_away": 490,
+  "book": "DraftKings (Tue Nov 17, via SI)",
+  "others": [
+   {
+    "book": "Circa (Tue Nov 17, via VSiN)",
+    "spread_home": -12.5,
+    "total": 44.5,
+    "ml_home": -700,
+    "ml_away": 520
+   }
+  ]
+ },
+ "weather": {
+  "summary": "Retractable roof; mild and dry outside",
+  "precip": 10,
+  "wind": null,
+  "rain_flag": false,
+  "note": "NRG Stadium has a retractable roof and I could not confirm whether it will be open. Outside it is forecast around 22\u00b0C (72\u00b0F) with a 10% chance of rain, so conditions are fine either way.",
+  "effect": "No weather adjustment."
+ },
+ "wx_model": {
+  "pass_mult": 1.0,
+  "cr_mult": 1.0,
+  "td_shift": 0.0,
+  "fg_shift": 0.0
+ },
+ "td_odds": {
+  "David Montgomery": {
+   "price": 100,
+   "book": "BetMGM (Wed Nov 18, 8:21 AM)"
+  },
+  "Nico Collins": {
+   "price": 100,
+   "book": "BetMGM (Wed Nov 18, 8:21 AM)"
+  },
+  "Jonathan Taylor": {
+   "price": 120,
+   "book": "BetMGM (Wed Nov 18, 8:21 AM)"
+  },
+  "Dalton Schultz": {
+   "price": 200,
+   "book": "BetMGM (Wed Nov 18, 8:21 AM)"
+  },
+  "Tank Dell": {
+   "price": 230,
+   "book": "BetMGM (Wed Nov 18, 8:21 AM)"
+  },
+  "Xavier Hutchinson": {
+   "price": 240,
+   "book": "BetMGM (Wed Nov 18, 8:21 AM)"
+  },
+  "Kayshon Boutte": {
+   "price": 300,
+   "book": "BetMGM (Wed Nov 18, 8:21 AM)"
+  },
+  "Tyler Warren": {
+   "price": 300,
+   "book": "BetMGM (Wed Nov 18, 8:21 AM)"
+  },
+  "Emari Demercado": {
+   "price": 310,
+   "book": "BetMGM (Wed Nov 18, 8:21 AM)"
+  },
+  "C.J. Stroud": {
+   "price": 425,
+   "book": "BetMGM (Wed Nov 18, 8:21 AM)"
+  },
+  "Daniel Jones": {
+   "price": 700,
+   "book": "BetMGM (Wed Nov 18, 8:21 AM)"
+  },
+  "Cade Stover": {
+   "price": 850,
+   "book": "BetMGM (Wed Nov 18, 8:21 AM)"
+  },
+  "Brevin Jordan": {
+   "price": 1700,
+   "book": "BetMGM (Wed Nov 18, 8:21 AM)"
+  },
+  "Andrew Ogletree": {
+   "price": 1700,
+   "book": "BetMGM (Wed Nov 18, 8:21 AM)"
+  },
+  "Nick Westbrook-Ikhine": {
+   "price": 1900,
+   "book": "BetMGM (Wed Nov 18, 8:21 AM)"
+  },
+  "Pharaoh Brown": {
+   "price": 3500,
+   "book": "BetMGM (Wed Nov 18, 8:21 AM)"
+  },
+  "DJ Giddens": {
+   "price": 3500,
+   "book": "BetMGM (Wed Nov 18, 8:21 AM)"
+  }
+ },
+ "yard_lines": {},
+ "injuries": [
+  "HOU Woody Marks (RB): Out, concussion (ruled out Tuesday)",
+  "HOU Marvin Harrison Jr. (WR): expected to miss, hamstring, no practice all week (reported, not yet official)",
+  "HOU Brevin Jordan (TE): did not practice, foot/illness, treated as questionable",
+  "HOU David Montgomery (RB): full practice, expected back from his groin injury",
+  "IND Will Mallory (TE): did not practice; IND Anthony Gould (WR): limited"
+ ],
+ "inputs": {
+  "qbs": {
+   "HOU": "C.J. Stroud",
+   "IND": "Daniel Jones"
+  },
+  "report_final": false,
+  "low_conf": {},
+  "notes": [
+   "Daniel Jones starts for Indianapolis after a 1.7 QBR game; Shane Steichen kept him in place because of the short week, and a benching could follow if he struggles again.",
+   "The Colts sold off Quenton Nelson, DeForest Buckner, Keenan Allen and Josh Downs before the deadline. The model has only one game of the new roster, so the game lines are held. Player props are less affected because team scoring for props comes from the book\u2019s line.",
+   "The final injury report comes out Wednesday afternoon, so calls stay on hold until it is in. Tomorrow morning\u2019s scheduled run picks it up."
+  ],
+  "hold_lines": "the model has the Texans by about 5 against the book\u2019s 12.5, and most of that gap is roster news it cannot see yet. The Colts traded Quenton Nelson, DeForest Buckner, Keenan Allen and Josh Downs in the last three weeks, so their team ratings still reflect the old roster."
+ },
+ "sources": [
+  {
+   "label": "Game lines: DraftKings (SI, Tue Nov 17)",
+   "url": "https://www.si.com/betting/colts-vs-texans-odds-skyrocket-in-favor-of-houston-on-thursday-night-football-in-week-11-2026"
+  },
+  {
+   "label": "Game lines: Circa (VSiN, Tue Nov 17)",
+   "url": "https://vsin.com/nfl/colts-vs-texans-predictions-week-11-thursday-night-football-odds-picks-and-player-props/"
+  },
+  {
+   "label": "Anytime TD prices: BetMGM (Wed Nov 18, 8:21 AM)",
+   "url": "https://sports.betmgm.com/en/blog/nfl/colts-texans-first-anytime-td-odds-picks-week-11-gaa/"
+  },
+  {
+   "label": "Woody Marks ruled out (FantasyPros, Tue Nov 17)",
+   "url": "https://www.fantasypros.com/nfl/news/620778/woody-marks-concussion-ruled-out-week-11.php"
+  },
+  {
+   "label": "Hunter, Marks, Harrison Jr. expected to miss (Yahoo, Tue Nov 17)",
+   "url": "https://sports.yahoo.com/nfl/live/nfl-news-injury-updates-131219200.html"
+  },
+  {
+   "label": "Texans practice report (Yahoo, Tue Nov 17)",
+   "url": "https://sports.yahoo.com/articles/latest-texans-ol-keylan-rutledge-011820006.html"
+  },
+  {
+   "label": "Jones stays the Colts starter (Yahoo, Nov 16)",
+   "url": "https://sports.yahoo.com/articles/shane-steichen-says-daniel-jones-150000932.html"
+  },
+  {
+   "label": "Houston daily forecast (weather tool, Wed Nov 18)",
+   "url": "https://weather.com/weather/tenday/l/Houston+TX"
+  },
+  {
+   "label": "Stats, rosters, injury report and play-by-play: nflverse",
+   "url": "https://github.com/nflverse/nflverse-data/releases"
+  },
+  {
+   "label": "Colts trade Downs and Allen; Nelson and Buckner earlier (Axios Indianapolis, Nov 10)",
+   "url": "https://www.axios.com/local/indianapolis/2026/11/10/colts-trade-downs-keep-taylor-in-trade-deadline-scramble"
+  }
+ ]
+}

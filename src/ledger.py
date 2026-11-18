@@ -49,7 +49,9 @@ def log_game(G, o):
                           book=L.get('book'), sim=round(pr, 4), call=base, live=g2 is None and base != 'pass', gate=g2))
     gm, mk = o['game'], o['market']; sp = mk['spread_home']; H, A = G['home'], G['away']
     def lean(kind, ok, **kw):
-        E.append(dict(kind=kind, call='lean' if ok else 'pass', live=bool(ok) and not lowc, gate='QB unclear' if lowc else None, **kw))
+        hold = I.get('hold_lines')   # game lines held for a stated reason the model cannot see (e.g. a roster sell-off)
+        g3 = 'QB unclear' if lowc else ('Held' if hold else None)
+        E.append(dict(kind=kind, call='lean' if ok else 'pass', live=bool(ok) and g3 is None, gate=g3, **kw))
     side_home = gm['p_home_cover'] >= gm['p_away_cover']
     lean('spread', max(gm['p_home_cover'], gm['p_away_cover']) >= .54, team=H if side_home else A, line=sp if side_home else -sp, price=-110,
          sim=round(max(gm['p_home_cover'], gm['p_away_cover']), 4))

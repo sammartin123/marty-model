@@ -50,7 +50,9 @@ def build(away, home, season=None):
         elif qb[t] in dnp:
             low_conf[t] = f"{qbn[t]} has not practised this week, so the {TEAMS[t][1]} quarterback is not certain."
     # injury report counts as final from 6 PM ET two days before the game (Friday for Sunday, Wednesday for Thursday)
-    final_at = dt.datetime.strptime(r.gameday, '%Y-%m-%d') - dt.timedelta(days=2) + dt.timedelta(hours=23)
+    # a Thursday game's final report comes out Wednesday, one day before; every other game's two days before
+    lead = 1 if str(r.weekday) == 'Thursday' else 2
+    final_at = dt.datetime.strptime(r.gameday, '%Y-%m-%d') - dt.timedelta(days=lead) + dt.timedelta(hours=23)
     report_final = dt.datetime.utcnow() >= final_at and os.path.exists(ip)
     d = dt.datetime.strptime(r.gameday, '%Y-%m-%d')
     hh, mm = map(int, str(r.gametime).split(':'))

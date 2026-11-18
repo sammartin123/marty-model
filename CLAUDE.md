@@ -41,6 +41,8 @@ runbook for the weekly run and the rules that always apply.
    - `sources`: label and URL for every page a number came from.
 5. `./run_game.sh games/AWAY_HOME.json`. Sanity-check the console output: win probability within about
    15 points of the market, no player with an absurd share, both starting QBs correct.
+   If the gap is bigger and the cause is news the data cannot see yet (a roster sell-off, a mid-week trade),
+   set `inputs.hold_lines` to a one-sentence reason: game-line calls are then held, player props stay live.
 6. Open `site/index.html` once to confirm it renders, then publish it to the artifact above.
 7. Commit the new game config and push to `main`.
 8. Send Sam a short summary: the game, model vs book on the winner, any Play or Lean calls, key injuries,

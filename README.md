@@ -122,6 +122,16 @@ Game-line calls are capped at Lean on the page for that reason.
   as final from Tuesday evening; it now waits for Wednesday evening, like the NFL's final Thursday report.
   `inputs.hold_lines` (a reason string) holds game-line calls when the model is far from the market for a
   reason it cannot see, such as the Colts' deadline sell-off.
+- **Targets left by absent players go out by recent snaps (Nov 19 2026): tested, adopted** (`vacate_tgt=1.0`).
+  When receivers are traded or ruled out, their target share used to go pro rata to whoever already had the
+  most targets (Tyler Warren jumped to 34% after the Colts traded Allen and Downs). Now it goes by recent snap
+  share. Paired backtest: receiving-yard MAE 24.07 to 23.98, squared error and median error all clearly better,
+  and better again in quarterback-change games; everything else no clear difference. Half-weight (0.5) helped
+  less.
+- **Yardage props vs posted lines (Nov 19 2026).** Every player with a posted line now shows it beside his
+  projection with the sim's chance of clearing it. The sim's ranges are well calibrated in the backtest
+  (receiving: 9.1% below the 10th percentile, 10.3% above the 90th, 48.8% over the median; rushing and passing
+  similar), but with no archive of past lines the edges against real lines are untested.
 - **Also tested, not adopted:** a player's own share of his team's past touchdowns as a usage feature
   (`td_hist`, no difference) and a yards-per-attempt ratio for backup quarterbacks (`qb_eff_pow`, made passing worse).
 - **Coverage matchups (Nov 2026): tested, not adopted.** `research/coverage_test.py` checks whether a player's

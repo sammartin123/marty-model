@@ -30,6 +30,7 @@ CFG = dict(
     qb_eff_pow=0.0, qb_k_att=150.0,     # (older YPA-ratio adjustment: tested, made things worse, left off)
     td_hist=False,              # own share of the team's past TDs as a usage feature: tested, no gain, left off
     vacate_rb=True,             # carries vacated by absent players go to the running backs, not pro rata to the QB
+    vacate_tgt=1.0,             # targets left by absent players go out by recent snap share, not pro rata
     qb_td_fix=True,             # quarterbacks score more rushing TDs than their carries suggest (sneaks, scrambles)
 )
 
@@ -411,6 +412,13 @@ def player_table(db, team, opp, asof, ids, qb_id=None, cfg=CFG, h2h=True):
                 if vac > 0 and rb.any():
                     base = s[rb] + 0.02
                     s = s.copy(); s[rb] = s[rb] + vac * base / base.sum()
+            if kind == 'rec' and cfg.get('vacate_tgt', 0) > 0 and 'u_snapf' in last:
+                # targets left by players who are gone: a share goes by recent snaps instead of pro rata to old target share
+                vac = max(0.0, 1.0 - s.sum()); el = (last.pos.values != 'QB')
+                sn = np.nan_to_num(last.u_snapf.values.astype(float)) * el
+                if vac > 0 and sn.sum() > 0:
+                    k = cfg['vacate_tgt']; s = s.copy()
+                    s = s + vac * k * sn / sn.sum()     # the rest of vac is spread pro rata by the normalisation below
             S.append(s / max(s.sum(), 1e-6))
         S.append(np.full(len(last), 1.0 / len(last)))
         S = np.array(S).T

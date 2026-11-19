@@ -12,13 +12,17 @@
   "IND": "00-0035710"
  },
  "out": [
+  "00-0036556",
+  "00-0039849",
   "00-0040583",
-  "00-0039849"
+  "00-0038394"
  ],
  "status": {
-  "00-0040583": "Out",
+  "00-0036556": "Out",
   "00-0039849": "Out",
-  "00-0036556": "Questionable"
+  "00-0040583": "Out",
+  "00-0038394": "Out",
+  "00-0039816": "Questionable"
  },
  "out_json": "out/IND_HOU.json",
  "meta": {
@@ -30,7 +34,7 @@
   "kickoff": "Thu Nov 19, 2026 \u00b7 8:15 PM ET",
   "time": "8:15 PM",
   "venue": "Reliant Stadium, Houston",
-  "generated": "Wed Nov 18, 2026",
+  "generated": "Thu Nov 19, 2026",
   "roof": "retractable",
   "lat": 29.685,
   "lon": -95.411,
@@ -38,11 +42,18 @@
  },
  "market": {
   "spread_home": -12.5,
-  "total": 44.5,
-  "ml_home": -675,
-  "ml_away": 490,
-  "book": "DraftKings (Tue Nov 17, via SI)",
+  "total": 43.5,
+  "ml_home": -750,
+  "ml_away": 525,
+  "book": "DraftKings (Thu Nov 19 morning, via SI)",
   "others": [
+   {
+    "book": "DraftKings (Tue Nov 17, via SI)",
+    "spread_home": -12.5,
+    "total": 44.5,
+    "ml_home": -675,
+    "ml_away": 490
+   },
    {
     "book": "Circa (Tue Nov 17, via VSiN)",
     "spread_home": -12.5,
@@ -115,10 +126,6 @@
    "price": 850,
    "book": "BetMGM (Wed Nov 18, 8:21 AM)"
   },
-  "Brevin Jordan": {
-   "price": 1700,
-   "book": "BetMGM (Wed Nov 18, 8:21 AM)"
-  },
   "Andrew Ogletree": {
    "price": 1700,
    "book": "BetMGM (Wed Nov 18, 8:21 AM)"
@@ -136,31 +143,191 @@
    "book": "BetMGM (Wed Nov 18, 8:21 AM)"
   }
  },
- "yard_lines": {},
+ "yard_lines": {
+  "C.J. Stroud": [
+   {
+    "stat": "pass",
+    "line": 261.5,
+    "over": -115,
+    "under": -115,
+    "book": "Consensus, Nov 19 9:09 AM ET (SportsBettingDime; book not named)"
+   },
+   {
+    "stat": "rush",
+    "line": 9.5,
+    "over": -135,
+    "under": 100,
+    "book": "BetMGM (Tue Nov 17)"
+   }
+  ],
+  "Daniel Jones": [
+   {
+    "stat": "pass",
+    "line": 180.5,
+    "over": -115,
+    "under": -115,
+    "book": "Consensus, Nov 19 9:09 AM ET (SportsBettingDime; book not named)"
+   }
+  ],
+  "David Montgomery": [
+   {
+    "stat": "rush",
+    "line": 52.5,
+    "over": -115,
+    "under": -115,
+    "book": "Consensus, Nov 19 9:09 AM ET (SportsBettingDime; book not named)"
+   },
+   {
+    "stat": "rec",
+    "line": 8.5,
+    "over": -115,
+    "under": -115,
+    "book": "Consensus, Nov 19 9:09 AM ET (SportsBettingDime; book not named)"
+   }
+  ],
+  "Nico Collins": [
+   {
+    "stat": "rec",
+    "line": 69.5,
+    "over": -115,
+    "under": -115,
+    "book": "Consensus, Nov 19 9:09 AM ET (SportsBettingDime; book not named)"
+   },
+   {
+    "stat": "recs",
+    "line": 5.5,
+    "over": 130,
+    "under": -175,
+    "book": "Consensus, Nov 19 9:09 AM ET (SportsBettingDime; book not named)"
+   }
+  ],
+  "Tank Dell": [
+   {
+    "stat": "rec",
+    "line": 35.5,
+    "over": -111,
+    "under": -118,
+    "book": "Consensus, Nov 19 9:09 AM ET (SportsBettingDime; book not named)"
+   }
+  ],
+  "Xavier Hutchinson": [
+   {
+    "stat": "rec",
+    "line": 36.5,
+    "over": -105,
+    "under": -125,
+    "book": "Consensus, Nov 19 9:09 AM ET (SportsBettingDime; book not named)"
+   }
+  ],
+  "Dalton Schultz": [
+   {
+    "stat": "rec",
+    "line": 31.5,
+    "over": -111,
+    "under": -120,
+    "book": "BetMGM (Tue Nov 17)"
+   }
+  ],
+  "Kayshon Boutte": [
+   {
+    "stat": "rec",
+    "line": 28.5,
+    "over": -115,
+    "under": -115,
+    "book": "BetMGM (Tue Nov 17)"
+   }
+  ],
+  "Jonathan Taylor": [
+   {
+    "stat": "rush",
+    "line": 49.5,
+    "over": -120,
+    "under": -111,
+    "book": "Consensus, Nov 19 9:09 AM ET (SportsBettingDime; book not named)"
+   },
+   {
+    "stat": "rec",
+    "line": 20.5,
+    "over": -111,
+    "under": -118,
+    "book": "Consensus, Nov 19 9:09 AM ET (SportsBettingDime; book not named)"
+   }
+  ],
+  "Seth McGowan": [
+   {
+    "stat": "rush",
+    "line": 28.5,
+    "over": -115,
+    "under": -115,
+    "book": "Consensus, Nov 19 9:09 AM ET (SportsBettingDime; book not named)"
+   }
+  ],
+  "Tyler Warren": [
+   {
+    "stat": "rec",
+    "line": 40.5,
+    "over": -115,
+    "under": -115,
+    "book": "Consensus, Nov 19 9:09 AM ET (SportsBettingDime; book not named)"
+   },
+   {
+    "stat": "recs",
+    "line": 5.5,
+    "over": 110,
+    "under": -149,
+    "book": "Consensus, Nov 19 9:09 AM ET (SportsBettingDime; book not named)"
+   }
+  ],
+  "Anthony Gould": [
+   {
+    "stat": "rec",
+    "line": 24.5,
+    "over": -108,
+    "under": -116,
+    "book": "Consensus, Nov 19 9:09 AM ET (SportsBettingDime; book not named)"
+   }
+  ]
+ },
  "injuries": [
-  "HOU Woody Marks (RB): Out, concussion (ruled out Tuesday)",
-  "HOU Marvin Harrison Jr. (WR): expected to miss, hamstring, no practice all week (reported, not yet official)",
-  "HOU Brevin Jordan (TE): did not practice, foot/illness, treated as questionable",
-  "HOU David Montgomery (RB): full practice, expected back from his groin injury",
-  "IND Will Mallory (TE): did not practice; IND Anthony Gould (WR): limited"
+  "HOU Brevin Jordan (TE): Out, Foot",
+  "HOU Marvin Harrison Jr. (WR): Out, Hamstring",
+  "HOU Woody Marks (RB): Out, Concussion",
+  "IND Will Mallory (TE): Out, Hamstring",
+  "IND Anthony Gould (WR): Questionable, Toe"
  ],
  "inputs": {
   "qbs": {
    "HOU": "C.J. Stroud",
    "IND": "Daniel Jones"
   },
-  "report_final": false,
+  "report_final": true,
   "low_conf": {},
   "notes": [
    "Daniel Jones starts for Indianapolis after a 1.7 QBR game; Shane Steichen kept him in place because of the short week, and a benching could follow if he struggles again.",
    "The Colts sold off Quenton Nelson, DeForest Buckner, Keenan Allen and Josh Downs before the deadline. The model has only one game of the new roster, so the game lines are held. Player props are less affected because team scoring for props comes from the book\u2019s line.",
-   "The final injury report comes out Wednesday afternoon, so calls stay on hold until it is in. Tomorrow morning\u2019s scheduled run picks it up."
+   "Yardage lines are the Thursday morning market consensus where available (the source does not name the book) and BetMGM\u2019s Tuesday lines otherwise. Check your own book\u2019s number before acting."
   ],
-  "hold_lines": "the model has the Texans by about 5 against the book\u2019s 12.5, and most of that gap is roster news it cannot see yet. The Colts traded Quenton Nelson, DeForest Buckner, Keenan Allen and Josh Downs in the last three weeks, so their team ratings still reflect the old roster."
+  "hold_lines": "the model has the Texans by about 5 against the book\u2019s 12.5. Most of that gap is news it cannot see: the Colts traded Quenton Nelson, DeForest Buckner, Keenan Allen and Josh Downs in the last three weeks, and the line moved further this week on Colts offensive line and secondary injuries, which the model does not track."
  },
  "sources": [
   {
-   "label": "Game lines: DraftKings (SI, Tue Nov 17)",
+   "label": "Game lines: DraftKings, Thu Nov 19 (SI)",
+   "url": "https://www.si.com/betting/colts-vs-texans-odds-for-week-11-total-dropping-ahead-of-thursday-night-football-houston-remains-huge-favorite"
+  },
+  {
+   "label": "Line move on Colts O-line and secondary injuries (Bleacher Nation, Thu Nov 19)",
+   "url": "https://www.bleachernation.com/betting/2026/11/19/colts-vs-texans-odds/"
+  },
+  {
+   "label": "Yardage lines: consensus board, Nov 19 9:09 AM ET (SportsBettingDime)",
+   "url": "https://www.sportsbettingdime.com/news/nfl/colts-vs-texans-touchdown-scorer-odds-prop-picks-nov-19/"
+  },
+  {
+   "label": "Yardage lines: BetMGM, Nov 17",
+   "url": "https://sports.betmgm.com/en/blog/nfl/colts-texans-prediction-odds-player-prop-bets-picks-week-11-jaa/"
+  },
+  {
+   "label": "Game lines: DraftKings, Tue Nov 17 (SI)",
    "url": "https://www.si.com/betting/colts-vs-texans-odds-skyrocket-in-favor-of-houston-on-thursday-night-football-in-week-11-2026"
   },
   {

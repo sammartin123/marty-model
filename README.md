@@ -132,6 +132,12 @@ Game-line calls are capped at Lean on the page for that reason.
   projection with the sim's chance of clearing it. The sim's ranges are well calibrated in the backtest
   (receiving: 9.1% below the 10th percentile, 10.3% above the 90th, 48.8% over the median; rushing and passing
   similar), but with no archive of past lines the edges against real lines are untested.
+- **Projected game (Nov 19 2026).** The typical-game section is now built from the prop simulations (team
+  scoring set to the book's line). The box score is every player's projection across all sims: median yards,
+  average volume and the chance of a TD, with the book line beside it. The final score is the most common one
+  at the middle margin, and the scoring plays come from the one game out of 300,000 (`typical_batches=2`
+  extra batches) that lands on that score with the usual TD/FG mix, the likeliest scorers and stat lines
+  closest to the projections. The model's own view of the game is still in Model vs book.
 - **Also tested, not adopted:** a player's own share of his team's past touchdowns as a usage feature
   (`td_hist`, no difference) and a yards-per-attempt ratio for backup quarterbacks (`qb_eff_pow`, made passing worse).
 - **Coverage matchups (Nov 2026): tested, not adopted.** `research/coverage_test.py` checks whether a player's

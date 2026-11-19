@@ -38,7 +38,7 @@ def run(G, db=None, quiet=False, record=True):
     if cfg.get('anchor') and mk0.get('spread_home') is not None and mk0.get('total') is not None:
         th, ta = M.implied_totals(mk0['spread_home'], mk0['total'])
         par_a = M.anchor(db, par, th, ta, cfg, wx=wx)
-        op = M.simulate(db, par_a, tabs, vols, N, np.random.default_rng(G.get('seed', 20261115) + 1), cfg, wx=wx)
+        op = M.simulate(db, par_a, tabs, vols, N, np.random.default_rng(G.get('seed', 20261115) + 1), cfg, wx=wx, keep=True)
         anchor = dict(home=float(th), away=float(ta), sim_home=float(op['pts'][:, 0].mean()), sim_away=float(op['pts'][:, 1].mean()),
                       model_home=float(pts[:, 0].mean()), model_away=float(pts[:, 1].mean()))
 
@@ -72,56 +72,86 @@ def run(G, db=None, quiet=False, record=True):
                 mkt_nv_home=nv_home, fair_ml_home=american(p_home), fair_ml_away=american(1 - p_home),
                 p_ot=float(o['ot'].mean()), drives=float(o['nd'].mean()))
 
-    # ------------------------------------------------------------ typical game
-    m_star = int(np.round(np.median(mg)))
+    # ------------------------------------------------------------ projected game (box score + one replay)
+    # Built from the same simulations as the props (team scoring set to the book's line when one is posted),
+    # so the box score, the yardage tables and the TD board all agree.
+    T0 = op
+    TP = T0['pts']; tmg = TP[:, 0] - TP[:, 1]; ttot = TP.sum(1)
+    m_star = int(np.round(np.median(tmg)))
     if m_star == 0:
-        m_star = 1 if mg.mean() > 0 else -1
-    cand = (mg == m_star) & (~o['ot']) & (np.abs(tot - np.median(tot)) <= 4)
-    pairs, cnt = np.unique(pts[cand], axis=0, return_counts=True)
+        m_star = 1 if tmg.mean() > 0 else -1
+    cand = (tmg == m_star) & (~T0['ot']) & (np.abs(ttot - np.median(ttot)) <= 4)
+    if not cand.any():
+        cand = (np.abs(tmg - m_star) <= 1) & (~T0['ot'])
+    pairs, cnt = np.unique(TP[cand], axis=0, return_counts=True)
     best = pairs[cnt.argmax()]
-    idx = np.where(cand & (pts[:, 0] == best[0]) & (pts[:, 1] == best[1]))[0]
-    # keep the usual way to reach that score (e.g. 24 = three TDs and a field goal, not eight field goals)
+
+    # projections every replay is measured against (from the full first batch)
+    ref = []
     for t in (0, 1):
-        S_ = o['stats'][t]; ntd = (S_['rtd'] + S_['ctd']).sum(1)
-        same = pts[:, t] == best[t]
-        vals, cts = np.unique(ntd[same], return_counts=True)
-        keep = ntd[idx] == vals[cts.argmax()]
-        if keep.any(): idx = idx[keep]
-    # closest to the median stat lines for the main players
-    dist = np.zeros(len(idx))
-    for t in (0, 1):
-        s = o['stats'][t]
-        for arr, w in [(s['pass_yds'], 1 / 60.0)]:
-            dist += np.abs(arr[idx] - np.median(arr)) * w
-        top = np.argsort(-s['ryds'].mean(0))[:3]
-        for j in top:
-            dist += np.abs(s['ryds'][idx, j] - np.median(s['ryds'][:, j])) / 30.0
-        topr = np.argsort(-s['uyds'].mean(0))[:2]
-        for j in topr:
-            dist += np.abs(s['uyds'][idx, j] - np.median(s['uyds'][:, j])) / 25.0
-        # prefer games whose touchdowns go to likely scorers, so the sample game reads like a normal night
-        # (cost = how unlikely each player's TD count in that game is, so no long shots and no 3-TD outliers)
+        s = T0['stats'][t]; df = tabs[t]
         tdj = np.minimum(s['rtd'] + s['ctd'], 4).astype(int)
-        pk = np.stack([(tdj == k).mean(0) for k in range(5)])            # P(player scores k TDs)
+        pk = np.stack([(tdj == k).mean(0) for k in range(5)])
         lp = -np.log(np.clip(pk, 1e-4, 1))
-        cost = lp[tdj[idx], np.arange(tdj.shape[1])] - lp.min(0)           # vs that player's most likely count
-        dist += 2.5 * cost.sum(1)
-        # every touchdown must have a plausible owner in the box score
-        dist += 50 * ((s['ctd'][idx] > s['recs'][idx]).any(1) | (s['rtd'][idx] > s['cars'][idx]).any(1))
-    # defensive and return touchdowns are rare, so keep them out of the sample game when possible
-    dist += 3.0 * (o['ev']['kind'][idx] == 3).sum(1)
-    i = int(idx[dist.argmin()])
+        items = [('pass_yds', None, s['pass_yds'])]
+        for j in range(len(df)):
+            if s['ryds'][:, j].mean() >= 8: items.append(('ryds', j, s['ryds'][:, j])); items.append(('recs', j, s['recs'][:, j]))
+            if s['uyds'][:, j].mean() >= 8: items.append(('uyds', j, s['uyds'][:, j])); items.append(('cars', j, s['cars'][:, j]))
+        sc_ = []
+        for key, j, arr in items:
+            q25, q50, q75 = np.quantile(arr, [.25, .5, .75])
+            sc_.append((key, j, q50, max(q75 - q25, 3.0 if key in ('recs', 'cars') else 15.0)))
+        ntd = (s['rtd'] + s['ctd']).sum(1)
+        vals, cts = np.unique(ntd[TP[:, t] == best[t]], return_counts=True)
+        ref.append(dict(items=sc_, lp=lp, ntd=int(vals[cts.argmax()]) if len(vals) else None))
+
+    def pick(T):
+        P_ = T['pts']
+        idx = np.where((P_[:, 0] == best[0]) & (P_[:, 1] == best[1]) & (~T['ot']))[0]
+        for t in (0, 1):
+            s = T['stats'][t]
+            if ref[t]['ntd'] is not None:
+                keep_ = (s['rtd'][idx] + s['ctd'][idx]).sum(1) == ref[t]['ntd']
+                if keep_.any(): idx = idx[keep_]
+        if not len(idx):
+            return np.inf, None
+        dist = np.zeros(len(idx))
+        for t in (0, 1):
+            s = T['stats'][t]
+            for key, j, med, scale in ref[t]['items']:
+                x = s[key][idx] if j is None else s[key][idx, j]
+                dist += np.abs(x - med) / scale
+            tdj = np.minimum(s['rtd'][idx] + s['ctd'][idx], 4).astype(int)
+            lp = ref[t]['lp']
+            dist += 2.5 * (lp[tdj, np.arange(tdj.shape[1])] - lp.min(0)).sum(1)
+            dist += 50 * ((s['ctd'][idx] > s['recs'][idx]).any(1) | (s['rtd'][idx] > s['cars'][idx]).any(1))
+        dist += 3.0 * (T['ev']['kind'][idx] == 3).sum(1)
+        k = int(dist.argmin())
+        return float(dist[k]), int(idx[k])
+
+    # look through extra batches so the replay can match the projections closely
+    extra = int(G.get('typical_batches', 2))
+    best_d, i = pick(T0); T = T0; pool = int(((TP[:, 0] == best[0]) & (TP[:, 1] == best[1])).sum())
+    for b_ in range(extra):
+        Tb = M.simulate(db, par_a if anchor else par, tabs, vols, N, np.random.default_rng(G.get('seed', 20261115) + 11 + b_), cfg, wx=wx, keep=True)
+        d_, i_ = pick(Tb); pool += int(((Tb['pts'][:, 0] == best[0]) & (Tb['pts'][:, 1] == best[1])).sum())
+        if i_ is not None and d_ < best_d:
+            best_d, i, T = d_, i_, Tb
+        else:
+            del Tb
+    pts_t = T['pts']
+
     sc = pd.read_parquet(os.path.join(M.WORK, 'scores.parquet'))
     sc = sc[sc.season >= 2021]
     rush_len = sc[(sc.rush_touchdown == 1)].yards_gained.dropna().values
     pass_len = sc[(sc.pass_touchdown == 1)].yards_gained.dropna().values
     fg_len = sc[(sc.field_goal_result == 'made')].kick_distance.dropna().values
     trng = np.random.default_rng(i)
-    ev = o['ev']
+    ev = T['ev']
     teams = [home, away]
     scorers = []
     for t in (0, 1):
-        s = o['stats'][t]; df = tabs[t]
+        s = T['stats'][t]; df = tabs[t]
         lst = []
         for j in range(len(df)):
             lst += [('rush', j)] * int(s['rtd'][i, j]) + [('rec', j)] * int(s['ctd'][i, j])
@@ -153,24 +183,34 @@ def run(G, db=None, quiet=False, record=True):
                      yards=int(trng.integers(18, 70)), pat='PAT good' if pat >= 1 else 'PAT no good')
         e['score'] = {home: score[0], away: score[1]}
         events.append(e)
-    assert score[0] == pts[i, 0] and score[1] == pts[i, 1], (score, pts[i])
+    assert score[0] == pts_t[i, 0] and score[1] == pts_t[i, 1], (score, pts_t[i])
 
-    def box(t):
-        s = o['stats'][t]; df = tabs[t]
-        rows = dict(passing=[], rushing=[], receiving=[])
-        qbj = int(np.where(df.is_qb.values)[0][0])
-        rows['passing'].append(dict(name=df.name[qbj], comp=int(s['comp'][i]), att=int(s['PA'][i]), yds=int(round(s['pass_yds'][i])),
-                                    td=int(s['pass_td'][i]), ints=int(s['ints'][i])))
-        for j in np.argsort(-s['uyds'][i]):
-            if s['cars'][i, j] > 0:
-                rows['rushing'].append(dict(name=df.name[j], car=int(s['cars'][i, j]), yds=int(round(s['uyds'][i, j])), td=int(s['rtd'][i, j])))
-        for j in np.argsort(-s['ryds'][i]):
-            if s['recs'][i, j] > 0:
-                rows['receiving'].append(dict(name=df.name[j], rec=int(s['recs'][i, j]), tgt=int(s['tgts'][i, j]),
-                                              yds=int(round(s['ryds'][i, j])), td=int(s['ctd'][i, j])))
-        return dict(passing=rows['passing'], rushing=rows['rushing'][:4], receiving=rows['receiving'][:6])
-    typical = dict(score={home: int(pts[i, 0]), away: int(pts[i, 1])}, events=events, box={home: box(0), away: box(1)},
-                   share=float((pts == best).all(1).mean()))
+    # projected box score: every number is from all of the first batch's simulations
+    def line_for(name, stat):
+        for L in (G.get('yard_lines') or {}).get(name, []) if isinstance(G.get('yard_lines'), dict) else []:
+            if L.get('stat') == stat: return L.get('line')
+        return None
+    def proj_box(t):
+        s = T0['stats'][t]; df = tabs[t]
+        qbj = int(np.where(df.is_qb.values)[0][0]); nmq = df.name[qbj]
+        md = lambda a: int(round(float(np.median(a))))
+        passing = [dict(name=nmq, comp=round(float(s['comp'].mean()), 1), att=round(float(s['PA'].mean()), 1), yds=md(s['pass_yds']),
+                        td=round(float(s['pass_td'].mean()), 1), ints=round(float(s['ints'].mean()), 1), line=line_for(nmq, 'pass'))]
+        rushing, receiving = [], []
+        for j in np.argsort(-s['cars'].mean(0)):
+            if s['cars'][:, j].mean() >= 1.5:
+                rushing.append(dict(name=df.name[j], car=round(float(s['cars'][:, j].mean()), 1), yds=md(s['uyds'][:, j]),
+                                    td=round(float((s['rtd'][:, j] > 0).mean()), 3), line=line_for(df.name[j], 'rush')))
+        for j in np.argsort(-np.median(s['ryds'], 0) - 0.01 * s['ryds'].mean(0)):
+            if s['tgts'][:, j].mean() >= 1.5:
+                receiving.append(dict(name=df.name[j], rec=round(float(s['recs'][:, j].mean()), 1), tgt=round(float(s['tgts'][:, j].mean()), 1),
+                                      yds=md(s['ryds'][:, j]), td=round(float((s['ctd'][:, j] > 0).mean()), 3), line=line_for(df.name[j], 'rec')))
+        return dict(passing=passing, rushing=rushing[:4], receiving=receiving[:6],
+                    pts=round(float(TP[:, t].mean()), 1))
+    typical = dict(score={home: int(pts_t[i, 0]), away: int(pts_t[i, 1])}, events=events,
+                   box={home: proj_box(0), away: proj_box(1)},
+                   share=float((TP == best).all(1).mean()), pool=pool, n_searched=int(N * (1 + extra)),
+                   anchored=bool(anchor), proj_margin=float(np.median(tmg)), proj_total=float(np.median(ttot)))
 
     # ------------------------------------------------------------ defence vs position (display)
     tp = db.tpos[db.tpos.season == G['season']]

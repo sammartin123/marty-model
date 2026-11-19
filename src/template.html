@@ -117,6 +117,7 @@ footer{font-family:var(--mono);font-size:11px;color:var(--faint)}
 .picker{position:sticky;top:0;z-index:20;background:var(--bg);padding:8px 0;display:flex;gap:8px;align-items:center;border-bottom:1px solid var(--line);margin-top:-20px}
 .picker label{font-family:var(--mono);font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--dim)}
 .picker select{flex:1;min-width:0}
+.picker[hidden]{display:none}
 .grow{display:block;width:100%;text-align:left;background:transparent;border:0;border-bottom:1px solid #331214;color:var(--ink);padding:10px 2px;cursor:pointer;font-family:var(--body)}
 .grow:last-child{border-bottom:0}
 .grow:hover,.grow[aria-current="true"]{background:var(--panel2)}
@@ -189,7 +190,7 @@ footer{font-family:var(--mono);font-size:11px;color:var(--faint)}
 
 <section id="s-typ">
   <div><h2 id="typH"></h2><div class="sub" id="typS"></div></div>
-  <canvas id="fldC" aria-label="Replay of the scoring plays in the typical simulated game"></canvas>
+  <canvas id="fldC" aria-label="Replay of the scoring plays in the projected game"></canvas>
   <div class="row"><button class="btn" id="fldBtn" type="button">Play the game</button><button class="btn" id="fldPrev" type="button" aria-label="Previous score">◀</button><button class="btn" id="fldNext" type="button" aria-label="Next score">▶</button><span class="counter" id="fldPos"></span></div>
   <div class="card"><div class="evlist" id="evList"></div></div>
   <div class="card"><div class="box" id="box"></div></div>
@@ -428,18 +429,28 @@ $('h1').innerHTML = esc(M.away_name)+' at '+esc(M.home_name);
 /* ---------- 4. typical game ---------- */
 (function(){
   const T=D.typical, ev=T.events, win = T.score[H]>T.score[A]?H:A, lose=win===H?A:H;
-  $('typH').textContent='The typical game: '+NAME[win]+' '+T.score[win]+', '+NAME[lose]+' '+T.score[lose];
-  $('typS').textContent='One sim with the most common final score, picked so its scorers and stat lines look like a normal night. It shows how the game could go, not who will score: for that, use the TD board, which counts all '+M.n_sims.toLocaleString('en-US')+' sims.';
+  $('typH').textContent='Projected game: '+NAME[win]+' '+T.score[win]+', '+NAME[lose]+' '+T.score[lose];
+  $('typS').textContent=(T.anchored?'Built from the same sims as the props, with team scoring set to the book\u2019s line. ':'')+'The final score is the most common one at the middle margin. The box score is every player\u2019s projection across all '+M.n_sims.toLocaleString('en-US')+' sims. The scoring plays come from the one game out of '+(T.n_searched||M.n_sims).toLocaleString('en-US')+' that lands on this score and sits closest to those projections.';
   const ord=['1ST','2ND','3RD','4TH'];
   const last=n=>n.split(' ').slice(-1)[0].replace(/^(Jr\.|II|III)$/,'');
   const sur=n=>{ const p=n.split(' '); const l=p[p.length-1]; return /^(Jr\.?|Sr\.?|II|III|IV)$/.test(l)?p[p.length-2]:l; };
   const desc=e=> e.type==='FG' ? e.yards+'-yard field goal is good' : e.type==='DTD' ? e.how+' touchdown, '+e.yards+' yards' : (e.how==='rec' ? sur(e.passer)+' to '+sur(e.player)+', '+e.yards+'-yard touchdown' : sur(e.player)+', '+e.yards+'-yard touchdown run');
   ev.forEach(e=>{ const d=el('div'); d.innerHTML='<span class="t">'+ord[e.q-1]+' '+e.clock+'</span><span><b style="color:'+M.colors[e.team]+'">'+e.team+'</b> '+esc(desc(e))+(e.pat&&e.pat!=='PAT good'?' <span class="dimtxt">('+esc(e.pat)+')</span>':'')+'</span><span class="sc">'+A+' '+e.score[A]+' · '+H+' '+e.score[H]+'</span>'; $('evList').appendChild(d); });
   // box score
-  [A,H].forEach(t=>{ const b=T.box[t]; const d=el('div'); let h='<h3 style="border-top-color:'+M.colors[t]+'"><span>'+esc(NAME[t])+'</span><span>'+T.score[t]+'</span></h3>';
-    h+='<div class="grp">Passing</div>'+b.passing.map(p=>'<div class="ln"><span>'+esc(sur(p.name))+'</span><span>'+p.comp+'/'+p.att+', '+p.yds+', '+p.td+' TD'+(p.ints?', '+p.ints+' INT':'')+'</span></div>').join('');
-    h+='<div class="grp">Rushing</div>'+b.rushing.map(p=>'<div class="ln"><span>'+esc(sur(p.name))+'</span><span>'+p.car+', '+p.yds+(p.td?', '+p.td+' TD':'')+'</span></div>').join('');
-    h+='<div class="grp">Receiving</div>'+b.receiving.map(p=>'<div class="ln"><span>'+esc(sur(p.name))+'</span><span>'+p.rec+'/'+p.tgt+', '+p.yds+(p.td?', '+p.td+' TD':'')+'</span></div>').join('');
+  const ln=v=> v!=null?' <span class="dimtxt">('+v+')</span>':'';
+  const tdp=v=> v>=.005?' · TD '+Math.round(v*100)+'%':'';
+  const f1=v=> (Math.round(v*10)/10).toFixed(1);
+  if(T.box[A].pts!=null) $('box').insertAdjacentHTML('beforebegin','<div class="eyebrow" style="margin:0 0 10px">Projected box score · median yards, average volume, chance of a TD · book line in brackets</div>');
+  [A,H].forEach(t=>{ const b=T.box[t]; const d=el('div'); let h='<h3 style="border-top-color:'+M.colors[t]+'"><span>'+esc(NAME[t])+'</span><span>'+T.score[t]+(b.pts!=null?' <small class="dimtxt" style="font-size:11px;font-style:normal">avg '+f1(b.pts)+'</small>':'')+'</span></h3>';
+    if(b.pts!=null){
+      h+='<div class="grp">Passing</div>'+b.passing.map(p=>'<div class="ln"><span>'+esc(sur(p.name))+'</span><span>'+Math.round(p.comp)+'/'+Math.round(p.att)+', '+p.yds+ln(p.line)+', '+f1(p.td)+' TD, '+f1(p.ints)+' INT</span></div>').join('');
+      h+='<div class="grp">Rushing</div>'+b.rushing.map(p=>'<div class="ln"><span>'+esc(sur(p.name))+'</span><span>'+f1(p.car)+' car, '+p.yds+ln(p.line)+tdp(p.td)+'</span></div>').join('');
+      h+='<div class="grp">Receiving</div>'+b.receiving.map(p=>'<div class="ln"><span>'+esc(sur(p.name))+'</span><span>'+f1(p.rec)+'/'+f1(p.tgt)+', '+p.yds+ln(p.line)+tdp(p.td)+'</span></div>').join('');
+    } else {
+      h+='<div class="grp">Passing</div>'+b.passing.map(p=>'<div class="ln"><span>'+esc(sur(p.name))+'</span><span>'+p.comp+'/'+p.att+', '+p.yds+', '+p.td+' TD'+(p.ints?', '+p.ints+' INT':'')+'</span></div>').join('');
+      h+='<div class="grp">Rushing</div>'+b.rushing.map(p=>'<div class="ln"><span>'+esc(sur(p.name))+'</span><span>'+p.car+', '+p.yds+(p.td?', '+p.td+' TD':'')+'</span></div>').join('');
+      h+='<div class="grp">Receiving</div>'+b.receiving.map(p=>'<div class="ln"><span>'+esc(sur(p.name))+'</span><span>'+p.rec+'/'+p.tgt+', '+p.yds+(p.td?', '+p.td+' TD':'')+'</span></div>').join('');
+    }
     d.innerHTML=h; $('box').appendChild(d); });
   // field replay
   const cv=$('fldC'); let idx=-1, raf=0, playing=false;
@@ -459,13 +470,13 @@ $('h1').innerHTML = esc(M.away_name)+' at '+esc(M.home_name);
     c.strokeStyle='#fff'; c.lineWidth=2; c.beginPath(); c.moveTo(ydx(0),fy); c.lineTo(ydx(0),fy+fh); c.stroke();
     // scorebug
     const sc = e? (p>=.62? e.score : (i>0?ev[i-1].score:{[H]:0,[A]:0})) : T.score;
-    c.textBaseline='alphabetic'; c.textAlign='left'; c.fillStyle='#fff'; c.font='700 10.5px JetBrains Mono, monospace'; c.fillText('THE TYPICAL GAME OF '+M.n_sims.toLocaleString('en-US')+' SIMS',2,13);
+    c.textBaseline='alphabetic'; c.textAlign='left'; c.fillStyle='#fff'; c.font='700 10.5px JetBrains Mono, monospace'; c.fillText('PROJECTED GAME · '+M.n_sims.toLocaleString('en-US')+' SIMS',2,13);
     c.fillStyle='#2a0d0f'; c.fillRect(0,20,w,30);
     c.font='italic 800 20px Barlow Condensed, sans-serif'; c.fillStyle=M.colors[A]; c.fillText(A,10,42); c.fillStyle='#fff'; c.fillText(sc[A],58,42); c.fillStyle=M.colors[H]; c.fillText(H,104,42); c.fillStyle='#fff'; c.fillText(sc[H],152,42);
     c.font='700 12px JetBrains Mono, monospace'; c.textAlign='right'; c.fillStyle='#f0d9c4'; c.fillText(e? ord[e.q-1]+' '+e.clock : 'FINAL', w-10,40);
     c.textAlign='left'; c.font='500 13px Barlow, sans-serif'; c.fillStyle='#f0d9c4';
     c.fillText(e? (p<.62 ? (e.type==='FG'? e.team+' lines up a '+e.yards+'-yard field goal' : e.type==='DTD'? (e.team===H?A:H)+' ball, turnover coming' : e.team+' ball at the '+(e.team===H?A:H)+' '+Math.min(e.yards,99)) : desc(e)) : 'Final: '+NAME[win]+' '+T.score[win]+', '+NAME[lose]+' '+T.score[lose], 4, 66);
-    if(!e){ return card(c,w,h,'FINAL',NAME[win].toUpperCase(),NAME[win]+' '+T.score[win]+', '+NAME[lose]+' '+T.score[lose]+' · '+pct(T.share,1)+' of all sims',M.colors[win]); }
+    if(!e){ return card(c,w,h,'FINAL',NAME[win].toUpperCase(),NAME[win]+' '+T.score[win]+', '+NAME[lose]+' '+T.score[lose]+' · most common score',M.colors[win]); }
     const cy=fy+fh*.5, s=Math.max(2.4,w/150);
     if(e.type==='FG'){
       const kx=ydx(Math.min(28,Math.max(8,e.yards-17))), gx= dir>0? w-4 : 4;

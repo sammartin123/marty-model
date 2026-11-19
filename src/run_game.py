@@ -80,6 +80,13 @@ def run(G, db=None, quiet=False, record=True):
     pairs, cnt = np.unique(pts[cand], axis=0, return_counts=True)
     best = pairs[cnt.argmax()]
     idx = np.where(cand & (pts[:, 0] == best[0]) & (pts[:, 1] == best[1]))[0]
+    # keep the usual way to reach that score (e.g. 24 = three TDs and a field goal, not eight field goals)
+    for t in (0, 1):
+        S_ = o['stats'][t]; ntd = (S_['rtd'] + S_['ctd']).sum(1)
+        same = pts[:, t] == best[t]
+        vals, cts = np.unique(ntd[same], return_counts=True)
+        keep = ntd[idx] == vals[cts.argmax()]
+        if keep.any(): idx = idx[keep]
     # closest to the median stat lines for the main players
     dist = np.zeros(len(idx))
     for t in (0, 1):
@@ -92,8 +99,17 @@ def run(G, db=None, quiet=False, record=True):
         topr = np.argsort(-s['uyds'].mean(0))[:2]
         for j in topr:
             dist += np.abs(s['uyds'][idx, j] - np.median(s['uyds'][:, j])) / 25.0
+        # prefer games whose touchdowns go to likely scorers, so the sample game reads like a normal night
+        # (cost = how unlikely each player's TD count in that game is, so no long shots and no 3-TD outliers)
+        tdj = np.minimum(s['rtd'] + s['ctd'], 4).astype(int)
+        pk = np.stack([(tdj == k).mean(0) for k in range(5)])            # P(player scores k TDs)
+        lp = -np.log(np.clip(pk, 1e-4, 1))
+        cost = lp[tdj[idx], np.arange(tdj.shape[1])] - lp.min(0)           # vs that player's most likely count
+        dist += 2.5 * cost.sum(1)
         # every touchdown must have a plausible owner in the box score
         dist += 50 * ((s['ctd'][idx] > s['recs'][idx]).any(1) | (s['rtd'][idx] > s['cars'][idx]).any(1))
+    # defensive and return touchdowns are rare, so keep them out of the sample game when possible
+    dist += 3.0 * (o['ev']['kind'][idx] == 3).sum(1)
     i = int(idx[dist.argmin()])
     sc = pd.read_parquet(os.path.join(M.WORK, 'scores.parquet'))
     sc = sc[sc.season >= 2021]

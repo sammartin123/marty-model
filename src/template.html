@@ -429,7 +429,7 @@ $('h1').innerHTML = esc(M.away_name)+' at '+esc(M.home_name);
 (function(){
   const T=D.typical, ev=T.events, win = T.score[H]>T.score[A]?H:A, lose=win===H?A:H;
   $('typH').textContent='The typical game: '+NAME[win]+' '+T.score[win]+', '+NAME[lose]+' '+T.score[lose];
-  $('typS').textContent='The most common final score at the middle margin';
+  $('typS').textContent='One sim with the most common final score, picked so its scorers and stat lines look like a normal night. It shows how the game could go, not who will score: for that, use the TD board, which counts all '+M.n_sims.toLocaleString('en-US')+' sims.';
   const ord=['1ST','2ND','3RD','4TH'];
   const last=n=>n.split(' ').slice(-1)[0].replace(/^(Jr\.|II|III)$/,'');
   const sur=n=>{ const p=n.split(' '); const l=p[p.length-1]; return /^(Jr\.?|Sr\.?|II|III|IV)$/.test(l)?p[p.length-2]:l; };

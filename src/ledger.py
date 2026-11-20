@@ -33,20 +33,22 @@ def log_game(G, o):
     for p in o['players']:
         gate = 'QB unclear' if p.get('low_conf') else ('Questionable' if p.get('status') == 'Questionable' else (None if final else 'Injuries not final'))
         if p.get('td_mkt'):
-            e = p['td_edge']
+            e = p.get('call_edge', p['td_edge'])     # model blended with the book (run_game.CALL_W)
             base = 'play' if (e >= .03 and p['p_td'] >= .10) else 'lean' if (e >= .015 and p['p_td'] >= .10) else 'fade' if e <= -.05 else 'pass'
             if base == 'fade' and p.get('is_qb'):
                 base = 'pass'            # same rule as the page: never fade a quarterback
             E.append(dict(kind='td', pid=p['id'], name=p['name'], team=p['team'], price=p['td_mkt']['price'], book=p['td_mkt']['book'],
-                          sim=round(p['p_td'], 4), mkt=round(p['td_mkt']['implied'], 4), call=base, live=gate is None and base != 'pass', gate=gate))
+                          sim=round(p['p_td'], 4), mkt=round(p['td_mkt']['implied'], 4), p_call=round(p.get('p_td_call', p['p_td']), 4), call=base, live=gate is None and base != 'pass', gate=gate))
         for L in p.get('lines', []):
-            side = 'over' if L['p_over'] >= .5 else 'under'
-            pr = max(L['p_over'], 1 - L['p_over']); price = L.get(side)
+            pc = L.get('p_call_over', L['p_over'])
+            side = 'over' if pc >= .5 else 'under'
+            pr = max(pc, 1 - pc); price = L.get(side)
             edge = pr - (imp(price) if price is not None else .524)
             base = 'play' if edge >= .04 else 'lean' if edge >= .02 else 'pass'
-            g2 = gate or (None if price is not None else 'No price for that side')
+            g2 = gate or (None if price is not None else 'No price for that side') or ('Correlated' if L.get('corr') and base != 'pass' else None)
             E.append(dict(kind='yards', pid=p['id'], name=p['name'], team=p['team'], stat=L['stat'], line=L['line'], side=side, price=price,
-                          book=L.get('book'), sim=round(pr, 4), call=base, live=g2 is None and base != 'pass', gate=g2))
+                          book=L.get('book'), sim=round(L['p_over'] if side == 'over' else 1 - L['p_over'], 4),
+                          mkt=round(L.get('p_mkt_over', .5) if side == 'over' else 1 - L.get('p_mkt_over', .5), 4), p_call=round(pr, 4), call=base, live=g2 is None and base != 'pass', gate=g2))
     gm, mk = o['game'], o['market']; sp = mk['spread_home']; H, A = G['home'], G['away']
     def lean(kind, ok, **kw):
         hold = I.get('hold_lines')   # game lines held for a stated reason the model cannot see (e.g. a roster sell-off)

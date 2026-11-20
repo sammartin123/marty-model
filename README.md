@@ -138,6 +138,14 @@ Game-line calls are capped at Lean on the page for that reason.
   at the middle margin, and the scoring plays come from the one game out of 300,000 (`typical_batches=2`
   extra batches) that lands on that score with the usual TD/FG mix, the likeliest scorers and stat lines
   closest to the projections. The model's own view of the game is still in Model vs book.
+- **Calls blend the model with the book (Nov 20 2026).** After two weeks the tracker had 87 graded priced
+  props, and the book's own probabilities beat the model's (TD log loss 0.514 vs 0.534, Brier 0.172 vs 0.180;
+  yardage 0.670 vs 0.822 on 17 lines). Thursday's yardage calls went 1-8, mostly overs on the Colts passing
+  game that all needed the same script. From Week 11 a call uses 40% model and 60% book (`CALL_W` in
+  run_game.py; the book's yardage side has the vig removed), and only the strongest call in each team's
+  passing or rushing group counts (others are gated 'Correlated'). Under these rules Thursday would have had
+  two live calls instead of ten. In-sample and a small sample, so revisit `CALL_W` once a few hundred props
+  are graded.
 - **Also tested, not adopted:** a player's own share of his team's past touchdowns as a usage feature
   (`td_hist`, no difference) and a yards-per-attempt ratio for backup quarterbacks (`qb_eff_pow`, made passing worse).
 - **Coverage matchups (Nov 2026): tested, not adopted.** `research/coverage_test.py` checks whether a player's

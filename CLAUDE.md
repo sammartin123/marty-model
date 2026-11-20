@@ -61,6 +61,8 @@ shifts every prop: double-check both numbers.
 
 After any change to `src/model.py`, rerun the backtest (`cd src && python3 backtest.py 2024,2025,2026 2500`)
 and commit the refreshed `work/bt_report.json`. Report results honestly, including when a change does not help.
+Calls blend model and book (`CALL_W` in src/run_game.py). Recheck it against `ledger/graded.json` every few
+weeks: if the model's probabilities start beating the book's on graded props, the weight can go up.
 
 ## Sunday slate (every Sunday game on one page)
 

@@ -3,6 +3,11 @@ usage: python3 src/run_game.py games/<AWAY_HOME>.json"""
 import os, sys, json, numpy as np, pandas as pd
 import model as M
 
+# Weight on the model when it is set against the book for a call. Across the first 87 graded props the
+# book's probabilities were more accurate than the model's (TD log loss 0.514 vs 0.534; yardage 0.670 vs 0.822),
+# so a call needs the model to disagree strongly. Revisit once the tracker has a few hundred graded props.
+CALL_W = 0.4
+
 def run(G, db=None, quiet=False, record=True):
     N = G.get('n_sims', 100000)
     home, away = G['home'], G['away']
@@ -281,6 +286,9 @@ def run(G, db=None, quiet=False, record=True):
                 od = odds[norm(df.name[j])]; matched.add(norm(df.name[j]))
                 d['td_mkt'] = dict(price=od['price'], book=od['book'], implied=implied(od['price']), all=od.get('all', []))
                 d['td_edge'] = p_td - implied(od['price'])
+                # calls use a blend of model and book (see CALL_W): the book has been the more accurate of the two
+                d['p_td_call'] = CALL_W * p_td + (1 - CALL_W) * implied(od['price'])
+                d['call_edge'] = d['p_td_call'] - implied(od['price'])
             if norm(df.name[j]) in ylines:
                 d['lines'] = []
                 matched.add(norm(df.name[j]))
@@ -292,8 +300,28 @@ def run(G, db=None, quiet=False, record=True):
                         e['imp_over'] = implied(L['over'])
                     if 'under' in L:
                         e['imp_under'] = implied(L['under'])
+                    # book's own over chance with the vig removed (0.5 when only one side is quoted)
+                    m = e['imp_over'] / (e['imp_over'] + e['imp_under']) if ('imp_over' in e and 'imp_under' in e) else 0.5
+                    e['p_mkt_over'] = m
+                    e['p_call_over'] = CALL_W * po + (1 - CALL_W) * m
                     d['lines'].append(e)
             players.append(d)
+
+    # ------------------------------------------------------------ correlated yardage calls
+    # Overs (or unders) on one team's passing game all need the same game script, so only the strongest one
+    # in each group is a call; the rest are marked 'Correlated'. Rushing is its own group.
+    groups = {}
+    for d in players:
+        for e in d.get('lines', []):
+            pc = e['p_call_over']; side = 'over' if pc >= .5 else 'under'
+            price = e.get(side)
+            edge = max(pc, 1 - pc) - (implied(price) if price is not None else .524)
+            fam = 'rush' if e['stat'] == 'rush' else 'pass'
+            groups.setdefault((d['team'], fam, side), []).append((edge, e))
+    for g_ in groups.values():
+        g_.sort(key=lambda x: -x[0])
+        for edge, e in g_[1:]:
+            e['corr'] = True
 
     # ------------------------------------------------------------ extras
     gm = db.games
@@ -327,6 +355,7 @@ def run(G, db=None, quiet=False, record=True):
                                rush_share=[float(x) for x in M.sigmoid(par['rush'])]),
                 anchor=anchor, qb_model=qb_info)
     import ledger
+    outj['call_w'] = CALL_W
     ledger.log_game(G, outj)
     if record:
         outj['record'] = ledger.grade(db)

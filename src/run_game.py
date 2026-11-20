@@ -8,6 +8,18 @@ import model as M
 # so a call needs the model to disagree strongly. Revisit once the tracker has a few hundred graded props.
 CALL_W = 0.4
 
+
+_REAL = {}
+def REAL_SCORES():
+    """How often each (winner, loser) final score happened in real regular-season games since 2015."""
+    if not _REAL:
+        g = pd.read_csv(os.path.join(M.DATA, 'games.csv'))
+        g = g[(g.season >= 2015) & g.home_score.notna() & (g.game_type == 'REG')]
+        w = np.maximum(g.home_score, g.away_score).astype(int); l = np.minimum(g.home_score, g.away_score).astype(int)
+        for a_, b_ in zip(w, l): _REAL[(a_, b_)] = _REAL.get((a_, b_), 0) + 1
+        _REAL['_n'] = len(g)
+    return _REAL
+
 def run(G, db=None, quiet=False, record=True):
     N = G.get('n_sims', 100000)
     home, away = G['home'], G['away']
@@ -79,22 +91,27 @@ def run(G, db=None, quiet=False, record=True):
 
     # ------------------------------------------------------------ projected game (box score + one replay)
     # Built from the model's own simulations (the same ones behind the win probability and the predicted
-    # score), and the replay lands on the predicted score rounded to whole points, so the projected game,
-    # the predicted score and the win probability always agree.
+    # score). The final score is the closest realistic NFL score to the predicted score, with the model's
+    # favourite winning, and the replay never hinges on a missed extra point.
     T0 = o
     TP = T0['pts']; tmg = TP[:, 0] - TP[:, 1]; ttot = TP.sum(1)
     th_, ta_ = float(TP[:, 0].mean()), float(TP[:, 1].mean())
-    tgt = [int(round(th_)), int(round(ta_))]
     fav = 0 if p_home >= 0.5 else 1
-    if tgt[fav] <= tgt[1 - fav]:                 # rounding can tie or flip a close game: keep the model's winner
-        tgt[fav] = tgt[1 - fav] + 1
-    win = (TP[:, fav] > TP[:, 1 - fav]) & (~T0['ot'])
+    kd0 = T0['ev']['kind']; pt0 = T0['ev']['pat']
+    clean0 = ((((kd0 == 1) | (kd0 == 3)) & (pt0 != 1)).sum(1) == 0)   # every extra point made, no two-point tries
+    win = (TP[:, fav] > TP[:, 1 - fav]) & (~T0['ot']) & clean0
     pairs, cnt = np.unique(TP[win], axis=0, return_counts=True)
-    dist_s = np.abs(pairs[:, 0] - tgt[0]) + np.abs(pairs[:, 1] - tgt[1])
+    dist_s = np.abs(pairs[:, 0] - th_) + np.abs(pairs[:, 1] - ta_)
+    # Realism: an average like 23.4-22.4 is not a real final score. Prefer final scores that real NFL games
+    # actually end on (regular season since 2015), so a one-point game built on a missed kick or an odd
+    # number like 22 loses to a common nearby score such as 23-20. Each point of distance from the model's
+    # predicted score costs 1; a final score that is e times rarer costs 1.5.
+    fh = REAL_SCORES()
+    rare = np.array([-np.log((fh.get((max(a_, b_), min(a_, b_)), 0) + 0.5) / fh['_n']) for a_, b_ in pairs])
     ok = cnt >= 3                                # the replay needs a few games at that score to choose from
     if not ok.any(): ok = cnt >= 1
-    dist_s = np.where(ok, dist_s, 999)
-    best = pairs[np.lexsort((-cnt, dist_s))[0]]
+    cost = np.where(ok, dist_s + 1.5 * rare, 1e9)
+    best = pairs[int(cost.argmin())]
 
     # projections every replay is measured against (from the full first batch)
     ref = []
@@ -112,12 +129,16 @@ def run(G, db=None, quiet=False, record=True):
             q25, q50, q75 = np.quantile(arr, [.25, .5, .75])
             sc_.append((key, j, q50, max(q75 - q25, 3.0 if key in ('recs', 'cars') else 15.0)))
         ntd = (s['rtd'] + s['ctd']).sum(1)
-        vals, cts = np.unique(ntd[TP[:, t] == best[t]], return_counts=True)
+        vals, cts = np.unique(ntd[(TP[:, 0] == best[0]) & (TP[:, 1] == best[1]) & clean0], return_counts=True)
         ref.append(dict(items=sc_, lp=lp, ntd=int(vals[cts.argmax()]) if len(vals) else None))
 
     def pick(T):
         P_ = T['pts']
         idx = np.where((P_[:, 0] == best[0]) & (P_[:, 1] == best[1]) & (~T['ot']))[0]
+        # realism: the replay never hinges on a missed extra point or a two-point try
+        kd = T['ev']['kind'][idx]; pt = T['ev']['pat'][idx]
+        odd = (((kd == 1) | (kd == 3)) & (pt != 1)).sum(1)
+        if (odd == 0).any(): idx = idx[odd == 0]; odd = odd[odd == 0]
         for t in (0, 1):
             s = T['stats'][t]
             if ref[t]['ntd'] is not None:
@@ -126,6 +147,8 @@ def run(G, db=None, quiet=False, record=True):
         if not len(idx):
             return np.inf, None
         dist = np.zeros(len(idx))
+        kd = T['ev']['kind'][idx]; pt = T['ev']['pat'][idx]
+        dist += 1000.0 * (((kd == 1) | (kd == 3)) & (pt != 1)).sum(1)
         for t in (0, 1):
             s = T['stats'][t]
             for key, j, med, scale in ref[t]['items']:
@@ -220,7 +243,7 @@ def run(G, db=None, quiet=False, record=True):
     typical = dict(score={home: int(pts_t[i, 0]), away: int(pts_t[i, 1])}, events=events,
                    box={home: proj_box(0), away: proj_box(1)},
                    share=float((TP == best).all(1).mean()), pool=pool, n_searched=int(N * (1 + extra)),
-                   anchored=False, target={home: tgt[0], away: tgt[1]}, proj_margin=float(np.median(tmg)), proj_total=float(np.median(ttot)))
+                   anchored=False, target={home: round(th_, 1), away: round(ta_, 1)}, proj_margin=float(np.median(tmg)), proj_total=float(np.median(ttot)))
 
     # ------------------------------------------------------------ defence vs position (display)
     tp = db.tpos[db.tpos.season == G['season']]

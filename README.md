@@ -95,6 +95,10 @@ Game-line calls are capped at Lean on the page for that reason.
   the book-anchored prop sims, so its score could disagree with the model's predicted score and winner (MIN at SF showed
   SF 23-20 while the model had MIN 23.4-22.4). It now uses the model's own sims and lands on the predicted score rounded
   to whole points, keeping the model's favourite as the winner. Prop tables still use book-anchored team scoring.
+- **Realistic projected finals (Nov 20, 2026): display change, no model change.** Rounding the average score gave finals
+  like 23-22 that only happen through a missed extra point. The projected final is now the sim score (model's winner,
+  every PAT made, no two-point tries) that minimises distance from the predicted score plus 1.5 x -log of how often
+  that final happened in real regular-season games since 2015. MIN at SF went from 23-22 to 23-20.
 - **Four upgrades (Nov 2026): tested, adopted.** Each was compared with the previous model on the same
   player-games across the 681 backtest games (`research/compare_bt.py`, bootstrap by game), and kept only
   because it measurably helped.

@@ -238,7 +238,20 @@ def run(G, db=None, quiet=False, record=True):
             if s['tgts'][:, j].mean() >= 1.5:
                 receiving.append(dict(name=df.name[j], rec=round(float(s['recs'][:, j].mean()), 1), tgt=round(float(s['tgts'][:, j].mean()), 1),
                                       yds=md(s['ryds'][:, j]), td=round(float((s['ctd'][:, j] > 0).mean()), 3), line=line_for(df.name[j], 'rec')))
-        return dict(passing=passing, rushing=rushing[:4], receiving=receiving[:6],
+        # anyone who scores in the replay is always listed, so the TD badge has a row to sit on
+        sc_r = {e['player'] for e in events if e.get('team') == teams[t] and e['type'] == 'TD' and e.get('how') == 'rush'}
+        sc_c = {e['player'] for e in events if e.get('team') == teams[t] and e['type'] == 'TD' and e.get('how') == 'rec'}
+        rush_out = rushing[:4] + [r for r in rushing[4:] if r['name'] in sc_r]
+        rec_out = receiving[:6] + [r for r in receiving[6:] if r['name'] in sc_c]
+        for nm_ in sc_r - {r['name'] for r in rush_out}:
+            j = int(np.where(df.name.values == nm_)[0][0])
+            rush_out.append(dict(name=nm_, car=round(float(s['cars'][:, j].mean()), 1), yds=md(s['uyds'][:, j]),
+                                 td=round(float((s['rtd'][:, j] > 0).mean()), 3), line=line_for(nm_, 'rush')))
+        for nm_ in sc_c - {r['name'] for r in rec_out}:
+            j = int(np.where(df.name.values == nm_)[0][0])
+            rec_out.append(dict(name=nm_, rec=round(float(s['recs'][:, j].mean()), 1), tgt=round(float(s['tgts'][:, j].mean()), 1),
+                                yds=md(s['ryds'][:, j]), td=round(float((s['ctd'][:, j] > 0).mean()), 3), line=line_for(nm_, 'rec')))
+        return dict(passing=passing, rushing=rush_out, receiving=rec_out,
                     pts=round(float(TP[:, t].mean()), 1))
     typical = dict(score={home: int(pts_t[i, 0]), away: int(pts_t[i, 1])}, events=events,
                    box={home: proj_box(0), away: proj_box(1)},

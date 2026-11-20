@@ -1,0 +1,41 @@
+{
+ "game_id": "2026_11_NYJ_LAC",
+ "season": 2026,
+ "week": 11,
+ "away": "NYJ",
+ "home": "LAC",
+ "kickoff_utc": "2026-11-22T21:05:00+00:00",
+ "book": "bet365 (Fri Nov 20, via SportsbookReview)",
+ "logged_utc": "2026-11-20T15:01+00:00",
+ "entries": [
+  {
+   "kind": "spread",
+   "call": "lean",
+   "live": true,
+   "gate": null,
+   "team": "NYJ",
+   "line": 3.5,
+   "price": -110,
+   "sim": 0.5533
+  },
+  {
+   "kind": "total",
+   "call": "pass",
+   "live": false,
+   "gate": null,
+   "side": "over",
+   "line": 41.5,
+   "price": -110,
+   "sim": 0.516
+  },
+  {
+   "kind": "ml",
+   "call": "lean",
+   "live": true,
+   "gate": null,
+   "team": "NYJ",
+   "price": 145,
+   "sim": 0.4435
+  }
+ ]
+}

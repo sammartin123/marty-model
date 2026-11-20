@@ -1,0 +1,76 @@
+{
+ "home": "LAC",
+ "away": "NYJ",
+ "season": 2026,
+ "week": 11,
+ "asof": "2026-11-22",
+ "n_sims": 100000,
+ "seed": 20261122,
+ "neutral": false,
+ "qb": {
+  "LAC": "00-0036355",
+  "NYJ": "00-0030565"
+ },
+ "out": [],
+ "status": {},
+ "out_json": "out/NYJ_LAC.json",
+ "meta": {
+  "title": "Jets at Chargers",
+  "home_name": "Chargers",
+  "away_name": "Jets",
+  "home_city": "Los Angeles",
+  "away_city": "New York",
+  "kickoff": "Sun Nov 22, 2026 \u00b7 4:05 PM ET",
+  "time": "4:05 PM",
+  "venue": "SoFi Stadium, Los Angeles",
+  "generated": "Fri Nov 20, 2026",
+  "roof": "dome",
+  "lat": 33.953,
+  "lon": -118.339,
+  "data_through": "Week 11",
+  "td_note": "Market = the best anytime TD price found across BetMGM, Caesars, FanDuel, DraftKings, bet365 and Fanatics (Action Network odds comparison, Fri Nov 20). This early run only has TD prices for Titans vs Cowboys. Confirm the price in your own book first: a call only holds at the price shown or longer."
+ },
+ "market": {
+  "spread_home": -3.5,
+  "total": 41.5,
+  "ml_home": -170,
+  "ml_away": 145,
+  "book": "bet365 (Fri Nov 20, via SportsbookReview)"
+ },
+ "weather": {
+  "summary": "Indoors",
+  "precip": null,
+  "wind": null,
+  "rain_flag": false,
+  "note": "SoFi Stadium is covered; treated as indoors.",
+  "effect": "No weather adjustment."
+ },
+ "wx_model": {
+  "pass_mult": 1.0,
+  "cr_mult": 1.0,
+  "td_shift": 0.0,
+  "fg_shift": 0.0
+ },
+ "td_odds": {},
+ "yard_lines": {},
+ "injuries": [],
+ "inputs": {
+  "qbs": {
+   "LAC": "Justin Herbert",
+   "NYJ": "Geno Smith"
+  },
+  "report_final": false,
+  "low_conf": {},
+  "notes": []
+ },
+ "sources": [
+  {
+   "label": "Play-by-play, rosters, depth charts, injuries, schedule (nflverse)",
+   "url": "https://github.com/nflverse/nflverse-data"
+  },
+  {
+   "label": "bet365 lines via SportsbookReview (Fri Nov 20, 8:14 AM ET)",
+   "url": "https://www.sportsbookreview.com/picks/nfl/week-11-odds-betting-lines-2026/"
+  }
+ ]
+}

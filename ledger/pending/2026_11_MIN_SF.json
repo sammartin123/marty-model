@@ -1,0 +1,58 @@
+{
+ "game_id": "2026_11_MIN_SF",
+ "season": 2026,
+ "week": 11,
+ "away": "MIN",
+ "home": "SF",
+ "kickoff_utc": "2026-11-23T01:20:00+00:00",
+ "book": "bet365 (Fri Nov 20, via SportsbookReview)",
+ "logged_utc": "2026-11-20T15:02+00:00",
+ "entries": [
+  {
+   "kind": "yards",
+   "pid": "00-0036322",
+   "name": "Justin Jefferson",
+   "team": "MIN",
+   "stat": "rec",
+   "line": 86.5,
+   "side": "under",
+   "price": -115,
+   "book": "bet365",
+   "sim": 0.7246,
+   "mkt": 0.5,
+   "p_call": 0.5899,
+   "call": "play",
+   "live": false,
+   "gate": "QB unclear"
+  },
+  {
+   "kind": "spread",
+   "call": "lean",
+   "live": false,
+   "gate": "QB unclear",
+   "team": "MIN",
+   "line": 3.5,
+   "price": -110,
+   "sim": 0.6355
+  },
+  {
+   "kind": "total",
+   "call": "pass",
+   "live": false,
+   "gate": "QB unclear",
+   "side": "under",
+   "line": 46.5,
+   "price": -110,
+   "sim": 0.5378
+  },
+  {
+   "kind": "ml",
+   "call": "lean",
+   "live": false,
+   "gate": "QB unclear",
+   "team": "MIN",
+   "price": 148,
+   "sim": 0.5305
+  }
+ ]
+}

@@ -1,0 +1,1042 @@
+{
+ "label": "NFL Week 11 \u00b7 Sunday Nov 22, 2026",
+ "week": 11,
+ "season": 2026,
+ "date": "2026-11-22",
+ "td_note": "Market = the best anytime TD price found across BetMGM, Caesars, FanDuel, DraftKings, bet365 and Fanatics (Action Network odds comparison, Fri Nov 20). This early run only has TD prices for Titans vs Cowboys. Confirm the price in your own book first: a call only holds at the price shown or longer.",
+ "games": {
+  "MIA_BUF": {
+   "market": {
+    "spread_home": -16.5,
+    "total": 44.5,
+    "ml_home": -1700,
+    "ml_away": 950,
+    "book": "bet365 (Fri Nov 20, via SportsbookReview)",
+    "others": [
+     {
+      "book": "DraftKings (Nov 19)",
+      "spread_home": -16.5,
+      "total": 44.5,
+      "ml_home": -1440,
+      "ml_away": 850
+     }
+    ]
+   },
+   "yard_lines": {
+    "James Cook": [
+     {
+      "stat": "rush",
+      "line": 94.5,
+      "over": -115,
+      "under": -115,
+      "book": "bet365"
+     }
+    ],
+    "Ollie Gordon": [
+     {
+      "stat": "rush",
+      "line": 58.5,
+      "over": -115,
+      "under": -115,
+      "book": "bet365"
+     }
+    ],
+    "Josh Allen": [
+     {
+      "stat": "rush",
+      "line": 27.5,
+      "over": -115,
+      "under": -115,
+      "book": "bet365"
+     }
+    ]
+   },
+   "sources": [
+    {
+     "label": "bet365 lines via SportsbookReview (Fri Nov 20, 8:14 AM ET)",
+     "url": "https://www.sportsbookreview.com/picks/nfl/week-11-odds-betting-lines-2026/"
+    },
+    {
+     "label": "bet365 and DraftKings lines, VegasInsider Week 11 odds (Nov 19)",
+     "url": "https://www.vegasinsider.com/nfl/nfl-week-11-odds-2026/"
+    },
+    {
+     "label": "Rushing yardage lines (bet365 unless noted), Action Network odds comparison, Fri Nov 20",
+     "url": "https://www.actionnetwork.com/nfl/props/rushing"
+    },
+    {
+     "label": "Game-time forecasts (precipitation and wind at kickoff), Action Network NFL weather, Fri Nov 20",
+     "url": "https://www.actionnetwork.com/nfl/weather"
+    }
+   ],
+   "weather": {
+    "summary": "No rain flagged",
+    "precip": null,
+    "wind": "S 9 mph",
+    "rain_flag": false,
+    "note": "Orchard Park (Highmark Stadium, outdoors): S winds around 9 mph at kickoff and not on the high-precipitation list.",
+    "effect": "No weather adjustment."
+   },
+   "wx_model": {
+    "pass_mult": 1.0,
+    "cr_mult": 1.0,
+    "td_shift": 0.0,
+    "fg_shift": 0.0
+   }
+  },
+  "BAL_CAR": {
+   "market": {
+    "spread_home": -2.5,
+    "total": 43.5,
+    "ml_home": -152,
+    "ml_away": 127,
+    "book": "bet365 (Fri Nov 20, via SportsbookReview)"
+   },
+   "yard_lines": {
+    "Zay Flowers": [
+     {
+      "stat": "rec",
+      "line": 67.5,
+      "over": -115,
+      "under": -115,
+      "book": "bet365"
+     }
+    ]
+   },
+   "sources": [
+    {
+     "label": "bet365 lines via SportsbookReview (Fri Nov 20, 8:14 AM ET)",
+     "url": "https://www.sportsbookreview.com/picks/nfl/week-11-odds-betting-lines-2026/"
+    },
+    {
+     "label": "Receiving yardage lines (bet365), Action Network odds comparison, Fri Nov 20",
+     "url": "https://www.actionnetwork.com/nfl/props/receiving"
+    },
+    {
+     "label": "Game-time forecasts (precipitation and wind at kickoff), Action Network NFL weather, Fri Nov 20",
+     "url": "https://www.actionnetwork.com/nfl/weather"
+    }
+   ],
+   "weather": {
+    "summary": "No rain flagged",
+    "precip": null,
+    "wind": "N 7 mph",
+    "rain_flag": false,
+    "note": "Charlotte (outdoors): N winds around 7 mph at kickoff and not on the high-precipitation list.",
+    "effect": "No weather adjustment."
+   },
+   "wx_model": {
+    "pass_mult": 1.0,
+    "cr_mult": 1.0,
+    "td_shift": 0.0,
+    "fg_shift": 0.0
+   },
+   "notes": [
+    "Ravens QB Jacoby Brissett, acquired from Arizona, is flagged low confidence: few attempts for Baltimore so far."
+   ]
+  },
+  "NO_CHI": {
+   "market": {
+    "spread_home": -11.5,
+    "total": 48.5,
+    "ml_home": -700,
+    "ml_away": 500,
+    "book": "bet365 (Fri Nov 20, via SportsbookReview)",
+    "others": [
+     {
+      "book": "DraftKings (Nov 19)",
+      "spread_home": -11.5,
+      "total": 48.5,
+      "ml_home": -600,
+      "ml_away": 447
+     }
+    ]
+   },
+   "yard_lines": {
+    "Chris Olave": [
+     {
+      "stat": "rec",
+      "line": 69.5,
+      "over": -115,
+      "under": -115,
+      "book": "bet365"
+     }
+    ]
+   },
+   "sources": [
+    {
+     "label": "bet365 lines via SportsbookReview (Fri Nov 20, 8:14 AM ET)",
+     "url": "https://www.sportsbookreview.com/picks/nfl/week-11-odds-betting-lines-2026/"
+    },
+    {
+     "label": "bet365 and DraftKings lines, VegasInsider Week 11 odds (Nov 19)",
+     "url": "https://www.vegasinsider.com/nfl/nfl-week-11-odds-2026/"
+    },
+    {
+     "label": "Receiving yardage lines (bet365), Action Network odds comparison, Fri Nov 20",
+     "url": "https://www.actionnetwork.com/nfl/props/receiving"
+    },
+    {
+     "label": "Game-time forecasts (precipitation and wind at kickoff), Action Network NFL weather, Fri Nov 20",
+     "url": "https://www.actionnetwork.com/nfl/weather"
+    }
+   ],
+   "weather": {
+    "summary": "Rain likely",
+    "precip": 58,
+    "wind": "WSW 9 mph",
+    "rain_flag": true,
+    "note": "Chicago (Soldier Field, outdoors): 58% chance of precipitation and WSW winds around 9 mph at kickoff. The forecast is two days out and will be rechecked Saturday.",
+    "effect": "Real rain risk: steer away from receiving-yard overs, especially secondary targets, and toward rushing volume, receptions or unders. The sim trims passing and scoring by the measured rain effect weighted by the chance of rain."
+   },
+   "wx_model": {
+    "pass_mult": 0.965,
+    "cr_mult": 0.907,
+    "td_shift": -0.23,
+    "fg_shift": -0.145
+   }
+  },
+  "TEN_DAL": {
+   "market": {
+    "spread_home": -7.5,
+    "total": 54.5,
+    "ml_home": -410,
+    "ml_away": 325,
+    "book": "bet365 (Fri Nov 20, via SportsbookReview)"
+   },
+   "yard_lines": {
+    "George Pickens": [
+     {
+      "stat": "rec",
+      "line": 69.5,
+      "over": -115,
+      "under": -115,
+      "book": "bet365"
+     }
+    ],
+    "CeeDee Lamb": [
+     {
+      "stat": "rec",
+      "line": 95.5,
+      "over": -115,
+      "under": -115,
+      "book": "bet365"
+     }
+    ],
+    "Carnell Tate": [
+     {
+      "stat": "rec",
+      "line": 66.5,
+      "over": -115,
+      "under": -115,
+      "book": "bet365"
+     }
+    ],
+    "Elic Ayomanor": [
+     {
+      "stat": "rec",
+      "line": 46.5,
+      "over": -115,
+      "under": -115,
+      "book": "bet365"
+     }
+    ],
+    "Ryan Flournoy": [
+     {
+      "stat": "rec",
+      "line": 40.5,
+      "over": -115,
+      "under": -115,
+      "book": "bet365"
+     }
+    ],
+    "Brevyn Spann-Ford": [
+     {
+      "stat": "rec",
+      "line": 23.5,
+      "over": -115,
+      "under": -115,
+      "book": "bet365"
+     }
+    ],
+    "Gunnar Helm": [
+     {
+      "stat": "rec",
+      "line": 27.5,
+      "over": -115,
+      "under": -115,
+      "book": "bet365"
+     }
+    ],
+    "Chimere Dike": [
+     {
+      "stat": "rec",
+      "line": 26.5,
+      "over": -115,
+      "under": -115,
+      "book": "bet365"
+     }
+    ]
+   },
+   "td_odds": {
+    "Javonte Williams": {
+     "price": -210,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       -210
+      ],
+      [
+       "Caesars",
+       -265
+      ],
+      [
+       "FanDuel",
+       -250
+      ],
+      [
+       "DraftKings",
+       -265
+      ],
+      [
+       "bet365",
+       -220
+      ],
+      [
+       "Fanatics",
+       -265
+      ]
+     ]
+    },
+    "Carnell Tate": {
+     "price": 185,
+     "book": "FanDuel",
+     "all": [
+      [
+       "BetMGM",
+       175
+      ],
+      [
+       "Caesars",
+       184
+      ],
+      [
+       "FanDuel",
+       185
+      ],
+      [
+       "DraftKings",
+       185
+      ],
+      [
+       "bet365",
+       180
+      ]
+     ]
+    },
+    "George Pickens": {
+     "price": -110,
+     "book": "DraftKings",
+     "all": [
+      [
+       "BetMGM",
+       -118
+      ],
+      [
+       "Caesars",
+       -122
+      ],
+      [
+       "FanDuel",
+       -120
+      ],
+      [
+       "DraftKings",
+       -110
+      ],
+      [
+       "bet365",
+       -125
+      ],
+      [
+       "Fanatics",
+       -120
+      ]
+     ]
+    },
+    "Ryan Flournoy": {
+     "price": 175,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       175
+      ],
+      [
+       "Caesars",
+       167
+      ],
+      [
+       "FanDuel",
+       170
+      ],
+      [
+       "DraftKings",
+       175
+      ],
+      [
+       "bet365",
+       170
+      ],
+      [
+       "Fanatics",
+       175
+      ]
+     ]
+    },
+    "CeeDee Lamb": {
+     "price": -155,
+     "book": "DraftKings",
+     "all": [
+      [
+       "BetMGM",
+       -160
+      ],
+      [
+       "Caesars",
+       -179
+      ],
+      [
+       "FanDuel",
+       -175
+      ],
+      [
+       "DraftKings",
+       -155
+      ],
+      [
+       "bet365",
+       -180
+      ],
+      [
+       "Fanatics",
+       -170
+      ]
+     ]
+    },
+    "Tony Pollard": {
+     "price": -120,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       -120
+      ],
+      [
+       "Caesars",
+       -122
+      ],
+      [
+       "FanDuel",
+       -130
+      ],
+      [
+       "DraftKings",
+       -120
+      ],
+      [
+       "bet365",
+       -135
+      ],
+      [
+       "Fanatics",
+       -130
+      ]
+     ]
+    },
+    "Elic Ayomanor": {
+     "price": 290,
+     "book": "FanDuel",
+     "all": [
+      [
+       "BetMGM",
+       280
+      ],
+      [
+       "Caesars",
+       275
+      ],
+      [
+       "FanDuel",
+       290
+      ],
+      [
+       "DraftKings",
+       275
+      ],
+      [
+       "bet365",
+       275
+      ]
+     ]
+    },
+    "Gunnar Helm": {
+     "price": 320,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       320
+      ],
+      [
+       "Caesars",
+       270
+      ],
+      [
+       "FanDuel",
+       290
+      ],
+      [
+       "DraftKings",
+       280
+      ],
+      [
+       "bet365",
+       280
+      ]
+     ]
+    },
+    "Chimere Dike": {
+     "price": 390,
+     "book": "DraftKings",
+     "all": [
+      [
+       "BetMGM",
+       260
+      ],
+      [
+       "Caesars",
+       350
+      ],
+      [
+       "FanDuel",
+       340
+      ],
+      [
+       "DraftKings",
+       390
+      ],
+      [
+       "bet365",
+       350
+      ]
+     ]
+    },
+    "Israel Abanikanda": {
+     "price": 450,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       450
+      ],
+      [
+       "bet365",
+       425
+      ],
+      [
+       "Fanatics",
+       400
+      ]
+     ]
+    },
+    "Tyjae Spears": {
+     "price": 500,
+     "book": "FanDuel",
+     "all": [
+      [
+       "BetMGM",
+       390
+      ],
+      [
+       "Caesars",
+       475
+      ],
+      [
+       "FanDuel",
+       500
+      ],
+      [
+       "DraftKings",
+       500
+      ],
+      [
+       "bet365",
+       475
+      ],
+      [
+       "Fanatics",
+       500
+      ]
+     ]
+    },
+    "Brevyn Spann-Ford": {
+     "price": 285,
+     "book": "DraftKings",
+     "all": [
+      [
+       "BetMGM",
+       270
+      ],
+      [
+       "Caesars",
+       260
+      ],
+      [
+       "FanDuel",
+       270
+      ],
+      [
+       "DraftKings",
+       285
+      ],
+      [
+       "bet365",
+       250
+      ],
+      [
+       "Fanatics",
+       250
+      ]
+     ]
+    },
+    "Dak Prescott": {
+     "price": 550,
+     "book": "DraftKings",
+     "all": [
+      [
+       "BetMGM",
+       450
+      ],
+      [
+       "Caesars",
+       500
+      ],
+      [
+       "FanDuel",
+       500
+      ],
+      [
+       "DraftKings",
+       550
+      ],
+      [
+       "bet365",
+       525
+      ],
+      [
+       "Fanatics",
+       525
+      ]
+     ]
+    }
+   },
+   "sources": [
+    {
+     "label": "bet365 lines via SportsbookReview (Fri Nov 20, 8:14 AM ET)",
+     "url": "https://www.sportsbookreview.com/picks/nfl/week-11-odds-betting-lines-2026/"
+    },
+    {
+     "label": "Receiving yardage lines (bet365), Action Network odds comparison, Fri Nov 20",
+     "url": "https://www.actionnetwork.com/nfl/props/receiving"
+    },
+    {
+     "label": "Anytime TD prices across BetMGM, Caesars, FanDuel, DraftKings, bet365, Fanatics, Action Network, Fri Nov 20",
+     "url": "https://www.actionnetwork.com/nfl/props/touchdown-props?gameIds=290984&week=11"
+    },
+    {
+     "label": "RotoBaller: Jake Ferguson not practicing Wednesday (Nov 18)",
+     "url": "https://www.rotoballer.com/?p=1997474"
+    },
+    {
+     "label": "Field Level Media: Titans WR Wan'Dale Robinson out for season (Nov 18)",
+     "url": "https://fieldlevelmedia.com/?p=504132"
+    }
+   ],
+   "weather": {
+    "summary": "Indoors",
+    "precip": null,
+    "wind": null,
+    "rain_flag": false,
+    "note": "AT&T Stadium has a retractable roof; treated as indoors (listed as a dome on the forecast board).",
+    "effect": "No weather adjustment."
+   },
+   "wx_model": {
+    "pass_mult": 1.0,
+    "cr_mult": 1.0,
+    "td_shift": 0.0,
+    "fg_shift": 0.0
+   },
+   "out_names": [
+    [
+     "Jake Ferguson",
+     "DAL"
+    ],
+    [
+     "Wan'Dale Robinson",
+     "TEN"
+    ]
+   ],
+   "notes": [
+    "Cowboys TE Jake Ferguson (concussion) did not practice Wednesday, and most books have pulled his touchdown price. He is modelled as out until the final report.",
+    "Titans WR Wan'Dale Robinson (ankle) is out for the season."
+   ]
+  },
+  "TB_DET": {
+   "market": {
+    "spread_home": -6.5,
+    "total": 45.5,
+    "ml_home": -270,
+    "ml_away": 220,
+    "book": "bet365 (Fri Nov 20, via SportsbookReview)",
+    "others": [
+     {
+      "book": "DraftKings (Nov 19)",
+      "spread_home": -6.0,
+      "total": 45.5,
+      "ml_home": -281,
+      "ml_away": 230
+     }
+    ]
+   },
+   "yard_lines": {
+    "Amon-Ra St. Brown": [
+     {
+      "stat": "rec",
+      "line": 79.5,
+      "over": -115,
+      "under": -115,
+      "book": "bet365"
+     }
+    ],
+    "Jahmyr Gibbs": [
+     {
+      "stat": "rush",
+      "line": 89.5,
+      "over": -115,
+      "under": -115,
+      "book": "bet365"
+     }
+    ],
+    "Bucky Irving": [
+     {
+      "stat": "rush",
+      "line": 69.5,
+      "over": -115,
+      "under": -115,
+      "book": "bet365"
+     }
+    ]
+   },
+   "sources": [
+    {
+     "label": "bet365 lines via SportsbookReview (Fri Nov 20, 8:14 AM ET)",
+     "url": "https://www.sportsbookreview.com/picks/nfl/week-11-odds-betting-lines-2026/"
+    },
+    {
+     "label": "bet365 and DraftKings lines, VegasInsider Week 11 odds (Nov 19)",
+     "url": "https://www.vegasinsider.com/nfl/nfl-week-11-odds-2026/"
+    },
+    {
+     "label": "Receiving yardage lines (bet365), Action Network odds comparison, Fri Nov 20",
+     "url": "https://www.actionnetwork.com/nfl/props/receiving"
+    },
+    {
+     "label": "Rushing yardage lines (bet365 unless noted), Action Network odds comparison, Fri Nov 20",
+     "url": "https://www.actionnetwork.com/nfl/props/rushing"
+    },
+    {
+     "label": "ClutchPoints: Rapoport says Mayfield trending toward Jalon Daniels start (Nov 2026)",
+     "url": "https://clutchpoints.com/nfl/tampa-bay-buccaneers/buccaneers-news-baker-mayfield-trending-wrong-direction-lions-injury-update"
+    }
+   ],
+   "weather": {
+    "summary": "Indoors",
+    "precip": null,
+    "wind": null,
+    "rain_flag": false,
+    "note": "Ford Field is a dome.",
+    "effect": "No weather adjustment."
+   },
+   "wx_model": {
+    "pass_mult": 1.0,
+    "cr_mult": 1.0,
+    "td_shift": 0.0,
+    "fg_shift": 0.0
+   },
+   "qb_names": {
+    "TB": "Jalon Daniels"
+   },
+   "low_conf": {
+    "TB": "Baker Mayfield (foot) has not practised and reports have rookie Jalon Daniels trending toward the start; not confirmed."
+   },
+   "notes": [
+    "Bucs QB Baker Mayfield (foot strain) did not practise Wednesday and Ian Rapoport reports he is trending toward sitting, so the sim uses rookie Jalon Daniels. Tampa Bay's player calls and the game lines stay held until the start is confirmed."
+   ]
+  },
+  "ARI_KC": {
+   "market": {
+    "spread_home": -16.5,
+    "total": 40.5,
+    "ml_home": -1700,
+    "ml_away": 950,
+    "book": "bet365 (Fri Nov 20, via SportsbookReview)"
+   },
+   "sources": [
+    {
+     "label": "bet365 lines via SportsbookReview (Fri Nov 20, 8:14 AM ET)",
+     "url": "https://www.sportsbookreview.com/picks/nfl/week-11-odds-betting-lines-2026/"
+    },
+    {
+     "label": "Game-time forecasts (precipitation and wind at kickoff), Action Network NFL weather, Fri Nov 20",
+     "url": "https://www.actionnetwork.com/nfl/weather"
+    },
+    {
+     "label": "Fox Sports: Walker misses Chiefs practice with groin injury, Sunday in question (Nov 18)",
+     "url": "https://www.foxsports.com/stories/nfl/kansas-city-chiefs-kenneth-walker-injury-emmett-johnson"
+    }
+   ],
+   "weather": {
+    "summary": "Breezy",
+    "precip": null,
+    "wind": "NNW 14 mph",
+    "rain_flag": false,
+    "note": "Kansas City (Arrowhead, outdoors): NNW winds around 14 mph at kickoff, just under the 15 mph line, and not on the high-precipitation list.",
+    "effect": "Half the measured wind effect is applied because the wind sits just under 15 mph."
+   },
+   "wx_model": {
+    "pass_mult": 0.985,
+    "cr_mult": 0.97,
+    "td_shift": -0.06,
+    "fg_shift": -0.05
+   },
+   "out_names": [
+    [
+     "Kenneth Walker III",
+     "KC"
+    ]
+   ],
+   "notes": [
+    "Chiefs RB Kenneth Walker III (groin) missed Wednesday's practice after sitting out last week, and reports expect Emmett Johnson to start again. He is modelled as out; this is not official until the final report.",
+    "Cardinals QB Carson Beck is flagged low confidence: a rookie with only one start for the team."
+   ]
+  },
+  "JAX_NYG": {
+   "market": {
+    "spread_home": 5.5,
+    "total": 46.5,
+    "ml_home": 220,
+    "ml_away": -270,
+    "book": "bet365 (Fri Nov 20, via SportsbookReview)"
+   },
+   "yard_lines": {
+    "Bhayshul Tuten": [
+     {
+      "stat": "rush",
+      "line": 72.5,
+      "over": -115,
+      "under": -115,
+      "book": "bet365"
+     }
+    ],
+    "Cam Skattebo": [
+     {
+      "stat": "rush",
+      "line": 54.5,
+      "over": -114,
+      "under": -110,
+      "book": "DraftKings"
+     }
+    ]
+   },
+   "sources": [
+    {
+     "label": "bet365 lines via SportsbookReview (Fri Nov 20, 8:14 AM ET)",
+     "url": "https://www.sportsbookreview.com/picks/nfl/week-11-odds-betting-lines-2026/"
+    },
+    {
+     "label": "Rushing yardage lines (bet365 unless noted), Action Network odds comparison, Fri Nov 20",
+     "url": "https://www.actionnetwork.com/nfl/props/rushing"
+    },
+    {
+     "label": "Game-time forecasts (precipitation and wind at kickoff), Action Network NFL weather, Fri Nov 20",
+     "url": "https://www.actionnetwork.com/nfl/weather"
+    }
+   ],
+   "weather": {
+    "summary": "Rain likely",
+    "precip": 77,
+    "wind": "NE 8 mph",
+    "rain_flag": true,
+    "note": "East Rutherford (MetLife Stadium, outdoors): 77% chance of precipitation and NE winds around 8 mph at kickoff. The forecast is two days out and will be rechecked Saturday.",
+    "effect": "Real rain risk: steer away from receiving-yard overs, especially secondary targets, and toward rushing volume, receptions or unders. The sim trims passing and scoring by the measured rain effect weighted by the chance of rain."
+   },
+   "wx_model": {
+    "pass_mult": 0.954,
+    "cr_mult": 0.877,
+    "td_shift": -0.31,
+    "fg_shift": -0.193
+   }
+  },
+  "NYJ_LAC": {
+   "market": {
+    "spread_home": -3.5,
+    "total": 41.5,
+    "ml_home": -170,
+    "ml_away": 145,
+    "book": "bet365 (Fri Nov 20, via SportsbookReview)"
+   },
+   "sources": [
+    {
+     "label": "bet365 lines via SportsbookReview (Fri Nov 20, 8:14 AM ET)",
+     "url": "https://www.sportsbookreview.com/picks/nfl/week-11-odds-betting-lines-2026/"
+    }
+   ],
+   "weather": {
+    "summary": "Indoors",
+    "precip": null,
+    "wind": null,
+    "rain_flag": false,
+    "note": "SoFi Stadium is covered; treated as indoors.",
+    "effect": "No weather adjustment."
+   },
+   "wx_model": {
+    "pass_mult": 1.0,
+    "cr_mult": 1.0,
+    "td_shift": 0.0,
+    "fg_shift": 0.0
+   }
+  },
+  "LV_DEN": {
+   "market": {
+    "spread_home": -10.5,
+    "total": 40.5,
+    "ml_home": -600,
+    "ml_away": 450,
+    "book": "bet365 (Fri Nov 20, via SportsbookReview)"
+   },
+   "sources": [
+    {
+     "label": "bet365 lines via SportsbookReview (Fri Nov 20, 8:14 AM ET)",
+     "url": "https://www.sportsbookreview.com/picks/nfl/week-11-odds-betting-lines-2026/"
+    },
+    {
+     "label": "Game-time forecasts (precipitation and wind at kickoff), Action Network NFL weather, Fri Nov 20",
+     "url": "https://www.actionnetwork.com/nfl/weather"
+    }
+   ],
+   "weather": {
+    "summary": "No rain flagged",
+    "precip": null,
+    "wind": "NNE 4 mph",
+    "rain_flag": false,
+    "note": "Denver (outdoors): light NNE winds around 4 mph at kickoff and not on the high-precipitation list.",
+    "effect": "No weather adjustment."
+   },
+   "wx_model": {
+    "pass_mult": 1.0,
+    "cr_mult": 1.0,
+    "td_shift": 0.0,
+    "fg_shift": 0.0
+   }
+  },
+  "PIT_PHI": {
+   "market": {
+    "spread_home": 4.5,
+    "total": 38.5,
+    "ml_home": 175,
+    "ml_away": -210,
+    "book": "bet365 (Fri Nov 20, via SportsbookReview)"
+   },
+   "sources": [
+    {
+     "label": "bet365 lines via SportsbookReview (Fri Nov 20, 8:14 AM ET)",
+     "url": "https://www.sportsbookreview.com/picks/nfl/week-11-odds-betting-lines-2026/"
+    },
+    {
+     "label": "Game-time forecasts (precipitation and wind at kickoff), Action Network NFL weather, Fri Nov 20",
+     "url": "https://www.actionnetwork.com/nfl/weather"
+    }
+   ],
+   "weather": {
+    "summary": "Rain likely",
+    "precip": 70,
+    "wind": "NE 9 mph",
+    "rain_flag": true,
+    "note": "Philadelphia (Lincoln Financial Field, outdoors): 70% chance of precipitation and NE winds around 9 mph at kickoff. The forecast is two days out and will be rechecked Saturday.",
+    "effect": "Real rain risk: steer away from receiving-yard overs, especially secondary targets, and toward rushing volume, receptions or unders. The sim trims passing and scoring by the measured rain effect weighted by the chance of rain."
+   },
+   "wx_model": {
+    "pass_mult": 0.958,
+    "cr_mult": 0.888,
+    "td_shift": -0.28,
+    "fg_shift": -0.175
+   },
+   "notes": [
+    "Eagles QB Joe Milton III is flagged low confidence: a recent promotion with few attempts for the team."
+   ]
+  },
+  "MIN_SF": {
+   "market": {
+    "spread_home": -3.5,
+    "total": 46.5,
+    "ml_home": -176,
+    "ml_away": 148,
+    "book": "bet365 (Fri Nov 20, via SportsbookReview)"
+   },
+   "yard_lines": {
+    "Justin Jefferson": [
+     {
+      "stat": "rec",
+      "line": 86.5,
+      "over": -115,
+      "under": -115,
+      "book": "bet365"
+     }
+    ]
+   },
+   "sources": [
+    {
+     "label": "bet365 lines via SportsbookReview (Fri Nov 20, 8:14 AM ET)",
+     "url": "https://www.sportsbookreview.com/picks/nfl/week-11-odds-betting-lines-2026/"
+    },
+    {
+     "label": "Receiving yardage lines (bet365), Action Network odds comparison, Fri Nov 20",
+     "url": "https://www.actionnetwork.com/nfl/props/receiving"
+    },
+    {
+     "label": "Game-time forecasts (precipitation and wind at kickoff), Action Network NFL weather, Fri Nov 20",
+     "url": "https://www.actionnetwork.com/nfl/weather"
+    }
+   ],
+   "weather": {
+    "summary": "No forecast found",
+    "precip": null,
+    "wind": null,
+    "rain_flag": false,
+    "note": "Played at Estadio Banorte in Mexico City (outdoors, about 2,200 m altitude). No game-time forecast was posted yet; it will be rechecked Saturday.",
+    "effect": "No weather adjustment."
+   },
+   "wx_model": {
+    "pass_mult": 1.0,
+    "cr_mult": 1.0,
+    "td_shift": 0.0,
+    "fg_shift": 0.0
+   },
+   "notes": [
+    "Kirk Cousins starts for Minnesota after being traded back; he is flagged low confidence because he has under 60 attempts for the team this season."
+   ]
+  }
+ }
+}

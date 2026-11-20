@@ -1,0 +1,127 @@
+{
+ "home": "BUF",
+ "away": "MIA",
+ "season": 2026,
+ "week": 11,
+ "asof": "2026-11-22",
+ "n_sims": 100000,
+ "seed": 20261122,
+ "neutral": false,
+ "qb": {
+  "BUF": "00-0034857",
+  "MIA": "00-0040014"
+ },
+ "out": [],
+ "status": {},
+ "out_json": "out/MIA_BUF.json",
+ "meta": {
+  "title": "Dolphins at Bills",
+  "home_name": "Bills",
+  "away_name": "Dolphins",
+  "home_city": "Buffalo",
+  "away_city": "Miami",
+  "kickoff": "Sun Nov 22, 2026 \u00b7 1:00 PM ET",
+  "time": "1:00 PM",
+  "venue": "Highmark Stadium, Buffalo",
+  "generated": "Fri Nov 20, 2026",
+  "roof": "outdoors",
+  "lat": 42.774,
+  "lon": -78.787,
+  "data_through": "Week 11",
+  "td_note": "Market = the best anytime TD price found across BetMGM, Caesars, FanDuel, DraftKings, bet365 and Fanatics (Action Network odds comparison, Fri Nov 20). This early run only has TD prices for Titans vs Cowboys. Confirm the price in your own book first: a call only holds at the price shown or longer."
+ },
+ "market": {
+  "spread_home": -16.5,
+  "total": 44.5,
+  "ml_home": -1700,
+  "ml_away": 950,
+  "book": "bet365 (Fri Nov 20, via SportsbookReview)",
+  "others": [
+   {
+    "book": "DraftKings (Nov 19)",
+    "spread_home": -16.5,
+    "total": 44.5,
+    "ml_home": -1440,
+    "ml_away": 850
+   }
+  ]
+ },
+ "weather": {
+  "summary": "No rain flagged",
+  "precip": null,
+  "wind": "S 9 mph",
+  "rain_flag": false,
+  "note": "Orchard Park (Highmark Stadium, outdoors): S winds around 9 mph at kickoff and not on the high-precipitation list.",
+  "effect": "No weather adjustment."
+ },
+ "wx_model": {
+  "pass_mult": 1.0,
+  "cr_mult": 1.0,
+  "td_shift": 0.0,
+  "fg_shift": 0.0
+ },
+ "td_odds": {},
+ "yard_lines": {
+  "James Cook": [
+   {
+    "stat": "rush",
+    "line": 94.5,
+    "over": -115,
+    "under": -115,
+    "book": "bet365"
+   }
+  ],
+  "Ollie Gordon": [
+   {
+    "stat": "rush",
+    "line": 58.5,
+    "over": -115,
+    "under": -115,
+    "book": "bet365"
+   }
+  ],
+  "Josh Allen": [
+   {
+    "stat": "rush",
+    "line": 27.5,
+    "over": -115,
+    "under": -115,
+    "book": "bet365"
+   }
+  ]
+ },
+ "injuries": [],
+ "inputs": {
+  "qbs": {
+   "BUF": "Josh Allen",
+   "MIA": "Kyle McCord"
+  },
+  "report_final": false,
+  "low_conf": {
+   "MIA": "Kyle McCord has 32 pass attempts for the Dolphins this season, so their numbers are low confidence."
+  },
+  "notes": []
+ },
+ "sources": [
+  {
+   "label": "Play-by-play, rosters, depth charts, injuries, schedule (nflverse)",
+   "url": "https://github.com/nflverse/nflverse-data"
+  },
+  {
+   "label": "bet365 lines via SportsbookReview (Fri Nov 20, 8:14 AM ET)",
+   "url": "https://www.sportsbookreview.com/picks/nfl/week-11-odds-betting-lines-2026/"
+  },
+  {
+   "label": "bet365 and DraftKings lines, VegasInsider Week 11 odds (Nov 19)",
+   "url": "https://www.vegasinsider.com/nfl/nfl-week-11-odds-2026/"
+  },
+  {
+   "label": "Rushing yardage lines (bet365 unless noted), Action Network odds comparison, Fri Nov 20",
+   "url": "https://www.actionnetwork.com/nfl/props/rushing"
+  },
+  {
+   "label": "Game-time forecasts (precipitation and wind at kickoff), Action Network NFL weather, Fri Nov 20",
+   "url": "https://www.actionnetwork.com/nfl/weather"
+  }
+ ]
+}

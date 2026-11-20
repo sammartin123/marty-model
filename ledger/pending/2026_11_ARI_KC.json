@@ -1,0 +1,41 @@
+{
+ "game_id": "2026_11_ARI_KC",
+ "season": 2026,
+ "week": 11,
+ "away": "ARI",
+ "home": "KC",
+ "kickoff_utc": "2026-11-22T18:00:00+00:00",
+ "book": "bet365 (Fri Nov 20, via SportsbookReview)",
+ "logged_utc": "2026-11-20T15:01+00:00",
+ "entries": [
+  {
+   "kind": "spread",
+   "call": "pass",
+   "live": false,
+   "gate": "QB unclear",
+   "team": "ARI",
+   "line": 16.5,
+   "price": -110,
+   "sim": 0.5048
+  },
+  {
+   "kind": "total",
+   "call": "pass",
+   "live": false,
+   "gate": "QB unclear",
+   "side": "over",
+   "line": 40.5,
+   "price": -110,
+   "sim": 0.521
+  },
+  {
+   "kind": "ml",
+   "call": "pass",
+   "live": false,
+   "gate": "QB unclear",
+   "team": "ARI",
+   "price": 950,
+   "sim": 0.0948
+  }
+ ]
+}

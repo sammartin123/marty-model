@@ -1,0 +1,92 @@
+{
+ "game_id": "2026_11_TB_DET",
+ "season": 2026,
+ "week": 11,
+ "away": "TB",
+ "home": "DET",
+ "kickoff_utc": "2026-11-22T18:00:00+00:00",
+ "book": "bet365 (Fri Nov 20, via SportsbookReview)",
+ "logged_utc": "2026-11-20T15:00+00:00",
+ "entries": [
+  {
+   "kind": "yards",
+   "pid": "00-0036963",
+   "name": "Amon-Ra St. Brown",
+   "team": "DET",
+   "stat": "rec",
+   "line": 79.5,
+   "side": "under",
+   "price": -115,
+   "book": "bet365",
+   "sim": 0.5726,
+   "mkt": 0.5,
+   "p_call": 0.529,
+   "call": "pass",
+   "live": false,
+   "gate": "Injuries not final"
+  },
+  {
+   "kind": "yards",
+   "pid": "00-0039139",
+   "name": "Jahmyr Gibbs",
+   "team": "DET",
+   "stat": "rush",
+   "line": 89.5,
+   "side": "under",
+   "price": -115,
+   "book": "bet365",
+   "sim": 0.505,
+   "mkt": 0.5,
+   "p_call": 0.502,
+   "call": "pass",
+   "live": false,
+   "gate": "Injuries not final"
+  },
+  {
+   "kind": "yards",
+   "pid": "00-0039361",
+   "name": "Bucky Irving",
+   "team": "TB",
+   "stat": "rush",
+   "line": 69.5,
+   "side": "under",
+   "price": -115,
+   "book": "bet365",
+   "sim": 0.6809,
+   "mkt": 0.5,
+   "p_call": 0.5724,
+   "call": "lean",
+   "live": false,
+   "gate": "QB unclear"
+  },
+  {
+   "kind": "spread",
+   "call": "lean",
+   "live": false,
+   "gate": "QB unclear",
+   "team": "TB",
+   "line": 6.5,
+   "price": -110,
+   "sim": 0.6263
+  },
+  {
+   "kind": "total",
+   "call": "pass",
+   "live": false,
+   "gate": "QB unclear",
+   "side": "over",
+   "line": 45.5,
+   "price": -110,
+   "sim": 0.509
+  },
+  {
+   "kind": "ml",
+   "call": "lean",
+   "live": false,
+   "gate": "QB unclear",
+   "team": "TB",
+   "price": 220,
+   "sim": 0.4226
+  }
+ ]
+}

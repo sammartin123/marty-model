@@ -1,0 +1,41 @@
+{
+ "game_id": "2026_11_PIT_PHI",
+ "season": 2026,
+ "week": 11,
+ "away": "PIT",
+ "home": "PHI",
+ "kickoff_utc": "2026-11-22T21:25:00+00:00",
+ "book": "bet365 (Fri Nov 20, via SportsbookReview)",
+ "logged_utc": "2026-11-20T15:02+00:00",
+ "entries": [
+  {
+   "kind": "spread",
+   "call": "lean",
+   "live": false,
+   "gate": "QB unclear",
+   "team": "PIT",
+   "line": -4.5,
+   "price": -110,
+   "sim": 0.6281
+  },
+  {
+   "kind": "total",
+   "call": "lean",
+   "live": false,
+   "gate": "QB unclear",
+   "side": "under",
+   "line": 38.5,
+   "price": -110,
+   "sim": 0.7401
+  },
+  {
+   "kind": "ml",
+   "call": "lean",
+   "live": false,
+   "gate": "QB unclear",
+   "team": "PIT",
+   "price": -210,
+   "sim": 0.7705
+  }
+ ]
+}

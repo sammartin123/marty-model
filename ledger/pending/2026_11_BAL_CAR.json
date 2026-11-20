@@ -1,0 +1,58 @@
+{
+ "game_id": "2026_11_BAL_CAR",
+ "season": 2026,
+ "week": 11,
+ "away": "BAL",
+ "home": "CAR",
+ "kickoff_utc": "2026-11-22T18:00:00+00:00",
+ "book": "bet365 (Fri Nov 20, via SportsbookReview)",
+ "logged_utc": "2026-11-20T15:00+00:00",
+ "entries": [
+  {
+   "kind": "yards",
+   "pid": "00-0039064",
+   "name": "Zay Flowers",
+   "team": "BAL",
+   "stat": "rec",
+   "line": 67.5,
+   "side": "under",
+   "price": -115,
+   "book": "bet365",
+   "sim": 0.5799,
+   "mkt": 0.5,
+   "p_call": 0.532,
+   "call": "pass",
+   "live": false,
+   "gate": "QB unclear"
+  },
+  {
+   "kind": "spread",
+   "call": "pass",
+   "live": false,
+   "gate": "QB unclear",
+   "team": "BAL",
+   "line": 2.5,
+   "price": -110,
+   "sim": 0.5132
+  },
+  {
+   "kind": "total",
+   "call": "lean",
+   "live": false,
+   "gate": "QB unclear",
+   "side": "over",
+   "line": 43.5,
+   "price": -110,
+   "sim": 0.618
+  },
+  {
+   "kind": "ml",
+   "call": "pass",
+   "live": false,
+   "gate": "QB unclear",
+   "team": "BAL",
+   "price": 127,
+   "sim": 0.459
+  }
+ ]
+}

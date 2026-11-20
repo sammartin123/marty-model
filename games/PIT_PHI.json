@@ -1,0 +1,84 @@
+{
+ "home": "PHI",
+ "away": "PIT",
+ "season": 2026,
+ "week": 11,
+ "asof": "2026-11-22",
+ "n_sims": 100000,
+ "seed": 20261122,
+ "neutral": false,
+ "qb": {
+  "PHI": "00-0039398",
+  "PIT": "00-0023459"
+ },
+ "out": [],
+ "status": {},
+ "out_json": "out/PIT_PHI.json",
+ "meta": {
+  "title": "Steelers at Eagles",
+  "home_name": "Eagles",
+  "away_name": "Steelers",
+  "home_city": "Philadelphia",
+  "away_city": "Pittsburgh",
+  "kickoff": "Sun Nov 22, 2026 \u00b7 4:25 PM ET",
+  "time": "4:25 PM",
+  "venue": "Lincoln Financial Field, Philadelphia",
+  "generated": "Fri Nov 20, 2026",
+  "roof": "outdoors",
+  "lat": 39.901,
+  "lon": -75.168,
+  "data_through": "Week 11",
+  "td_note": "Market = the best anytime TD price found across BetMGM, Caesars, FanDuel, DraftKings, bet365 and Fanatics (Action Network odds comparison, Fri Nov 20). This early run only has TD prices for Titans vs Cowboys. Confirm the price in your own book first: a call only holds at the price shown or longer."
+ },
+ "market": {
+  "spread_home": 4.5,
+  "total": 38.5,
+  "ml_home": 175,
+  "ml_away": -210,
+  "book": "bet365 (Fri Nov 20, via SportsbookReview)"
+ },
+ "weather": {
+  "summary": "Rain likely",
+  "precip": 70,
+  "wind": "NE 9 mph",
+  "rain_flag": true,
+  "note": "Philadelphia (Lincoln Financial Field, outdoors): 70% chance of precipitation and NE winds around 9 mph at kickoff. The forecast is two days out and will be rechecked Saturday.",
+  "effect": "Real rain risk: steer away from receiving-yard overs, especially secondary targets, and toward rushing volume, receptions or unders. The sim trims passing and scoring by the measured rain effect weighted by the chance of rain."
+ },
+ "wx_model": {
+  "pass_mult": 0.958,
+  "cr_mult": 0.888,
+  "td_shift": -0.28,
+  "fg_shift": -0.175
+ },
+ "td_odds": {},
+ "yard_lines": {},
+ "injuries": [],
+ "inputs": {
+  "qbs": {
+   "PHI": "Joe Milton III",
+   "PIT": "Aaron Rodgers"
+  },
+  "report_final": false,
+  "low_conf": {
+   "PHI": "Joe Milton III has 33 pass attempts for the Eagles this season, so their numbers are low confidence."
+  },
+  "notes": [
+   "Eagles QB Joe Milton III is flagged low confidence: a recent promotion with few attempts for the team."
+  ]
+ },
+ "sources": [
+  {
+   "label": "Play-by-play, rosters, depth charts, injuries, schedule (nflverse)",
+   "url": "https://github.com/nflverse/nflverse-data"
+  },
+  {
+   "label": "bet365 lines via SportsbookReview (Fri Nov 20, 8:14 AM ET)",
+   "url": "https://www.sportsbookreview.com/picks/nfl/week-11-odds-betting-lines-2026/"
+  },
+  {
+   "label": "Game-time forecasts (precipitation and wind at kickoff), Action Network NFL weather, Fri Nov 20",
+   "url": "https://www.actionnetwork.com/nfl/weather"
+  }
+ ]
+}

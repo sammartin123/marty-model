@@ -1,0 +1,107 @@
+{
+ "home": "CHI",
+ "away": "NO",
+ "season": 2026,
+ "week": 11,
+ "asof": "2026-11-22",
+ "n_sims": 100000,
+ "seed": 20261122,
+ "neutral": false,
+ "qb": {
+  "CHI": "00-0039918",
+  "NO": "00-0040743"
+ },
+ "out": [],
+ "status": {},
+ "out_json": "out/NO_CHI.json",
+ "meta": {
+  "title": "Saints at Bears",
+  "home_name": "Bears",
+  "away_name": "Saints",
+  "home_city": "Chicago",
+  "away_city": "New Orleans",
+  "kickoff": "Sun Nov 22, 2026 \u00b7 1:00 PM ET",
+  "time": "1:00 PM",
+  "venue": "Soldier Field, Chicago",
+  "generated": "Fri Nov 20, 2026",
+  "roof": "outdoors",
+  "lat": 41.862,
+  "lon": -87.617,
+  "data_through": "Week 11",
+  "td_note": "Market = the best anytime TD price found across BetMGM, Caesars, FanDuel, DraftKings, bet365 and Fanatics (Action Network odds comparison, Fri Nov 20). This early run only has TD prices for Titans vs Cowboys. Confirm the price in your own book first: a call only holds at the price shown or longer."
+ },
+ "market": {
+  "spread_home": -11.5,
+  "total": 48.5,
+  "ml_home": -700,
+  "ml_away": 500,
+  "book": "bet365 (Fri Nov 20, via SportsbookReview)",
+  "others": [
+   {
+    "book": "DraftKings (Nov 19)",
+    "spread_home": -11.5,
+    "total": 48.5,
+    "ml_home": -600,
+    "ml_away": 447
+   }
+  ]
+ },
+ "weather": {
+  "summary": "Rain likely",
+  "precip": 58,
+  "wind": "WSW 9 mph",
+  "rain_flag": true,
+  "note": "Chicago (Soldier Field, outdoors): 58% chance of precipitation and WSW winds around 9 mph at kickoff. The forecast is two days out and will be rechecked Saturday.",
+  "effect": "Real rain risk: steer away from receiving-yard overs, especially secondary targets, and toward rushing volume, receptions or unders. The sim trims passing and scoring by the measured rain effect weighted by the chance of rain."
+ },
+ "wx_model": {
+  "pass_mult": 0.965,
+  "cr_mult": 0.907,
+  "td_shift": -0.23,
+  "fg_shift": -0.145
+ },
+ "td_odds": {},
+ "yard_lines": {
+  "Chris Olave": [
+   {
+    "stat": "rec",
+    "line": 69.5,
+    "over": -115,
+    "under": -115,
+    "book": "bet365"
+   }
+  ]
+ },
+ "injuries": [],
+ "inputs": {
+  "qbs": {
+   "CHI": "Caleb Williams",
+   "NO": "Tyler Shough"
+  },
+  "report_final": false,
+  "low_conf": {},
+  "notes": []
+ },
+ "sources": [
+  {
+   "label": "Play-by-play, rosters, depth charts, injuries, schedule (nflverse)",
+   "url": "https://github.com/nflverse/nflverse-data"
+  },
+  {
+   "label": "bet365 lines via SportsbookReview (Fri Nov 20, 8:14 AM ET)",
+   "url": "https://www.sportsbookreview.com/picks/nfl/week-11-odds-betting-lines-2026/"
+  },
+  {
+   "label": "bet365 and DraftKings lines, VegasInsider Week 11 odds (Nov 19)",
+   "url": "https://www.vegasinsider.com/nfl/nfl-week-11-odds-2026/"
+  },
+  {
+   "label": "Receiving yardage lines (bet365), Action Network odds comparison, Fri Nov 20",
+   "url": "https://www.actionnetwork.com/nfl/props/receiving"
+  },
+  {
+   "label": "Game-time forecasts (precipitation and wind at kickoff), Action Network NFL weather, Fri Nov 20",
+   "url": "https://www.actionnetwork.com/nfl/weather"
+  }
+ ]
+}

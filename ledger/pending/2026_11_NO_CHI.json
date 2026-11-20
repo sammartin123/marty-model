@@ -1,0 +1,58 @@
+{
+ "game_id": "2026_11_NO_CHI",
+ "season": 2026,
+ "week": 11,
+ "away": "NO",
+ "home": "CHI",
+ "kickoff_utc": "2026-11-22T18:00:00+00:00",
+ "book": "bet365 (Fri Nov 20, via SportsbookReview)",
+ "logged_utc": "2026-11-20T15:00+00:00",
+ "entries": [
+  {
+   "kind": "yards",
+   "pid": "00-0037239",
+   "name": "Chris Olave",
+   "team": "NO",
+   "stat": "rec",
+   "line": 69.5,
+   "side": "under",
+   "price": -115,
+   "book": "bet365",
+   "sim": 0.7041,
+   "mkt": 0.5,
+   "p_call": 0.5816,
+   "call": "play",
+   "live": false,
+   "gate": "Injuries not final"
+  },
+  {
+   "kind": "spread",
+   "call": "lean",
+   "live": true,
+   "gate": null,
+   "team": "NO",
+   "line": 11.5,
+   "price": -110,
+   "sim": 0.5829
+  },
+  {
+   "kind": "total",
+   "call": "lean",
+   "live": true,
+   "gate": null,
+   "side": "under",
+   "line": 48.5,
+   "price": -110,
+   "sim": 0.6309
+  },
+  {
+   "kind": "ml",
+   "call": "lean",
+   "live": true,
+   "gate": null,
+   "team": "NO",
+   "price": 500,
+   "sim": 0.2356
+  }
+ ]
+}

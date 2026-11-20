@@ -1,0 +1,95 @@
+{
+ "home": "KC",
+ "away": "ARI",
+ "season": 2026,
+ "week": 11,
+ "asof": "2026-11-22",
+ "n_sims": 100000,
+ "seed": 20261122,
+ "neutral": false,
+ "qb": {
+  "KC": "00-0033873",
+  "ARI": "00-0041561"
+ },
+ "out": [
+  "00-0038134"
+ ],
+ "status": {
+  "00-0038134": "Out"
+ },
+ "out_json": "out/ARI_KC.json",
+ "meta": {
+  "title": "Cardinals at Chiefs",
+  "home_name": "Chiefs",
+  "away_name": "Cardinals",
+  "home_city": "Kansas City",
+  "away_city": "Arizona",
+  "kickoff": "Sun Nov 22, 2026 \u00b7 1:00 PM ET",
+  "time": "1:00 PM",
+  "venue": "GEHA Field at Arrowhead Stadium, Kansas City",
+  "generated": "Fri Nov 20, 2026",
+  "roof": "outdoors",
+  "lat": 39.049,
+  "lon": -94.484,
+  "data_through": "Week 11",
+  "td_note": "Market = the best anytime TD price found across BetMGM, Caesars, FanDuel, DraftKings, bet365 and Fanatics (Action Network odds comparison, Fri Nov 20). This early run only has TD prices for Titans vs Cowboys. Confirm the price in your own book first: a call only holds at the price shown or longer."
+ },
+ "market": {
+  "spread_home": -16.5,
+  "total": 40.5,
+  "ml_home": -1700,
+  "ml_away": 950,
+  "book": "bet365 (Fri Nov 20, via SportsbookReview)"
+ },
+ "weather": {
+  "summary": "Breezy",
+  "precip": null,
+  "wind": "NNW 14 mph",
+  "rain_flag": false,
+  "note": "Kansas City (Arrowhead, outdoors): NNW winds around 14 mph at kickoff, just under the 15 mph line, and not on the high-precipitation list.",
+  "effect": "Half the measured wind effect is applied because the wind sits just under 15 mph."
+ },
+ "wx_model": {
+  "pass_mult": 0.985,
+  "cr_mult": 0.97,
+  "td_shift": -0.06,
+  "fg_shift": -0.05
+ },
+ "td_odds": {},
+ "yard_lines": {},
+ "injuries": [
+  "KC Kenneth Walker III: Out (late change, from news reports)"
+ ],
+ "inputs": {
+  "qbs": {
+   "KC": "Patrick Mahomes",
+   "ARI": "Carson Beck"
+  },
+  "report_final": false,
+  "low_conf": {
+   "ARI": "Carson Beck has 18 pass attempts for the Cardinals this season, so their numbers are low confidence."
+  },
+  "notes": [
+   "Chiefs RB Kenneth Walker III (groin) missed Wednesday's practice after sitting out last week, and reports expect Emmett Johnson to start again. He is modelled as out; this is not official until the final report.",
+   "Cardinals QB Carson Beck is flagged low confidence: a rookie with only one start for the team."
+  ]
+ },
+ "sources": [
+  {
+   "label": "Play-by-play, rosters, depth charts, injuries, schedule (nflverse)",
+   "url": "https://github.com/nflverse/nflverse-data"
+  },
+  {
+   "label": "bet365 lines via SportsbookReview (Fri Nov 20, 8:14 AM ET)",
+   "url": "https://www.sportsbookreview.com/picks/nfl/week-11-odds-betting-lines-2026/"
+  },
+  {
+   "label": "Game-time forecasts (precipitation and wind at kickoff), Action Network NFL weather, Fri Nov 20",
+   "url": "https://www.actionnetwork.com/nfl/weather"
+  },
+  {
+   "label": "Fox Sports: Walker misses Chiefs practice with groin injury, Sunday in question (Nov 18)",
+   "url": "https://www.foxsports.com/stories/nfl/kansas-city-chiefs-kenneth-walker-injury-emmett-johnson"
+  }
+ ]
+}

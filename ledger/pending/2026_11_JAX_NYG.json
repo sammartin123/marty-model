@@ -1,0 +1,75 @@
+{
+ "game_id": "2026_11_JAX_NYG",
+ "season": 2026,
+ "week": 11,
+ "away": "JAX",
+ "home": "NYG",
+ "kickoff_utc": "2026-11-22T18:00:00+00:00",
+ "book": "bet365 (Fri Nov 20, via SportsbookReview)",
+ "logged_utc": "2026-11-20T15:01+00:00",
+ "entries": [
+  {
+   "kind": "yards",
+   "pid": "00-0040715",
+   "name": "Cam Skattebo",
+   "team": "NYG",
+   "stat": "rush",
+   "line": 54.5,
+   "side": "under",
+   "price": -110,
+   "book": "DraftKings",
+   "sim": 0.5615,
+   "mkt": 0.4958,
+   "p_call": 0.5221,
+   "call": "pass",
+   "live": false,
+   "gate": "Injuries not final"
+  },
+  {
+   "kind": "yards",
+   "pid": "00-0040719",
+   "name": "Bhayshul Tuten",
+   "team": "JAX",
+   "stat": "rush",
+   "line": 72.5,
+   "side": "under",
+   "price": -115,
+   "book": "bet365",
+   "sim": 0.6737,
+   "mkt": 0.5,
+   "p_call": 0.5695,
+   "call": "lean",
+   "live": false,
+   "gate": "Injuries not final"
+  },
+  {
+   "kind": "spread",
+   "call": "lean",
+   "live": true,
+   "gate": null,
+   "team": "JAX",
+   "line": -5.5,
+   "price": -110,
+   "sim": 0.5692
+  },
+  {
+   "kind": "total",
+   "call": "lean",
+   "live": true,
+   "gate": null,
+   "side": "under",
+   "line": 46.5,
+   "price": -110,
+   "sim": 0.624
+  },
+  {
+   "kind": "ml",
+   "call": "pass",
+   "live": false,
+   "gate": null,
+   "team": "JAX",
+   "price": -270,
+   "sim": 0.7282
+  }
+ ]
+}

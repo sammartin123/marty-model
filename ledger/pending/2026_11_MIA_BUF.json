@@ -1,0 +1,92 @@
+{
+ "game_id": "2026_11_MIA_BUF",
+ "season": 2026,
+ "week": 11,
+ "away": "MIA",
+ "home": "BUF",
+ "kickoff_utc": "2026-11-22T18:00:00+00:00",
+ "book": "bet365 (Fri Nov 20, via SportsbookReview)",
+ "logged_utc": "2026-11-20T15:00+00:00",
+ "entries": [
+  {
+   "kind": "yards",
+   "pid": "00-0034857",
+   "name": "Josh Allen",
+   "team": "BUF",
+   "stat": "rush",
+   "line": 27.5,
+   "side": "under",
+   "price": -115,
+   "book": "bet365",
+   "sim": 0.6336,
+   "mkt": 0.5,
+   "p_call": 0.5534,
+   "call": "pass",
+   "live": false,
+   "gate": "Injuries not final"
+  },
+  {
+   "kind": "yards",
+   "pid": "00-0037248",
+   "name": "James Cook",
+   "team": "BUF",
+   "stat": "rush",
+   "line": 94.5,
+   "side": "over",
+   "price": -115,
+   "book": "bet365",
+   "sim": 0.5322,
+   "mkt": 0.5,
+   "p_call": 0.5129,
+   "call": "pass",
+   "live": false,
+   "gate": "Injuries not final"
+  },
+  {
+   "kind": "yards",
+   "pid": "00-0040198",
+   "name": "Ollie Gordon II",
+   "team": "MIA",
+   "stat": "rush",
+   "line": 58.5,
+   "side": "under",
+   "price": -115,
+   "book": "bet365",
+   "sim": 0.6025,
+   "mkt": 0.5,
+   "p_call": 0.541,
+   "call": "pass",
+   "live": false,
+   "gate": "QB unclear"
+  },
+  {
+   "kind": "spread",
+   "call": "lean",
+   "live": false,
+   "gate": "QB unclear",
+   "team": "BUF",
+   "line": -16.5,
+   "price": -110,
+   "sim": 0.5623
+  },
+  {
+   "kind": "total",
+   "call": "lean",
+   "live": false,
+   "gate": "QB unclear",
+   "side": "over",
+   "line": 44.5,
+   "price": -110,
+   "sim": 0.5486
+  },
+  {
+   "kind": "ml",
+   "call": "pass",
+   "live": false,
+   "gate": "QB unclear",
+   "team": "BUF",
+   "price": -1700,
+   "sim": 0.9282
+  }
+ ]
+}

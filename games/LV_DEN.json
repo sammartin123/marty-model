@@ -1,0 +1,82 @@
+{
+ "home": "DEN",
+ "away": "LV",
+ "season": 2026,
+ "week": 11,
+ "asof": "2026-11-22",
+ "n_sims": 100000,
+ "seed": 20261122,
+ "neutral": false,
+ "qb": {
+  "DEN": "00-0039732",
+  "LV": "00-0041562"
+ },
+ "out": [],
+ "status": {},
+ "out_json": "out/LV_DEN.json",
+ "meta": {
+  "title": "Raiders at Broncos",
+  "home_name": "Broncos",
+  "away_name": "Raiders",
+  "home_city": "Denver",
+  "away_city": "Las Vegas",
+  "kickoff": "Sun Nov 22, 2026 \u00b7 4:25 PM ET",
+  "time": "4:25 PM",
+  "venue": "Empower Field at Mile High, Denver",
+  "generated": "Fri Nov 20, 2026",
+  "roof": "outdoors",
+  "lat": 39.744,
+  "lon": -105.02,
+  "data_through": "Week 11",
+  "td_note": "Market = the best anytime TD price found across BetMGM, Caesars, FanDuel, DraftKings, bet365 and Fanatics (Action Network odds comparison, Fri Nov 20). This early run only has TD prices for Titans vs Cowboys. Confirm the price in your own book first: a call only holds at the price shown or longer."
+ },
+ "market": {
+  "spread_home": -10.5,
+  "total": 40.5,
+  "ml_home": -600,
+  "ml_away": 450,
+  "book": "bet365 (Fri Nov 20, via SportsbookReview)"
+ },
+ "weather": {
+  "summary": "No rain flagged",
+  "precip": null,
+  "wind": "NNE 4 mph",
+  "rain_flag": false,
+  "note": "Denver (outdoors): light NNE winds around 4 mph at kickoff and not on the high-precipitation list.",
+  "effect": "No weather adjustment."
+ },
+ "wx_model": {
+  "pass_mult": 1.0,
+  "cr_mult": 1.0,
+  "td_shift": 0.0,
+  "fg_shift": 0.0
+ },
+ "td_odds": {},
+ "yard_lines": {},
+ "injuries": [],
+ "inputs": {
+  "qbs": {
+   "DEN": "Bo Nix",
+   "LV": "Fernando Mendoza"
+  },
+  "report_final": false,
+  "low_conf": {
+   "LV": "Fernando Mendoza has 37 pass attempts for the Raiders this season, so their numbers are low confidence."
+  },
+  "notes": []
+ },
+ "sources": [
+  {
+   "label": "Play-by-play, rosters, depth charts, injuries, schedule (nflverse)",
+   "url": "https://github.com/nflverse/nflverse-data"
+  },
+  {
+   "label": "bet365 lines via SportsbookReview (Fri Nov 20, 8:14 AM ET)",
+   "url": "https://www.sportsbookreview.com/picks/nfl/week-11-odds-betting-lines-2026/"
+  },
+  {
+   "label": "Game-time forecasts (precipitation and wind at kickoff), Action Network NFL weather, Fri Nov 20",
+   "url": "https://www.actionnetwork.com/nfl/weather"
+  }
+ ]
+}

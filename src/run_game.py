@@ -78,18 +78,23 @@ def run(G, db=None, quiet=False, record=True):
                 p_ot=float(o['ot'].mean()), drives=float(o['nd'].mean()))
 
     # ------------------------------------------------------------ projected game (box score + one replay)
-    # Built from the same simulations as the props (team scoring set to the book's line when one is posted),
-    # so the box score, the yardage tables and the TD board all agree.
-    T0 = op
+    # Built from the model's own simulations (the same ones behind the win probability and the predicted
+    # score), and the replay lands on the predicted score rounded to whole points, so the projected game,
+    # the predicted score and the win probability always agree.
+    T0 = o
     TP = T0['pts']; tmg = TP[:, 0] - TP[:, 1]; ttot = TP.sum(1)
-    m_star = int(np.round(np.median(tmg)))
-    if m_star == 0:
-        m_star = 1 if tmg.mean() > 0 else -1
-    cand = (tmg == m_star) & (~T0['ot']) & (np.abs(ttot - np.median(ttot)) <= 4)
-    if not cand.any():
-        cand = (np.abs(tmg - m_star) <= 1) & (~T0['ot'])
-    pairs, cnt = np.unique(TP[cand], axis=0, return_counts=True)
-    best = pairs[cnt.argmax()]
+    th_, ta_ = float(TP[:, 0].mean()), float(TP[:, 1].mean())
+    tgt = [int(round(th_)), int(round(ta_))]
+    fav = 0 if p_home >= 0.5 else 1
+    if tgt[fav] <= tgt[1 - fav]:                 # rounding can tie or flip a close game: keep the model's winner
+        tgt[fav] = tgt[1 - fav] + 1
+    win = (TP[:, fav] > TP[:, 1 - fav]) & (~T0['ot'])
+    pairs, cnt = np.unique(TP[win], axis=0, return_counts=True)
+    dist_s = np.abs(pairs[:, 0] - tgt[0]) + np.abs(pairs[:, 1] - tgt[1])
+    ok = cnt >= 3                                # the replay needs a few games at that score to choose from
+    if not ok.any(): ok = cnt >= 1
+    dist_s = np.where(ok, dist_s, 999)
+    best = pairs[np.lexsort((-cnt, dist_s))[0]]
 
     # projections every replay is measured against (from the full first batch)
     ref = []
@@ -138,7 +143,7 @@ def run(G, db=None, quiet=False, record=True):
     extra = int(G.get('typical_batches', 2))
     best_d, i = pick(T0); T = T0; pool = int(((TP[:, 0] == best[0]) & (TP[:, 1] == best[1])).sum())
     for b_ in range(extra):
-        Tb = M.simulate(db, par_a if anchor else par, tabs, vols, N, np.random.default_rng(G.get('seed', 20261115) + 11 + b_), cfg, wx=wx, keep=True)
+        Tb = M.simulate(db, par, tabs, vols, N, np.random.default_rng(G.get('seed', 20261115) + 11 + b_), cfg, wx=wx, keep=True)
         d_, i_ = pick(Tb); pool += int(((Tb['pts'][:, 0] == best[0]) & (Tb['pts'][:, 1] == best[1])).sum())
         if i_ is not None and d_ < best_d:
             best_d, i, T = d_, i_, Tb
@@ -215,7 +220,7 @@ def run(G, db=None, quiet=False, record=True):
     typical = dict(score={home: int(pts_t[i, 0]), away: int(pts_t[i, 1])}, events=events,
                    box={home: proj_box(0), away: proj_box(1)},
                    share=float((TP == best).all(1).mean()), pool=pool, n_searched=int(N * (1 + extra)),
-                   anchored=bool(anchor), proj_margin=float(np.median(tmg)), proj_total=float(np.median(ttot)))
+                   anchored=False, target={home: tgt[0], away: tgt[1]}, proj_margin=float(np.median(tmg)), proj_total=float(np.median(ttot)))
 
     # ------------------------------------------------------------ defence vs position (display)
     tp = db.tpos[db.tpos.season == G['season']]

@@ -91,6 +91,10 @@ Game-line calls are capped at Lean on the page for that reason.
 
 ## Research log
 
+- **Projected game matches the predicted score (Nov 20, 2026): display change, no model change.** The projected game used
+  the book-anchored prop sims, so its score could disagree with the model's predicted score and winner (MIN at SF showed
+  SF 23-20 while the model had MIN 23.4-22.4). It now uses the model's own sims and lands on the predicted score rounded
+  to whole points, keeping the model's favourite as the winner. Prop tables still use book-anchored team scoring.
 - **Four upgrades (Nov 2026): tested, adopted.** Each was compared with the previous model on the same
   player-games across the 681 backtest games (`research/compare_bt.py`, bootstrap by game), and kept only
   because it measurably helped.

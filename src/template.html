@@ -431,7 +431,7 @@ $('h1').innerHTML = esc(M.away_name)+' at '+esc(M.home_name);
 (function(){
   const T=D.typical, ev=T.events, win = T.score[H]>T.score[A]?H:A, lose=win===H?A:H;
   $('typH').textContent='Projected game: '+NAME[win]+' '+T.score[win]+', '+NAME[lose]+' '+T.score[lose];
-  $('typS').textContent=(T.anchored?'Built from the same sims as the props, with team scoring set to the book\u2019s line. ':'')+'The final score is the most common one at the middle margin. The box score is every player\u2019s projection across all '+M.n_sims.toLocaleString('en-US')+' sims. The scoring plays come from the one game out of '+(T.n_searched||M.n_sims).toLocaleString('en-US')+' that lands on this score and sits closest to those projections.';
+  $('typS').textContent='Built from the same '+M.n_sims.toLocaleString('en-US')+' model sims as the win probability and predicted score above, so the final score is that predicted score rounded to whole points, with the model\u2019s favourite winning. The box score is every player\u2019s projection across all of those sims. The scoring plays come from the one game out of '+(T.n_searched||M.n_sims).toLocaleString('en-US')+' that lands on this score and sits closest to those projections. The prop tables below set team scoring to the book\u2019s line, so their yardage can differ a little from this box score.';
   const ord=['1ST','2ND','3RD','4TH'];
   const last=n=>n.split(' ').slice(-1)[0].replace(/^(Jr\.|II|III)$/,'');
   const sur=n=>{ const p=n.split(' '); const l=p[p.length-1]; return /^(Jr\.?|Sr\.?|II|III|IV)$/.test(l)?p[p.length-2]:l; };

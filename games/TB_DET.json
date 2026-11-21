@@ -9,10 +9,13 @@
  "neutral": false,
  "qb": {
   "DET": "00-0033106",
-  "TB": "00-0041251"
+  "TB": "00-0034855"
  },
  "out": [],
- "status": {},
+ "status": {
+  "00-0039364": "Questionable",
+  "00-0034855": "Questionable"
+ },
  "out_json": "out/TB_DET.json",
  "meta": {
   "title": "Buccaneers at Lions",
@@ -23,26 +26,26 @@
   "kickoff": "Sun Nov 22, 2026 \u00b7 1:00 PM ET",
   "time": "1:00 PM",
   "venue": "Ford Field, Detroit",
-  "generated": "Fri Nov 20, 2026",
+  "generated": "Sat Nov 21, 2026",
   "roof": "dome",
   "lat": 42.34,
   "lon": -83.046,
   "data_through": "Week 11",
-  "td_note": "Market = the best anytime TD price found across BetMGM, Caesars, FanDuel, DraftKings, bet365 and Fanatics (Action Network odds comparison, Fri Nov 20). This early run only has TD prices for Titans vs Cowboys. Confirm the price in your own book first: a call only holds at the price shown or longer."
+  "td_note": "Market = the best anytime TD price found across BetMGM, Caesars, FanDuel, DraftKings, bet365 and Fanatics (Action Network odds comparison, Sat Nov 21; prediction-market prices are not used). Receiving and rushing yardage lines are Friday quotes. Confirm the price in your own book first: a call only holds at the price shown or longer."
  },
  "market": {
-  "spread_home": -6.5,
-  "total": 45.5,
-  "ml_home": -270,
-  "ml_away": 220,
-  "book": "bet365 (Fri Nov 20, via SportsbookReview)",
+  "spread_home": -4.5,
+  "total": 46.5,
+  "ml_home": -240,
+  "ml_away": 195,
+  "book": "bet365 (Sat Nov 21, via Action Network)",
   "others": [
    {
-    "book": "DraftKings (Nov 19)",
-    "spread_home": -6.0,
-    "total": 45.5,
-    "ml_home": -281,
-    "ml_away": 230
+    "book": "DraftKings (Sat Nov 21)",
+    "spread_home": -4.5,
+    "total": 46.5,
+    "ml_home": -221,
+    "ml_away": 184
    }
   ]
  },
@@ -60,7 +63,366 @@
   "td_shift": 0.0,
   "fg_shift": 0.0
  },
- "td_odds": {},
+ "td_odds": {
+  "Jahmyr Gibbs": {
+   "price": -220,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     -220
+    ],
+    [
+     "Caesars",
+     -245
+    ],
+    [
+     "FanDuel",
+     -250
+    ],
+    [
+     "DraftKings",
+     -235
+    ],
+    [
+     "bet365",
+     -260
+    ],
+    [
+     "Fanatics",
+     -245
+    ]
+   ]
+  },
+  "Bucky Irving": {
+   "price": 110,
+   "book": "FanDuel",
+   "all": [
+    [
+     "BetMGM",
+     100
+    ],
+    [
+     "Caesars",
+     105
+    ],
+    [
+     "FanDuel",
+     110
+    ],
+    [
+     "DraftKings",
+     100
+    ],
+    [
+     "bet365",
+     105
+    ],
+    [
+     "Fanatics",
+     100
+    ]
+   ]
+  },
+  "Amon-Ra St. Brown": {
+   "price": -125,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     -125
+    ],
+    [
+     "Caesars",
+     -136
+    ],
+    [
+     "FanDuel",
+     -130
+    ],
+    [
+     "DraftKings",
+     -140
+    ],
+    [
+     "bet365",
+     -135
+    ],
+    [
+     "Fanatics",
+     -145
+    ]
+   ]
+  },
+  "Jameson Williams": {
+   "price": 230,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     230
+    ],
+    [
+     "Caesars",
+     215
+    ],
+    [
+     "FanDuel",
+     230
+    ],
+    [
+     "DraftKings",
+     205
+    ],
+    [
+     "bet365",
+     220
+    ],
+    [
+     "Fanatics",
+     220
+    ]
+   ]
+  },
+  "Jalon Daniels": {
+   "price": 310,
+   "book": "DraftKings",
+   "all": [
+    [
+     "DraftKings",
+     310
+    ]
+   ]
+  },
+  "Chris Godwin": {
+   "price": 400,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     400
+    ],
+    [
+     "Caesars",
+     320
+    ],
+    [
+     "FanDuel",
+     330
+    ],
+    [
+     "DraftKings",
+     310
+    ],
+    [
+     "bet365",
+     325
+    ],
+    [
+     "Fanatics",
+     330
+    ]
+   ]
+  },
+  "Isaac TeSlaa": {
+   "price": 500,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     500
+    ],
+    [
+     "Caesars",
+     450
+    ],
+    [
+     "FanDuel",
+     470
+    ],
+    [
+     "DraftKings",
+     500
+    ],
+    [
+     "bet365",
+     450
+    ]
+   ]
+  },
+  "Tez Johnson": {
+   "price": 475,
+   "book": "DraftKings",
+   "all": [
+    [
+     "BetMGM",
+     450
+    ],
+    [
+     "Caesars",
+     425
+    ],
+    [
+     "FanDuel",
+     460
+    ],
+    [
+     "DraftKings",
+     475
+    ],
+    [
+     "bet365",
+     450
+    ]
+   ]
+  },
+  "Sam LaPorta": {
+   "price": 240,
+   "book": "Fanatics",
+   "all": [
+    [
+     "BetMGM",
+     230
+    ],
+    [
+     "Caesars",
+     220
+    ],
+    [
+     "FanDuel",
+     220
+    ],
+    [
+     "DraftKings",
+     225
+    ],
+    [
+     "bet365",
+     220
+    ],
+    [
+     "Fanatics",
+     240
+    ]
+   ]
+  },
+  "Emeka Egbuka": {
+   "price": 230,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     230
+    ],
+    [
+     "Caesars",
+     215
+    ],
+    [
+     "FanDuel",
+     220
+    ],
+    [
+     "DraftKings",
+     215
+    ],
+    [
+     "bet365",
+     220
+    ]
+   ]
+  },
+  "Kenneth Gainwell": {
+   "price": 410,
+   "book": "FanDuel",
+   "all": [
+    [
+     "BetMGM",
+     310
+    ],
+    [
+     "Caesars",
+     375
+    ],
+    [
+     "FanDuel",
+     410
+    ],
+    [
+     "DraftKings",
+     390
+    ],
+    [
+     "bet365",
+     350
+    ],
+    [
+     "Fanatics",
+     270
+    ]
+   ]
+  },
+  "Baker Mayfield": {
+   "price": 775,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     775
+    ],
+    [
+     "Caesars",
+     650
+    ],
+    [
+     "FanDuel",
+     650
+    ],
+    [
+     "DraftKings",
+     700
+    ],
+    [
+     "bet365",
+     625
+    ],
+    [
+     "Fanatics",
+     650
+    ]
+   ]
+  },
+  "Cade Otton": {
+   "price": 400,
+   "book": "DraftKings",
+   "all": [
+    [
+     "BetMGM",
+     350
+    ],
+    [
+     "Caesars",
+     370
+    ],
+    [
+     "FanDuel",
+     390
+    ],
+    [
+     "DraftKings",
+     400
+    ],
+    [
+     "bet365",
+     375
+    ],
+    [
+     "Fanatics",
+     400
+    ]
+   ]
+  }
+ },
  "yard_lines": {
   "Amon-Ra St. Brown": [
    {
@@ -90,18 +452,21 @@
    }
   ]
  },
- "injuries": [],
+ "injuries": [
+  "DET Sione Vaki (RB): Questionable, Ankle",
+  "TB Baker Mayfield (QB): Questionable, Foot"
+ ],
  "inputs": {
   "qbs": {
    "DET": "Jared Goff",
-   "TB": "Jalon Daniels"
+   "TB": "Baker Mayfield"
   },
-  "report_final": false,
+  "report_final": true,
   "low_conf": {
-   "TB": "Baker Mayfield (foot) has not practised and reports have rookie Jalon Daniels trending toward the start; not confirmed."
+   "TB": "Baker Mayfield (foot) is questionable and no Friday decision was found; he practised Thursday and the line moved toward him, but Jalon Daniels could still start."
   },
   "notes": [
-   "Bucs QB Baker Mayfield (foot strain) did not practise Wednesday and Ian Rapoport reports he is trending toward sitting, so the sim uses rookie Jalon Daniels. Tampa Bay's player calls and the game lines stay held until the start is confirmed."
+   "Bucs QB Baker Mayfield (foot) is questionable. He sat Wednesday, returned to practice Thursday and was reported trending toward playing, and the line has moved from Lions -6.5 to -4.5 with every book pricing his touchdown. The sim uses Mayfield, but Tampa Bay's player calls and the game lines stay held until the start is confirmed."
   ]
  },
  "sources": [
@@ -110,12 +475,12 @@
    "url": "https://github.com/nflverse/nflverse-data"
   },
   {
-   "label": "bet365 lines via SportsbookReview (Fri Nov 20, 8:14 AM ET)",
-   "url": "https://www.sportsbookreview.com/picks/nfl/week-11-odds-betting-lines-2026/"
+   "label": "Spread, total and moneyline (bet365; DraftKings as the alternative), Action Network NFL odds, Sat Nov 21 ~12:40 PM ET",
+   "url": "https://www.actionnetwork.com/nfl/odds"
   },
   {
-   "label": "bet365 and DraftKings lines, VegasInsider Week 11 odds (Nov 19)",
-   "url": "https://www.vegasinsider.com/nfl/nfl-week-11-odds-2026/"
+   "label": "Anytime TD prices across BetMGM, Caesars, FanDuel, DraftKings, bet365, Fanatics, Action Network, Sat Nov 21",
+   "url": "https://www.actionnetwork.com/nfl/props/touchdown-props?gameIds=290985&seasonType=reg&week=11"
   },
   {
    "label": "Receiving yardage lines (bet365), Action Network odds comparison, Fri Nov 20",
@@ -126,8 +491,16 @@
    "url": "https://www.actionnetwork.com/nfl/props/rushing"
   },
   {
-   "label": "ClutchPoints: Rapoport says Mayfield trending toward Jalon Daniels start (Nov 2026)",
-   "url": "https://clutchpoints.com/nfl/tampa-bay-buccaneers/buccaneers-news-baker-mayfield-trending-wrong-direction-lions-injury-update"
+   "label": "Official NFL Week 11 injury report (final Friday statuses)",
+   "url": "https://www.nfl.com/injuries/league/2026/REG11"
+  },
+  {
+   "label": "PrizePicks: Mayfield returns to practice Thursday, Tampa Bay Times says trending to play (Nov 19)",
+   "url": "https://www.prizepicks.com/playbook-article/baker-mayfield-injury-update-is-buccaneers-qb-playing-this-week"
+  },
+  {
+   "label": "ClutchPoints: Bowles to decide on Mayfield Friday after Thursday evaluation",
+   "url": "https://clutchpoints.com/nfl/tampa-bay-buccaneers/buccaneers-news-baker-mayfield-wednesday-practice-foot-injury"
   }
  ]
 }

@@ -11,8 +11,17 @@
   "SF": "00-0037834",
   "MIN": "00-0029604"
  },
- "out": [],
- "status": {},
+ "out": [
+  "00-0035228",
+  "00-0038994"
+ ],
+ "status": {
+  "00-0035228": "Out",
+  "00-0038994": "Out",
+  "00-0031408": "Questionable",
+  "00-0036972": "Questionable",
+  "00-0040177": "Questionable"
+ },
  "out_json": "out/MIN_SF.json",
  "meta": {
   "title": "Vikings at 49ers",
@@ -23,26 +32,35 @@
   "kickoff": "Sun Nov 22, 2026 \u00b7 8:20 PM ET",
   "time": "8:20 PM",
   "venue": "Estadio Banorte, San Francisco",
-  "generated": "Fri Nov 20, 2026",
+  "generated": "Sat Nov 21, 2026",
   "roof": "outdoors",
   "lat": 37.403,
   "lon": -121.97,
   "data_through": "Week 11",
-  "td_note": "Market = the best anytime TD price found across BetMGM, Caesars, FanDuel, DraftKings, bet365 and Fanatics (Action Network odds comparison, Fri Nov 20). This early run only has TD prices for Titans vs Cowboys. Confirm the price in your own book first: a call only holds at the price shown or longer."
+  "td_note": "Market = the best anytime TD price found across BetMGM, Caesars, FanDuel, DraftKings, bet365 and Fanatics (Action Network odds comparison, Sat Nov 21; prediction-market prices are not used). Receiving and rushing yardage lines are Friday quotes. Confirm the price in your own book first: a call only holds at the price shown or longer."
  },
  "market": {
   "spread_home": -3.5,
   "total": 46.5,
   "ml_home": -176,
   "ml_away": 148,
-  "book": "bet365 (Fri Nov 20, via SportsbookReview)"
+  "book": "bet365 (Sat Nov 21, via Action Network)",
+  "others": [
+   {
+    "book": "DraftKings (Sat Nov 21)",
+    "spread_home": -3.5,
+    "total": 46.5,
+    "ml_home": -172,
+    "ml_away": 145
+   }
+  ]
  },
  "weather": {
   "summary": "No forecast found",
   "precip": null,
   "wind": null,
   "rain_flag": false,
-  "note": "Played at Estadio Banorte in Mexico City (outdoors, about 2,200 m altitude). No game-time forecast was posted yet; it will be rechecked Saturday.",
+  "note": "Played at Estadio Banorte in Mexico City (outdoors, about 2,200 m altitude). The forecast board still had no game-time forecast on Saturday.",
   "effect": "No weather adjustment."
  },
  "wx_model": {
@@ -51,7 +69,356 @@
   "td_shift": 0.0,
   "fg_shift": 0.0
  },
- "td_odds": {},
+ "td_odds": {
+  "Mike Evans": {
+   "price": 170,
+   "book": "FanDuel",
+   "all": [
+    [
+     "BetMGM",
+     165
+    ],
+    [
+     "Caesars",
+     163
+    ],
+    [
+     "FanDuel",
+     170
+    ],
+    [
+     "DraftKings",
+     165
+    ],
+    [
+     "bet365",
+     160
+    ],
+    [
+     "Fanatics",
+     170
+    ]
+   ]
+  },
+  "Aaron Jones": {
+   "price": 170,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     170
+    ],
+    [
+     "Caesars",
+     161
+    ],
+    [
+     "FanDuel",
+     165
+    ],
+    [
+     "DraftKings",
+     165
+    ],
+    [
+     "bet365",
+     165
+    ],
+    [
+     "Fanatics",
+     160
+    ]
+   ]
+  },
+  "Christian McCaffrey": {
+   "price": -155,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     -155
+    ],
+    [
+     "Caesars",
+     -170
+    ],
+    [
+     "FanDuel",
+     -165
+    ],
+    [
+     "DraftKings",
+     -170
+    ],
+    [
+     "bet365",
+     -170
+    ],
+    [
+     "Fanatics",
+     -175
+    ]
+   ]
+  },
+  "Jordan Mason": {
+   "price": 210,
+   "book": "FanDuel",
+   "all": [
+    [
+     "BetMGM",
+     195
+    ],
+    [
+     "Caesars",
+     200
+    ],
+    [
+     "FanDuel",
+     210
+    ],
+    [
+     "DraftKings",
+     205
+    ],
+    [
+     "bet365",
+     205
+    ],
+    [
+     "Fanatics",
+     200
+    ]
+   ]
+  },
+  "Keenan Allen": {
+   "price": 350,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     350
+    ],
+    [
+     "Caesars",
+     285
+    ],
+    [
+     "FanDuel",
+     290
+    ],
+    [
+     "DraftKings",
+     310
+    ],
+    [
+     "bet365",
+     280
+    ],
+    [
+     "Fanatics",
+     285
+    ]
+   ]
+  },
+  "Justin Jefferson": {
+   "price": 120,
+   "book": "FanDuel",
+   "all": [
+    [
+     "BetMGM",
+     115
+    ],
+    [
+     "Caesars",
+     116
+    ],
+    [
+     "FanDuel",
+     120
+    ],
+    [
+     "DraftKings",
+     115
+    ],
+    [
+     "bet365",
+     115
+    ],
+    [
+     "Fanatics",
+     120
+    ]
+   ]
+  },
+  "George Kittle": {
+   "price": 195,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     195
+    ],
+    [
+     "Caesars",
+     178
+    ],
+    [
+     "FanDuel",
+     180
+    ],
+    [
+     "DraftKings",
+     175
+    ],
+    [
+     "bet365",
+     180
+    ],
+    [
+     "Fanatics",
+     185
+    ]
+   ]
+  },
+  "T.J. Hockenson": {
+   "price": 225,
+   "book": "bet365",
+   "all": [
+    [
+     "BetMGM",
+     220
+    ],
+    [
+     "Caesars",
+     215
+    ],
+    [
+     "FanDuel",
+     220
+    ],
+    [
+     "DraftKings",
+     220
+    ],
+    [
+     "bet365",
+     225
+    ],
+    [
+     "Fanatics",
+     220
+    ]
+   ]
+  },
+  "Tai Felton": {
+   "price": 650,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     650
+    ],
+    [
+     "Caesars",
+     575
+    ],
+    [
+     "FanDuel",
+     650
+    ],
+    [
+     "DraftKings",
+     600
+    ],
+    [
+     "bet365",
+     550
+    ]
+   ]
+  },
+  "Deebo Samuel": {
+   "price": 360,
+   "book": "FanDuel",
+   "all": [
+    [
+     "BetMGM",
+     240
+    ],
+    [
+     "Caesars",
+     340
+    ],
+    [
+     "FanDuel",
+     360
+    ],
+    [
+     "DraftKings",
+     350
+    ],
+    [
+     "bet365",
+     350
+    ],
+    [
+     "Fanatics",
+     360
+    ]
+   ]
+  },
+  "Kaelon Black": {
+   "price": 300,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     300
+    ],
+    [
+     "Caesars",
+     285
+    ],
+    [
+     "FanDuel",
+     290
+    ],
+    [
+     "DraftKings",
+     300
+    ],
+    [
+     "bet365",
+     290
+    ]
+   ]
+  },
+  "Myles Price": {
+   "price": 800,
+   "book": "DraftKings",
+   "all": [
+    [
+     "BetMGM",
+     600
+    ],
+    [
+     "Caesars",
+     675
+    ],
+    [
+     "FanDuel",
+     650
+    ],
+    [
+     "DraftKings",
+     800
+    ],
+    [
+     "bet365",
+     650
+    ]
+   ]
+  }
+ },
  "yard_lines": {
   "Justin Jefferson": [
    {
@@ -63,18 +430,25 @@
    }
   ]
  },
- "injuries": [],
+ "injuries": [
+  "MIN Kyler Murray (QB): Out, Hamstring",
+  "MIN Jordan Addison (WR): Out, Thumb",
+  "SF Mike Evans (WR): Questionable, Achilles",
+  "SF Mac Jones (QB): Questionable, Illness",
+  "SF Jordan James (RB): Questionable, Calf"
+ ],
  "inputs": {
   "qbs": {
    "SF": "Brock Purdy",
    "MIN": "Kirk Cousins"
   },
-  "report_final": false,
+  "report_final": true,
   "low_conf": {
    "MIN": "Kirk Cousins has 31 pass attempts for the Vikings this season, so their numbers are low confidence."
   },
   "notes": [
-   "Kirk Cousins starts for Minnesota after being traded back; he is flagged low confidence because he has under 60 attempts for the team this season."
+   "Vikings QB Kyler Murray is out, so Kirk Cousins starts; he is flagged low confidence with under 60 attempts for Minnesota this season.",
+   "Vikings WR Jordan Addison is out on the final report (DraftKings still listed a TD price; it is ignored). 49ers WR Mike Evans and QB Mac Jones are questionable."
   ]
  },
  "sources": [
@@ -83,15 +457,23 @@
    "url": "https://github.com/nflverse/nflverse-data"
   },
   {
-   "label": "bet365 lines via SportsbookReview (Fri Nov 20, 8:14 AM ET)",
-   "url": "https://www.sportsbookreview.com/picks/nfl/week-11-odds-betting-lines-2026/"
+   "label": "Spread, total and moneyline (bet365; DraftKings as the alternative), Action Network NFL odds, Sat Nov 21 ~12:40 PM ET",
+   "url": "https://www.actionnetwork.com/nfl/odds"
+  },
+  {
+   "label": "Anytime TD prices across BetMGM, Caesars, FanDuel, DraftKings, bet365, Fanatics, Action Network, Sat Nov 21",
+   "url": "https://www.actionnetwork.com/nfl/props/touchdown-props?gameIds=290995&seasonType=reg&week=11"
   },
   {
    "label": "Receiving yardage lines (bet365), Action Network odds comparison, Fri Nov 20",
    "url": "https://www.actionnetwork.com/nfl/props/receiving"
   },
   {
-   "label": "Game-time forecasts (precipitation and wind at kickoff), Action Network NFL weather, Fri Nov 20",
+   "label": "Official NFL Week 11 injury report (final Friday statuses)",
+   "url": "https://www.nfl.com/injuries/league/2026/REG11"
+  },
+  {
+   "label": "Game-time forecasts (precipitation and wind at kickoff), Action Network NFL weather, Sat Nov 21",
    "url": "https://www.actionnetwork.com/nfl/weather"
   }
  ]

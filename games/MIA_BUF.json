@@ -11,8 +11,15 @@
   "BUF": "00-0034857",
   "MIA": "00-0040014"
  },
- "out": [],
- "status": {},
+ "out": [
+  "00-0038728",
+  "00-0038933"
+ ],
+ "status": {
+  "00-0038933": "Doubtful",
+  "00-0040194": "Questionable",
+  "00-0038728": "Out"
+ },
  "out_json": "out/MIA_BUF.json",
  "meta": {
   "title": "Dolphins at Bills",
@@ -23,35 +30,35 @@
   "kickoff": "Sun Nov 22, 2026 \u00b7 1:00 PM ET",
   "time": "1:00 PM",
   "venue": "Highmark Stadium, Buffalo",
-  "generated": "Fri Nov 20, 2026",
+  "generated": "Sat Nov 21, 2026",
   "roof": "outdoors",
   "lat": 42.774,
   "lon": -78.787,
   "data_through": "Week 11",
-  "td_note": "Market = the best anytime TD price found across BetMGM, Caesars, FanDuel, DraftKings, bet365 and Fanatics (Action Network odds comparison, Fri Nov 20). This early run only has TD prices for Titans vs Cowboys. Confirm the price in your own book first: a call only holds at the price shown or longer."
+  "td_note": "Market = the best anytime TD price found across BetMGM, Caesars, FanDuel, DraftKings, bet365 and Fanatics (Action Network odds comparison, Sat Nov 21; prediction-market prices are not used). Receiving and rushing yardage lines are Friday quotes. Confirm the price in your own book first: a call only holds at the price shown or longer."
  },
  "market": {
   "spread_home": -16.5,
   "total": 44.5,
-  "ml_home": -1700,
+  "ml_home": -1400,
   "ml_away": 950,
-  "book": "bet365 (Fri Nov 20, via SportsbookReview)",
+  "book": "bet365 (Sat Nov 21, via Action Network)",
   "others": [
    {
-    "book": "DraftKings (Nov 19)",
+    "book": "DraftKings (Sat Nov 21)",
     "spread_home": -16.5,
     "total": 44.5,
-    "ml_home": -1440,
-    "ml_away": 850
+    "ml_home": -1540,
+    "ml_away": 880
    }
   ]
  },
  "weather": {
   "summary": "No rain flagged",
   "precip": null,
-  "wind": "S 9 mph",
+  "wind": "SSW 11 mph",
   "rain_flag": false,
-  "note": "Orchard Park (Highmark Stadium, outdoors): S winds around 9 mph at kickoff and not on the high-precipitation list.",
+  "note": "Orchard Park (Highmark Stadium, outdoors): SSW winds around 11 mph at kickoff and not on the high-precipitation list.",
   "effect": "No weather adjustment."
  },
  "wx_model": {
@@ -60,7 +67,330 @@
   "td_shift": 0.0,
   "fg_shift": 0.0
  },
- "td_odds": {},
+ "td_odds": {
+  "James Cook": {
+   "price": -190,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     -190
+    ],
+    [
+     "Caesars",
+     -190
+    ],
+    [
+     "FanDuel",
+     -195
+    ],
+    [
+     "DraftKings",
+     -190
+    ],
+    [
+     "bet365",
+     -200
+    ],
+    [
+     "Fanatics",
+     -190
+    ]
+   ]
+  },
+  "Ollie Gordon": {
+   "price": 125,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     125
+    ],
+    [
+     "Caesars",
+     114
+    ],
+    [
+     "FanDuel",
+     110
+    ],
+    [
+     "DraftKings",
+     110
+    ],
+    [
+     "bet365",
+     115
+    ],
+    [
+     "Fanatics",
+     110
+    ]
+   ]
+  },
+  "Josh Allen": {
+   "price": -160,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     -160
+    ],
+    [
+     "Caesars",
+     -179
+    ],
+    [
+     "FanDuel",
+     -175
+    ],
+    [
+     "DraftKings",
+     -175
+    ],
+    [
+     "bet365",
+     -175
+    ],
+    [
+     "Fanatics",
+     -170
+    ]
+   ]
+  },
+  "Khalil Shakir": {
+   "price": 240,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     240
+    ],
+    [
+     "Caesars",
+     200
+    ],
+    [
+     "FanDuel",
+     210
+    ],
+    [
+     "DraftKings",
+     205
+    ],
+    [
+     "bet365",
+     195
+    ],
+    [
+     "Fanatics",
+     190
+    ]
+   ]
+  },
+  "D.J. Moore": {
+   "price": 175,
+   "book": "FanDuel",
+   "all": [
+    [
+     "BetMGM",
+     145
+    ],
+    [
+     "Caesars",
+     165
+    ],
+    [
+     "FanDuel",
+     175
+    ],
+    [
+     "DraftKings",
+     175
+    ],
+    [
+     "bet365",
+     165
+    ],
+    [
+     "Fanatics",
+     165
+    ]
+   ]
+  },
+  "Ty Johnson": {
+   "price": 550,
+   "book": "DraftKings",
+   "all": [
+    [
+     "BetMGM",
+     400
+    ],
+    [
+     "Caesars",
+     475
+    ],
+    [
+     "FanDuel",
+     500
+    ],
+    [
+     "DraftKings",
+     550
+    ],
+    [
+     "bet365",
+     475
+    ],
+    [
+     "Fanatics",
+     525
+    ]
+   ]
+  },
+  "Keon Coleman": {
+   "price": 275,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     275
+    ],
+    [
+     "Caesars",
+     250
+    ],
+    [
+     "FanDuel",
+     250
+    ],
+    [
+     "DraftKings",
+     260
+    ],
+    [
+     "bet365",
+     260
+    ],
+    [
+     "Fanatics",
+     270
+    ]
+   ]
+  },
+  "Malik Washington": {
+   "price": 475,
+   "book": "Fanatics",
+   "all": [
+    [
+     "BetMGM",
+     425
+    ],
+    [
+     "Caesars",
+     425
+    ],
+    [
+     "FanDuel",
+     470
+    ],
+    [
+     "DraftKings",
+     450
+    ],
+    [
+     "Fanatics",
+     475
+    ]
+   ]
+  },
+  "Dawson Knox": {
+   "price": 310,
+   "book": "FanDuel",
+   "all": [
+    [
+     "BetMGM",
+     300
+    ],
+    [
+     "Caesars",
+     250
+    ],
+    [
+     "FanDuel",
+     310
+    ],
+    [
+     "DraftKings",
+     290
+    ],
+    [
+     "bet365",
+     310
+    ],
+    [
+     "Fanatics",
+     285
+    ]
+   ]
+  },
+  "Greg Dulcich": {
+   "price": 575,
+   "book": "Fanatics",
+   "all": [
+    [
+     "BetMGM",
+     475
+    ],
+    [
+     "Caesars",
+     475
+    ],
+    [
+     "FanDuel",
+     550
+    ],
+    [
+     "DraftKings",
+     500
+    ],
+    [
+     "bet365",
+     475
+    ],
+    [
+     "Fanatics",
+     575
+    ]
+   ]
+  },
+  "Keleki Latu": {
+   "price": 850,
+   "book": "DraftKings",
+   "all": [
+    [
+     "BetMGM",
+     775
+    ],
+    [
+     "Caesars",
+     700
+    ],
+    [
+     "FanDuel",
+     650
+    ],
+    [
+     "DraftKings",
+     850
+    ],
+    [
+     "bet365",
+     650
+    ]
+   ]
+  }
+ },
  "yard_lines": {
   "James Cook": [
    {
@@ -90,17 +420,23 @@
    }
   ]
  },
- "injuries": [],
+ "injuries": [
+  "BUF Dalton Kincaid (TE): Doubtful, Thumb",
+  "BUF Jackson Hawes (TE): Questionable, Shoulder",
+  "MIA Jared Wayne (WR): Out, Quadricep"
+ ],
  "inputs": {
   "qbs": {
    "BUF": "Josh Allen",
    "MIA": "Kyle McCord"
   },
-  "report_final": false,
+  "report_final": true,
   "low_conf": {
    "MIA": "Kyle McCord has 32 pass attempts for the Dolphins this season, so their numbers are low confidence."
   },
-  "notes": []
+  "notes": [
+   "Bills TE Dalton Kincaid is doubtful and is left out of the TD board."
+  ]
  },
  "sources": [
   {
@@ -108,19 +444,23 @@
    "url": "https://github.com/nflverse/nflverse-data"
   },
   {
-   "label": "bet365 lines via SportsbookReview (Fri Nov 20, 8:14 AM ET)",
-   "url": "https://www.sportsbookreview.com/picks/nfl/week-11-odds-betting-lines-2026/"
+   "label": "Spread, total and moneyline (bet365; DraftKings as the alternative), Action Network NFL odds, Sat Nov 21 ~12:40 PM ET",
+   "url": "https://www.actionnetwork.com/nfl/odds"
   },
   {
-   "label": "bet365 and DraftKings lines, VegasInsider Week 11 odds (Nov 19)",
-   "url": "https://www.vegasinsider.com/nfl/nfl-week-11-odds-2026/"
+   "label": "Anytime TD prices across BetMGM, Caesars, FanDuel, DraftKings, bet365, Fanatics, Action Network, Sat Nov 21",
+   "url": "https://www.actionnetwork.com/nfl/props/touchdown-props?gameIds=290987&seasonType=reg&week=11"
   },
   {
    "label": "Rushing yardage lines (bet365 unless noted), Action Network odds comparison, Fri Nov 20",
    "url": "https://www.actionnetwork.com/nfl/props/rushing"
   },
   {
-   "label": "Game-time forecasts (precipitation and wind at kickoff), Action Network NFL weather, Fri Nov 20",
+   "label": "Official NFL Week 11 injury report (final Friday statuses)",
+   "url": "https://www.nfl.com/injuries/league/2026/REG11"
+  },
+  {
+   "label": "Game-time forecasts (precipitation and wind at kickoff), Action Network NFL weather, Sat Nov 21",
    "url": "https://www.actionnetwork.com/nfl/weather"
   }
  ]

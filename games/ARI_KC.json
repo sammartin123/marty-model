@@ -15,6 +15,7 @@
   "00-0038134"
  ],
  "status": {
+  "00-0041561": "Questionable",
   "00-0038134": "Out"
  },
  "out_json": "out/ARI_KC.json",
@@ -27,19 +28,28 @@
   "kickoff": "Sun Nov 22, 2026 \u00b7 1:00 PM ET",
   "time": "1:00 PM",
   "venue": "GEHA Field at Arrowhead Stadium, Kansas City",
-  "generated": "Fri Nov 20, 2026",
+  "generated": "Sat Nov 21, 2026",
   "roof": "outdoors",
   "lat": 39.049,
   "lon": -94.484,
   "data_through": "Week 11",
-  "td_note": "Market = the best anytime TD price found across BetMGM, Caesars, FanDuel, DraftKings, bet365 and Fanatics (Action Network odds comparison, Fri Nov 20). This early run only has TD prices for Titans vs Cowboys. Confirm the price in your own book first: a call only holds at the price shown or longer."
+  "td_note": "Market = the best anytime TD price found across BetMGM, Caesars, FanDuel, DraftKings, bet365 and Fanatics (Action Network odds comparison, Sat Nov 21; prediction-market prices are not used). Receiving and rushing yardage lines are Friday quotes. Confirm the price in your own book first: a call only holds at the price shown or longer."
  },
  "market": {
   "spread_home": -16.5,
   "total": 40.5,
-  "ml_home": -1700,
-  "ml_away": 950,
-  "book": "bet365 (Fri Nov 20, via SportsbookReview)"
+  "ml_home": -1600,
+  "ml_away": 900,
+  "book": "bet365 (Sat Nov 21, via Action Network)",
+  "others": [
+   {
+    "book": "DraftKings (Sat Nov 21)",
+    "spread_home": -15.5,
+    "total": 40.5,
+    "ml_home": -1480,
+    "ml_away": 860
+   }
+  ]
  },
  "weather": {
   "summary": "Breezy",
@@ -55,23 +65,367 @@
   "td_shift": -0.06,
   "fg_shift": -0.05
  },
- "td_odds": {},
+ "td_odds": {
+  "Emmett Johnson": {
+   "price": -220,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     -220
+    ],
+    [
+     "Caesars",
+     -235
+    ],
+    [
+     "FanDuel",
+     -230
+    ],
+    [
+     "DraftKings",
+     -225
+    ],
+    [
+     "bet365",
+     -230
+    ]
+   ]
+  },
+  "Xavier Worthy": {
+   "price": 390,
+   "book": "FanDuel",
+   "all": [
+    [
+     "BetMGM",
+     300
+    ],
+    [
+     "Caesars",
+     360
+    ],
+    [
+     "FanDuel",
+     390
+    ],
+    [
+     "DraftKings",
+     370
+    ],
+    [
+     "bet365",
+     350
+    ],
+    [
+     "Fanatics",
+     380
+    ]
+   ]
+  },
+  "Bam Knight": {
+   "price": 390,
+   "book": "bet365",
+   "all": [
+    [
+     "BetMGM",
+     375
+    ],
+    [
+     "Caesars",
+     360
+    ],
+    [
+     "FanDuel",
+     380
+    ],
+    [
+     "DraftKings",
+     370
+    ],
+    [
+     "bet365",
+     390
+    ],
+    [
+     "Fanatics",
+     380
+    ]
+   ]
+  },
+  "Rashee Rice": {
+   "price": 165,
+   "book": "FanDuel",
+   "all": [
+    [
+     "BetMGM",
+     160
+    ],
+    [
+     "Caesars",
+     151
+    ],
+    [
+     "FanDuel",
+     165
+    ],
+    [
+     "DraftKings",
+     145
+    ],
+    [
+     "bet365",
+     150
+    ],
+    [
+     "Fanatics",
+     160
+    ]
+   ]
+  },
+  "Travis Kelce": {
+   "price": 195,
+   "book": "FanDuel",
+   "all": [
+    [
+     "BetMGM",
+     165
+    ],
+    [
+     "Caesars",
+     181
+    ],
+    [
+     "FanDuel",
+     195
+    ],
+    [
+     "DraftKings",
+     190
+    ],
+    [
+     "bet365",
+     185
+    ],
+    [
+     "Fanatics",
+     190
+    ]
+   ]
+  },
+  "Noah Gray": {
+   "price": 525,
+   "book": "Fanatics",
+   "all": [
+    [
+     "BetMGM",
+     450
+    ],
+    [
+     "Caesars",
+     475
+    ],
+    [
+     "FanDuel",
+     500
+    ],
+    [
+     "DraftKings",
+     500
+    ],
+    [
+     "bet365",
+     450
+    ],
+    [
+     "Fanatics",
+     525
+    ]
+   ]
+  },
+  "Nathan Carter": {
+   "price": 525,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     525
+    ]
+   ]
+  },
+  "Josh Downs": {
+   "price": 240,
+   "book": "DraftKings",
+   "all": [
+    [
+     "BetMGM",
+     210
+    ],
+    [
+     "Caesars",
+     210
+    ],
+    [
+     "FanDuel",
+     210
+    ],
+    [
+     "DraftKings",
+     240
+    ],
+    [
+     "bet365",
+     195
+    ],
+    [
+     "Fanatics",
+     190
+    ]
+   ]
+  },
+  "Cyrus Allen": {
+   "price": 500,
+   "book": "FanDuel",
+   "all": [
+    [
+     "BetMGM",
+     475
+    ],
+    [
+     "Caesars",
+     475
+    ],
+    [
+     "FanDuel",
+     500
+    ],
+    [
+     "DraftKings",
+     500
+    ],
+    [
+     "bet365",
+     475
+    ]
+   ]
+  },
+  "Trey McBride": {
+   "price": 310,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     310
+    ],
+    [
+     "Caesars",
+     280
+    ],
+    [
+     "FanDuel",
+     290
+    ],
+    [
+     "DraftKings",
+     265
+    ],
+    [
+     "bet365",
+     290
+    ],
+    [
+     "Fanatics",
+     300
+    ]
+   ]
+  },
+  "Tyler Allgeier": {
+   "price": 340,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     340
+    ],
+    [
+     "Caesars",
+     305
+    ],
+    [
+     "FanDuel",
+     310
+    ],
+    [
+     "DraftKings",
+     320
+    ],
+    [
+     "bet365",
+     325
+    ],
+    [
+     "Fanatics",
+     300
+    ]
+   ]
+  },
+  "Reggie Virgil": {
+   "price": 850,
+   "book": "DraftKings",
+   "all": [
+    [
+     "BetMGM",
+     825
+    ],
+    [
+     "Caesars",
+     800
+    ],
+    [
+     "FanDuel",
+     800
+    ],
+    [
+     "DraftKings",
+     850
+    ],
+    [
+     "bet365",
+     800
+    ],
+    [
+     "Fanatics",
+     800
+    ]
+   ]
+  },
+  "Carson Beck": {
+   "price": 1100,
+   "book": "DraftKings",
+   "all": [
+    [
+     "DraftKings",
+     1100
+    ]
+   ]
+  }
+ },
  "yard_lines": {},
  "injuries": [
-  "KC Kenneth Walker III: Out (late change, from news reports)"
+  "ARI Carson Beck (QB): Questionable, Back",
+  "KC Kenneth Walker III (RB): Out, Groin"
  ],
  "inputs": {
   "qbs": {
    "KC": "Patrick Mahomes",
    "ARI": "Carson Beck"
   },
-  "report_final": false,
+  "report_final": true,
   "low_conf": {
    "ARI": "Carson Beck has 18 pass attempts for the Cardinals this season, so their numbers are low confidence."
   },
   "notes": [
-   "Chiefs RB Kenneth Walker III (groin) missed Wednesday's practice after sitting out last week, and reports expect Emmett Johnson to start again. He is modelled as out; this is not official until the final report.",
-   "Cardinals QB Carson Beck is flagged low confidence: a rookie with only one start for the team."
+   "Chiefs RB Kenneth Walker III (groin) is out on the final report, so Emmett Johnson starts again.",
+   "Cardinals QB Carson Beck is questionable but expected to make his second start; he is flagged low confidence with so few attempts for the team."
   ]
  },
  "sources": [
@@ -80,16 +434,20 @@
    "url": "https://github.com/nflverse/nflverse-data"
   },
   {
-   "label": "bet365 lines via SportsbookReview (Fri Nov 20, 8:14 AM ET)",
-   "url": "https://www.sportsbookreview.com/picks/nfl/week-11-odds-betting-lines-2026/"
+   "label": "Spread, total and moneyline (bet365; DraftKings as the alternative), Action Network NFL odds, Sat Nov 21 ~12:40 PM ET",
+   "url": "https://www.actionnetwork.com/nfl/odds"
   },
   {
-   "label": "Game-time forecasts (precipitation and wind at kickoff), Action Network NFL weather, Fri Nov 20",
+   "label": "Anytime TD prices across BetMGM, Caesars, FanDuel, DraftKings, bet365, Fanatics, Action Network, Sat Nov 21",
+   "url": "https://www.actionnetwork.com/nfl/props/touchdown-props?gameIds=290986&seasonType=reg&week=11"
+  },
+  {
+   "label": "Official NFL Week 11 injury report (final Friday statuses)",
+   "url": "https://www.nfl.com/injuries/league/2026/REG11"
+  },
+  {
+   "label": "Game-time forecasts (precipitation and wind at kickoff), Action Network NFL weather, Sat Nov 21",
    "url": "https://www.actionnetwork.com/nfl/weather"
-  },
-  {
-   "label": "Fox Sports: Walker misses Chiefs practice with groin injury, Sunday in question (Nov 18)",
-   "url": "https://www.foxsports.com/stories/nfl/kansas-city-chiefs-kenneth-walker-injury-emmett-johnson"
   }
  ]
 }

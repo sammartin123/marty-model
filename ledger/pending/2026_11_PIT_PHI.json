@@ -5,18 +5,144 @@
  "away": "PIT",
  "home": "PHI",
  "kickoff_utc": "2026-11-22T21:25:00+00:00",
- "book": "bet365 (Fri Nov 20, via SportsbookReview)",
- "logged_utc": "2026-11-20T17:49+00:00",
+ "book": "bet365 (Sat Nov 21, via Action Network)",
+ "logged_utc": "2026-11-21T18:14+00:00",
  "entries": [
+  {
+   "kind": "td",
+   "pid": "00-0036912",
+   "name": "DeVonta Smith",
+   "team": "PHI",
+   "price": 360,
+   "book": "Fanatics",
+   "sim": 0.2299,
+   "mkt": 0.2174,
+   "p_call": 0.2224,
+   "call": "pass",
+   "live": false,
+   "gate": "QB unclear"
+  },
+  {
+   "kind": "td",
+   "pid": "00-0034351",
+   "name": "Dallas Goedert",
+   "team": "PHI",
+   "price": 450,
+   "book": "DraftKings",
+   "sim": 0.1608,
+   "mkt": 0.1818,
+   "p_call": 0.1734,
+   "call": "pass",
+   "live": false,
+   "gate": "QB unclear"
+  },
+  {
+   "kind": "td",
+   "pid": "00-0034844",
+   "name": "Saquon Barkley",
+   "team": "PHI",
+   "price": 130,
+   "book": "DraftKings",
+   "sim": 0.2839,
+   "mkt": 0.4348,
+   "p_call": 0.3744,
+   "call": "fade",
+   "live": false,
+   "gate": "QB unclear"
+  },
+  {
+   "kind": "td",
+   "pid": "00-0040867",
+   "name": "Makai Lemon",
+   "team": "PHI",
+   "price": 500,
+   "book": "FanDuel",
+   "sim": 0.1675,
+   "mkt": 0.1667,
+   "p_call": 0.167,
+   "call": "pass",
+   "live": false,
+   "gate": "QB unclear"
+  },
+  {
+   "kind": "td",
+   "pid": "00-0035640",
+   "name": "DK Metcalf",
+   "team": "PIT",
+   "price": 250,
+   "book": "BetMGM",
+   "sim": 0.3164,
+   "mkt": 0.2857,
+   "p_call": 0.298,
+   "call": "pass",
+   "live": false,
+   "gate": null
+  },
+  {
+   "kind": "td",
+   "pid": "00-0036139",
+   "name": "Rico Dowdle",
+   "team": "PIT",
+   "price": 220,
+   "book": "FanDuel",
+   "sim": 0.2766,
+   "mkt": 0.3125,
+   "p_call": 0.2981,
+   "call": "pass",
+   "live": false,
+   "gate": null
+  },
+  {
+   "kind": "td",
+   "pid": "00-0036894",
+   "name": "Pat Freiermuth",
+   "team": "PIT",
+   "price": 400,
+   "book": "BetMGM",
+   "sim": 0.1731,
+   "mkt": 0.2,
+   "p_call": 0.1893,
+   "call": "pass",
+   "live": false,
+   "gate": null
+  },
+  {
+   "kind": "td",
+   "pid": "00-0037228",
+   "name": "Jaylen Warren",
+   "team": "PIT",
+   "price": 135,
+   "book": "FanDuel",
+   "sim": 0.3464,
+   "mkt": 0.4255,
+   "p_call": 0.3939,
+   "call": "pass",
+   "live": false,
+   "gate": null
+  },
+  {
+   "kind": "td",
+   "pid": "00-0041489",
+   "name": "Germie Bernard",
+   "team": "PIT",
+   "price": 500,
+   "book": "DraftKings",
+   "sim": 0.2311,
+   "mkt": 0.1667,
+   "p_call": 0.1924,
+   "call": "lean",
+   "live": true,
+   "gate": null
+  },
   {
    "kind": "spread",
    "call": "lean",
    "live": false,
    "gate": "QB unclear",
    "team": "PIT",
-   "line": -4.5,
+   "line": -3.5,
    "price": -110,
-   "sim": 0.6281
+   "sim": 0.6615
   },
   {
    "kind": "total",
@@ -24,9 +150,9 @@
    "live": false,
    "gate": "QB unclear",
    "side": "under",
-   "line": 38.5,
+   "line": 37.5,
    "price": -110,
-   "sim": 0.7401
+   "sim": 0.7214
   },
   {
    "kind": "ml",
@@ -34,8 +160,8 @@
    "live": false,
    "gate": "QB unclear",
    "team": "PIT",
-   "price": -210,
-   "sim": 0.7705
+   "price": -198,
+   "sim": 0.7718
   }
  ]
 }

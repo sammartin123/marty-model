@@ -5,9 +5,23 @@
  "away": "TB",
  "home": "DET",
  "kickoff_utc": "2026-11-22T18:00:00+00:00",
- "book": "bet365 (Fri Nov 20, via SportsbookReview)",
- "logged_utc": "2026-11-20T17:48+00:00",
+ "book": "bet365 (Sat Nov 21, via Action Network)",
+ "logged_utc": "2026-11-21T18:13+00:00",
  "entries": [
+  {
+   "kind": "td",
+   "pid": "00-0036963",
+   "name": "Amon-Ra St. Brown",
+   "team": "DET",
+   "price": -125,
+   "book": "BetMGM",
+   "sim": 0.423,
+   "mkt": 0.5556,
+   "p_call": 0.5025,
+   "call": "fade",
+   "live": true,
+   "gate": null
+  },
   {
    "kind": "yards",
    "pid": "00-0036963",
@@ -18,12 +32,54 @@
    "side": "under",
    "price": -115,
    "book": "bet365",
-   "sim": 0.5726,
+   "sim": 0.5637,
    "mkt": 0.5,
-   "p_call": 0.529,
+   "p_call": 0.5255,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
+  },
+  {
+   "kind": "td",
+   "pid": "00-0037240",
+   "name": "Jameson Williams",
+   "team": "DET",
+   "price": 230,
+   "book": "BetMGM",
+   "sim": 0.3539,
+   "mkt": 0.303,
+   "p_call": 0.3234,
+   "call": "lean",
+   "live": true,
+   "gate": null
+  },
+  {
+   "kind": "td",
+   "pid": "00-0039065",
+   "name": "Sam LaPorta",
+   "team": "DET",
+   "price": 240,
+   "book": "Fanatics",
+   "sim": 0.3072,
+   "mkt": 0.2941,
+   "p_call": 0.2993,
+   "call": "pass",
+   "live": false,
+   "gate": null
+  },
+  {
+   "kind": "td",
+   "pid": "00-0039139",
+   "name": "Jahmyr Gibbs",
+   "team": "DET",
+   "price": -220,
+   "book": "BetMGM",
+   "sim": 0.5984,
+   "mkt": 0.6875,
+   "p_call": 0.6519,
+   "call": "pass",
+   "live": false,
+   "gate": null
   },
   {
    "kind": "yards",
@@ -35,12 +91,82 @@
    "side": "under",
    "price": -115,
    "book": "bet365",
-   "sim": 0.505,
+   "sim": 0.5273,
    "mkt": 0.5,
-   "p_call": 0.502,
+   "p_call": 0.5109,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
+  },
+  {
+   "kind": "td",
+   "pid": "00-0040669",
+   "name": "Isaac TeSlaa",
+   "team": "DET",
+   "price": 500,
+   "book": "BetMGM",
+   "sim": 0.1966,
+   "mkt": 0.1667,
+   "p_call": 0.1786,
+   "call": "pass",
+   "live": false,
+   "gate": null
+  },
+  {
+   "kind": "td",
+   "pid": "00-0033921",
+   "name": "Chris Godwin Jr.",
+   "team": "TB",
+   "price": 400,
+   "book": "BetMGM",
+   "sim": 0.16,
+   "mkt": 0.2,
+   "p_call": 0.184,
+   "call": "pass",
+   "live": false,
+   "gate": "QB unclear"
+  },
+  {
+   "kind": "td",
+   "pid": "00-0034855",
+   "name": "Baker Mayfield",
+   "team": "TB",
+   "price": 775,
+   "book": "BetMGM",
+   "sim": 0.077,
+   "mkt": 0.1143,
+   "p_call": 0.0994,
+   "call": "pass",
+   "live": false,
+   "gate": "QB unclear"
+  },
+  {
+   "kind": "td",
+   "pid": "00-0038129",
+   "name": "Cade Otton",
+   "team": "TB",
+   "price": 400,
+   "book": "DraftKings",
+   "sim": 0.2345,
+   "mkt": 0.2,
+   "p_call": 0.2138,
+   "call": "pass",
+   "live": false,
+   "gate": "QB unclear"
+  },
+  {
+   "kind": "td",
+   "pid": "00-0039361",
+   "name": "Bucky Irving",
+   "team": "TB",
+   "price": 110,
+   "book": "FanDuel",
+   "sim": 0.4225,
+   "mkt": 0.4762,
+   "p_call": 0.4547,
+   "call": "pass",
+   "live": false,
+   "gate": "QB unclear"
   },
   {
    "kind": "yards",
@@ -52,10 +178,38 @@
    "side": "under",
    "price": -115,
    "book": "bet365",
-   "sim": 0.6809,
+   "sim": 0.6514,
    "mkt": 0.5,
-   "p_call": 0.5724,
+   "p_call": 0.5606,
    "call": "lean",
+   "live": false,
+   "gate": "QB unclear"
+  },
+  {
+   "kind": "td",
+   "pid": "00-0040129",
+   "name": "Emeka Egbuka",
+   "team": "TB",
+   "price": 230,
+   "book": "BetMGM",
+   "sim": 0.2615,
+   "mkt": 0.303,
+   "p_call": 0.2864,
+   "call": "pass",
+   "live": false,
+   "gate": "QB unclear"
+  },
+  {
+   "kind": "td",
+   "pid": "00-0040237",
+   "name": "Tez Johnson",
+   "team": "TB",
+   "price": 475,
+   "book": "DraftKings",
+   "sim": 0.157,
+   "mkt": 0.1739,
+   "p_call": 0.1672,
+   "call": "pass",
    "live": false,
    "gate": "QB unclear"
   },
@@ -65,9 +219,9 @@
    "live": false,
    "gate": "QB unclear",
    "team": "TB",
-   "line": 6.5,
+   "line": 4.5,
    "price": -110,
-   "sim": 0.6263
+   "sim": 0.601
   },
   {
    "kind": "total",
@@ -75,9 +229,9 @@
    "live": false,
    "gate": "QB unclear",
    "side": "over",
-   "line": 45.5,
+   "line": 46.5,
    "price": -110,
-   "sim": 0.509
+   "sim": 0.5089
   },
   {
    "kind": "ml",
@@ -85,8 +239,8 @@
    "live": false,
    "gate": "QB unclear",
    "team": "TB",
-   "price": 220,
-   "sim": 0.4226
+   "price": 195,
+   "sim": 0.46
   }
  ]
 }

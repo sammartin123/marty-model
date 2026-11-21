@@ -11,8 +11,15 @@
   "PHI": "00-0039398",
   "PIT": "00-0023459"
  },
- "out": [],
- "status": {},
+ "out": [
+  "00-0038393"
+ ],
+ "status": {
+  "00-0038393": "Out",
+  "00-0039746": "Questionable",
+  "00-0036252": "Questionable",
+  "00-0039739": "Questionable"
+ },
  "out_json": "out/PIT_PHI.json",
  "meta": {
   "title": "Steelers at Eagles",
@@ -23,48 +30,386 @@
   "kickoff": "Sun Nov 22, 2026 \u00b7 4:25 PM ET",
   "time": "4:25 PM",
   "venue": "Lincoln Financial Field, Philadelphia",
-  "generated": "Fri Nov 20, 2026",
+  "generated": "Sat Nov 21, 2026",
   "roof": "outdoors",
   "lat": 39.901,
   "lon": -75.168,
   "data_through": "Week 11",
-  "td_note": "Market = the best anytime TD price found across BetMGM, Caesars, FanDuel, DraftKings, bet365 and Fanatics (Action Network odds comparison, Fri Nov 20). This early run only has TD prices for Titans vs Cowboys. Confirm the price in your own book first: a call only holds at the price shown or longer."
+  "td_note": "Market = the best anytime TD price found across BetMGM, Caesars, FanDuel, DraftKings, bet365 and Fanatics (Action Network odds comparison, Sat Nov 21; prediction-market prices are not used). Receiving and rushing yardage lines are Friday quotes. Confirm the price in your own book first: a call only holds at the price shown or longer."
  },
  "market": {
-  "spread_home": 4.5,
-  "total": 38.5,
-  "ml_home": 175,
-  "ml_away": -210,
-  "book": "bet365 (Fri Nov 20, via SportsbookReview)"
+  "spread_home": 3.5,
+  "total": 37.5,
+  "ml_home": 164,
+  "ml_away": -198,
+  "book": "bet365 (Sat Nov 21, via Action Network)",
+  "others": [
+   {
+    "book": "DraftKings (Sat Nov 21)",
+    "spread_home": 3.5,
+    "total": 37.5,
+    "ml_home": 164,
+    "ml_away": -196
+   }
+  ]
  },
  "weather": {
   "summary": "Rain likely",
-  "precip": 70,
-  "wind": "NE 9 mph",
+  "precip": 71,
+  "wind": "NE 7 mph",
   "rain_flag": true,
-  "note": "Philadelphia (Lincoln Financial Field, outdoors): 70% chance of precipitation and NE winds around 9 mph at kickoff. The forecast is two days out and will be rechecked Saturday.",
+  "note": "Philadelphia (Lincoln Financial Field, outdoors): 71% chance of precipitation and NE winds around 7 mph at kickoff.",
   "effect": "Real rain risk: steer away from receiving-yard overs, especially secondary targets, and toward rushing volume, receptions or unders. The sim trims passing and scoring by the measured rain effect weighted by the chance of rain."
  },
  "wx_model": {
-  "pass_mult": 0.958,
-  "cr_mult": 0.888,
+  "pass_mult": 0.957,
+  "cr_mult": 0.886,
   "td_shift": -0.28,
-  "fg_shift": -0.175
+  "fg_shift": -0.177
  },
- "td_odds": {},
+ "td_odds": {
+  "Saquon Barkley": {
+   "price": 130,
+   "book": "DraftKings",
+   "all": [
+    [
+     "BetMGM",
+     125
+    ],
+    [
+     "Caesars",
+     127
+    ],
+    [
+     "FanDuel",
+     125
+    ],
+    [
+     "DraftKings",
+     130
+    ],
+    [
+     "bet365",
+     125
+    ],
+    [
+     "Fanatics",
+     120
+    ]
+   ]
+  },
+  "Rico Dowdle": {
+   "price": 220,
+   "book": "FanDuel",
+   "all": [
+    [
+     "BetMGM",
+     195
+    ],
+    [
+     "Caesars",
+     210
+    ],
+    [
+     "FanDuel",
+     220
+    ],
+    [
+     "DraftKings",
+     205
+    ],
+    [
+     "bet365",
+     220
+    ],
+    [
+     "Fanatics",
+     220
+    ]
+   ]
+  },
+  "DK Metcalf": {
+   "price": 250,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     250
+    ],
+    [
+     "Caesars",
+     230
+    ],
+    [
+     "FanDuel",
+     240
+    ],
+    [
+     "DraftKings",
+     230
+    ],
+    [
+     "bet365",
+     230
+    ],
+    [
+     "Fanatics",
+     230
+    ]
+   ]
+  },
+  "Jaylen Warren": {
+   "price": 135,
+   "book": "FanDuel",
+   "all": [
+    [
+     "BetMGM",
+     100
+    ],
+    [
+     "Caesars",
+     131
+    ],
+    [
+     "FanDuel",
+     135
+    ],
+    [
+     "DraftKings",
+     135
+    ],
+    [
+     "bet365",
+     135
+    ],
+    [
+     "Fanatics",
+     130
+    ]
+   ]
+  },
+  "Germie Bernard": {
+   "price": 500,
+   "book": "DraftKings",
+   "all": [
+    [
+     "BetMGM",
+     400
+    ],
+    [
+     "Caesars",
+     450
+    ],
+    [
+     "FanDuel",
+     470
+    ],
+    [
+     "DraftKings",
+     500
+    ],
+    [
+     "bet365",
+     450
+    ]
+   ]
+  },
+  "Dallas Goedert": {
+   "price": 450,
+   "book": "DraftKings",
+   "all": [
+    [
+     "BetMGM",
+     360
+    ],
+    [
+     "Caesars",
+     400
+    ],
+    [
+     "FanDuel",
+     390
+    ],
+    [
+     "DraftKings",
+     450
+    ],
+    [
+     "bet365",
+     390
+    ],
+    [
+     "Fanatics",
+     420
+    ]
+   ]
+  },
+  "Michael Pittman": {
+   "price": 550,
+   "book": "FanDuel",
+   "all": [
+    [
+     "BetMGM",
+     500
+    ],
+    [
+     "Caesars",
+     500
+    ],
+    [
+     "FanDuel",
+     550
+    ],
+    [
+     "DraftKings",
+     500
+    ],
+    [
+     "bet365",
+     525
+    ],
+    [
+     "Fanatics",
+     525
+    ]
+   ]
+  },
+  "Makai Lemon": {
+   "price": 500,
+   "book": "FanDuel",
+   "all": [
+    [
+     "BetMGM",
+     475
+    ],
+    [
+     "Caesars",
+     450
+    ],
+    [
+     "FanDuel",
+     500
+    ],
+    [
+     "DraftKings",
+     450
+    ],
+    [
+     "bet365",
+     450
+    ]
+   ]
+  },
+  "Roman Wilson": {
+   "price": 650,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     650
+    ],
+    [
+     "Caesars",
+     525
+    ],
+    [
+     "FanDuel",
+     550
+    ],
+    [
+     "DraftKings",
+     550
+    ],
+    [
+     "bet365",
+     525
+    ],
+    [
+     "Fanatics",
+     575
+    ]
+   ]
+  },
+  "DeVonta Smith": {
+   "price": 360,
+   "book": "Fanatics",
+   "all": [
+    [
+     "BetMGM",
+     270
+    ],
+    [
+     "Caesars",
+     320
+    ],
+    [
+     "FanDuel",
+     340
+    ],
+    [
+     "DraftKings",
+     350
+    ],
+    [
+     "bet365",
+     310
+    ],
+    [
+     "Fanatics",
+     360
+    ]
+   ]
+  },
+  "Pat Freiermuth": {
+   "price": 400,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     400
+    ],
+    [
+     "Caesars",
+     340
+    ],
+    [
+     "FanDuel",
+     350
+    ],
+    [
+     "DraftKings",
+     370
+    ],
+    [
+     "bet365",
+     350
+    ],
+    [
+     "Fanatics",
+     370
+    ]
+   ]
+  }
+ },
  "yard_lines": {},
- "injuries": [],
+ "injuries": [
+  "PHI Dontayvion Wicks (WR): Out, Ankle",
+  "PHI Will Shipley (RB): Questionable, Foot",
+  "PIT Michael Pittman (WR): Questionable, Foot",
+  "PIT Roman Wilson (WR): Questionable, Hand"
+ ],
  "inputs": {
   "qbs": {
    "PHI": "Joe Milton III",
    "PIT": "Aaron Rodgers"
   },
-  "report_final": false,
+  "report_final": true,
   "low_conf": {
    "PHI": "Joe Milton III has 33 pass attempts for the Eagles this season, so their numbers are low confidence."
   },
   "notes": [
-   "Eagles QB Joe Milton III is flagged low confidence: a recent promotion with few attempts for the team."
+   "Eagles QB Joe Milton III is flagged low confidence: a recent promotion with few attempts for the team.",
+   "Steelers WRs Michael Pittman and Roman Wilson are questionable and simulated as playing; Eagles WR Dontayvion Wicks is out."
   ]
  },
  "sources": [
@@ -73,11 +418,19 @@
    "url": "https://github.com/nflverse/nflverse-data"
   },
   {
-   "label": "bet365 lines via SportsbookReview (Fri Nov 20, 8:14 AM ET)",
-   "url": "https://www.sportsbookreview.com/picks/nfl/week-11-odds-betting-lines-2026/"
+   "label": "Spread, total and moneyline (bet365; DraftKings as the alternative), Action Network NFL odds, Sat Nov 21 ~12:40 PM ET",
+   "url": "https://www.actionnetwork.com/nfl/odds"
   },
   {
-   "label": "Game-time forecasts (precipitation and wind at kickoff), Action Network NFL weather, Fri Nov 20",
+   "label": "Anytime TD prices across BetMGM, Caesars, FanDuel, DraftKings, bet365, Fanatics, Action Network, Sat Nov 21",
+   "url": "https://www.actionnetwork.com/nfl/props/touchdown-props?gameIds=290992&seasonType=reg&week=11"
+  },
+  {
+   "label": "Official NFL Week 11 injury report (final Friday statuses)",
+   "url": "https://www.nfl.com/injuries/league/2026/REG11"
+  },
+  {
+   "label": "Game-time forecasts (precipitation and wind at kickoff), Action Network NFL weather, Sat Nov 21",
    "url": "https://www.actionnetwork.com/nfl/weather"
   }
  ]

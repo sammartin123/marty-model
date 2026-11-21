@@ -11,8 +11,18 @@
   "LAC": "00-0036355",
   "NYJ": "00-0030565"
  },
- "out": [],
- "status": {},
+ "out": [
+  "00-0039451",
+  "00-0041511",
+  "00-0041550"
+ ],
+ "status": {
+  "00-0038046": "Questionable",
+  "00-0039915": "Questionable",
+  "00-0041550": "Doubtful",
+  "00-0039451": "Out",
+  "00-0041511": "Out"
+ },
  "out_json": "out/NYJ_LAC.json",
  "meta": {
   "title": "Jets at Chargers",
@@ -23,19 +33,28 @@
   "kickoff": "Sun Nov 22, 2026 \u00b7 4:05 PM ET",
   "time": "4:05 PM",
   "venue": "SoFi Stadium, Los Angeles",
-  "generated": "Fri Nov 20, 2026",
+  "generated": "Sat Nov 21, 2026",
   "roof": "dome",
   "lat": 33.953,
   "lon": -118.339,
   "data_through": "Week 11",
-  "td_note": "Market = the best anytime TD price found across BetMGM, Caesars, FanDuel, DraftKings, bet365 and Fanatics (Action Network odds comparison, Fri Nov 20). This early run only has TD prices for Titans vs Cowboys. Confirm the price in your own book first: a call only holds at the price shown or longer."
+  "td_note": "Market = the best anytime TD price found across BetMGM, Caesars, FanDuel, DraftKings, bet365 and Fanatics (Action Network odds comparison, Sat Nov 21; prediction-market prices are not used). Receiving and rushing yardage lines are Friday quotes. Confirm the price in your own book first: a call only holds at the price shown or longer."
  },
  "market": {
-  "spread_home": -3.5,
+  "spread_home": -3,
   "total": 41.5,
-  "ml_home": -170,
-  "ml_away": 145,
-  "book": "bet365 (Fri Nov 20, via SportsbookReview)"
+  "ml_home": -178,
+  "ml_away": 149,
+  "book": "bet365 (Sat Nov 21, via Action Network)",
+  "others": [
+   {
+    "book": "DraftKings (Sat Nov 21)",
+    "spread_home": -3,
+    "total": 42.5,
+    "ml_home": -171,
+    "ml_away": 144
+   }
+  ]
  },
  "weather": {
   "summary": "Indoors",
@@ -51,17 +70,378 @@
   "td_shift": 0.0,
   "fg_shift": 0.0
  },
- "td_odds": {},
+ "td_odds": {
+  "Ladd McConkey": {
+   "price": 225,
+   "book": "DraftKings",
+   "all": [
+    [
+     "BetMGM",
+     200
+    ],
+    [
+     "Caesars",
+     210
+    ],
+    [
+     "FanDuel",
+     210
+    ],
+    [
+     "DraftKings",
+     225
+    ],
+    [
+     "bet365",
+     210
+    ],
+    [
+     "Fanatics",
+     210
+    ]
+   ]
+  },
+  "Tre' Harris": {
+   "price": 225,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     225
+    ],
+    [
+     "Caesars",
+     205
+    ],
+    [
+     "FanDuel",
+     210
+    ],
+    [
+     "DraftKings",
+     205
+    ],
+    [
+     "bet365",
+     210
+    ],
+    [
+     "Fanatics",
+     200
+    ]
+   ]
+  },
+  "Omarion Hampton": {
+   "price": 120,
+   "book": "FanDuel",
+   "all": [
+    [
+     "BetMGM",
+     110
+    ],
+    [
+     "Caesars",
+     117
+    ],
+    [
+     "FanDuel",
+     120
+    ],
+    [
+     "DraftKings",
+     110
+    ],
+    [
+     "bet365",
+     115
+    ]
+   ]
+  },
+  "Justin Herbert": {
+   "price": 360,
+   "book": "Fanatics",
+   "all": [
+    [
+     "BetMGM",
+     333
+    ],
+    [
+     "Caesars",
+     340
+    ],
+    [
+     "FanDuel",
+     340
+    ],
+    [
+     "DraftKings",
+     330
+    ],
+    [
+     "bet365",
+     325
+    ],
+    [
+     "Fanatics",
+     360
+    ]
+   ]
+  },
+  "Breece Hall": {
+   "price": 180,
+   "book": "FanDuel",
+   "all": [
+    [
+     "BetMGM",
+     125
+    ],
+    [
+     "Caesars",
+     173
+    ],
+    [
+     "FanDuel",
+     180
+    ],
+    [
+     "DraftKings",
+     175
+    ],
+    [
+     "bet365",
+     175
+    ],
+    [
+     "Fanatics",
+     180
+    ]
+   ]
+  },
+  "Garrett Wilson": {
+   "price": 190,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     190
+    ],
+    [
+     "Caesars",
+     170
+    ],
+    [
+     "FanDuel",
+     175
+    ],
+    [
+     "DraftKings",
+     165
+    ],
+    [
+     "bet365",
+     175
+    ],
+    [
+     "Fanatics",
+     175
+    ]
+   ]
+  },
+  "Kenyon Sadiq": {
+   "price": 525,
+   "book": "bet365",
+   "all": [
+    [
+     "BetMGM",
+     450
+    ],
+    [
+     "Caesars",
+     475
+    ],
+    [
+     "FanDuel",
+     500
+    ],
+    [
+     "DraftKings",
+     475
+    ],
+    [
+     "bet365",
+     525
+    ]
+   ]
+  },
+  "Adonai Mitchell": {
+   "price": 250,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     250
+    ],
+    [
+     "Caesars",
+     225
+    ],
+    [
+     "FanDuel",
+     240
+    ],
+    [
+     "DraftKings",
+     215
+    ],
+    [
+     "bet365",
+     230
+    ],
+    [
+     "Fanatics",
+     230
+    ]
+   ]
+  },
+  "Kimani Vidal": {
+   "price": 475,
+   "book": "DraftKings",
+   "all": [
+    [
+     "BetMGM",
+     300
+    ],
+    [
+     "Caesars",
+     425
+    ],
+    [
+     "FanDuel",
+     440
+    ],
+    [
+     "DraftKings",
+     475
+    ],
+    [
+     "bet365",
+     450
+    ],
+    [
+     "Fanatics",
+     450
+    ]
+   ]
+  },
+  "Quentin Johnston": {
+   "price": 370,
+   "book": "Fanatics",
+   "all": [
+    [
+     "BetMGM",
+     320
+    ],
+    [
+     "Caesars",
+     340
+    ],
+    [
+     "FanDuel",
+     350
+    ],
+    [
+     "DraftKings",
+     340
+    ],
+    [
+     "bet365",
+     350
+    ],
+    [
+     "Fanatics",
+     370
+    ]
+   ]
+  },
+  "Braelon Allen": {
+   "price": 285,
+   "book": "Fanatics",
+   "all": [
+    [
+     "BetMGM",
+     210
+    ],
+    [
+     "Caesars",
+     260
+    ],
+    [
+     "FanDuel",
+     270
+    ],
+    [
+     "DraftKings",
+     270
+    ],
+    [
+     "bet365",
+     260
+    ],
+    [
+     "Fanatics",
+     285
+    ]
+   ]
+  },
+  "Charlie Kolar": {
+   "price": 370,
+   "book": "DraftKings",
+   "all": [
+    [
+     "BetMGM",
+     350
+    ],
+    [
+     "Caesars",
+     350
+    ],
+    [
+     "FanDuel",
+     350
+    ],
+    [
+     "DraftKings",
+     370
+    ],
+    [
+     "bet365",
+     350
+    ],
+    [
+     "Fanatics",
+     360
+    ]
+   ]
+  }
+ },
  "yard_lines": {},
- "injuries": [],
+ "injuries": [
+  "LAC Charlie Kolar (TE): Questionable, Concussion",
+  "LAC Ladd McConkey (WR): Questionable, Back",
+  "LAC Brenen Thompson (WR): Doubtful, Hamstring",
+  "NYJ Isaiah Williams (WR): Out, Ribs",
+  "NYJ Omar Cooper Jr. (WR): Out, Ankle"
+ ],
  "inputs": {
   "qbs": {
    "LAC": "Justin Herbert",
    "NYJ": "Geno Smith"
   },
-  "report_final": false,
+  "report_final": true,
   "low_conf": {},
-  "notes": []
+  "notes": [
+   "Chargers WR Ladd McConkey is questionable and simulated as playing; Jets WRs Isaiah Williams and Omar Cooper Jr. are out."
+  ]
  },
  "sources": [
   {
@@ -69,8 +449,16 @@
    "url": "https://github.com/nflverse/nflverse-data"
   },
   {
-   "label": "bet365 lines via SportsbookReview (Fri Nov 20, 8:14 AM ET)",
-   "url": "https://www.sportsbookreview.com/picks/nfl/week-11-odds-betting-lines-2026/"
+   "label": "Spread, total and moneyline (bet365; DraftKings as the alternative), Action Network NFL odds, Sat Nov 21 ~12:40 PM ET",
+   "url": "https://www.actionnetwork.com/nfl/odds"
+  },
+  {
+   "label": "Anytime TD prices across BetMGM, Caesars, FanDuel, DraftKings, bet365, Fanatics, Action Network, Sat Nov 21",
+   "url": "https://www.actionnetwork.com/nfl/props/touchdown-props?gameIds=290991&seasonType=reg&week=11"
+  },
+  {
+   "label": "Official NFL Week 11 injury report (final Friday statuses)",
+   "url": "https://www.nfl.com/injuries/league/2026/REG11"
   }
  ]
 }

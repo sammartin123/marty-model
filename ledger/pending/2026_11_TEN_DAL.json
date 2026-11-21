@@ -5,36 +5,22 @@
  "away": "TEN",
  "home": "DAL",
  "kickoff_utc": "2026-11-22T18:00:00+00:00",
- "book": "bet365 (Fri Nov 20, via SportsbookReview)",
- "logged_utc": "2026-11-20T17:48+00:00",
+ "book": "bet365 (Sat Nov 21, via Action Network)",
+ "logged_utc": "2026-11-21T18:13+00:00",
  "entries": [
-  {
-   "kind": "td",
-   "pid": "00-0033077",
-   "name": "Dak Prescott",
-   "team": "DAL",
-   "price": 550,
-   "book": "DraftKings",
-   "sim": 0.2111,
-   "mkt": 0.1538,
-   "p_call": 0.1768,
-   "call": "lean",
-   "live": false,
-   "gate": "Injuries not final"
-  },
   {
    "kind": "td",
    "pid": "00-0036358",
    "name": "CeeDee Lamb",
    "team": "DAL",
-   "price": -155,
-   "book": "DraftKings",
-   "sim": 0.5315,
-   "mkt": 0.6078,
-   "p_call": 0.5773,
+   "price": -160,
+   "book": "BetMGM",
+   "sim": 0.5422,
+   "mkt": 0.6154,
+   "p_call": 0.5861,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "yards",
@@ -46,12 +32,12 @@
    "side": "over",
    "price": -115,
    "book": "bet365",
-   "sim": 0.5256,
+   "sim": 0.5438,
    "mkt": 0.5,
-   "p_call": 0.5103,
+   "p_call": 0.5175,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "td",
@@ -60,26 +46,26 @@
    "team": "DAL",
    "price": -210,
    "book": "BetMGM",
-   "sim": 0.682,
+   "sim": 0.6872,
    "mkt": 0.6774,
-   "p_call": 0.6792,
+   "p_call": 0.6813,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "td",
    "pid": "00-0037247",
    "name": "George Pickens",
    "team": "DAL",
-   "price": -110,
-   "book": "DraftKings",
-   "sim": 0.4287,
-   "mkt": 0.5238,
-   "p_call": 0.4857,
+   "price": -118,
+   "book": "BetMGM",
+   "sim": 0.4397,
+   "mkt": 0.5413,
+   "p_call": 0.5007,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "yards",
@@ -91,26 +77,40 @@
    "side": "over",
    "price": -115,
    "book": "bet365",
-   "sim": 0.5333,
+   "sim": 0.5503,
    "mkt": 0.5,
-   "p_call": 0.5133,
+   "p_call": 0.5201,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
+  },
+  {
+   "kind": "td",
+   "pid": "00-0038738",
+   "name": "Hunter Luepke",
+   "team": "DAL",
+   "price": 600,
+   "book": "DraftKings",
+   "sim": 0.0774,
+   "mkt": 0.1429,
+   "p_call": 0.1167,
+   "call": "pass",
+   "live": false,
+   "gate": null
   },
   {
    "kind": "td",
    "pid": "00-0039410",
    "name": "Ryan Flournoy",
    "team": "DAL",
-   "price": 175,
-   "book": "BetMGM",
-   "sim": 0.2981,
-   "mkt": 0.3636,
-   "p_call": 0.3374,
+   "price": 180,
+   "book": "FanDuel",
+   "sim": 0.3124,
+   "mkt": 0.3571,
+   "p_call": 0.3392,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "yards",
@@ -122,26 +122,12 @@
    "side": "over",
    "price": -115,
    "book": "bet365",
-   "sim": 0.5402,
+   "sim": 0.5673,
    "mkt": 0.5,
-   "p_call": 0.5161,
+   "p_call": 0.5269,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
-  },
-  {
-   "kind": "td",
-   "pid": "00-0039530",
-   "name": "Brevyn Spann-Ford",
-   "team": "DAL",
-   "price": 285,
-   "book": "DraftKings",
-   "sim": 0.1615,
-   "mkt": 0.2597,
-   "p_call": 0.2205,
-   "call": "pass",
-   "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "yards",
@@ -153,12 +139,12 @@
    "side": "under",
    "price": -115,
    "book": "bet365",
-   "sim": 0.6667,
+   "sim": 0.6371,
    "mkt": 0.5,
-   "p_call": 0.5667,
-   "call": "lean",
+   "p_call": 0.5548,
+   "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "td",
@@ -166,13 +152,13 @@
    "name": "Carnell Tate",
    "team": "TEN",
    "price": 185,
-   "book": "FanDuel",
-   "sim": 0.3066,
+   "book": "DraftKings",
+   "sim": 0.3082,
    "mkt": 0.3509,
-   "p_call": 0.3332,
+   "p_call": 0.3338,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": "Questionable"
   },
   {
    "kind": "yards",
@@ -184,54 +170,54 @@
    "side": "under",
    "price": -115,
    "book": "bet365",
-   "sim": 0.5821,
+   "sim": 0.5818,
    "mkt": 0.5,
-   "p_call": 0.5328,
+   "p_call": 0.5327,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": "Questionable"
   },
   {
    "kind": "td",
    "pid": "00-0035261",
    "name": "Tony Pollard",
    "team": "TEN",
-   "price": -120,
-   "book": "BetMGM",
-   "sim": 0.6019,
-   "mkt": 0.5455,
-   "p_call": 0.568,
-   "call": "lean",
+   "price": -130,
+   "book": "FanDuel",
+   "sim": 0.6007,
+   "mkt": 0.5652,
+   "p_call": 0.5794,
+   "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "td",
    "pid": "00-0039032",
    "name": "Tyjae Spears",
    "team": "TEN",
-   "price": 500,
+   "price": 550,
    "book": "FanDuel",
-   "sim": 0.1934,
-   "mkt": 0.1667,
-   "p_call": 0.1774,
-   "call": "pass",
+   "sim": 0.1956,
+   "mkt": 0.1538,
+   "p_call": 0.1706,
+   "call": "lean",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": "Questionable"
   },
   {
    "kind": "td",
    "pid": "00-0040170",
    "name": "Elic Ayomanor",
    "team": "TEN",
-   "price": 290,
-   "book": "FanDuel",
-   "sim": 0.2362,
-   "mkt": 0.2564,
-   "p_call": 0.2483,
+   "price": 300,
+   "book": "DraftKings",
+   "sim": 0.2361,
+   "mkt": 0.25,
+   "p_call": 0.2445,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "yards",
@@ -243,26 +229,26 @@
    "side": "under",
    "price": -115,
    "book": "bet365",
-   "sim": 0.6831,
+   "sim": 0.6808,
    "mkt": 0.5,
-   "p_call": 0.5732,
+   "p_call": 0.5723,
    "call": "lean",
-   "live": false,
-   "gate": "Injuries not final"
+   "live": true,
+   "gate": null
   },
   {
    "kind": "td",
    "pid": "00-0040584",
    "name": "Gunnar Helm",
    "team": "TEN",
-   "price": 320,
+   "price": 300,
    "book": "BetMGM",
-   "sim": 0.1111,
-   "mkt": 0.2381,
-   "p_call": 0.1873,
+   "sim": 0.1121,
+   "mkt": 0.25,
+   "p_call": 0.1948,
    "call": "fade",
-   "live": false,
-   "gate": "Injuries not final"
+   "live": true,
+   "gate": null
   },
   {
    "kind": "yards",
@@ -274,26 +260,26 @@
    "side": "under",
    "price": -115,
    "book": "bet365",
-   "sim": 0.6692,
+   "sim": 0.6707,
    "mkt": 0.5,
-   "p_call": 0.5677,
+   "p_call": 0.5683,
    "call": "lean",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": "Correlated"
   },
   {
    "kind": "td",
    "pid": "00-0040705",
    "name": "Chimere Dike",
    "team": "TEN",
-   "price": 390,
-   "book": "DraftKings",
-   "sim": 0.162,
-   "mkt": 0.2041,
-   "p_call": 0.1873,
+   "price": 350,
+   "book": "BetMGM",
+   "sim": 0.1636,
+   "mkt": 0.2222,
+   "p_call": 0.1988,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "yards",
@@ -305,12 +291,12 @@
    "side": "under",
    "price": -115,
    "book": "bet365",
-   "sim": 0.6163,
+   "sim": 0.615,
    "mkt": 0.5,
-   "p_call": 0.5465,
+   "p_call": 0.546,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "spread",
@@ -338,7 +324,7 @@
    "live": true,
    "gate": null,
    "team": "TEN",
-   "price": 325,
+   "price": 320,
    "sim": 0.3046
   }
  ]

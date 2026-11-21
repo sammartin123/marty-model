@@ -13,10 +13,15 @@
  },
  "out": [
   "00-0038041",
-  "00-0038117"
+  "00-0038117",
+  "00-0039062"
  ],
  "status": {
   "00-0038041": "Out",
+  "00-0038547": "Questionable",
+  "00-0039062": "Out",
+  "00-0039032": "Questionable",
+  "00-0041438": "Questionable",
   "00-0038117": "Out"
  },
  "out_json": "out/TEN_DAL.json",
@@ -29,19 +34,28 @@
   "kickoff": "Sun Nov 22, 2026 \u00b7 1:00 PM ET",
   "time": "1:00 PM",
   "venue": "AT&T Stadium, Dallas",
-  "generated": "Fri Nov 20, 2026",
+  "generated": "Sat Nov 21, 2026",
   "roof": "retractable",
   "lat": 32.748,
   "lon": -97.093,
   "data_through": "Week 11",
-  "td_note": "Market = the best anytime TD price found across BetMGM, Caesars, FanDuel, DraftKings, bet365 and Fanatics (Action Network odds comparison, Fri Nov 20). This early run only has TD prices for Titans vs Cowboys. Confirm the price in your own book first: a call only holds at the price shown or longer."
+  "td_note": "Market = the best anytime TD price found across BetMGM, Caesars, FanDuel, DraftKings, bet365 and Fanatics (Action Network odds comparison, Sat Nov 21; prediction-market prices are not used). Receiving and rushing yardage lines are Friday quotes. Confirm the price in your own book first: a call only holds at the price shown or longer."
  },
  "market": {
   "spread_home": -7.5,
   "total": 54.5,
-  "ml_home": -410,
-  "ml_away": 325,
-  "book": "bet365 (Fri Nov 20, via SportsbookReview)"
+  "ml_home": -400,
+  "ml_away": 320,
+  "book": "bet365 (Sat Nov 21, via Action Network)",
+  "others": [
+   {
+    "book": "DraftKings (Sat Nov 21)",
+    "spread_home": -7.5,
+    "total": 54.5,
+    "ml_home": -370,
+    "ml_away": 295
+   }
+  ]
  },
  "weather": {
   "summary": "Indoors",
@@ -58,39 +72,9 @@
   "fg_shift": 0.0
  },
  "td_odds": {
-  "Javonte Williams": {
-   "price": -210,
-   "book": "BetMGM",
-   "all": [
-    [
-     "BetMGM",
-     -210
-    ],
-    [
-     "Caesars",
-     -265
-    ],
-    [
-     "FanDuel",
-     -250
-    ],
-    [
-     "DraftKings",
-     -265
-    ],
-    [
-     "bet365",
-     -220
-    ],
-    [
-     "Fanatics",
-     -265
-    ]
-   ]
-  },
   "Carnell Tate": {
    "price": 185,
-   "book": "FanDuel",
+   "book": "DraftKings",
    "all": [
     [
      "BetMGM",
@@ -98,11 +82,11 @@
     ],
     [
      "Caesars",
-     184
+     182
     ],
     [
      "FanDuel",
-     185
+     180
     ],
     [
      "DraftKings",
@@ -114,69 +98,39 @@
     ]
    ]
   },
-  "George Pickens": {
-   "price": -110,
-   "book": "DraftKings",
-   "all": [
-    [
-     "BetMGM",
-     -118
-    ],
-    [
-     "Caesars",
-     -122
-    ],
-    [
-     "FanDuel",
-     -120
-    ],
-    [
-     "DraftKings",
-     -110
-    ],
-    [
-     "bet365",
-     -125
-    ],
-    [
-     "Fanatics",
-     -120
-    ]
-   ]
-  },
-  "Ryan Flournoy": {
-   "price": 175,
+  "Javonte Williams": {
+   "price": -210,
    "book": "BetMGM",
    "all": [
     [
      "BetMGM",
-     175
+     -210
     ],
     [
      "Caesars",
-     167
+     -250
     ],
     [
      "FanDuel",
-     170
+     -250
     ],
     [
      "DraftKings",
-     175
+     -250
     ],
     [
      "bet365",
-     170
+     -245
     ],
     [
      "Fanatics",
-     175
+     -245
     ]
    ]
   },
   "CeeDee Lamb": {
-   "price": -155,
-   "book": "DraftKings",
+   "price": -160,
+   "book": "BetMGM",
    "all": [
     [
      "BetMGM",
@@ -192,7 +146,7 @@
     ],
     [
      "DraftKings",
-     -155
+     -160
     ],
     [
      "bet365",
@@ -205,12 +159,42 @@
    ]
   },
   "Tony Pollard": {
-   "price": -120,
+   "price": -130,
+   "book": "FanDuel",
+   "all": [
+    [
+     "BetMGM",
+     -135
+    ],
+    [
+     "Caesars",
+     -132
+    ],
+    [
+     "FanDuel",
+     -130
+    ],
+    [
+     "DraftKings",
+     -130
+    ],
+    [
+     "bet365",
+     -130
+    ],
+    [
+     "Fanatics",
+     -135
+    ]
+   ]
+  },
+  "George Pickens": {
+   "price": -118,
    "book": "BetMGM",
    "all": [
     [
      "BetMGM",
-     -120
+     -118
     ],
     [
      "Caesars",
@@ -218,7 +202,7 @@
     ],
     [
      "FanDuel",
-     -130
+     -120
     ],
     [
      "DraftKings",
@@ -226,89 +210,89 @@
     ],
     [
      "bet365",
-     -135
+     -120
     ],
     [
      "Fanatics",
-     -130
+     -120
     ]
    ]
   },
   "Elic Ayomanor": {
-   "price": 290,
-   "book": "FanDuel",
-   "all": [
-    [
-     "BetMGM",
-     280
-    ],
-    [
-     "Caesars",
-     275
-    ],
-    [
-     "FanDuel",
-     290
-    ],
-    [
-     "DraftKings",
-     275
-    ],
-    [
-     "bet365",
-     275
-    ]
-   ]
-  },
-  "Gunnar Helm": {
-   "price": 320,
-   "book": "BetMGM",
-   "all": [
-    [
-     "BetMGM",
-     320
-    ],
-    [
-     "Caesars",
-     270
-    ],
-    [
-     "FanDuel",
-     290
-    ],
-    [
-     "DraftKings",
-     280
-    ],
-    [
-     "bet365",
-     280
-    ]
-   ]
-  },
-  "Chimere Dike": {
-   "price": 390,
+   "price": 300,
    "book": "DraftKings",
    "all": [
     [
      "BetMGM",
-     260
+     270
     ],
     [
      "Caesars",
-     350
+     285
     ],
     [
      "FanDuel",
-     340
+     280
     ],
     [
      "DraftKings",
-     390
+     300
     ],
     [
      "bet365",
+     290
+    ]
+   ]
+  },
+  "Gunnar Helm": {
+   "price": 300,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     300
+    ],
+    [
+     "Caesars",
+     280
+    ],
+    [
+     "FanDuel",
+     290
+    ],
+    [
+     "DraftKings",
+     280
+    ],
+    [
+     "bet365",
+     290
+    ]
+   ]
+  },
+  "Chimere Dike": {
+   "price": 350,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
      350
+    ],
+    [
+     "Caesars",
+     305
+    ],
+    [
+     "FanDuel",
+     330
+    ],
+    [
+     "DraftKings",
+     320
+    ],
+    [
+     "bet365",
+     325
     ]
    ]
   },
@@ -321,17 +305,43 @@
      450
     ],
     [
+     "Fanatics",
+     420
+    ]
+   ]
+  },
+  "Ryan Flournoy": {
+   "price": 180,
+   "book": "FanDuel",
+   "all": [
+    [
+     "BetMGM",
+     175
+    ],
+    [
+     "Caesars",
+     172
+    ],
+    [
+     "FanDuel",
+     180
+    ],
+    [
+     "DraftKings",
+     175
+    ],
+    [
      "bet365",
-     425
+     170
     ],
     [
      "Fanatics",
-     400
+     175
     ]
    ]
   },
   "Tyjae Spears": {
-   "price": 500,
+   "price": 550,
    "book": "FanDuel",
    "all": [
     [
@@ -340,71 +350,11 @@
     ],
     [
      "Caesars",
-     475
+     525
     ],
     [
      "FanDuel",
-     500
-    ],
-    [
-     "DraftKings",
-     500
-    ],
-    [
-     "bet365",
-     475
-    ],
-    [
-     "Fanatics",
-     500
-    ]
-   ]
-  },
-  "Brevyn Spann-Ford": {
-   "price": 285,
-   "book": "DraftKings",
-   "all": [
-    [
-     "BetMGM",
-     270
-    ],
-    [
-     "Caesars",
-     260
-    ],
-    [
-     "FanDuel",
-     270
-    ],
-    [
-     "DraftKings",
-     285
-    ],
-    [
-     "bet365",
-     250
-    ],
-    [
-     "Fanatics",
-     250
-    ]
-   ]
-  },
-  "Dak Prescott": {
-   "price": 550,
-   "book": "DraftKings",
-   "all": [
-    [
-     "BetMGM",
-     450
-    ],
-    [
-     "Caesars",
-     500
-    ],
-    [
-     "FanDuel",
-     500
+     550
     ],
     [
      "DraftKings",
@@ -412,11 +362,41 @@
     ],
     [
      "bet365",
-     525
+     500
     ],
     [
      "Fanatics",
      525
+    ]
+   ]
+  },
+  "Hunter Luepke": {
+   "price": 600,
+   "book": "DraftKings",
+   "all": [
+    [
+     "BetMGM",
+     525
+    ],
+    [
+     "Caesars",
+     550
+    ],
+    [
+     "FanDuel",
+     550
+    ],
+    [
+     "DraftKings",
+     600
+    ],
+    [
+     "bet365",
+     550
+    ],
+    [
+     "Fanatics",
+     575
     ]
    ]
   }
@@ -496,7 +476,11 @@
   ]
  },
  "injuries": [
-  "DAL Jake Ferguson: Out (late change, from news reports)",
+  "DAL Jake Ferguson (TE): Out, Knee",
+  "DAL Luke Schoonmaker (TE): Questionable, Illness",
+  "DAL Jonathan Mingo (WR): Out, Ankle",
+  "TEN Tyjae Spears (RB): Questionable, Knee",
+  "TEN Carnell Tate (WR): Questionable, Shoulder",
   "TEN Wan'Dale Robinson: Out (late change, from news reports)"
  ],
  "inputs": {
@@ -504,11 +488,11 @@
    "DAL": "Dak Prescott",
    "TEN": "Cam Ward"
   },
-  "report_final": false,
+  "report_final": true,
   "low_conf": {},
   "notes": [
-   "Cowboys TE Jake Ferguson (concussion) did not practice Wednesday, and most books have pulled his touchdown price. He is modelled as out until the final report.",
-   "Titans WR Wan'Dale Robinson (ankle) is out for the season."
+   "Cowboys TE Jake Ferguson (concussion) and WR Jonathan Mingo are out on the final report.",
+   "Titans WR Wan'Dale Robinson (ankle) is out for the season. Titans WR Carnell Tate and RB Tyjae Spears are questionable; both are simulated as playing."
   ]
  },
  "sources": [
@@ -517,24 +501,20 @@
    "url": "https://github.com/nflverse/nflverse-data"
   },
   {
-   "label": "bet365 lines via SportsbookReview (Fri Nov 20, 8:14 AM ET)",
-   "url": "https://www.sportsbookreview.com/picks/nfl/week-11-odds-betting-lines-2026/"
+   "label": "Spread, total and moneyline (bet365; DraftKings as the alternative), Action Network NFL odds, Sat Nov 21 ~12:40 PM ET",
+   "url": "https://www.actionnetwork.com/nfl/odds"
+  },
+  {
+   "label": "Anytime TD prices across BetMGM, Caesars, FanDuel, DraftKings, bet365, Fanatics, Action Network, Sat Nov 21",
+   "url": "https://www.actionnetwork.com/nfl/props/touchdown-props?gameIds=290984&seasonType=reg&week=11"
   },
   {
    "label": "Receiving yardage lines (bet365), Action Network odds comparison, Fri Nov 20",
    "url": "https://www.actionnetwork.com/nfl/props/receiving"
   },
   {
-   "label": "Anytime TD prices across BetMGM, Caesars, FanDuel, DraftKings, bet365, Fanatics, Action Network, Fri Nov 20",
-   "url": "https://www.actionnetwork.com/nfl/props/touchdown-props?gameIds=290984&week=11"
-  },
-  {
-   "label": "RotoBaller: Jake Ferguson not practicing Wednesday (Nov 18)",
-   "url": "https://www.rotoballer.com/?p=1997474"
-  },
-  {
-   "label": "Field Level Media: Titans WR Wan'Dale Robinson out for season (Nov 18)",
-   "url": "https://fieldlevelmedia.com/?p=504132"
+   "label": "Official NFL Week 11 injury report (final Friday statuses)",
+   "url": "https://www.nfl.com/injuries/league/2026/REG11"
   }
  ]
 }

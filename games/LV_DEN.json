@@ -11,8 +11,13 @@
   "DEN": "00-0039732",
   "LV": "00-0041562"
  },
- "out": [],
- "status": {},
+ "out": [
+  "00-0040240"
+ ],
+ "status": {
+  "00-0040240": "Out",
+  "00-0039338": "Questionable"
+ },
  "out_json": "out/LV_DEN.json",
  "meta": {
   "title": "Raiders at Broncos",
@@ -23,26 +28,35 @@
   "kickoff": "Sun Nov 22, 2026 \u00b7 4:25 PM ET",
   "time": "4:25 PM",
   "venue": "Empower Field at Mile High, Denver",
-  "generated": "Fri Nov 20, 2026",
+  "generated": "Sat Nov 21, 2026",
   "roof": "outdoors",
   "lat": 39.744,
   "lon": -105.02,
   "data_through": "Week 11",
-  "td_note": "Market = the best anytime TD price found across BetMGM, Caesars, FanDuel, DraftKings, bet365 and Fanatics (Action Network odds comparison, Fri Nov 20). This early run only has TD prices for Titans vs Cowboys. Confirm the price in your own book first: a call only holds at the price shown or longer."
+  "td_note": "Market = the best anytime TD price found across BetMGM, Caesars, FanDuel, DraftKings, bet365 and Fanatics (Action Network odds comparison, Sat Nov 21; prediction-market prices are not used). Receiving and rushing yardage lines are Friday quotes. Confirm the price in your own book first: a call only holds at the price shown or longer."
  },
  "market": {
   "spread_home": -10.5,
   "total": 40.5,
   "ml_home": -600,
   "ml_away": 450,
-  "book": "bet365 (Fri Nov 20, via SportsbookReview)"
+  "book": "bet365 (Sat Nov 21, via Action Network)",
+  "others": [
+   {
+    "book": "DraftKings (Sat Nov 21)",
+    "spread_home": -10.5,
+    "total": 40.5,
+    "ml_home": -620,
+    "ml_away": 456
+   }
+  ]
  },
  "weather": {
   "summary": "No rain flagged",
   "precip": null,
-  "wind": "NNE 4 mph",
+  "wind": "N 4 mph",
   "rain_flag": false,
-  "note": "Denver (outdoors): light NNE winds around 4 mph at kickoff and not on the high-precipitation list.",
+  "note": "Denver (outdoors): light N winds around 4 mph at kickoff and not on the high-precipitation list.",
   "effect": "No weather adjustment."
  },
  "wx_model": {
@@ -51,19 +65,399 @@
   "td_shift": 0.0,
   "fg_shift": 0.0
  },
- "td_odds": {},
+ "td_odds": {
+  "Jonah Coleman": {
+   "price": -140,
+   "book": "DraftKings",
+   "all": [
+    [
+     "BetMGM",
+     -145
+    ],
+    [
+     "Caesars",
+     -150
+    ],
+    [
+     "FanDuel",
+     -145
+    ],
+    [
+     "DraftKings",
+     -140
+    ],
+    [
+     "bet365",
+     -150
+    ]
+   ]
+  },
+  "J.K. Dobbins": {
+   "price": 260,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     260
+    ],
+    [
+     "Caesars",
+     235
+    ],
+    [
+     "FanDuel",
+     250
+    ],
+    [
+     "DraftKings",
+     230
+    ],
+    [
+     "bet365",
+     245
+    ],
+    [
+     "Fanatics",
+     250
+    ]
+   ]
+  },
+  "Brock Bowers": {
+   "price": 330,
+   "book": "Fanatics",
+   "all": [
+    [
+     "BetMGM",
+     210
+    ],
+    [
+     "Caesars",
+     295
+    ],
+    [
+     "FanDuel",
+     320
+    ],
+    [
+     "DraftKings",
+     295
+    ],
+    [
+     "bet365",
+     280
+    ],
+    [
+     "Fanatics",
+     330
+    ]
+   ]
+  },
+  "Pat Bryant": {
+   "price": 320,
+   "book": "FanDuel",
+   "all": [
+    [
+     "BetMGM",
+     240
+    ],
+    [
+     "Caesars",
+     285
+    ],
+    [
+     "FanDuel",
+     320
+    ],
+    [
+     "DraftKings",
+     275
+    ],
+    [
+     "bet365",
+     290
+    ]
+   ]
+  },
+  "Evan Engram": {
+   "price": 400,
+   "book": "Fanatics",
+   "all": [
+    [
+     "BetMGM",
+     350
+    ],
+    [
+     "Caesars",
+     370
+    ],
+    [
+     "FanDuel",
+     390
+    ],
+    [
+     "DraftKings",
+     380
+    ],
+    [
+     "bet365",
+     350
+    ],
+    [
+     "Fanatics",
+     400
+    ]
+   ]
+  },
+  "Jaylen Waddle": {
+   "price": 200,
+   "book": "FanDuel",
+   "all": [
+    [
+     "BetMGM",
+     175
+    ],
+    [
+     "Caesars",
+     193
+    ],
+    [
+     "FanDuel",
+     200
+    ],
+    [
+     "DraftKings",
+     200
+    ],
+    [
+     "bet365",
+     180
+    ],
+    [
+     "Fanatics",
+     200
+    ]
+   ]
+  },
+  "Mike Washington": {
+   "price": 410,
+   "book": "FanDuel",
+   "all": [
+    [
+     "BetMGM",
+     400
+    ],
+    [
+     "Caesars",
+     360
+    ],
+    [
+     "FanDuel",
+     410
+    ],
+    [
+     "DraftKings",
+     350
+    ],
+    [
+     "bet365",
+     375
+    ],
+    [
+     "Fanatics",
+     370
+    ]
+   ]
+  },
+  "Tre Tucker": {
+   "price": 500,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     500
+    ],
+    [
+     "Caesars",
+     450
+    ],
+    [
+     "FanDuel",
+     480
+    ],
+    [
+     "DraftKings",
+     500
+    ],
+    [
+     "bet365",
+     475
+    ],
+    [
+     "Fanatics",
+     500
+    ]
+   ]
+  },
+  "Ashton Jeanty": {
+   "price": 210,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     210
+    ],
+    [
+     "Caesars",
+     200
+    ],
+    [
+     "FanDuel",
+     210
+    ],
+    [
+     "DraftKings",
+     205
+    ],
+    [
+     "bet365",
+     200
+    ]
+   ]
+  },
+  "Courtland Sutton": {
+   "price": 220,
+   "book": "FanDuel",
+   "all": [
+    [
+     "BetMGM",
+     175
+    ],
+    [
+     "Caesars",
+     215
+    ],
+    [
+     "FanDuel",
+     220
+    ],
+    [
+     "DraftKings",
+     220
+    ],
+    [
+     "bet365",
+     220
+    ],
+    [
+     "Fanatics",
+     210
+    ]
+   ]
+  },
+  "Michael Mayer": {
+   "price": 550,
+   "book": "DraftKings",
+   "all": [
+    [
+     "Caesars",
+     475
+    ],
+    [
+     "FanDuel",
+     480
+    ],
+    [
+     "DraftKings",
+     550
+    ],
+    [
+     "bet365",
+     475
+    ],
+    [
+     "Fanatics",
+     550
+    ]
+   ]
+  },
+  "Marvin Mims": {
+   "price": 600,
+   "book": "FanDuel",
+   "all": [
+    [
+     "BetMGM",
+     390
+    ],
+    [
+     "Caesars",
+     550
+    ],
+    [
+     "FanDuel",
+     600
+    ],
+    [
+     "DraftKings",
+     550
+    ],
+    [
+     "bet365",
+     575
+    ],
+    [
+     "Fanatics",
+     575
+    ]
+   ]
+  },
+  "Jalen Nailor": {
+   "price": 800,
+   "book": "DraftKings",
+   "all": [
+    [
+     "BetMGM",
+     750
+    ],
+    [
+     "Caesars",
+     675
+    ],
+    [
+     "FanDuel",
+     650
+    ],
+    [
+     "DraftKings",
+     800
+    ],
+    [
+     "bet365",
+     650
+    ],
+    [
+     "Fanatics",
+     650
+    ]
+   ]
+  }
+ },
  "yard_lines": {},
- "injuries": [],
+ "injuries": [
+  "DEN Caleb Lohner (TE): Out, Foot",
+  "LV Brock Bowers (TE): Questionable, Ankle"
+ ],
  "inputs": {
   "qbs": {
    "DEN": "Bo Nix",
    "LV": "Fernando Mendoza"
   },
-  "report_final": false,
+  "report_final": true,
   "low_conf": {
    "LV": "Fernando Mendoza has 37 pass attempts for the Raiders this season, so their numbers are low confidence."
   },
-  "notes": []
+  "notes": [
+   "Raiders TE Brock Bowers is questionable and simulated as playing; every book still prices his touchdown."
+  ]
  },
  "sources": [
   {
@@ -71,11 +465,19 @@
    "url": "https://github.com/nflverse/nflverse-data"
   },
   {
-   "label": "bet365 lines via SportsbookReview (Fri Nov 20, 8:14 AM ET)",
-   "url": "https://www.sportsbookreview.com/picks/nfl/week-11-odds-betting-lines-2026/"
+   "label": "Spread, total and moneyline (bet365; DraftKings as the alternative), Action Network NFL odds, Sat Nov 21 ~12:40 PM ET",
+   "url": "https://www.actionnetwork.com/nfl/odds"
   },
   {
-   "label": "Game-time forecasts (precipitation and wind at kickoff), Action Network NFL weather, Fri Nov 20",
+   "label": "Anytime TD prices across BetMGM, Caesars, FanDuel, DraftKings, bet365, Fanatics, Action Network, Sat Nov 21",
+   "url": "https://www.actionnetwork.com/nfl/props/touchdown-props?gameIds=290993&seasonType=reg&week=11"
+  },
+  {
+   "label": "Official NFL Week 11 injury report (final Friday statuses)",
+   "url": "https://www.nfl.com/injuries/league/2026/REG11"
+  },
+  {
+   "label": "Game-time forecasts (precipitation and wind at kickoff), Action Network NFL weather, Sat Nov 21",
    "url": "https://www.actionnetwork.com/nfl/weather"
   }
  ]

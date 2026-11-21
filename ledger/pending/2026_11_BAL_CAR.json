@@ -5,8 +5,8 @@
  "away": "BAL",
  "home": "CAR",
  "kickoff_utc": "2026-11-22T18:00:00+00:00",
- "book": "bet365 (Fri Nov 20, via SportsbookReview)",
- "logged_utc": "2026-11-20T17:48+00:00",
+ "book": "bet365 (Sat Nov 21, via Action Network)",
+ "logged_utc": "2026-11-21T18:12+00:00",
  "entries": [
   {
    "kind": "yards",
@@ -18,10 +18,10 @@
    "side": "under",
    "price": -115,
    "book": "bet365",
-   "sim": 0.5799,
+   "sim": 0.6483,
    "mkt": 0.5,
-   "p_call": 0.532,
-   "call": "pass",
+   "p_call": 0.5593,
+   "call": "lean",
    "live": false,
    "gate": "QB unclear"
   },
@@ -33,17 +33,17 @@
    "team": "BAL",
    "line": 2.5,
    "price": -110,
-   "sim": 0.5132
+   "sim": 0.5114
   },
   {
    "kind": "total",
-   "call": "lean",
+   "call": "pass",
    "live": false,
    "gate": "QB unclear",
-   "side": "over",
+   "side": "under",
    "line": 43.5,
    "price": -110,
-   "sim": 0.618
+   "sim": 0.5199
   },
   {
    "kind": "ml",
@@ -52,7 +52,7 @@
    "gate": "QB unclear",
    "team": "BAL",
    "price": 127,
-   "sim": 0.459
+   "sim": 0.4586
   }
  ]
 }

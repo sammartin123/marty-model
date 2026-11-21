@@ -31,7 +31,7 @@
   "lat": 42.34,
   "lon": -83.046,
   "data_through": "Week 11",
-  "td_note": "Market = the best anytime TD price found across BetMGM, Caesars, FanDuel, DraftKings, bet365 and Fanatics (Action Network odds comparison, Sat Nov 21; prediction-market prices are not used). Receiving and rushing yardage lines are Friday quotes. Confirm the price in your own book first: a call only holds at the price shown or longer."
+  "td_note": "Market = the best anytime TD price found across BetMGM, Caesars, FanDuel, DraftKings, bet365 and Fanatics (Action Network odds comparison, Sat Nov 21 early afternoon; prediction-market prices are not used). Receiving and rushing yardage lines are Friday quotes. Confirm the price in your own book first: a call only holds at the price shown or longer."
  },
  "market": {
   "spread_home": -4.5,
@@ -184,16 +184,6 @@
     ]
    ]
   },
-  "Jalon Daniels": {
-   "price": 310,
-   "book": "DraftKings",
-   "all": [
-    [
-     "DraftKings",
-     310
-    ]
-   ]
-  },
   "Chris Godwin": {
    "price": 400,
    "book": "BetMGM",
@@ -332,36 +322,6 @@
     ]
    ]
   },
-  "Kenneth Gainwell": {
-   "price": 410,
-   "book": "FanDuel",
-   "all": [
-    [
-     "BetMGM",
-     310
-    ],
-    [
-     "Caesars",
-     375
-    ],
-    [
-     "FanDuel",
-     410
-    ],
-    [
-     "DraftKings",
-     390
-    ],
-    [
-     "bet365",
-     350
-    ],
-    [
-     "Fanatics",
-     270
-    ]
-   ]
-  },
   "Baker Mayfield": {
    "price": 775,
    "book": "BetMGM",
@@ -421,6 +381,36 @@
      400
     ]
    ]
+  },
+  "Kenny Gainwell": {
+   "price": 410,
+   "book": "FanDuel",
+   "all": [
+    [
+     "BetMGM",
+     310
+    ],
+    [
+     "Caesars",
+     375
+    ],
+    [
+     "FanDuel",
+     410
+    ],
+    [
+     "DraftKings",
+     390
+    ],
+    [
+     "bet365",
+     350
+    ],
+    [
+     "Fanatics",
+     270
+    ]
+   ]
   }
  },
  "yard_lines": {
@@ -463,10 +453,10 @@
   },
   "report_final": true,
   "low_conf": {
-   "TB": "Baker Mayfield (foot) is questionable and no Friday decision was found; he practised Thursday and the line moved toward him, but Jalon Daniels could still start."
+   "TB": "Baker Mayfield (foot) is questionable. Todd Bowles said Friday he is trending in the right direction and is expected to start, but no formal decision was announced; Jalon Daniels starts if he cannot go."
   },
   "notes": [
-   "Bucs QB Baker Mayfield (foot) is questionable. He sat Wednesday, returned to practice Thursday and was reported trending toward playing, and the line has moved from Lions -6.5 to -4.5 with every book pricing his touchdown. The sim uses Mayfield, but Tampa Bay's player calls and the game lines stay held until the start is confirmed."
+   "Bucs QB Baker Mayfield (foot) is questionable. Todd Bowles said Friday he is trending in the right direction and reports expect him to start, but nothing was confirmed by Saturday evening. The sim uses Mayfield; Tampa Bay's player calls and the game lines stay held until he is active (inactives 11:30 AM ET)."
   ]
  },
  "sources": [
@@ -501,6 +491,10 @@
   {
    "label": "ClutchPoints: Bowles to decide on Mayfield Friday after Thursday evaluation",
    "url": "https://clutchpoints.com/nfl/tampa-bay-buccaneers/buccaneers-news-baker-mayfield-wednesday-practice-foot-injury"
+  },
+  {
+   "label": "SI Bucs On SI: Bowles says Mayfield trending in the right direction, expected to start (Fri Nov 20)",
+   "url": "https://www.si.com/nfl/buccaneers/onsi/buccaneers-announce-likely-starting-quarterback-vs-lions-baker-mayfield"
   }
  ]
 }

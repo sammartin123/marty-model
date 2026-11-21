@@ -6,7 +6,7 @@
  "home": "LAC",
  "kickoff_utc": "2026-11-22T21:05:00+00:00",
  "book": "bet365 (Sat Nov 21, via Action Network)",
- "logged_utc": "2026-11-21T18:14+00:00",
+ "logged_utc": "2026-11-21T22:16+00:00",
  "entries": [
   {
    "kind": "td",
@@ -15,9 +15,9 @@
    "team": "LAC",
    "price": 225,
    "book": "DraftKings",
-   "sim": 0.1447,
+   "sim": 0.1467,
    "mkt": 0.3077,
-   "p_call": 0.2425,
+   "p_call": 0.2433,
    "call": "fade",
    "live": false,
    "gate": "Questionable"
@@ -29,9 +29,9 @@
    "team": "LAC",
    "price": 360,
    "book": "Fanatics",
-   "sim": 0.2239,
+   "sim": 0.2249,
    "mkt": 0.2174,
-   "p_call": 0.22,
+   "p_call": 0.2204,
    "call": "pass",
    "live": false,
    "gate": null
@@ -43,9 +43,9 @@
    "team": "LAC",
    "price": 370,
    "book": "DraftKings",
-   "sim": 0.0998,
+   "sim": 0.1002,
    "mkt": 0.2128,
-   "p_call": 0.1676,
+   "p_call": 0.1677,
    "call": "pass",
    "live": false,
    "gate": "Questionable"
@@ -57,9 +57,9 @@
    "team": "LAC",
    "price": 370,
    "book": "Fanatics",
-   "sim": 0.1693,
+   "sim": 0.1714,
    "mkt": 0.2128,
-   "p_call": 0.1954,
+   "p_call": 0.1962,
    "call": "pass",
    "live": false,
    "gate": null
@@ -71,9 +71,9 @@
    "team": "LAC",
    "price": 475,
    "book": "DraftKings",
-   "sim": 0.188,
+   "sim": 0.1897,
    "mkt": 0.1739,
-   "p_call": 0.1796,
+   "p_call": 0.1802,
    "call": "pass",
    "live": false,
    "gate": null
@@ -85,9 +85,9 @@
    "team": "LAC",
    "price": 120,
    "book": "FanDuel",
-   "sim": 0.3978,
+   "sim": 0.3959,
    "mkt": 0.4545,
-   "p_call": 0.4319,
+   "p_call": 0.4311,
    "call": "pass",
    "live": false,
    "gate": null
@@ -99,9 +99,9 @@
    "team": "LAC",
    "price": 225,
    "book": "BetMGM",
-   "sim": 0.2044,
+   "sim": 0.2043,
    "mkt": 0.3077,
-   "p_call": 0.2664,
+   "p_call": 0.2663,
    "call": "pass",
    "live": false,
    "gate": null
@@ -113,9 +113,9 @@
    "team": "NYJ",
    "price": 190,
    "book": "BetMGM",
-   "sim": 0.2503,
+   "sim": 0.251,
    "mkt": 0.3448,
-   "p_call": 0.307,
+   "p_call": 0.3073,
    "call": "pass",
    "live": false,
    "gate": null
@@ -127,9 +127,9 @@
    "team": "NYJ",
    "price": 180,
    "book": "FanDuel",
-   "sim": 0.2503,
+   "sim": 0.2524,
    "mkt": 0.3571,
-   "p_call": 0.3144,
+   "p_call": 0.3152,
    "call": "pass",
    "live": false,
    "gate": null
@@ -141,9 +141,9 @@
    "team": "NYJ",
    "price": 285,
    "book": "Fanatics",
-   "sim": 0.2448,
+   "sim": 0.2454,
    "mkt": 0.2597,
-   "p_call": 0.2538,
+   "p_call": 0.254,
    "call": "pass",
    "live": false,
    "gate": null
@@ -155,9 +155,9 @@
    "team": "NYJ",
    "price": 250,
    "book": "BetMGM",
-   "sim": 0.2322,
+   "sim": 0.2314,
    "mkt": 0.2857,
-   "p_call": 0.2643,
+   "p_call": 0.264,
    "call": "pass",
    "live": false,
    "gate": null
@@ -169,9 +169,9 @@
    "team": "NYJ",
    "price": 525,
    "book": "bet365",
-   "sim": 0.0657,
+   "sim": 0.0659,
    "mkt": 0.16,
-   "p_call": 0.1223,
+   "p_call": 0.1224,
    "call": "pass",
    "live": false,
    "gate": null
@@ -184,7 +184,7 @@
    "team": "NYJ",
    "line": 3,
    "price": -110,
-   "sim": 0.5066
+   "sim": 0.5065
   },
   {
    "kind": "total",
@@ -194,7 +194,7 @@
    "side": "over",
    "line": 41.5,
    "price": -110,
-   "sim": 0.516
+   "sim": 0.5166
   },
   {
    "kind": "ml",
@@ -203,7 +203,7 @@
    "gate": null,
    "team": "NYJ",
    "price": 149,
-   "sim": 0.4435
+   "sim": 0.4433
   }
  ]
 }

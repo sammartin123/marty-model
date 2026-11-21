@@ -6,7 +6,7 @@
  "home": "DAL",
  "kickoff_utc": "2026-11-22T18:00:00+00:00",
  "book": "bet365 (Sat Nov 21, via Action Network)",
- "logged_utc": "2026-11-21T18:13+00:00",
+ "logged_utc": "2026-11-21T22:15+00:00",
  "entries": [
   {
    "kind": "td",
@@ -15,9 +15,9 @@
    "team": "DAL",
    "price": -160,
    "book": "BetMGM",
-   "sim": 0.5422,
+   "sim": 0.5396,
    "mkt": 0.6154,
-   "p_call": 0.5861,
+   "p_call": 0.5851,
    "call": "pass",
    "live": false,
    "gate": null
@@ -32,9 +32,9 @@
    "side": "over",
    "price": -115,
    "book": "bet365",
-   "sim": 0.5438,
+   "sim": 0.5434,
    "mkt": 0.5,
-   "p_call": 0.5175,
+   "p_call": 0.5174,
    "call": "pass",
    "live": false,
    "gate": null
@@ -46,9 +46,9 @@
    "team": "DAL",
    "price": -210,
    "book": "BetMGM",
-   "sim": 0.6872,
+   "sim": 0.685,
    "mkt": 0.6774,
-   "p_call": 0.6813,
+   "p_call": 0.6805,
    "call": "pass",
    "live": false,
    "gate": null
@@ -60,9 +60,9 @@
    "team": "DAL",
    "price": -118,
    "book": "BetMGM",
-   "sim": 0.4397,
+   "sim": 0.4415,
    "mkt": 0.5413,
-   "p_call": 0.5007,
+   "p_call": 0.5014,
    "call": "pass",
    "live": false,
    "gate": null
@@ -77,9 +77,9 @@
    "side": "over",
    "price": -115,
    "book": "bet365",
-   "sim": 0.5503,
+   "sim": 0.551,
    "mkt": 0.5,
-   "p_call": 0.5201,
+   "p_call": 0.5204,
    "call": "pass",
    "live": false,
    "gate": null
@@ -91,9 +91,9 @@
    "team": "DAL",
    "price": 600,
    "book": "DraftKings",
-   "sim": 0.0774,
+   "sim": 0.0769,
    "mkt": 0.1429,
-   "p_call": 0.1167,
+   "p_call": 0.1165,
    "call": "pass",
    "live": false,
    "gate": null
@@ -105,9 +105,9 @@
    "team": "DAL",
    "price": 180,
    "book": "FanDuel",
-   "sim": 0.3124,
+   "sim": 0.3132,
    "mkt": 0.3571,
-   "p_call": 0.3392,
+   "p_call": 0.3396,
    "call": "pass",
    "live": false,
    "gate": null
@@ -122,9 +122,9 @@
    "side": "over",
    "price": -115,
    "book": "bet365",
-   "sim": 0.5673,
+   "sim": 0.5668,
    "mkt": 0.5,
-   "p_call": 0.5269,
+   "p_call": 0.5267,
    "call": "pass",
    "live": false,
    "gate": null
@@ -139,9 +139,9 @@
    "side": "under",
    "price": -115,
    "book": "bet365",
-   "sim": 0.6371,
+   "sim": 0.6333,
    "mkt": 0.5,
-   "p_call": 0.5548,
+   "p_call": 0.5533,
    "call": "pass",
    "live": false,
    "gate": null
@@ -153,9 +153,9 @@
    "team": "TEN",
    "price": 185,
    "book": "DraftKings",
-   "sim": 0.3082,
+   "sim": 0.307,
    "mkt": 0.3509,
-   "p_call": 0.3338,
+   "p_call": 0.3333,
    "call": "pass",
    "live": false,
    "gate": "Questionable"
@@ -170,9 +170,9 @@
    "side": "under",
    "price": -115,
    "book": "bet365",
-   "sim": 0.5818,
+   "sim": 0.5824,
    "mkt": 0.5,
-   "p_call": 0.5327,
+   "p_call": 0.533,
    "call": "pass",
    "live": false,
    "gate": "Questionable"
@@ -184,7 +184,7 @@
    "team": "TEN",
    "price": -130,
    "book": "FanDuel",
-   "sim": 0.6007,
+   "sim": 0.6006,
    "mkt": 0.5652,
    "p_call": 0.5794,
    "call": "pass",
@@ -198,9 +198,9 @@
    "team": "TEN",
    "price": 550,
    "book": "FanDuel",
-   "sim": 0.1956,
+   "sim": 0.1948,
    "mkt": 0.1538,
-   "p_call": 0.1706,
+   "p_call": 0.1702,
    "call": "lean",
    "live": false,
    "gate": "Questionable"
@@ -212,9 +212,9 @@
    "team": "TEN",
    "price": 300,
    "book": "DraftKings",
-   "sim": 0.2361,
+   "sim": 0.2374,
    "mkt": 0.25,
-   "p_call": 0.2445,
+   "p_call": 0.2449,
    "call": "pass",
    "live": false,
    "gate": null
@@ -229,9 +229,9 @@
    "side": "under",
    "price": -115,
    "book": "bet365",
-   "sim": 0.6808,
+   "sim": 0.6856,
    "mkt": 0.5,
-   "p_call": 0.5723,
+   "p_call": 0.5743,
    "call": "lean",
    "live": true,
    "gate": null
@@ -243,9 +243,9 @@
    "team": "TEN",
    "price": 300,
    "book": "BetMGM",
-   "sim": 0.1121,
+   "sim": 0.1106,
    "mkt": 0.25,
-   "p_call": 0.1948,
+   "p_call": 0.1942,
    "call": "fade",
    "live": true,
    "gate": null
@@ -260,9 +260,9 @@
    "side": "under",
    "price": -115,
    "book": "bet365",
-   "sim": 0.6707,
+   "sim": 0.6675,
    "mkt": 0.5,
-   "p_call": 0.5683,
+   "p_call": 0.567,
    "call": "lean",
    "live": false,
    "gate": "Correlated"
@@ -274,9 +274,9 @@
    "team": "TEN",
    "price": 350,
    "book": "BetMGM",
-   "sim": 0.1636,
+   "sim": 0.1628,
    "mkt": 0.2222,
-   "p_call": 0.1988,
+   "p_call": 0.1984,
    "call": "pass",
    "live": false,
    "gate": null
@@ -291,9 +291,9 @@
    "side": "under",
    "price": -115,
    "book": "bet365",
-   "sim": 0.615,
+   "sim": 0.6157,
    "mkt": 0.5,
-   "p_call": 0.546,
+   "p_call": 0.5463,
    "call": "pass",
    "live": false,
    "gate": null
@@ -306,7 +306,7 @@
    "team": "TEN",
    "line": 7.5,
    "price": -110,
-   "sim": 0.5417
+   "sim": 0.5416
   },
   {
    "kind": "total",
@@ -316,7 +316,7 @@
    "side": "under",
    "line": 54.5,
    "price": -110,
-   "sim": 0.5439
+   "sim": 0.5442
   },
   {
    "kind": "ml",
@@ -325,7 +325,7 @@
    "gate": null,
    "team": "TEN",
    "price": 320,
-   "sim": 0.3046
+   "sim": 0.3043
   }
  ]
 }

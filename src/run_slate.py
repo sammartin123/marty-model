@@ -2,7 +2,8 @@
 usage: python3 src/run_slate.py slates/2026-W10.json   ->  out/slate.json (+ games/<AWAY_HOME>.json per game)
 
 A slate file lists the games as "AWAY_HOME" keys. Each may override market, td_odds, yard_lines, weather,
-wx_model, out, qb and sources (out_names / q_names for late injury changes); everything else (teams, kickoff, venue, injuries, starting QBs) is built
+wx_model, out, qb and sources (out_names / q_names for late injury changes, add_names for players activated
+or elevated after the roster file, kickoff_et for a flexed kickoff the schedule feed has not caught); everything else (teams, kickoff, venue, injuries, starting QBs) is built
 automatically from the data files. "use_existing" points at a hand-finished game config to reuse."""
 import sys, os, json, datetime as dt
 import pandas as pd
@@ -43,6 +44,16 @@ def main(path):
                     G['out'].append(pid)
                 G.setdefault('status', {})[pid] = stat
                 G['injuries'] = [x for x in G['injuries'] if not x.startswith(f"{team} {nm} (")] + [f"{team} {nm}: {stat} (late change, from news reports)"]
+        for nm, team in ov.get('add_names', []):
+            pid = pid_of(nm, team)
+            if pid is None:
+                print(f'  WARNING: {nm} ({team}) not found in the data; fix the spelling'); continue
+            G.setdefault('add', []).append([pid, team])
+        if ov.get('kickoff_et'):   # schedule change the data feed has not picked up yet (e.g. a flexed game), "HH:MM" ET
+            hh, mm = map(int, ov['kickoff_et'].split(':'))
+            t12 = f"{((hh - 1) % 12) + 1}:{mm:02d} {'PM' if hh >= 12 else 'AM'}"
+            G['meta']['kickoff'] = G['meta']['kickoff'].split(' · ')[0] + f' · {t12} ET'
+            G['meta']['time'] = t12; G['meta']['kickoff_et'] = ov['kickoff_et']
         for team, nm in ov.get('qb_names', {}).items():
             G['qb'][team] = pid_of(nm, team); G['inputs']['qbs'][team] = nm
             G['inputs']['low_conf'].pop(team, None)

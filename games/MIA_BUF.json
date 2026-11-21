@@ -35,7 +35,7 @@
   "lat": 42.774,
   "lon": -78.787,
   "data_through": "Week 11",
-  "td_note": "Market = the best anytime TD price found across BetMGM, Caesars, FanDuel, DraftKings, bet365 and Fanatics (Action Network odds comparison, Sat Nov 21; prediction-market prices are not used). Receiving and rushing yardage lines are Friday quotes. Confirm the price in your own book first: a call only holds at the price shown or longer."
+  "td_note": "Market = the best anytime TD price found across BetMGM, Caesars, FanDuel, DraftKings, bet365 and Fanatics (Action Network odds comparison, Sat Nov 21 early afternoon; prediction-market prices are not used). Receiving and rushing yardage lines are Friday quotes. Confirm the price in your own book first: a call only holds at the price shown or longer."
  },
  "market": {
   "spread_home": -16.5,
@@ -435,6 +435,7 @@
    "MIA": "Kyle McCord has 32 pass attempts for the Dolphins this season, so their numbers are low confidence."
   },
   "notes": [
+   "Dolphins QB Kyle McCord makes his second start with Malik Willis on injured reserve; he is flagged low confidence with few attempts for Miami.",
    "Bills TE Dalton Kincaid is doubtful and is left out of the TD board."
   ]
  },
@@ -462,6 +463,10 @@
   {
    "label": "Game-time forecasts (precipitation and wind at kickoff), Action Network NFL weather, Sat Nov 21",
    "url": "https://www.actionnetwork.com/nfl/weather"
+  },
+  {
+   "label": "TSN/AP: Bills get chance to feast on another backup QB with McCord and Dolphins up next",
+   "url": "https://www.tsn.ca/nfl/article/bills-get-chance-to-feast-on-another-backup-qb-with-mccord-dolphins-up-next/"
   }
  ]
 }

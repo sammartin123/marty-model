@@ -6,7 +6,7 @@
  "home": "DEN",
  "kickoff_utc": "2026-11-22T21:25:00+00:00",
  "book": "bet365 (Sat Nov 21, via Action Network)",
- "logged_utc": "2026-11-21T18:14+00:00",
+ "logged_utc": "2026-11-21T22:16+00:00",
  "entries": [
   {
    "kind": "td",
@@ -15,9 +15,9 @@
    "team": "DEN",
    "price": 400,
    "book": "Fanatics",
-   "sim": 0.1725,
+   "sim": 0.1745,
    "mkt": 0.2,
-   "p_call": 0.189,
+   "p_call": 0.1898,
    "call": "pass",
    "live": false,
    "gate": null
@@ -29,9 +29,9 @@
    "team": "DEN",
    "price": 220,
    "book": "FanDuel",
-   "sim": 0.3245,
+   "sim": 0.3259,
    "mkt": 0.3125,
-   "p_call": 0.3173,
+   "p_call": 0.3179,
    "call": "pass",
    "live": false,
    "gate": null
@@ -43,9 +43,9 @@
    "team": "DEN",
    "price": 260,
    "book": "BetMGM",
-   "sim": 0.2811,
+   "sim": 0.2822,
    "mkt": 0.2778,
-   "p_call": 0.2791,
+   "p_call": 0.2795,
    "call": "pass",
    "live": false,
    "gate": null
@@ -57,9 +57,9 @@
    "team": "DEN",
    "price": 200,
    "book": "FanDuel",
-   "sim": 0.2382,
+   "sim": 0.2365,
    "mkt": 0.3333,
-   "p_call": 0.2953,
+   "p_call": 0.2946,
    "call": "pass",
    "live": false,
    "gate": null
@@ -71,9 +71,9 @@
    "team": "DEN",
    "price": 600,
    "book": "FanDuel",
-   "sim": 0.1374,
+   "sim": 0.1385,
    "mkt": 0.1429,
-   "p_call": 0.1407,
+   "p_call": 0.1411,
    "call": "pass",
    "live": false,
    "gate": null
@@ -85,9 +85,9 @@
    "team": "DEN",
    "price": 320,
    "book": "FanDuel",
-   "sim": 0.159,
+   "sim": 0.158,
    "mkt": 0.2381,
-   "p_call": 0.2065,
+   "p_call": 0.2061,
    "call": "pass",
    "live": false,
    "gate": null
@@ -113,9 +113,9 @@
    "team": "LV",
    "price": 800,
    "book": "DraftKings",
-   "sim": 0.1114,
+   "sim": 0.1107,
    "mkt": 0.1111,
-   "p_call": 0.1112,
+   "p_call": 0.1109,
    "call": "pass",
    "live": false,
    "gate": "QB unclear"
@@ -127,9 +127,9 @@
    "team": "LV",
    "price": 500,
    "book": "BetMGM",
-   "sim": 0.1607,
+   "sim": 0.1613,
    "mkt": 0.1667,
-   "p_call": 0.1643,
+   "p_call": 0.1645,
    "call": "pass",
    "live": false,
    "gate": "QB unclear"
@@ -141,9 +141,9 @@
    "team": "LV",
    "price": 550,
    "book": "DraftKings",
-   "sim": 0.1298,
+   "sim": 0.1319,
    "mkt": 0.1538,
-   "p_call": 0.1442,
+   "p_call": 0.1451,
    "call": "pass",
    "live": false,
    "gate": "QB unclear"
@@ -155,9 +155,9 @@
    "team": "LV",
    "price": 330,
    "book": "Fanatics",
-   "sim": 0.2289,
+   "sim": 0.227,
    "mkt": 0.2326,
-   "p_call": 0.2311,
+   "p_call": 0.2303,
    "call": "pass",
    "live": false,
    "gate": "QB unclear"
@@ -169,9 +169,9 @@
    "team": "LV",
    "price": 210,
    "book": "BetMGM",
-   "sim": 0.2217,
+   "sim": 0.2213,
    "mkt": 0.3226,
-   "p_call": 0.2822,
+   "p_call": 0.2821,
    "call": "pass",
    "live": false,
    "gate": "QB unclear"
@@ -183,9 +183,9 @@
    "team": "LV",
    "price": 410,
    "book": "FanDuel",
-   "sim": 0.1325,
+   "sim": 0.1333,
    "mkt": 0.1961,
-   "p_call": 0.1706,
+   "p_call": 0.171,
    "call": "pass",
    "live": false,
    "gate": "QB unclear"
@@ -198,7 +198,7 @@
    "team": "DEN",
    "line": -10.5,
    "price": -110,
-   "sim": 0.6045
+   "sim": 0.603
   },
   {
    "kind": "total",
@@ -208,7 +208,7 @@
    "side": "over",
    "line": 40.5,
    "price": -110,
-   "sim": 0.507
+   "sim": 0.5075
   },
   {
    "kind": "ml",
@@ -217,7 +217,7 @@
    "gate": "QB unclear",
    "team": "DEN",
    "price": -600,
-   "sim": 0.877
+   "sim": 0.8746
   }
  ]
 }

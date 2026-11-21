@@ -4,9 +4,9 @@
  "week": 11,
  "away": "PIT",
  "home": "PHI",
- "kickoff_utc": "2026-11-22T21:25:00+00:00",
+ "kickoff_utc": "2026-11-22T18:00:00+00:00",
  "book": "bet365 (Sat Nov 21, via Action Network)",
- "logged_utc": "2026-11-21T18:14+00:00",
+ "logged_utc": "2026-11-21T22:15+00:00",
  "entries": [
   {
    "kind": "td",
@@ -15,9 +15,9 @@
    "team": "PHI",
    "price": 360,
    "book": "Fanatics",
-   "sim": 0.2299,
+   "sim": 0.2307,
    "mkt": 0.2174,
-   "p_call": 0.2224,
+   "p_call": 0.2227,
    "call": "pass",
    "live": false,
    "gate": "QB unclear"
@@ -29,9 +29,9 @@
    "team": "PHI",
    "price": 450,
    "book": "DraftKings",
-   "sim": 0.1608,
+   "sim": 0.1617,
    "mkt": 0.1818,
-   "p_call": 0.1734,
+   "p_call": 0.1738,
    "call": "pass",
    "live": false,
    "gate": "QB unclear"
@@ -57,12 +57,26 @@
    "team": "PHI",
    "price": 500,
    "book": "FanDuel",
-   "sim": 0.1675,
+   "sim": 0.1672,
    "mkt": 0.1667,
-   "p_call": 0.167,
+   "p_call": 0.1669,
    "call": "pass",
    "live": false,
    "gate": "QB unclear"
+  },
+  {
+   "kind": "td",
+   "pid": "00-0039739",
+   "name": "Roman Wilson",
+   "team": "PIT",
+   "price": 650,
+   "book": "BetMGM",
+   "sim": 0.1225,
+   "mkt": 0.1333,
+   "p_call": 0.129,
+   "call": "pass",
+   "live": false,
+   "gate": "Questionable"
   },
   {
    "kind": "td",
@@ -71,9 +85,9 @@
    "team": "PIT",
    "price": 250,
    "book": "BetMGM",
-   "sim": 0.3164,
+   "sim": 0.2962,
    "mkt": 0.2857,
-   "p_call": 0.298,
+   "p_call": 0.2899,
    "call": "pass",
    "live": false,
    "gate": null
@@ -85,9 +99,9 @@
    "team": "PIT",
    "price": 220,
    "book": "FanDuel",
-   "sim": 0.2766,
+   "sim": 0.2678,
    "mkt": 0.3125,
-   "p_call": 0.2981,
+   "p_call": 0.2946,
    "call": "pass",
    "live": false,
    "gate": null
@@ -99,9 +113,9 @@
    "team": "PIT",
    "price": 400,
    "book": "BetMGM",
-   "sim": 0.1731,
+   "sim": 0.16,
    "mkt": 0.2,
-   "p_call": 0.1893,
+   "p_call": 0.184,
    "call": "pass",
    "live": false,
    "gate": null
@@ -113,9 +127,9 @@
    "team": "PIT",
    "price": 135,
    "book": "FanDuel",
-   "sim": 0.3464,
+   "sim": 0.3349,
    "mkt": 0.4255,
-   "p_call": 0.3939,
+   "p_call": 0.3893,
    "call": "pass",
    "live": false,
    "gate": null
@@ -127,9 +141,9 @@
    "team": "PIT",
    "price": 500,
    "book": "DraftKings",
-   "sim": 0.2311,
+   "sim": 0.2066,
    "mkt": 0.1667,
-   "p_call": 0.1924,
+   "p_call": 0.1826,
    "call": "lean",
    "live": true,
    "gate": null
@@ -152,7 +166,7 @@
    "side": "under",
    "line": 37.5,
    "price": -110,
-   "sim": 0.7214
+   "sim": 0.7213
   },
   {
    "kind": "ml",
@@ -161,7 +175,7 @@
    "gate": "QB unclear",
    "team": "PIT",
    "price": -198,
-   "sim": 0.7718
+   "sim": 0.7709
   }
  ]
 }

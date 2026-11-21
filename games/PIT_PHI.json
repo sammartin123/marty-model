@@ -12,12 +12,13 @@
   "PIT": "00-0023459"
  },
  "out": [
+  "00-0036252",
   "00-0038393"
  ],
  "status": {
   "00-0038393": "Out",
   "00-0039746": "Questionable",
-  "00-0036252": "Questionable",
+  "00-0036252": "Out",
   "00-0039739": "Questionable"
  },
  "out_json": "out/PIT_PHI.json",
@@ -27,15 +28,16 @@
   "away_name": "Steelers",
   "home_city": "Philadelphia",
   "away_city": "Pittsburgh",
-  "kickoff": "Sun Nov 22, 2026 \u00b7 4:25 PM ET",
-  "time": "4:25 PM",
+  "kickoff": "Sun Nov 22, 2026 \u00b7 1:00 PM ET",
+  "time": "1:00 PM",
   "venue": "Lincoln Financial Field, Philadelphia",
   "generated": "Sat Nov 21, 2026",
   "roof": "outdoors",
   "lat": 39.901,
   "lon": -75.168,
   "data_through": "Week 11",
-  "td_note": "Market = the best anytime TD price found across BetMGM, Caesars, FanDuel, DraftKings, bet365 and Fanatics (Action Network odds comparison, Sat Nov 21; prediction-market prices are not used). Receiving and rushing yardage lines are Friday quotes. Confirm the price in your own book first: a call only holds at the price shown or longer."
+  "kickoff_et": "13:00",
+  "td_note": "Market = the best anytime TD price found across BetMGM, Caesars, FanDuel, DraftKings, bet365 and Fanatics (Action Network odds comparison, Sat Nov 21 early afternoon; prediction-market prices are not used). Receiving and rushing yardage lines are Friday quotes. Confirm the price in your own book first: a call only holds at the price shown or longer."
  },
  "market": {
   "spread_home": 3.5,
@@ -58,7 +60,7 @@
   "precip": 71,
   "wind": "NE 7 mph",
   "rain_flag": true,
-  "note": "Philadelphia (Lincoln Financial Field, outdoors): 71% chance of precipitation and NE winds around 7 mph at kickoff.",
+  "note": "Philadelphia (Lincoln Financial Field, outdoors), now a 1:00 PM kickoff: Saturday's board had a 71% chance of precipitation and NE winds around 7 mph at kickoff; FantasyAlarm's hourly table shows 84% from 1 to 4 PM.",
   "effect": "Real rain risk: steer away from receiving-yard overs, especially secondary targets, and toward rushing volume, receptions or unders. The sim trims passing and scoring by the measured rain effect weighted by the chance of rain."
  },
  "wx_model": {
@@ -244,36 +246,6 @@
     ]
    ]
   },
-  "Michael Pittman": {
-   "price": 550,
-   "book": "FanDuel",
-   "all": [
-    [
-     "BetMGM",
-     500
-    ],
-    [
-     "Caesars",
-     500
-    ],
-    [
-     "FanDuel",
-     550
-    ],
-    [
-     "DraftKings",
-     500
-    ],
-    [
-     "bet365",
-     525
-    ],
-    [
-     "Fanatics",
-     525
-    ]
-   ]
-  },
   "Makai Lemon": {
    "price": 500,
    "book": "FanDuel",
@@ -395,8 +367,8 @@
  "injuries": [
   "PHI Dontayvion Wicks (WR): Out, Ankle",
   "PHI Will Shipley (RB): Questionable, Foot",
-  "PIT Michael Pittman (WR): Questionable, Foot",
-  "PIT Roman Wilson (WR): Questionable, Hand"
+  "PIT Roman Wilson (WR): Questionable, Hand",
+  "PIT Michael Pittman: Out (late change, from news reports)"
  ],
  "inputs": {
   "qbs": {
@@ -408,8 +380,10 @@
    "PHI": "Joe Milton III has 33 pass attempts for the Eagles this season, so their numbers are low confidence."
   },
   "notes": [
+   "Flexed to 1:00 PM ET (the schedule feed still shows 4:25).",
    "Eagles QB Joe Milton III is flagged low confidence: a recent promotion with few attempts for the team.",
-   "Steelers WRs Michael Pittman and Roman Wilson are questionable and simulated as playing; Eagles WR Dontayvion Wicks is out."
+   "The model's total (31) sits more than 6 points under the book's 37.5: Joe Milton III is confirmed as the Eagles' starter, and the gap comes from his small sample plus an 84% rain chance in the 1 PM window, so the total and spread are leans at most and the Eagles side is low confidence.",
+   "Steelers WR Roman Wilson was activated from injured reserve on Saturday and plays; WR Michael Pittman Jr. was not activated and is left out. Eagles WR Dontayvion Wicks is out."
   ]
  },
  "sources": [
@@ -432,6 +406,32 @@
   {
    "label": "Game-time forecasts (precipitation and wind at kickoff), Action Network NFL weather, Sat Nov 21",
    "url": "https://www.actionnetwork.com/nfl/weather"
+  },
+  {
+   "label": "NBC Sports: Roman Wilson activated from IR, to play in Week 11 (Sat Nov 21)",
+   "url": "https://www.nbcsports.com/fantasy/football/player-news/2026-11-21/roman-wilson-activated-from-ir-to-play-in-week-11"
+  },
+  {
+   "label": "PFT: Steelers activate WR Roman Wilson (Sat Nov 21)",
+   "url": "https://nbcsports.com/nfl/profootballtalk/rumor-mill/news/steelers-activate-wr-roman-wilson"
+  },
+  {
+   "label": "NFL.com: Week 11 schedule change (JAX-NYG to 4:25 PM ET, PIT-PHI to 1:00 PM ET)",
+   "url": "https://www.nfl.com/news/week-11-schedule-change"
+  },
+  {
+   "label": "Northeast Times: Eagles injury report, Milton starts vs. Steelers",
+   "url": "https://northeasttimes.com/?p=166691"
+  },
+  {
+   "label": "FantasyAlarm Week 11 weather report: Philadelphia 84% rain 1 to 4 PM (updated Nov 20)",
+   "url": "https://www.fantasyalarm.com/articles/nfl/nfl-weather/nfl-week-11-weather-report-fantasy-football-dfs-impact/199062"
   }
+ ],
+ "add": [
+  [
+   "00-0039739",
+   "PIT"
+  ]
  ]
 }

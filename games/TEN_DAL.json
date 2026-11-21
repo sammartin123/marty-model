@@ -39,7 +39,7 @@
   "lat": 32.748,
   "lon": -97.093,
   "data_through": "Week 11",
-  "td_note": "Market = the best anytime TD price found across BetMGM, Caesars, FanDuel, DraftKings, bet365 and Fanatics (Action Network odds comparison, Sat Nov 21; prediction-market prices are not used). Receiving and rushing yardage lines are Friday quotes. Confirm the price in your own book first: a call only holds at the price shown or longer."
+  "td_note": "Market = the best anytime TD price found across BetMGM, Caesars, FanDuel, DraftKings, bet365 and Fanatics (Action Network odds comparison, Sat Nov 21 early afternoon; prediction-market prices are not used). Receiving and rushing yardage lines are Friday quotes. Confirm the price in your own book first: a call only holds at the price shown or longer."
  },
  "market": {
   "spread_home": -7.5,
@@ -293,20 +293,6 @@
     [
      "bet365",
      325
-    ]
-   ]
-  },
-  "Israel Abanikanda": {
-   "price": 450,
-   "book": "BetMGM",
-   "all": [
-    [
-     "BetMGM",
-     450
-    ],
-    [
-     "Fanatics",
-     420
     ]
    ]
   },

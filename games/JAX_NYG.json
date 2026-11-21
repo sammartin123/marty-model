@@ -20,15 +20,16 @@
   "away_name": "Jaguars",
   "home_city": "New York",
   "away_city": "Jacksonville",
-  "kickoff": "Sun Nov 22, 2026 \u00b7 1:00 PM ET",
-  "time": "1:00 PM",
+  "kickoff": "Sun Nov 22, 2026 \u00b7 4:25 PM ET",
+  "time": "4:25 PM",
   "venue": "MetLife Stadium, New York",
   "generated": "Sat Nov 21, 2026",
   "roof": "outdoors",
   "lat": 40.813,
   "lon": -74.074,
   "data_through": "Week 11",
-  "td_note": "Market = the best anytime TD price found across BetMGM, Caesars, FanDuel, DraftKings, bet365 and Fanatics (Action Network odds comparison, Sat Nov 21; prediction-market prices are not used). Receiving and rushing yardage lines are Friday quotes. Confirm the price in your own book first: a call only holds at the price shown or longer."
+  "kickoff_et": "16:25",
+  "td_note": "Market = the best anytime TD price found across BetMGM, Caesars, FanDuel, DraftKings, bet365 and Fanatics (Action Network odds comparison, Sat Nov 21 early afternoon; prediction-market prices are not used). Receiving and rushing yardage lines are Friday quotes. Confirm the price in your own book first: a call only holds at the price shown or longer."
  },
  "market": {
   "spread_home": 5.5,
@@ -478,7 +479,9 @@
   },
   "report_final": true,
   "low_conf": {},
-  "notes": []
+  "notes": [
+   "Flexed to 4:25 PM ET (the schedule feed still shows 1:00). The Saturday forecast carries rain through the whole game."
+  ]
  },
  "sources": [
   {
@@ -504,6 +507,14 @@
   {
    "label": "Game-time forecasts (precipitation and wind at kickoff), Action Network NFL weather, Sat Nov 21",
    "url": "https://www.actionnetwork.com/nfl/weather"
+  },
+  {
+   "label": "NFL.com: Week 11 schedule change (JAX-NYG to 4:25 PM ET, PIT-PHI to 1:00 PM ET)",
+   "url": "https://www.nfl.com/news/week-11-schedule-change"
+  },
+  {
+   "label": "The Spun via Yahoo: rain forecast for the entire Jaguars-Giants game, citing AccuWeather (Sat Nov 21)",
+   "url": "https://sports.yahoo.com/articles/forecast-shows-heavy-rain-jaguars-174059430.html"
   }
  ]
 }

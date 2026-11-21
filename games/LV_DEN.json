@@ -33,7 +33,7 @@
   "lat": 39.744,
   "lon": -105.02,
   "data_through": "Week 11",
-  "td_note": "Market = the best anytime TD price found across BetMGM, Caesars, FanDuel, DraftKings, bet365 and Fanatics (Action Network odds comparison, Sat Nov 21; prediction-market prices are not used). Receiving and rushing yardage lines are Friday quotes. Confirm the price in your own book first: a call only holds at the price shown or longer."
+  "td_note": "Market = the best anytime TD price found across BetMGM, Caesars, FanDuel, DraftKings, bet365 and Fanatics (Action Network odds comparison, Sat Nov 21 early afternoon; prediction-market prices are not used). Receiving and rushing yardage lines are Friday quotes. Confirm the price in your own book first: a call only holds at the price shown or longer."
  },
  "market": {
   "spread_home": -10.5,
@@ -456,6 +456,7 @@
    "LV": "Fernando Mendoza has 37 pass attempts for the Raiders this season, so their numbers are low confidence."
   },
   "notes": [
+   "Raiders rookie QB Fernando Mendoza makes his second start; he is flagged low confidence with few attempts so far. Bowers was limited all week (ankle, quad) and is a true game-time call.",
    "Raiders TE Brock Bowers is questionable and simulated as playing; every book still prices his touchdown."
   ]
  },
@@ -479,6 +480,14 @@
   {
    "label": "Game-time forecasts (precipitation and wind at kickoff), Action Network NFL weather, Sat Nov 21",
    "url": "https://www.actionnetwork.com/nfl/weather"
+  },
+  {
+   "label": "Raiders.com: Week 11 injury report, Bowers questionable (Fri Nov 20)",
+   "url": "https://www.raiders.com/news/raiders-broncos-week-11-injury-report"
+  },
+  {
+   "label": "Fox 5 Vegas: Mendoza's first start vs Seattle (Nov 16)",
+   "url": "https://www.fox5vegas.com/2026/11/16/live-fernando-mendoza-shows-promise-growing-pains-raiders-lose-seahawks-his-first-start/"
   }
  ]
 }

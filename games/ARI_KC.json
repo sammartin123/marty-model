@@ -9,13 +9,14 @@
  "neutral": false,
  "qb": {
   "KC": "00-0033873",
-  "ARI": "00-0041561"
+  "ARI": "00-0030322"
  },
  "out": [
-  "00-0038134"
+  "00-0038134",
+  "00-0041561"
  ],
  "status": {
-  "00-0041561": "Questionable",
+  "00-0041561": "Out",
   "00-0038134": "Out"
  },
  "out_json": "out/ARI_KC.json",
@@ -33,7 +34,7 @@
   "lat": 39.049,
   "lon": -94.484,
   "data_through": "Week 11",
-  "td_note": "Market = the best anytime TD price found across BetMGM, Caesars, FanDuel, DraftKings, bet365 and Fanatics (Action Network odds comparison, Sat Nov 21; prediction-market prices are not used). Receiving and rushing yardage lines are Friday quotes. Confirm the price in your own book first: a call only holds at the price shown or longer."
+  "td_note": "Market = the best anytime TD price found across BetMGM, Caesars, FanDuel, DraftKings, bet365 and Fanatics (Action Network odds comparison, Sat Nov 21 early afternoon; prediction-market prices are not used). Receiving and rushing yardage lines are Friday quotes. Confirm the price in your own book first: a call only holds at the price shown or longer."
  },
  "market": {
   "spread_home": -16.5,
@@ -242,16 +243,6 @@
     ]
    ]
   },
-  "Nathan Carter": {
-   "price": 525,
-   "book": "BetMGM",
-   "all": [
-    [
-     "BetMGM",
-     525
-    ]
-   ]
-  },
   "Josh Downs": {
    "price": 240,
    "book": "DraftKings",
@@ -398,34 +389,35 @@
     ]
    ]
   },
-  "Carson Beck": {
-   "price": 1100,
-   "book": "DraftKings",
+  "Nate Carter": {
+   "price": 525,
+   "book": "BetMGM",
    "all": [
     [
-     "DraftKings",
-     1100
+     "BetMGM",
+     525
     ]
    ]
   }
  },
  "yard_lines": {},
  "injuries": [
-  "ARI Carson Beck (QB): Questionable, Back",
-  "KC Kenneth Walker III (RB): Out, Groin"
+  "KC Kenneth Walker III (RB): Out, Groin",
+  "ARI Carson Beck: Out (late change, from news reports)"
  ],
  "inputs": {
   "qbs": {
    "KC": "Patrick Mahomes",
-   "ARI": "Carson Beck"
+   "ARI": "Josh Johnson"
   },
   "report_final": true,
   "low_conf": {
-   "ARI": "Carson Beck has 18 pass attempts for the Cardinals this season, so their numbers are low confidence."
+   "ARI": "Josh Johnson, 40, starts after Carson Beck was ruled out Saturday with back spasms; he has thrown no passes for Arizona, so the Cardinals' numbers are low confidence."
   },
   "notes": [
-   "Chiefs RB Kenneth Walker III (groin) is out on the final report, so Emmett Johnson starts again.",
-   "Cardinals QB Carson Beck is questionable but expected to make his second start; he is flagged low confidence with so few attempts for the team."
+   "Cardinals QB Carson Beck (back) was downgraded to out on Saturday, so 40-year-old Josh Johnson starts; Arizona's numbers are low confidence and its calls are held.",
+   "Chiefs RB Kenneth Walker III (groin) is out, so Emmett Johnson starts again; RB Nate Carter was elevated from the practice squad for a second straight week.",
+   "The Saturday lines and TD prices may have been posted before Beck was ruled out: check that the price still holds."
   ]
  },
  "sources": [
@@ -448,6 +440,20 @@
   {
    "label": "Game-time forecasts (precipitation and wind at kickoff), Action Network NFL weather, Sat Nov 21",
    "url": "https://www.actionnetwork.com/nfl/weather"
+  },
+  {
+   "label": "Arizona Cardinals: Josh Johnson start confirmed after Carson Beck downgraded (Sat Nov 21)",
+   "url": "https://www.azcardinals.com/news/josh-johnson-start-confirmed-after-carson-beck-downgraded"
+  },
+  {
+   "label": "A to Z Sports: Chiefs Week 11 practice squad elevations, Nate Carter and Pete Nygra (Sat Nov 21)",
+   "url": "https://atozsports.com/nfl/kansas-city-chiefs-news/chiefs-week-11-practice-squad-elevations-nate-carter-pete-nygra-depth-injuries/"
   }
+ ],
+ "add": [
+  [
+   "00-0040547",
+   "KC"
+  ]
  ]
 }

@@ -16,15 +16,15 @@ def imp(o):
 def payout(price):
     return price / 100 if price > 0 else 100 / -price
 
-def kickoff_utc(season, away, home):
+def kickoff_utc(season, away, home, kick_et=None):
     g = pd.read_csv(os.path.join(ROOT, 'data', 'games.csv'))
     r = g[(g.season == season) & (g.away_team == away) & (g.home_team == home)].sort_values('gameday').iloc[-1]
-    t = dt.datetime.strptime(f"{r.gameday} {r.gametime}", '%Y-%m-%d %H:%M').replace(tzinfo=ZoneInfo('America/New_York'))
+    t = dt.datetime.strptime(f"{r.gameday} {kick_et or r.gametime}", '%Y-%m-%d %H:%M').replace(tzinfo=ZoneInfo('America/New_York'))
     return r.game_id, t.astimezone(dt.timezone.utc)
 
 def log_game(G, o):
     """Snapshot this game's calls. Skipped once the game has kicked off, so the last pre-game run is what gets graded."""
-    gid, ko = kickoff_utc(G['season'], G['away'], G['home'])
+    gid, ko = kickoff_utc(G['season'], G['away'], G['home'], G.get('meta', {}).get('kickoff_et'))
     if dt.datetime.now(dt.timezone.utc) >= ko:
         return
     I = o.get('inputs', {})

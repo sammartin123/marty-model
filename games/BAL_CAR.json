@@ -11,11 +11,13 @@
   "CAR": "00-0039150",
   "BAL": "00-0033119"
  },
- "out": [],
+ "out": [
+  "00-0039344"
+ ],
  "status": {
   "00-0031610": "Questionable",
   "00-0037005": "Questionable",
-  "00-0039344": "Questionable"
+  "00-0039344": "Out"
  },
  "out_json": "out/BAL_CAR.json",
  "meta": {
@@ -32,7 +34,7 @@
   "lat": 35.226,
   "lon": -80.853,
   "data_through": "Week 11",
-  "td_note": "Market = the best anytime TD price found across BetMGM, Caesars, FanDuel, DraftKings, bet365 and Fanatics (Action Network odds comparison, Sat Nov 21; prediction-market prices are not used). Receiving and rushing yardage lines are Friday quotes. Confirm the price in your own book first: a call only holds at the price shown or longer."
+  "td_note": "Market = the best anytime TD price found across BetMGM, Caesars, FanDuel, DraftKings, bet365 and Fanatics (Action Network odds comparison, Sat Nov 21 early afternoon; prediction-market prices are not used). Receiving and rushing yardage lines are Friday quotes. Confirm the price in your own book first: a call only holds at the price shown or longer."
  },
  "market": {
   "spread_home": -2.5,
@@ -79,7 +81,7 @@
  "injuries": [
   "CAR Darren Waller (TE): Questionable, Knee",
   "CAR Tommy Tremble (TE): Questionable, Knee",
-  "CAR Jonathon Brooks (RB): Questionable, Groin"
+  "CAR Jonathon Brooks: Out (late change, from news reports)"
  ],
  "inputs": {
   "qbs": {
@@ -92,7 +94,8 @@
   },
   "notes": [
    "Ravens QB Jacoby Brissett, acquired from Arizona, is flagged low confidence: few attempts for Baltimore so far.",
-   "No anytime TD board was posted for this game on Saturday, so there are no TD calls here."
+   "No anytime TD board was posted for this game on Saturday, so there are no TD calls here.",
+   "Panthers RB Jonathon Brooks (groin) was downgraded to out and stays on injured reserve."
   ]
  },
  "sources": [
@@ -115,6 +118,10 @@
   {
    "label": "Game-time forecasts (precipitation and wind at kickoff), Action Network NFL weather, Sat Nov 21",
    "url": "https://www.actionnetwork.com/nfl/weather"
+  },
+  {
+   "label": "RotoWire: Jonathon Brooks downgraded to out, staying on IR for Week 11 (Sat Nov 21)",
+   "url": "https://www.rotowire.com/football/headlines/jonathon-brooks-injury-staying-on-ir-for-week-11-648981"
   }
  ]
 }

@@ -6,7 +6,7 @@
  "home": "BUF",
  "kickoff_utc": "2026-11-22T18:00:00+00:00",
  "book": "bet365 (Sat Nov 21, via Action Network)",
- "logged_utc": "2026-11-21T18:12+00:00",
+ "logged_utc": "2026-11-21T22:14+00:00",
  "entries": [
   {
    "kind": "td",
@@ -15,9 +15,9 @@
    "team": "BUF",
    "price": 175,
    "book": "FanDuel",
-   "sim": 0.3412,
+   "sim": 0.3408,
    "mkt": 0.3636,
-   "p_call": 0.3547,
+   "p_call": 0.3545,
    "call": "pass",
    "live": false,
    "gate": null
@@ -29,7 +29,7 @@
    "team": "BUF",
    "price": -160,
    "book": "BetMGM",
-   "sim": 0.4008,
+   "sim": 0.4009,
    "mkt": 0.6154,
    "p_call": 0.5296,
    "call": "pass",
@@ -60,9 +60,9 @@
    "team": "BUF",
    "price": 550,
    "book": "DraftKings",
-   "sim": 0.2124,
+   "sim": 0.2126,
    "mkt": 0.1538,
-   "p_call": 0.1772,
+   "p_call": 0.1774,
    "call": "lean",
    "live": true,
    "gate": null
@@ -74,9 +74,9 @@
    "team": "BUF",
    "price": 310,
    "book": "FanDuel",
-   "sim": 0.2014,
+   "sim": 0.2017,
    "mkt": 0.2439,
-   "p_call": 0.2269,
+   "p_call": 0.227,
    "call": "pass",
    "live": false,
    "gate": null
@@ -88,9 +88,9 @@
    "team": "BUF",
    "price": -190,
    "book": "BetMGM",
-   "sim": 0.6504,
+   "sim": 0.6515,
    "mkt": 0.6552,
-   "p_call": 0.6533,
+   "p_call": 0.6537,
    "call": "pass",
    "live": false,
    "gate": null
@@ -105,9 +105,9 @@
    "side": "over",
    "price": -115,
    "book": "bet365",
-   "sim": 0.532,
+   "sim": 0.5338,
    "mkt": 0.5,
-   "p_call": 0.5128,
+   "p_call": 0.5135,
    "call": "pass",
    "live": false,
    "gate": null
@@ -119,9 +119,9 @@
    "team": "BUF",
    "price": 240,
    "book": "BetMGM",
-   "sim": 0.2685,
+   "sim": 0.2673,
    "mkt": 0.2941,
-   "p_call": 0.2839,
+   "p_call": 0.2834,
    "call": "pass",
    "live": false,
    "gate": null
@@ -133,9 +133,9 @@
    "team": "BUF",
    "price": 275,
    "book": "BetMGM",
-   "sim": 0.2748,
+   "sim": 0.2743,
    "mkt": 0.2667,
-   "p_call": 0.2699,
+   "p_call": 0.2697,
    "call": "pass",
    "live": false,
    "gate": null
@@ -147,9 +147,9 @@
    "team": "BUF",
    "price": 850,
    "book": "DraftKings",
-   "sim": 0.0456,
+   "sim": 0.0451,
    "mkt": 0.1053,
-   "p_call": 0.0814,
+   "p_call": 0.0812,
    "call": "pass",
    "live": false,
    "gate": null
@@ -161,9 +161,9 @@
    "team": "MIA",
    "price": 575,
    "book": "Fanatics",
-   "sim": 0.0862,
+   "sim": 0.0856,
    "mkt": 0.1481,
-   "p_call": 0.1234,
+   "p_call": 0.1231,
    "call": "pass",
    "live": false,
    "gate": "QB unclear"
@@ -175,9 +175,9 @@
    "team": "MIA",
    "price": 475,
    "book": "Fanatics",
-   "sim": 0.157,
+   "sim": 0.1539,
    "mkt": 0.1739,
-   "p_call": 0.1671,
+   "p_call": 0.1659,
    "call": "pass",
    "live": false,
    "gate": "QB unclear"
@@ -189,9 +189,9 @@
    "team": "MIA",
    "price": 125,
    "book": "BetMGM",
-   "sim": 0.3061,
+   "sim": 0.3059,
    "mkt": 0.4444,
-   "p_call": 0.3891,
+   "p_call": 0.389,
    "call": "fade",
    "live": false,
    "gate": "QB unclear"
@@ -206,9 +206,9 @@
    "side": "under",
    "price": -115,
    "book": "bet365",
-   "sim": 0.6013,
+   "sim": 0.5983,
    "mkt": 0.5,
-   "p_call": 0.5405,
+   "p_call": 0.5393,
    "call": "pass",
    "live": false,
    "gate": "QB unclear"
@@ -240,7 +240,7 @@
    "gate": "QB unclear",
    "team": "BUF",
    "price": -1400,
-   "sim": 0.9282
+   "sim": 0.9281
   }
  ]
 }

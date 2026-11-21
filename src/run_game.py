@@ -36,7 +36,8 @@ def run(G, db=None, quiet=False, record=True):
     out_ids = set(G.get('out', []))
     tabs, vols = [], []
     for team, opp in [(home, away), (away, home)]:
-        ids = set(ros[ros.team == team].gsis_id) - out_ids
+        # players activated from IR or elevated from the practice squad after the weekly roster file (slate 'add_names')
+        ids = (set(ros[ros.team == team].gsis_id) | {pid for pid, tm in G.get('add', []) if tm == team}) - out_ids
         t = M.player_table(db, team, opp, asof, ids, qb_id=G['qb'][team], cfg=cfg)
         tabs.append(t); vols.append(M.team_volume(db, team, asof))
 

@@ -1,0 +1,204 @@
+{
+ "home": "WAS",
+ "away": "CIN",
+ "season": 2026,
+ "week": 11,
+ "asof": "2026-11-23",
+ "n_sims": 100000,
+ "seed": 20261123,
+ "neutral": false,
+ "qb": {
+  "WAS": "00-0039910",
+  "CIN": "00-0036442"
+ },
+ "out": [
+  "00-0038619"
+ ],
+ "status": {
+  "00-0038619": "Doubtful",
+  "00-0037256": "Questionable",
+  "00-0040242": "Questionable"
+ },
+ "out_json": "out/CIN_WAS.json",
+ "meta": {
+  "title": "Bengals at Commanders",
+  "home_name": "Commanders",
+  "away_name": "Bengals",
+  "home_city": "Washington",
+  "away_city": "Cincinnati",
+  "kickoff": "Mon Nov 23, 2026 \u00b7 8:15 PM ET",
+  "time": "8:15 PM",
+  "venue": "Northwest Stadium, Washington",
+  "generated": "Mon Nov 23, 2026",
+  "roof": "outdoors",
+  "lat": 38.908,
+  "lon": -76.864,
+  "data_through": "Week 11",
+  "td_note": "Market = the best anytime TD price found from a named book (FanDuel, BetMGM, DraftKings via TheLines and Action Network, Mon Nov 23). Only six players had a confirmed price. No yardage lines with a named book were found. Confirm the price in your own book first: a call only holds at the price shown or longer."
+ },
+ "market": {
+  "spread_home": 6.0,
+  "total": 54.5,
+  "ml_home": 245,
+  "ml_away": -302,
+  "book": "DraftKings (Mon Nov 23, via NBC Sports)",
+  "others": [
+   {
+    "book": "Circa Sports (Sun Nov 22, via VSiN)",
+    "spread_home": 6.0,
+    "total": 55.0,
+    "ml_home": 240,
+    "ml_away": -285
+   }
+  ]
+ },
+ "weather": {
+  "summary": "Dry, mild",
+  "precip": 15,
+  "wind": "NW 9 mph",
+  "rain_flag": false,
+  "note": "Landover (Northwest Stadium, outdoors), hourly: 56F with NW winds around 9 mph and a 15% chance of light rain at 8 PM, falling to 52F and 2% by 10 PM. The National Weather Service has gusts up to 22 mph overnight.",
+  "effect": "No weather adjustment: wind stays under 15 mph and the rain chance is well under 30%."
+ },
+ "wx_model": {
+  "pass_mult": 1.0,
+  "cr_mult": 1.0,
+  "td_shift": 0.0,
+  "fg_shift": 0.0
+ },
+ "td_odds": {
+  "Ja'Marr Chase": {
+   "price": -160,
+   "book": "FanDuel",
+   "all": [
+    [
+     "FanDuel",
+     -160
+    ]
+   ]
+  },
+  "Chase Brown": {
+   "price": -130,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     -130
+    ]
+   ]
+  },
+  "Stefon Diggs": {
+   "price": 180,
+   "book": "FanDuel",
+   "all": [
+    [
+     "FanDuel",
+     180
+    ]
+   ]
+  },
+  "Jayden Daniels": {
+   "price": 270,
+   "book": "FanDuel",
+   "all": [
+    [
+     "FanDuel",
+     270
+    ],
+    [
+     "BetMGM",
+     220
+    ]
+   ]
+  },
+  "Treylon Burks": {
+   "price": 325,
+   "book": "FanDuel",
+   "all": [
+    [
+     "FanDuel",
+     325
+    ]
+   ]
+  },
+  "Dohnte Meyers": {
+   "price": 400,
+   "book": "DraftKings",
+   "all": [
+    [
+     "DraftKings",
+     400
+    ]
+   ]
+  }
+ },
+ "yard_lines": {},
+ "injuries": [
+  "CIN Andrei Iosivas (WR): Doubtful, Thumb",
+  "WAS Rachaad White (RB): Questionable, Heel",
+  "WAS Jacory Croskey-Merritt (RB): Questionable, Groin",
+  "WAS Terry McLaurin (WR): on injured reserve",
+  "WAS Jacory Croskey-Merritt (RB): Questionable, on IR and expected to be activated before kickoff"
+ ],
+ "inputs": {
+  "qbs": {
+   "WAS": "Jayden Daniels",
+   "CIN": "Joe Burrow"
+  },
+  "report_final": true,
+  "low_conf": {},
+  "notes": [
+   "Commanders WR Terry McLaurin is on injured reserve and Bengals WR Andrei Iosivas (thumb, IR) is doubtful, so both are left out.",
+   "Commanders RB Jacory Croskey-Merritt (groin) is questionable and expected to be activated from IR before kickoff after four games out; Rachaad White (heel) is questionable after missing Saturday's practice. Both are simulated as playing, but neither gets a call. If White sits, Austin Ekeler gets more carries.",
+   "Joe Burrow (illness) and Jayden Daniels (elbow) practised fully and carry no designation."
+  ]
+ },
+ "sources": [
+  {
+   "label": "Play-by-play, rosters, depth charts, injuries, schedule (nflverse)",
+   "url": "https://github.com/nflverse/nflverse-data"
+  },
+  {
+   "label": "Spread, total, moneyline (DraftKings), NBC Sports, Mon Nov 23 1:30 PM",
+   "url": "https://www.nbcsports.com/betting/nfl/news/bengals-vs-commanders-odds-expert-picks-team-and-player-news-betting-trends-and-stats"
+  },
+  {
+   "label": "Circa Sports line, VSiN, Sun Nov 22",
+   "url": "https://vsin.com/nfl/bengals-vs-commanders-predictions-week-11-monday-night-football-odds-picks-and-player-props/"
+  },
+  {
+   "label": "Anytime TD prices (FanDuel, BetMGM), TheLines, Mon Nov 23",
+   "url": "https://www.thelines.com/nfl/player-props/anytime-touchdown-scorer-today-5-bengals-commanders-mnf-picks/"
+  },
+  {
+   "label": "Anytime TD prices (FanDuel, DraftKings), Action Network via Yahoo, Mon Nov 23",
+   "url": "https://sports.yahoo.com/articles/bengals-vs-commanders-anytime-touchdown-121658179.html"
+  },
+  {
+   "label": "Bengals.com Week 11 injury report (Sat Nov 21)",
+   "url": "https://www.bengals.com/news/bengals-commanders-week-11-2026-injury-report-monday-night-football"
+  },
+  {
+   "label": "Commanders On SI final injury report (Sat Nov 21)",
+   "url": "https://www.si.com/nfl/commanders/onsi/commanders-bengals-final-injury-report-week-11"
+  },
+  {
+   "label": "RotoWire: Croskey-Merritt expected to be activated Monday (Mon Nov 23)",
+   "url": "https://www.rotowire.com/football/headlines/jacory-croskey-merritt-injury-expected-to-return-monday-648990"
+  },
+  {
+   "label": "Hourly kickoff forecast, DK Network, Mon Nov 23",
+   "url": "https://dknetwork.draftkings.com/2026/11/23/bengals-vs-commanders-weather-forecast-mnf/"
+  },
+  {
+   "label": "National Weather Service point forecast, Landover MD",
+   "url": "https://forecast.weather.gov/MapClick.php?lat=38.9313&lon=-76.9064&lg=english&FcstType=text"
+  }
+ ],
+ "add": [
+  [
+   "00-0040242",
+   "WAS"
+  ]
+ ]
+}

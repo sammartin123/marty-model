@@ -16,7 +16,7 @@
   "00-0040737"
  ],
  "status": {
-  "00-0035700": "Questionable",
+  "00-0035700": "Out",
   "00-0037091": "Questionable",
   "00-0038090": "Questionable",
   "00-0040737": "Out"
@@ -36,7 +36,7 @@
   "lat": 33.953,
   "lon": -118.339,
   "data_through": "Week 11",
-  "td_note": "Market = the best anytime TD price found from a named book (BetMGM, Fanatics, FanDuel; Nov 24 to 25). No Josh Jacobs price was posted. Yardage lines are BetMGM (Nov 24). Confirm the price in your own book first: a call only holds at the price shown or longer."
+  "td_note": "Market = the best anytime TD price found from a named book (mostly BetMGM, Nov 24 to 25; prediction-market prices are not used). Yardage lines are BetMGM quotes from Nov 24. Confirm the price in your own book first: a call only holds at the price shown or longer."
  },
  "market": {
   "spread_home": -2.5,
@@ -317,11 +317,10 @@
   ]
  },
  "injuries": [
-  "GB Josh Jacobs (RB): Questionable, Finger; Matt LaFleur called him unlikely to play, so he is simulated as out",
   "GB Bo Melton (WR): Questionable, Thigh",
   "GB Skyy Moore (WR): Questionable, Ankle",
   "LA Terrance Ferguson (TE): Out, Ankle",
-  "LA Puka Nacua (WR) and Davante Adams (WR): on injured reserve"
+  "GB Josh Jacobs: Out (late change, from news reports)"
  ],
  "inputs": {
   "qbs": {
@@ -330,12 +329,12 @@
   },
   "report_final": true,
   "low_conf": {},
+  "hold_lines": "The model's Rams rating is built mostly from games with Puka Nacua and Davante Adams, who are both on injured reserve, so its 70% for the Rams (book 56%) overstates them; game-line calls are held and player props stay live.",
   "notes": [
    "Packers RB Josh Jacobs (finger) is questionable after limited practices all week; Matt LaFleur said he remains unlikely to play and books are not pricing his touchdown, so he is simulated as out with Kaleb Johnson leading the backfield. If Jacobs is active at the 6:30 PM ET inactives, the Packers running back calls do not hold.",
    "Rams WRs Puka Nacua and Davante Adams are both on injured reserve, so the Rams' targets spread across Konata Mumpfield, Tutu Atwell and the tight ends. TE Terrance Ferguson is out.",
    "Stafford (elbow) and Kyren Williams (toe) practised fully and carry no designation. Packers WRs Bo Melton and Skyy Moore are questionable."
-  ],
-  "hold_lines": "The model's Rams rating is built mostly from games with Puka Nacua and Davante Adams, who are both on injured reserve, so its 70% for the Rams (book 56%) overstates them; game-line calls are held and player props stay live."
+  ]
  },
  "sources": [
   {

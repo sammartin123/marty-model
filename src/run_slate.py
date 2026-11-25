@@ -58,6 +58,8 @@ def main(path):
             G['qb'][team] = pid_of(nm, team); G['inputs']['qbs'][team] = nm
             G['inputs']['low_conf'].pop(team, None)
         G['inputs']['low_conf'].update(ov.get('low_conf', {}))
+        if ov.get('hold_lines'):   # game lines held for a stated reason the data cannot see yet (player props stay live)
+            G['inputs']['hold_lines'] = ov['hold_lines']
         G['inputs']['notes'] = ov.get('notes', [])
         G['out'] = sorted(set(G['out']) | set(ov.get('out', [])))
         G['meta'].setdefault('td_note', S.get('td_note', ''))

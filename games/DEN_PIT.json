@@ -1,0 +1,351 @@
+{
+ "home": "PIT",
+ "away": "DEN",
+ "season": 2026,
+ "week": 12,
+ "asof": "2026-11-27",
+ "n_sims": 100000,
+ "seed": 20261127,
+ "neutral": false,
+ "qb": {
+  "PIT": "00-0034771",
+  "DEN": "00-0039732"
+ },
+ "out": [],
+ "status": {},
+ "out_json": "out/DEN_PIT.json",
+ "meta": {
+  "title": "Broncos at Steelers",
+  "home_name": "Steelers",
+  "away_name": "Broncos",
+  "home_city": "Pittsburgh",
+  "away_city": "Denver",
+  "kickoff": "Fri Nov 27, 2026 \u00b7 3:00 PM ET",
+  "time": "3:00 PM",
+  "venue": "Acrisure Stadium, Pittsburgh",
+  "generated": "Wed Nov 25, 2026",
+  "roof": "outdoors",
+  "lat": 40.447,
+  "lon": -80.016,
+  "data_through": "Week 11",
+  "td_note": "Market = the best anytime TD price found from a named book (mostly BetMGM, Nov 24 to 25; prediction-market prices are not used). Yardage lines are BetMGM quotes from Nov 24. Confirm the price in your own book first: a call only holds at the price shown or longer."
+ },
+ "market": {
+  "spread_home": 2.5,
+  "total": 40.0,
+  "ml_home": 130,
+  "ml_away": -155,
+  "book": "BetMGM (Tue Nov 24)",
+  "others": []
+ },
+ "weather": {
+  "summary": "Rain likely",
+  "precip": 62,
+  "wind": null,
+  "rain_flag": true,
+  "note": "Pittsburgh (Acrisure Stadium, outdoors): daily forecast only (AccuWeather, seen Tuesday): high 43F, low 38F, occasional rain and drizzle, maybe a little snow, 62%. No hourly kickoff forecast or wind was found.",
+  "effect": "Real rain risk: steer away from receiving-yard overs, especially secondary targets, and toward rushing volume, receptions or unders. The sim trims passing and scoring by the measured rain effect weighted by the chance of rain."
+ },
+ "wx_model": {
+  "pass_mult": 0.963,
+  "cr_mult": 0.901,
+  "td_shift": -0.248,
+  "fg_shift": -0.155
+ },
+ "td_odds": {
+  "Jonah Coleman": {
+   "price": -130,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     -130
+    ]
+   ]
+  },
+  "Jaylen Warren": {
+   "price": 140,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     140
+    ]
+   ]
+  },
+  "Jaylen Waddle": {
+   "price": 270,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     270
+    ]
+   ]
+  },
+  "Rico Dowdle": {
+   "price": 310,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     310
+    ]
+   ]
+  },
+  "DK Metcalf": {
+   "price": 400,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     400
+    ]
+   ]
+  },
+  "Courtland Sutton": {
+   "price": 450,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     450
+    ]
+   ]
+  },
+  "Pat Bryant": {
+   "price": 475,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     475
+    ]
+   ]
+  },
+  "Evan Engram": {
+   "price": 500,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     500
+    ]
+   ]
+  },
+  "Bo Nix": {
+   "price": 525,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     525
+    ]
+   ]
+  },
+  "Pat Freiermuth": {
+   "price": 525,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     525
+    ]
+   ]
+  },
+  "Darnell Washington": {
+   "price": 525,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     525
+    ]
+   ]
+  },
+  "Marvin Mims Jr.": {
+   "price": 650,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     650
+    ]
+   ]
+  },
+  "Roman Wilson": {
+   "price": 650,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     650
+    ]
+   ]
+  },
+  "Mason Rudolph": {
+   "price": 950,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     950
+    ]
+   ]
+  },
+  "Troy Franklin": {
+   "price": 1050,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     1050
+    ]
+   ]
+  },
+  "Adam Trautman": {
+   "price": 1200,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     1200
+    ]
+   ]
+  }
+ },
+ "yard_lines": {
+  "Jaylen Waddle": [
+   {
+    "stat": "rec",
+    "line": 46.5,
+    "over": -115,
+    "under": -115,
+    "book": "BetMGM"
+   }
+  ],
+  "DK Metcalf": [
+   {
+    "stat": "rec",
+    "line": 35.5,
+    "over": -115,
+    "under": -115,
+    "book": "BetMGM"
+   }
+  ],
+  "Courtland Sutton": [
+   {
+    "stat": "rec",
+    "line": 30.5,
+    "over": -120,
+    "under": -111,
+    "book": "BetMGM"
+   }
+  ],
+  "Pat Bryant": [
+   {
+    "stat": "rec",
+    "line": 26.5,
+    "over": -115,
+    "under": -115,
+    "book": "BetMGM"
+   }
+  ],
+  "Germie Bernard": [
+   {
+    "stat": "rec",
+    "line": 25.5,
+    "over": -110,
+    "under": -120,
+    "book": "BetMGM"
+   }
+  ],
+  "Jonah Coleman": [
+   {
+    "stat": "rush",
+    "line": 68.5,
+    "over": -115,
+    "under": -115,
+    "book": "BetMGM"
+   }
+  ],
+  "Jaylen Warren": [
+   {
+    "stat": "rush",
+    "line": 57.5,
+    "over": -115,
+    "under": -115,
+    "book": "BetMGM"
+   }
+  ],
+  "Rico Dowdle": [
+   {
+    "stat": "rush",
+    "line": 27.5,
+    "over": -115,
+    "under": -115,
+    "book": "BetMGM"
+   }
+  ],
+  "Bo Nix": [
+   {
+    "stat": "rush",
+    "line": 10.5,
+    "over": -125,
+    "under": -105,
+    "book": "BetMGM"
+   }
+  ],
+  "J.K. Dobbins": [
+   {
+    "stat": "rush",
+    "line": 6.5,
+    "over": -125,
+    "under": -105,
+    "book": "BetMGM"
+   }
+  ]
+ },
+ "injuries": [],
+ "inputs": {
+  "qbs": {
+   "PIT": "Mason Rudolph",
+   "DEN": "Bo Nix"
+  },
+  "report_final": false,
+  "low_conf": {
+   "PIT": "Mason Rudolph starts after Aaron Rodgers was benched; he has 4 pass attempts for the Steelers this season, so their numbers are low confidence."
+  },
+  "notes": [
+   "The Steelers benched Aaron Rodgers late Tuesday: Mason Rudolph starts and Rodgers is inactive.",
+   "The official game statuses come out Wednesday evening, so every call here waits for them.",
+   "The model's total (33) is 7 under the book's 40 and it gives Pittsburgh 24% against the book's 42%: that comes from Rudolph's thin record and a 62% rain chance, so the game lines and the Steelers' player calls are held."
+  ]
+ },
+ "sources": [
+  {
+   "label": "Play-by-play, rosters, depth charts, injuries, schedule (nflverse)",
+   "url": "https://github.com/nflverse/nflverse-data"
+  },
+  {
+   "label": "Anytime TD odds (BetMGM), Nov 25",
+   "url": "https://sports.betmgm.com/en/blog/nfl/broncos-steelers-first-anytime-td-odds-picks-week-12-gaa/"
+  },
+  {
+   "label": "Lines and player props (BetMGM), Nov 24",
+   "url": "https://sports.betmgm.com/en/blog/nfl/broncos-steelers-prediction-odds-player-prop-bets-picks-week-12-jaa/"
+  },
+  {
+   "label": "NFL.com: Rodgers inactive Friday, Rudolph to start",
+   "url": "https://www.nfl.com/news/aaron-rodgers-will-be-inactive-for-steelers-friday-vs-broncos-mason-rudolph-to-start"
+  },
+  {
+   "label": "PFT: Steelers bench Rodgers for Rudolph (Nov 24)",
+   "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steelers-bench-aaron-rodgers-for-mason-rudolph"
+  },
+  {
+   "label": "AccuWeather, Acrisure Stadium 10-day forecast",
+   "url": "https://www.accuweather.com/en/us/acrisure-stadium/15212/weather-forecast/53633_poi"
+  }
+ ]
+}

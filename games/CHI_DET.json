@@ -1,0 +1,355 @@
+{
+ "home": "DET",
+ "away": "CHI",
+ "season": 2026,
+ "week": 12,
+ "asof": "2026-11-26",
+ "n_sims": 100000,
+ "seed": 20261126,
+ "neutral": false,
+ "qb": {
+  "DET": "00-0033106",
+  "CHI": "00-0039918"
+ },
+ "out": [],
+ "status": {},
+ "out_json": "out/CHI_DET.json",
+ "meta": {
+  "title": "Bears at Lions",
+  "home_name": "Lions",
+  "away_name": "Bears",
+  "home_city": "Detroit",
+  "away_city": "Chicago",
+  "kickoff": "Thu Nov 26, 2026 \u00b7 1:00 PM ET",
+  "time": "1:00 PM",
+  "venue": "Ford Field, Detroit",
+  "generated": "Wed Nov 25, 2026",
+  "roof": "dome",
+  "lat": 42.34,
+  "lon": -83.046,
+  "data_through": "Week 11",
+  "td_note": "Market = the best anytime TD price found from a named book (mostly BetMGM, Nov 24 to 25; prediction-market prices are not used). Yardage lines are BetMGM quotes from Nov 24. Confirm the price in your own book first: a call only holds at the price shown or longer."
+ },
+ "market": {
+  "spread_home": 2.5,
+  "total": 55.5,
+  "ml_home": 115,
+  "ml_away": -140,
+  "book": "BetMGM (Tue Nov 24)",
+  "others": [
+   {
+    "book": "FanDuel (Mon Nov 23, via Fox Sports)",
+    "spread_home": 2.5,
+    "total": 55.5,
+    "ml_home": 126,
+    "ml_away": -149
+   }
+  ]
+ },
+ "weather": {
+  "summary": "Indoors",
+  "precip": null,
+  "wind": null,
+  "rain_flag": false,
+  "note": "Ford Field is a dome.",
+  "effect": "No weather adjustment."
+ },
+ "wx_model": {
+  "pass_mult": 1.0,
+  "cr_mult": 1.0,
+  "td_shift": 0.0,
+  "fg_shift": 0.0
+ },
+ "td_odds": {
+  "Jahmyr Gibbs": {
+   "price": -250,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     -250
+    ]
+   ]
+  },
+  "Amon-Ra St. Brown": {
+   "price": -135,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     -135
+    ]
+   ]
+  },
+  "D'Andre Swift": {
+   "price": -130,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     -130
+    ],
+    [
+     "BetMGM (later)",
+     -140
+    ]
+   ]
+  },
+  "Colston Loveland": {
+   "price": 140,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     140
+    ]
+   ]
+  },
+  "Luther Burden III": {
+   "price": 145,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     145
+    ]
+   ]
+  },
+  "Kyle Monangai": {
+   "price": 145,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     145
+    ]
+   ]
+  },
+  "Rome Odunze": {
+   "price": 175,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     175
+    ]
+   ]
+  },
+  "Jameson Williams": {
+   "price": 200,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     200
+    ]
+   ]
+  },
+  "Sam LaPorta": {
+   "price": 225,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     225
+    ]
+   ]
+  },
+  "Caleb Williams": {
+   "price": 310,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     310
+    ]
+   ]
+  },
+  "Kalif Raymond": {
+   "price": 360,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     360
+    ]
+   ]
+  },
+  "Isaac TeSlaa": {
+   "price": 475,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     475
+    ]
+   ]
+  },
+  "Jared Goff": {
+   "price": 1050,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     1050
+    ]
+   ]
+  },
+  "Brock Wright": {
+   "price": 1050,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     1050
+    ]
+   ]
+  },
+  "Tyler Conklin": {
+   "price": 1350,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     1350
+    ]
+   ]
+  },
+  "Jacob Saylors": {
+   "price": 1900,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     1900
+    ]
+   ]
+  }
+ },
+ "yard_lines": {
+  "Amon-Ra St. Brown": [
+   {
+    "stat": "rec",
+    "line": 87.5,
+    "over": -115,
+    "under": -115,
+    "book": "BetMGM"
+   }
+  ],
+  "Luther Burden III": [
+   {
+    "stat": "rec",
+    "line": 60.5,
+    "over": -115,
+    "under": -115,
+    "book": "BetMGM"
+   }
+  ],
+  "Jameson Williams": [
+   {
+    "stat": "rec",
+    "line": 57.5,
+    "over": -115,
+    "under": -115,
+    "book": "BetMGM"
+   }
+  ],
+  "Colston Loveland": [
+   {
+    "stat": "rec",
+    "line": 53.5,
+    "over": -115,
+    "under": -115,
+    "book": "BetMGM"
+   }
+  ],
+  "Rome Odunze": [
+   {
+    "stat": "rec",
+    "line": 49.5,
+    "over": -115,
+    "under": -115,
+    "book": "BetMGM"
+   }
+  ],
+  "Jahmyr Gibbs": [
+   {
+    "stat": "rush",
+    "line": 91.5,
+    "over": -115,
+    "under": -115,
+    "book": "BetMGM"
+   }
+  ],
+  "D'Andre Swift": [
+   {
+    "stat": "rush",
+    "line": 51.5,
+    "over": -115,
+    "under": -115,
+    "book": "BetMGM"
+   }
+  ],
+  "Kyle Monangai": [
+   {
+    "stat": "rush",
+    "line": 34.5,
+    "over": -120,
+    "under": -111,
+    "book": "BetMGM"
+   }
+  ],
+  "Caleb Williams": [
+   {
+    "stat": "rush",
+    "line": 20.5,
+    "over": -115,
+    "under": -115,
+    "book": "BetMGM"
+   }
+  ],
+  "Sione Vaki": [
+   {
+    "stat": "rush",
+    "line": 10.5,
+    "over": -115,
+    "under": -115,
+    "book": "BetMGM"
+   }
+  ]
+ },
+ "injuries": [],
+ "inputs": {
+  "qbs": {
+   "DET": "Jared Goff",
+   "CHI": "Caleb Williams"
+  },
+  "report_final": false,
+  "low_conf": {},
+  "notes": [
+   "Lions TE Sam LaPorta (ankle) was limited at Monday's walkthrough. The official game statuses come out Wednesday evening, so every call here waits for them."
+  ]
+ },
+ "sources": [
+  {
+   "label": "Play-by-play, rosters, depth charts, injuries, schedule (nflverse)",
+   "url": "https://github.com/nflverse/nflverse-data"
+  },
+  {
+   "label": "Anytime TD odds (BetMGM), Nov 24",
+   "url": "https://sports.betmgm.com/en/blog/nfl/bears-lions-first-anytime-td-odds-picks-week-12-gaa/"
+  },
+  {
+   "label": "Lines and player props (BetMGM), Nov 24",
+   "url": "https://sports.betmgm.com/en/blog/nfl/bears-lions-prediction-odds-player-prop-bets-picks-week-12-jaa/"
+  },
+  {
+   "label": "Thanksgiving lines (FanDuel), Fox Sports, Nov 23",
+   "url": "https://amp.foxsports.com/stories/nfl/2026-nfl-thanksgiving-odds-lines-spreads-what-know-all-4-games"
+  },
+  {
+   "label": "Fox Sports game page (LaPorta practice note)",
+   "url": "https://www.foxsports.com/nfl/week-12-chicago-bears-vs-detroit-lions-nov-26-2026-game-boxscore-11096?tab=odds"
+  }
+ ]
+}

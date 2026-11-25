@@ -1,0 +1,349 @@
+{
+ "home": "BUF",
+ "away": "KC",
+ "season": 2026,
+ "week": 12,
+ "asof": "2026-11-26",
+ "n_sims": 100000,
+ "seed": 20261126,
+ "neutral": false,
+ "qb": {
+  "BUF": "00-0034857",
+  "KC": "00-0033873"
+ },
+ "out": [],
+ "status": {},
+ "out_json": "out/KC_BUF.json",
+ "meta": {
+  "title": "Chiefs at Bills",
+  "home_name": "Bills",
+  "away_name": "Chiefs",
+  "home_city": "Buffalo",
+  "away_city": "Kansas City",
+  "kickoff": "Thu Nov 26, 2026 \u00b7 8:20 PM ET",
+  "time": "8:20 PM",
+  "venue": "Highmark Stadium, Buffalo",
+  "generated": "Wed Nov 25, 2026",
+  "roof": "outdoors",
+  "lat": 42.774,
+  "lon": -78.787,
+  "data_through": "Week 11",
+  "td_note": "Market = the best anytime TD price found from a named book (mostly BetMGM, Nov 24 to 25; prediction-market prices are not used). Yardage lines are BetMGM quotes from Nov 24. Confirm the price in your own book first: a call only holds at the price shown or longer."
+ },
+ "market": {
+  "spread_home": -3.0,
+  "total": 47.5,
+  "ml_home": -150,
+  "ml_away": 126,
+  "book": "DraftKings (Wed Nov 25, via ESPN)",
+  "others": [
+   {
+    "book": "BetMGM (Tue Nov 24)",
+    "spread_home": -2.5,
+    "total": 50.0,
+    "ml_home": -150,
+    "ml_away": 125
+   }
+  ]
+ },
+ "weather": {
+  "summary": "Rain and wind",
+  "precip": 85,
+  "wind": "ENE 15 to 25 mph",
+  "rain_flag": true,
+  "note": "Orchard Park (Highmark Stadium, outdoors), Thursday night forecast (daily night period; no hourly found): rain likely, 80 to 90% chance, low near 37F, ENE winds 15 to 25 mph with higher gusts (The Weather Channel and weather.com via Tuesday reports).",
+  "effect": "Rain and wind over 15 mph both apply: steer away from receiving-yard overs, especially secondary targets, toward rushing volume and unders. The sim applies the measured rain effect (weighted 85%) and the wind effect; the cold effect is left off because kickoff should sit right around 40F."
+ },
+ "wx_model": {
+  "pass_mult": 0.921,
+  "cr_mult": 0.812,
+  "td_shift": -0.46,
+  "fg_shift": -0.312
+ },
+ "td_odds": {
+  "Kenneth Walker III": {
+   "price": -165,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     -165
+    ]
+   ]
+  },
+  "Emmett Johnson": {
+   "price": -130,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     -130
+    ]
+   ]
+  },
+  "Josh Allen": {
+   "price": -125,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     -125
+    ]
+   ]
+  },
+  "James Cook": {
+   "price": -105,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     -105
+    ]
+   ]
+  },
+  "DJ Moore": {
+   "price": 190,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     190
+    ]
+   ]
+  },
+  "Travis Kelce": {
+   "price": 210,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     210
+    ]
+   ]
+  },
+  "Dalton Kincaid": {
+   "price": 230,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     230
+    ]
+   ]
+  },
+  "Rashee Rice": {
+   "price": 250,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     250
+    ]
+   ]
+  },
+  "Josh Downs": {
+   "price": 290,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     290
+    ]
+   ]
+  },
+  "Khalil Shakir": {
+   "price": 300,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     300
+    ]
+   ]
+  },
+  "Keon Coleman": {
+   "price": 390,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     390
+    ]
+   ]
+  },
+  "Xavier Worthy": {
+   "price": 425,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     425
+    ]
+   ]
+  },
+  "Patrick Mahomes": {
+   "price": 525,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     525
+    ]
+   ]
+  },
+  "Dawson Knox": {
+   "price": 525,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     525
+    ]
+   ]
+  },
+  "Noah Gray": {
+   "price": 700,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     700
+    ]
+   ]
+  },
+  "Cyrus Allen": {
+   "price": 700,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     700
+    ]
+   ]
+  },
+  "Jalen Royals": {
+   "price": 2000,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     2000
+    ]
+   ]
+  }
+ },
+ "yard_lines": {
+  "DJ Moore": [
+   {
+    "stat": "rec",
+    "line": 51.5,
+    "over": -115,
+    "under": -115,
+    "book": "BetMGM"
+   }
+  ],
+  "Rashee Rice": [
+   {
+    "stat": "rec",
+    "line": 46.5,
+    "over": -115,
+    "under": -115,
+    "book": "BetMGM"
+   }
+  ],
+  "Travis Kelce": [
+   {
+    "stat": "rec",
+    "line": 43.5,
+    "over": -115,
+    "under": -115,
+    "book": "BetMGM"
+   }
+  ],
+  "Josh Downs": [
+   {
+    "stat": "rec",
+    "line": 39.5,
+    "over": -125,
+    "under": -105,
+    "book": "BetMGM"
+   }
+  ],
+  "Khalil Shakir": [
+   {
+    "stat": "rec",
+    "line": 37.5,
+    "over": -115,
+    "under": -115,
+    "book": "BetMGM"
+   }
+  ],
+  "James Cook": [
+   {
+    "stat": "rush",
+    "line": 85.5,
+    "over": -115,
+    "under": -115,
+    "book": "BetMGM"
+   }
+  ],
+  "Josh Allen": [
+   {
+    "stat": "rush",
+    "line": 35.5,
+    "over": -115,
+    "under": -115,
+    "book": "BetMGM"
+   }
+  ],
+  "Ty Johnson": [
+   {
+    "stat": "rush",
+    "line": 1.5,
+    "over": -120,
+    "under": -110,
+    "book": "BetMGM"
+   }
+  ]
+ },
+ "injuries": [],
+ "inputs": {
+  "qbs": {
+   "BUF": "Josh Allen",
+   "KC": "Patrick Mahomes"
+  },
+  "report_final": false,
+  "low_conf": {},
+  "notes": [
+   "Chiefs RB Kenneth Walker III (groin) is listed questionable on ESPN; Emmett Johnson leads if he sits. The official game statuses come out Wednesday evening, so every call here waits for them.",
+   "The total has dropped from 50 to 47.5 at DraftKings on the weather forecast. The yardage lines are Tuesday BetMGM quotes from before that move.",
+   "The model's total (40) sits 7.5 under DraftKings' 47.5. Almost all of that is the weather adjustment: the book has moved 2.5 points on the same forecast, so the under is a weather bet and depends on the rain and wind arriving as forecast."
+  ]
+ },
+ "sources": [
+  {
+   "label": "Play-by-play, rosters, depth charts, injuries, schedule (nflverse)",
+   "url": "https://github.com/nflverse/nflverse-data"
+  },
+  {
+   "label": "Anytime TD odds (BetMGM), Nov 25",
+   "url": "https://sports.betmgm.com/en/blog/nfl/chiefs-bills-first-anytime-td-odds-picks-week-12-gaa/"
+  },
+  {
+   "label": "Lines and player props (BetMGM), Nov 24",
+   "url": "https://sports.betmgm.com/en/blog/nfl/chiefs-bills-prediction-odds-player-prop-bets-picks-week-12-jaa/"
+  },
+  {
+   "label": "Spread, total, moneyline (DraftKings), ESPN odds page",
+   "url": "https://www.espn.com/nfl/odds/_/gameId/401873082"
+  },
+  {
+   "label": "Athlon via Yahoo: Thursday night rain and 15 to 25 mph winds (The Weather Channel), Nov 24",
+   "url": "https://sports.yahoo.com/nfl/articles/bills-vs-chiefs-weather-forecast-215738628.html"
+  },
+  {
+   "label": "The Spun via Yahoo: weather.com Thursday night forecast, Nov 24",
+   "url": "https://sports.yahoo.com/articles/forecast-thanksgiving-nights-bills-vs-152626656.html"
+  }
+ ]
+}

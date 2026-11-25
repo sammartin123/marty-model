@@ -1,0 +1,1484 @@
+{
+ "label": "NFL Week 12 · Wed Nov 25 to Fri Nov 27, 2026",
+ "week": 12,
+ "season": 2026,
+ "date": "2026-11-25",
+ "td_note": "Market = the best anytime TD price found from a named book (mostly BetMGM, Nov 24 to 25; prediction-market prices are not used). Yardage lines are BetMGM quotes from Nov 24. Confirm the price in your own book first: a call only holds at the price shown or longer.",
+ "games": {
+  "GB_LA": {
+   "market": {
+    "spread_home": -2.5,
+    "total": 44.5,
+    "ml_home": -137,
+    "ml_away": 116,
+    "book": "DraftKings (Wed Nov 25, via ESPN)",
+    "others": [
+     {
+      "book": "Fanatics (Tue Nov 24)",
+      "spread_home": -2.5,
+      "total": 45.0,
+      "ml_home": -150,
+      "ml_away": 125
+     }
+    ]
+   },
+   "td_odds": {
+    "Kyren Williams": {
+     "price": -105,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       -105
+      ],
+      [
+       "Fanatics",
+       -125
+      ]
+     ]
+    },
+    "Blake Corum": {
+     "price": 110,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       110
+      ],
+      [
+       "Fanatics",
+       -120
+      ]
+     ]
+    },
+    "Christian Watson": {
+     "price": 170,
+     "book": "Fanatics",
+     "all": [
+      [
+       "BetMGM",
+       145
+      ],
+      [
+       "Fanatics",
+       170
+      ]
+     ]
+    },
+    "Matthew Golden": {
+     "price": 200,
+     "book": "Fanatics",
+     "all": [
+      [
+       "BetMGM",
+       145
+      ],
+      [
+       "Fanatics",
+       200
+      ],
+      [
+       "FanDuel",
+       195
+      ]
+     ]
+    },
+    "Kaleb Johnson": {
+     "price": 220,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       220
+      ],
+      [
+       "Fanatics",
+       210
+      ]
+     ]
+    },
+    "Tucker Kraft": {
+     "price": 270,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       270
+      ]
+     ]
+    },
+    "Colby Parkinson": {
+     "price": 280,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       280
+      ]
+     ]
+    },
+    "Tyler Higbee": {
+     "price": 300,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       300
+      ]
+     ]
+    },
+    "MarShawn Lloyd": {
+     "price": 360,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       360
+      ]
+     ]
+    },
+    "Tutu Atwell": {
+     "price": 525,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       525
+      ]
+     ]
+    },
+    "Jordan Love": {
+     "price": 950,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       950
+      ]
+     ]
+    },
+    "Jonnu Smith": {
+     "price": 1250,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       1250
+      ]
+     ]
+    },
+    "Matthew Stafford": {
+     "price": 1800,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       1800
+      ]
+     ]
+    }
+   },
+   "yard_lines": {
+    "Matthew Golden": [
+     {
+      "stat": "rec",
+      "line": 76.5,
+      "over": -115,
+      "under": -115,
+      "book": "BetMGM"
+     }
+    ],
+    "Christian Watson": [
+     {
+      "stat": "rec",
+      "line": 74.5,
+      "over": -115,
+      "under": -115,
+      "book": "BetMGM"
+     }
+    ],
+    "Tucker Kraft": [
+     {
+      "stat": "rec",
+      "line": 37.5,
+      "over": -115,
+      "under": -115,
+      "book": "BetMGM"
+     }
+    ],
+    "Konata Mumpfield": [
+     {
+      "stat": "rec",
+      "line": 36.5,
+      "over": -115,
+      "under": -115,
+      "book": "BetMGM"
+     }
+    ],
+    "Tyler Higbee": [
+     {
+      "stat": "rec",
+      "line": 32.5,
+      "over": -115,
+      "under": -115,
+      "book": "BetMGM"
+     }
+    ],
+    "Blake Corum": [
+     {
+      "stat": "rush",
+      "line": 57.5,
+      "over": -111,
+      "under": -120,
+      "book": "BetMGM"
+     }
+    ],
+    "Kyren Williams": [
+     {
+      "stat": "rush",
+      "line": 57.5,
+      "over": -115,
+      "under": -115,
+      "book": "BetMGM"
+     }
+    ],
+    "Kaleb Johnson": [
+     {
+      "stat": "rush",
+      "line": 32.5,
+      "over": -115,
+      "under": -115,
+      "book": "BetMGM"
+     }
+    ],
+    "MarShawn Lloyd": [
+     {
+      "stat": "rush",
+      "line": 11.5,
+      "over": -115,
+      "under": -115,
+      "book": "BetMGM"
+     }
+    ],
+    "Jordan Love": [
+     {
+      "stat": "rush",
+      "line": 3.5,
+      "over": -110,
+      "under": -120,
+      "book": "BetMGM"
+     }
+    ]
+   },
+   "weather": {
+    "summary": "Indoors",
+    "precip": null,
+    "wind": null,
+    "rain_flag": false,
+    "note": "SoFi Stadium is covered; treated as indoors.",
+    "effect": "No weather adjustment."
+   },
+   "wx_model": {
+    "pass_mult": 1.0,
+    "cr_mult": 1.0,
+    "td_shift": 0.0,
+    "fg_shift": 0.0
+   },
+   "out_names": [
+    [
+     "Josh Jacobs",
+     "GB"
+    ]
+   ],
+   "notes": [
+    "Packers RB Josh Jacobs (finger) is questionable after limited practices all week; Matt LaFleur said he remains unlikely to play and books are not pricing his touchdown, so he is simulated as out with Kaleb Johnson leading the backfield. If Jacobs is active at the 6:30 PM ET inactives, the Packers running back calls do not hold.",
+    "Rams WRs Puka Nacua and Davante Adams are both on injured reserve, so the Rams' targets spread across Konata Mumpfield, Tutu Atwell and the tight ends. TE Terrance Ferguson is out.",
+    "Stafford (elbow) and Kyren Williams (toe) practised fully and carry no designation. Packers WRs Bo Melton and Skyy Moore are questionable."
+   ],
+   "hold_lines": "The model's Rams rating is built mostly from games with Puka Nacua and Davante Adams, who are both on injured reserve, so its 70% for the Rams (book 56%) overstates them; game-line calls are held and player props stay live.",
+   "sources": [
+    {
+     "label": "Spread, total, moneyline and yardage ladder (DraftKings), ESPN odds page",
+     "url": "https://www.espn.com/nfl/odds/_/gameId/401873079"
+    },
+    {
+     "label": "Lines, anytime TD and yardage props (Fanatics), Nov 24",
+     "url": "https://betfanatics.com/blog/packers-vs-rams-odds-spreads-and-lines"
+    },
+    {
+     "label": "Anytime TD odds table (BetMGM), Nov 24",
+     "url": "https://sports.betmgm.com/en/blog/nfl/packers-rams-first-anytime-td-odds-picks-week-12-gaa/"
+    },
+    {
+     "label": "Prediction, odds and player props (BetMGM), Nov 24",
+     "url": "https://sports.betmgm.com/en/blog/nfl/packers-rams-prediction-odds-player-prop-bets-picks-week-12-jaa/"
+    },
+    {
+     "label": "Anytime TD prices (FanDuel), Action Network via Yahoo, Nov 25",
+     "url": "https://sports.yahoo.com/betting/articles/packers-vs-rams-anytime-touchdown-121251600.html"
+    },
+    {
+     "label": "Rams Week 12 injury report (Nov 24)",
+     "url": "https://www.therams.com/news/rams-injury-report-week-12-2026-vs-packers-steve-avila-terrance-ferguson-coleman-shelton-kobie-turner"
+    },
+    {
+     "label": "Packers Week 12 injury report (Nov 24)",
+     "url": "https://www.packers.com/news/packers-list-eight-questionable-vs-rams-week-12-injury-report"
+    },
+    {
+     "label": "SI: Is Josh Jacobs playing tonight? (Nov 25)",
+     "url": "https://www.si.com/betting/josh-jacobs-injury-update-betting-impact-for-packers-vs-rams-in-nfl-week-12-2026"
+    },
+    {
+     "label": "RotoWire: Jacobs officially questionable, possible pregame workout (Nov 24)",
+     "url": "https://www.rotowire.com/football/headlines/josh-jacobs-injury-officially-questionable-for-wednesday-649591"
+    }
+   ]
+  },
+  "CHI_DET": {
+   "market": {
+    "spread_home": 2.5,
+    "total": 55.5,
+    "ml_home": 115,
+    "ml_away": -140,
+    "book": "BetMGM (Tue Nov 24)",
+    "others": [
+     {
+      "book": "FanDuel (Mon Nov 23, via Fox Sports)",
+      "spread_home": 2.5,
+      "total": 55.5,
+      "ml_home": 126,
+      "ml_away": -149
+     }
+    ]
+   },
+   "td_odds": {
+    "Jahmyr Gibbs": {
+     "price": -250,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       -250
+      ]
+     ]
+    },
+    "Amon-Ra St. Brown": {
+     "price": -135,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       -135
+      ]
+     ]
+    },
+    "D'Andre Swift": {
+     "price": -130,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       -130
+      ],
+      [
+       "BetMGM (later)",
+       -140
+      ]
+     ]
+    },
+    "Colston Loveland": {
+     "price": 140,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       140
+      ]
+     ]
+    },
+    "Luther Burden III": {
+     "price": 145,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       145
+      ]
+     ]
+    },
+    "Kyle Monangai": {
+     "price": 145,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       145
+      ]
+     ]
+    },
+    "Rome Odunze": {
+     "price": 175,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       175
+      ]
+     ]
+    },
+    "Jameson Williams": {
+     "price": 200,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       200
+      ]
+     ]
+    },
+    "Sam LaPorta": {
+     "price": 225,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       225
+      ]
+     ]
+    },
+    "Caleb Williams": {
+     "price": 310,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       310
+      ]
+     ]
+    },
+    "Kalif Raymond": {
+     "price": 360,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       360
+      ]
+     ]
+    },
+    "Isaac TeSlaa": {
+     "price": 475,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       475
+      ]
+     ]
+    },
+    "Jared Goff": {
+     "price": 1050,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       1050
+      ]
+     ]
+    },
+    "Brock Wright": {
+     "price": 1050,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       1050
+      ]
+     ]
+    },
+    "Tyler Conklin": {
+     "price": 1350,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       1350
+      ]
+     ]
+    },
+    "Jacob Saylors": {
+     "price": 1900,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       1900
+      ]
+     ]
+    }
+   },
+   "yard_lines": {
+    "Amon-Ra St. Brown": [
+     {
+      "stat": "rec",
+      "line": 87.5,
+      "over": -115,
+      "under": -115,
+      "book": "BetMGM"
+     }
+    ],
+    "Luther Burden III": [
+     {
+      "stat": "rec",
+      "line": 60.5,
+      "over": -115,
+      "under": -115,
+      "book": "BetMGM"
+     }
+    ],
+    "Jameson Williams": [
+     {
+      "stat": "rec",
+      "line": 57.5,
+      "over": -115,
+      "under": -115,
+      "book": "BetMGM"
+     }
+    ],
+    "Colston Loveland": [
+     {
+      "stat": "rec",
+      "line": 53.5,
+      "over": -115,
+      "under": -115,
+      "book": "BetMGM"
+     }
+    ],
+    "Rome Odunze": [
+     {
+      "stat": "rec",
+      "line": 49.5,
+      "over": -115,
+      "under": -115,
+      "book": "BetMGM"
+     }
+    ],
+    "Jahmyr Gibbs": [
+     {
+      "stat": "rush",
+      "line": 91.5,
+      "over": -115,
+      "under": -115,
+      "book": "BetMGM"
+     }
+    ],
+    "D'Andre Swift": [
+     {
+      "stat": "rush",
+      "line": 51.5,
+      "over": -115,
+      "under": -115,
+      "book": "BetMGM"
+     }
+    ],
+    "Kyle Monangai": [
+     {
+      "stat": "rush",
+      "line": 34.5,
+      "over": -120,
+      "under": -111,
+      "book": "BetMGM"
+     }
+    ],
+    "Caleb Williams": [
+     {
+      "stat": "rush",
+      "line": 20.5,
+      "over": -115,
+      "under": -115,
+      "book": "BetMGM"
+     }
+    ],
+    "Sione Vaki": [
+     {
+      "stat": "rush",
+      "line": 10.5,
+      "over": -115,
+      "under": -115,
+      "book": "BetMGM"
+     }
+    ]
+   },
+   "weather": {
+    "summary": "Indoors",
+    "precip": null,
+    "wind": null,
+    "rain_flag": false,
+    "note": "Ford Field is a dome.",
+    "effect": "No weather adjustment."
+   },
+   "wx_model": {
+    "pass_mult": 1.0,
+    "cr_mult": 1.0,
+    "td_shift": 0.0,
+    "fg_shift": 0.0
+   },
+   "notes": [
+    "Lions TE Sam LaPorta (ankle) was limited at Monday's walkthrough. The official game statuses come out Wednesday evening, so every call here waits for them."
+   ],
+   "sources": [
+    {
+     "label": "Anytime TD odds (BetMGM), Nov 24",
+     "url": "https://sports.betmgm.com/en/blog/nfl/bears-lions-first-anytime-td-odds-picks-week-12-gaa/"
+    },
+    {
+     "label": "Lines and player props (BetMGM), Nov 24",
+     "url": "https://sports.betmgm.com/en/blog/nfl/bears-lions-prediction-odds-player-prop-bets-picks-week-12-jaa/"
+    },
+    {
+     "label": "Thanksgiving lines (FanDuel), Fox Sports, Nov 23",
+     "url": "https://amp.foxsports.com/stories/nfl/2026-nfl-thanksgiving-odds-lines-spreads-what-know-all-4-games"
+    },
+    {
+     "label": "Fox Sports game page (LaPorta practice note)",
+     "url": "https://www.foxsports.com/nfl/week-12-chicago-bears-vs-detroit-lions-nov-26-2026-game-boxscore-11096?tab=odds"
+    }
+   ]
+  },
+  "PHI_DAL": {
+   "market": {
+    "spread_home": -8.5,
+    "total": 47.5,
+    "ml_home": -446,
+    "ml_away": 348,
+    "book": "FanDuel (Mon Nov 23, via Fox Sports)",
+    "others": []
+   },
+   "td_odds": {
+    "CeeDee Lamb": {
+     "price": -155,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       -155
+      ]
+     ]
+    },
+    "Javonte Williams": {
+     "price": -150,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       -150
+      ]
+     ]
+    },
+    "George Pickens": {
+     "price": -111,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       -111
+      ]
+     ]
+    },
+    "Saquon Barkley": {
+     "price": 100,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       100
+      ]
+     ]
+    },
+    "DeVonta Smith": {
+     "price": 195,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       195
+      ]
+     ]
+    },
+    "Ryan Flournoy": {
+     "price": 270,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       270
+      ]
+     ]
+    },
+    "Joe Milton III": {
+     "price": 300,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       300
+      ]
+     ]
+    },
+    "Dallas Goedert": {
+     "price": 310,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       310
+      ]
+     ]
+    },
+    "Makai Lemon": {
+     "price": 425,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       425
+      ]
+     ]
+    },
+    "Dak Prescott": {
+     "price": 525,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       525
+      ]
+     ]
+    },
+    "KaVontae Turpin": {
+     "price": 600,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       600
+      ]
+     ]
+    },
+    "Luke Schoonmaker": {
+     "price": 750,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       750
+      ]
+     ]
+    },
+    "Zach Ertz": {
+     "price": 1550,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       1550
+      ]
+     ]
+    },
+    "Elijah Moore": {
+     "price": 2500,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       2500
+      ]
+     ]
+    },
+    "Johnny Mundt": {
+     "price": 3500,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       3500
+      ]
+     ]
+    },
+    "Grant Calcaterra": {
+     "price": 3500,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       3500
+      ]
+     ]
+    }
+   },
+   "yard_lines": {
+    "CeeDee Lamb": [
+     {
+      "stat": "rec",
+      "line": 88.5,
+      "over": -115,
+      "under": -115,
+      "book": "BetMGM"
+     }
+    ]
+   },
+   "weather": {
+    "summary": "Indoors",
+    "precip": null,
+    "wind": null,
+    "rain_flag": false,
+    "note": "AT&T Stadium has a retractable roof; treated as indoors (no roof decision found).",
+    "effect": "No weather adjustment."
+   },
+   "wx_model": {
+    "pass_mult": 1.0,
+    "cr_mult": 1.0,
+    "td_shift": 0.0,
+    "fg_shift": 0.0
+   },
+   "notes": [
+    "Eagles QB Joe Milton III makes another start with Jalen Hurts on injured reserve. The game line is a Monday FanDuel quote; no newer line was found."
+   ],
+   "sources": [
+    {
+     "label": "Anytime TD odds (BetMGM), Nov 25",
+     "url": "https://sports.betmgm.com/en/blog/nfl/eagles-cowboys-first-anytime-td-odds-picks-week-12-gaa/"
+    },
+    {
+     "label": "Thanksgiving lines (FanDuel), Fox Sports, Nov 23",
+     "url": "https://amp.foxsports.com/stories/nfl/2026-nfl-thanksgiving-odds-lines-spreads-what-know-all-4-games"
+    },
+    {
+     "label": "Thanksgiving player props (BetMGM), Nov 24",
+     "url": "https://sports.betmgm.com/en/blog/nfl/best-nfl-player-prop-picks-thanksgiving-bm16/"
+    },
+    {
+     "label": "A to Z Sports: Milton lined up to start at Dallas",
+     "url": "https://atozsports.com/?p=510666"
+    }
+   ]
+  },
+  "KC_BUF": {
+   "market": {
+    "spread_home": -3.0,
+    "total": 47.5,
+    "ml_home": -150,
+    "ml_away": 126,
+    "book": "DraftKings (Wed Nov 25, via ESPN)",
+    "others": [
+     {
+      "book": "BetMGM (Tue Nov 24)",
+      "spread_home": -2.5,
+      "total": 50.0,
+      "ml_home": -150,
+      "ml_away": 125
+     }
+    ]
+   },
+   "td_odds": {
+    "Kenneth Walker III": {
+     "price": -165,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       -165
+      ]
+     ]
+    },
+    "Emmett Johnson": {
+     "price": -130,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       -130
+      ]
+     ]
+    },
+    "Josh Allen": {
+     "price": -125,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       -125
+      ]
+     ]
+    },
+    "James Cook": {
+     "price": -105,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       -105
+      ]
+     ]
+    },
+    "DJ Moore": {
+     "price": 190,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       190
+      ]
+     ]
+    },
+    "Travis Kelce": {
+     "price": 210,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       210
+      ]
+     ]
+    },
+    "Dalton Kincaid": {
+     "price": 230,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       230
+      ]
+     ]
+    },
+    "Rashee Rice": {
+     "price": 250,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       250
+      ]
+     ]
+    },
+    "Josh Downs": {
+     "price": 290,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       290
+      ]
+     ]
+    },
+    "Khalil Shakir": {
+     "price": 300,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       300
+      ]
+     ]
+    },
+    "Keon Coleman": {
+     "price": 390,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       390
+      ]
+     ]
+    },
+    "Xavier Worthy": {
+     "price": 425,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       425
+      ]
+     ]
+    },
+    "Patrick Mahomes": {
+     "price": 525,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       525
+      ]
+     ]
+    },
+    "Dawson Knox": {
+     "price": 525,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       525
+      ]
+     ]
+    },
+    "Noah Gray": {
+     "price": 700,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       700
+      ]
+     ]
+    },
+    "Cyrus Allen": {
+     "price": 700,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       700
+      ]
+     ]
+    },
+    "Jalen Royals": {
+     "price": 2000,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       2000
+      ]
+     ]
+    }
+   },
+   "yard_lines": {
+    "DJ Moore": [
+     {
+      "stat": "rec",
+      "line": 51.5,
+      "over": -115,
+      "under": -115,
+      "book": "BetMGM"
+     }
+    ],
+    "Rashee Rice": [
+     {
+      "stat": "rec",
+      "line": 46.5,
+      "over": -115,
+      "under": -115,
+      "book": "BetMGM"
+     }
+    ],
+    "Travis Kelce": [
+     {
+      "stat": "rec",
+      "line": 43.5,
+      "over": -115,
+      "under": -115,
+      "book": "BetMGM"
+     }
+    ],
+    "Josh Downs": [
+     {
+      "stat": "rec",
+      "line": 39.5,
+      "over": -125,
+      "under": -105,
+      "book": "BetMGM"
+     }
+    ],
+    "Khalil Shakir": [
+     {
+      "stat": "rec",
+      "line": 37.5,
+      "over": -115,
+      "under": -115,
+      "book": "BetMGM"
+     }
+    ],
+    "James Cook": [
+     {
+      "stat": "rush",
+      "line": 85.5,
+      "over": -115,
+      "under": -115,
+      "book": "BetMGM"
+     }
+    ],
+    "Josh Allen": [
+     {
+      "stat": "rush",
+      "line": 35.5,
+      "over": -115,
+      "under": -115,
+      "book": "BetMGM"
+     }
+    ],
+    "Ty Johnson": [
+     {
+      "stat": "rush",
+      "line": 1.5,
+      "over": -120,
+      "under": -110,
+      "book": "BetMGM"
+     }
+    ]
+   },
+   "weather": {
+    "summary": "Rain and wind",
+    "precip": 85,
+    "wind": "ENE 15 to 25 mph",
+    "rain_flag": true,
+    "note": "Orchard Park (Highmark Stadium, outdoors), Thursday night forecast (daily night period; no hourly found): rain likely, 80 to 90% chance, low near 37F, ENE winds 15 to 25 mph with higher gusts (The Weather Channel and weather.com via Tuesday reports).",
+    "effect": "Rain and wind over 15 mph both apply: steer away from receiving-yard overs, especially secondary targets, toward rushing volume and unders. The sim applies the measured rain effect (weighted 85%) and the wind effect; the cold effect is left off because kickoff should sit right around 40F."
+   },
+   "wx_model": {
+    "pass_mult": 0.921,
+    "cr_mult": 0.812,
+    "td_shift": -0.46,
+    "fg_shift": -0.312
+   },
+   "notes": [
+    "Chiefs RB Kenneth Walker III (groin) is listed questionable on ESPN; Emmett Johnson leads if he sits. The official game statuses come out Wednesday evening, so every call here waits for them.",
+    "The total has dropped from 50 to 47.5 at DraftKings on the weather forecast. The yardage lines are Tuesday BetMGM quotes from before that move.",
+    "The model's total (40) sits 7.5 under DraftKings' 47.5. Almost all of that is the weather adjustment: the book has moved 2.5 points on the same forecast, so the under is a weather bet and depends on the rain and wind arriving as forecast."
+   ],
+   "sources": [
+    {
+     "label": "Anytime TD odds (BetMGM), Nov 25",
+     "url": "https://sports.betmgm.com/en/blog/nfl/chiefs-bills-first-anytime-td-odds-picks-week-12-gaa/"
+    },
+    {
+     "label": "Lines and player props (BetMGM), Nov 24",
+     "url": "https://sports.betmgm.com/en/blog/nfl/chiefs-bills-prediction-odds-player-prop-bets-picks-week-12-jaa/"
+    },
+    {
+     "label": "Spread, total, moneyline (DraftKings), ESPN odds page",
+     "url": "https://www.espn.com/nfl/odds/_/gameId/401873082"
+    },
+    {
+     "label": "Athlon via Yahoo: Thursday night rain and 15 to 25 mph winds (The Weather Channel), Nov 24",
+     "url": "https://sports.yahoo.com/nfl/articles/bills-vs-chiefs-weather-forecast-215738628.html"
+    },
+    {
+     "label": "The Spun via Yahoo: weather.com Thursday night forecast, Nov 24",
+     "url": "https://sports.yahoo.com/articles/forecast-thanksgiving-nights-bills-vs-152626656.html"
+    }
+   ]
+  },
+  "DEN_PIT": {
+   "market": {
+    "spread_home": 2.5,
+    "total": 40.0,
+    "ml_home": 130,
+    "ml_away": -155,
+    "book": "BetMGM (Tue Nov 24)",
+    "others": []
+   },
+   "td_odds": {
+    "Jonah Coleman": {
+     "price": -130,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       -130
+      ]
+     ]
+    },
+    "Jaylen Warren": {
+     "price": 140,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       140
+      ]
+     ]
+    },
+    "Jaylen Waddle": {
+     "price": 270,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       270
+      ]
+     ]
+    },
+    "Rico Dowdle": {
+     "price": 310,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       310
+      ]
+     ]
+    },
+    "DK Metcalf": {
+     "price": 400,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       400
+      ]
+     ]
+    },
+    "Courtland Sutton": {
+     "price": 450,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       450
+      ]
+     ]
+    },
+    "Pat Bryant": {
+     "price": 475,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       475
+      ]
+     ]
+    },
+    "Evan Engram": {
+     "price": 500,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       500
+      ]
+     ]
+    },
+    "Bo Nix": {
+     "price": 525,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       525
+      ]
+     ]
+    },
+    "Pat Freiermuth": {
+     "price": 525,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       525
+      ]
+     ]
+    },
+    "Darnell Washington": {
+     "price": 525,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       525
+      ]
+     ]
+    },
+    "Marvin Mims Jr.": {
+     "price": 650,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       650
+      ]
+     ]
+    },
+    "Roman Wilson": {
+     "price": 650,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       650
+      ]
+     ]
+    },
+    "Mason Rudolph": {
+     "price": 950,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       950
+      ]
+     ]
+    },
+    "Troy Franklin": {
+     "price": 1050,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       1050
+      ]
+     ]
+    },
+    "Adam Trautman": {
+     "price": 1200,
+     "book": "BetMGM",
+     "all": [
+      [
+       "BetMGM",
+       1200
+      ]
+     ]
+    }
+   },
+   "yard_lines": {
+    "Jaylen Waddle": [
+     {
+      "stat": "rec",
+      "line": 46.5,
+      "over": -115,
+      "under": -115,
+      "book": "BetMGM"
+     }
+    ],
+    "DK Metcalf": [
+     {
+      "stat": "rec",
+      "line": 35.5,
+      "over": -115,
+      "under": -115,
+      "book": "BetMGM"
+     }
+    ],
+    "Courtland Sutton": [
+     {
+      "stat": "rec",
+      "line": 30.5,
+      "over": -120,
+      "under": -111,
+      "book": "BetMGM"
+     }
+    ],
+    "Pat Bryant": [
+     {
+      "stat": "rec",
+      "line": 26.5,
+      "over": -115,
+      "under": -115,
+      "book": "BetMGM"
+     }
+    ],
+    "Germie Bernard": [
+     {
+      "stat": "rec",
+      "line": 25.5,
+      "over": -110,
+      "under": -120,
+      "book": "BetMGM"
+     }
+    ],
+    "Jonah Coleman": [
+     {
+      "stat": "rush",
+      "line": 68.5,
+      "over": -115,
+      "under": -115,
+      "book": "BetMGM"
+     }
+    ],
+    "Jaylen Warren": [
+     {
+      "stat": "rush",
+      "line": 57.5,
+      "over": -115,
+      "under": -115,
+      "book": "BetMGM"
+     }
+    ],
+    "Rico Dowdle": [
+     {
+      "stat": "rush",
+      "line": 27.5,
+      "over": -115,
+      "under": -115,
+      "book": "BetMGM"
+     }
+    ],
+    "Bo Nix": [
+     {
+      "stat": "rush",
+      "line": 10.5,
+      "over": -125,
+      "under": -105,
+      "book": "BetMGM"
+     }
+    ],
+    "J.K. Dobbins": [
+     {
+      "stat": "rush",
+      "line": 6.5,
+      "over": -125,
+      "under": -105,
+      "book": "BetMGM"
+     }
+    ]
+   },
+   "weather": {
+    "summary": "Rain likely",
+    "precip": 62,
+    "wind": null,
+    "rain_flag": true,
+    "note": "Pittsburgh (Acrisure Stadium, outdoors): daily forecast only (AccuWeather, seen Tuesday): high 43F, low 38F, occasional rain and drizzle, maybe a little snow, 62%. No hourly kickoff forecast or wind was found.",
+    "effect": "Real rain risk: steer away from receiving-yard overs, especially secondary targets, and toward rushing volume, receptions or unders. The sim trims passing and scoring by the measured rain effect weighted by the chance of rain."
+   },
+   "wx_model": {
+    "pass_mult": 0.963,
+    "cr_mult": 0.901,
+    "td_shift": -0.248,
+    "fg_shift": -0.155
+   },
+   "qb_names": {
+    "PIT": "Mason Rudolph"
+   },
+   "notes": [
+    "The Steelers benched Aaron Rodgers late Tuesday: Mason Rudolph starts and Rodgers is inactive.",
+    "The official game statuses come out Wednesday evening, so every call here waits for them.",
+    "The model's total (33) is 7 under the book's 40 and it gives Pittsburgh 24% against the book's 42%: that comes from Rudolph's thin record and a 62% rain chance, so the game lines and the Steelers' player calls are held."
+   ],
+   "sources": [
+    {
+     "label": "Anytime TD odds (BetMGM), Nov 25",
+     "url": "https://sports.betmgm.com/en/blog/nfl/broncos-steelers-first-anytime-td-odds-picks-week-12-gaa/"
+    },
+    {
+     "label": "Lines and player props (BetMGM), Nov 24",
+     "url": "https://sports.betmgm.com/en/blog/nfl/broncos-steelers-prediction-odds-player-prop-bets-picks-week-12-jaa/"
+    },
+    {
+     "label": "NFL.com: Rodgers inactive Friday, Rudolph to start",
+     "url": "https://www.nfl.com/news/aaron-rodgers-will-be-inactive-for-steelers-friday-vs-broncos-mason-rudolph-to-start"
+    },
+    {
+     "label": "PFT: Steelers bench Rodgers for Rudolph (Nov 24)",
+     "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steelers-bench-aaron-rodgers-for-mason-rudolph"
+    },
+    {
+     "label": "AccuWeather, Acrisure Stadium 10-day forecast",
+     "url": "https://www.accuweather.com/en/us/acrisure-stadium/15212/weather-forecast/53633_poi"
+    }
+   ],
+   "low_conf": {
+    "PIT": "Mason Rudolph starts after Aaron Rodgers was benched; he has 4 pass attempts for the Steelers this season, so their numbers are low confidence."
+   }
+  }
+ }
+}

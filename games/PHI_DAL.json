@@ -1,0 +1,264 @@
+{
+ "home": "DAL",
+ "away": "PHI",
+ "season": 2026,
+ "week": 12,
+ "asof": "2026-11-26",
+ "n_sims": 100000,
+ "seed": 20261126,
+ "neutral": false,
+ "qb": {
+  "DAL": "00-0033077",
+  "PHI": "00-0039398"
+ },
+ "out": [],
+ "status": {},
+ "out_json": "out/PHI_DAL.json",
+ "meta": {
+  "title": "Eagles at Cowboys",
+  "home_name": "Cowboys",
+  "away_name": "Eagles",
+  "home_city": "Dallas",
+  "away_city": "Philadelphia",
+  "kickoff": "Thu Nov 26, 2026 \u00b7 4:30 PM ET",
+  "time": "4:30 PM",
+  "venue": "AT&T Stadium, Dallas",
+  "generated": "Wed Nov 25, 2026",
+  "roof": "retractable",
+  "lat": 32.748,
+  "lon": -97.093,
+  "data_through": "Week 11",
+  "td_note": "Market = the best anytime TD price found from a named book (mostly BetMGM, Nov 24 to 25; prediction-market prices are not used). Yardage lines are BetMGM quotes from Nov 24. Confirm the price in your own book first: a call only holds at the price shown or longer."
+ },
+ "market": {
+  "spread_home": -8.5,
+  "total": 47.5,
+  "ml_home": -446,
+  "ml_away": 348,
+  "book": "FanDuel (Mon Nov 23, via Fox Sports)",
+  "others": []
+ },
+ "weather": {
+  "summary": "Indoors",
+  "precip": null,
+  "wind": null,
+  "rain_flag": false,
+  "note": "AT&T Stadium has a retractable roof; treated as indoors (no roof decision found).",
+  "effect": "No weather adjustment."
+ },
+ "wx_model": {
+  "pass_mult": 1.0,
+  "cr_mult": 1.0,
+  "td_shift": 0.0,
+  "fg_shift": 0.0
+ },
+ "td_odds": {
+  "CeeDee Lamb": {
+   "price": -155,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     -155
+    ]
+   ]
+  },
+  "Javonte Williams": {
+   "price": -150,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     -150
+    ]
+   ]
+  },
+  "George Pickens": {
+   "price": -111,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     -111
+    ]
+   ]
+  },
+  "Saquon Barkley": {
+   "price": 100,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     100
+    ]
+   ]
+  },
+  "DeVonta Smith": {
+   "price": 195,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     195
+    ]
+   ]
+  },
+  "Ryan Flournoy": {
+   "price": 270,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     270
+    ]
+   ]
+  },
+  "Joe Milton III": {
+   "price": 300,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     300
+    ]
+   ]
+  },
+  "Dallas Goedert": {
+   "price": 310,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     310
+    ]
+   ]
+  },
+  "Makai Lemon": {
+   "price": 425,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     425
+    ]
+   ]
+  },
+  "Dak Prescott": {
+   "price": 525,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     525
+    ]
+   ]
+  },
+  "KaVontae Turpin": {
+   "price": 600,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     600
+    ]
+   ]
+  },
+  "Luke Schoonmaker": {
+   "price": 750,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     750
+    ]
+   ]
+  },
+  "Zach Ertz": {
+   "price": 1550,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     1550
+    ]
+   ]
+  },
+  "Elijah Moore": {
+   "price": 2500,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     2500
+    ]
+   ]
+  },
+  "Johnny Mundt": {
+   "price": 3500,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     3500
+    ]
+   ]
+  },
+  "Grant Calcaterra": {
+   "price": 3500,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     3500
+    ]
+   ]
+  }
+ },
+ "yard_lines": {
+  "CeeDee Lamb": [
+   {
+    "stat": "rec",
+    "line": 88.5,
+    "over": -115,
+    "under": -115,
+    "book": "BetMGM"
+   }
+  ]
+ },
+ "injuries": [],
+ "inputs": {
+  "qbs": {
+   "DAL": "Dak Prescott",
+   "PHI": "Joe Milton III"
+  },
+  "report_final": false,
+  "low_conf": {
+   "PHI": "Joe Milton III has 54 pass attempts for the Eagles this season, so their numbers are low confidence."
+  },
+  "notes": [
+   "Eagles QB Joe Milton III makes another start with Jalen Hurts on injured reserve. The game line is a Monday FanDuel quote; no newer line was found."
+  ]
+ },
+ "sources": [
+  {
+   "label": "Play-by-play, rosters, depth charts, injuries, schedule (nflverse)",
+   "url": "https://github.com/nflverse/nflverse-data"
+  },
+  {
+   "label": "Anytime TD odds (BetMGM), Nov 25",
+   "url": "https://sports.betmgm.com/en/blog/nfl/eagles-cowboys-first-anytime-td-odds-picks-week-12-gaa/"
+  },
+  {
+   "label": "Thanksgiving lines (FanDuel), Fox Sports, Nov 23",
+   "url": "https://amp.foxsports.com/stories/nfl/2026-nfl-thanksgiving-odds-lines-spreads-what-know-all-4-games"
+  },
+  {
+   "label": "Thanksgiving player props (BetMGM), Nov 24",
+   "url": "https://sports.betmgm.com/en/blog/nfl/best-nfl-player-prop-picks-thanksgiving-bm16/"
+  },
+  {
+   "label": "A to Z Sports: Milton lined up to start at Dallas",
+   "url": "https://atozsports.com/?p=510666"
+  }
+ ]
+}

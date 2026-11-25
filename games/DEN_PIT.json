@@ -11,8 +11,12 @@
   "PIT": "00-0034771",
   "DEN": "00-0039732"
  },
- "out": [],
- "status": {},
+ "out": [
+  "00-0036158"
+ ],
+ "status": {
+  "00-0036158": "Out"
+ },
  "out_json": "out/DEN_PIT.json",
  "meta": {
   "title": "Broncos at Steelers",
@@ -295,30 +299,23 @@
     "under": -105,
     "book": "BetMGM"
    }
-  ],
-  "J.K. Dobbins": [
-   {
-    "stat": "rush",
-    "line": 6.5,
-    "over": -125,
-    "under": -105,
-    "book": "BetMGM"
-   }
   ]
  },
- "injuries": [],
+ "injuries": [
+  "DEN J.K. Dobbins: Out (late change, from news reports)"
+ ],
  "inputs": {
   "qbs": {
    "PIT": "Mason Rudolph",
    "DEN": "Bo Nix"
   },
-  "report_final": false,
+  "report_final": true,
   "low_conf": {
    "PIT": "Mason Rudolph starts after Aaron Rodgers was benched; he has 4 pass attempts for the Steelers this season, so their numbers are low confidence."
   },
   "notes": [
    "The Steelers benched Aaron Rodgers late Tuesday: Mason Rudolph starts and Rodgers is inactive.",
-   "The official game statuses come out Wednesday evening, so every call here waits for them.",
+   "Broncos RB J.K. Dobbins is suspended for this game (conduct detrimental to the team), so Jonah Coleman leads the backfield. No Friday game statuses were found yet: Steelers WR Ben Skowronek missed Tuesday practice and is the one to watch.",
    "The model's total (33) is 7 under the book's 40 and it gives Pittsburgh 24% against the book's 42%: that comes from Rudolph's thin record and a 62% rain chance, so the game lines and the Steelers' player calls are held."
   ]
  },
@@ -346,6 +343,14 @@
   {
    "label": "AccuWeather, Acrisure Stadium 10-day forecast",
    "url": "https://www.accuweather.com/en/us/acrisure-stadium/15212/weather-forecast/53633_poi"
+  },
+  {
+   "label": "Bleacher Report: Dobbins suspended for Black Friday game (Nov 24)",
+   "url": "https://bleacherreport.com/articles/25537375-jk-dobbins-suspended-broncos-black-friday-nfl-game-vs-steelers"
+  },
+  {
+   "label": "Broncos-Steelers practice participation report (Nov 24)",
+   "url": "https://sports.yahoo.com/nfl/articles/broncos-vs-steelers-practice-participation-232025459.html"
   }
  ]
 }

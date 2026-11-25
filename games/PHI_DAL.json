@@ -11,8 +11,22 @@
   "DAL": "00-0033077",
   "PHI": "00-0039398"
  },
- "out": [],
- "status": {},
+ "out": [
+  "00-0037258",
+  "00-0038041",
+  "00-0038393",
+  "00-0038555",
+  "00-0039062"
+ ],
+ "status": {
+  "00-0037258": "Out",
+  "00-0038555": "Out",
+  "00-0038393": "Out",
+  "00-0039062": "Out",
+  "00-0038041": "Out",
+  "00-0039746": "Questionable",
+  "00-0038547": "Questionable"
+ },
  "out_json": "out/PHI_DAL.json",
  "meta": {
   "title": "Eagles at Cowboys",
@@ -163,16 +177,6 @@
     ]
    ]
   },
-  "Luke Schoonmaker": {
-   "price": 750,
-   "book": "BetMGM",
-   "all": [
-    [
-     "BetMGM",
-     750
-    ]
-   ]
-  },
   "Zach Ertz": {
    "price": 1550,
    "book": "BetMGM",
@@ -225,18 +229,27 @@
    }
   ]
  },
- "injuries": [],
+ "injuries": [
+  "PHI Dameon Pierce: Out (late change, from news reports)",
+  "PHI Tank Bigsby: Out (late change, from news reports)",
+  "PHI Dontayvion Wicks: Out (late change, from news reports)",
+  "DAL Jonathan Mingo: Out (late change, from news reports)",
+  "DAL Jake Ferguson: Out (late change, from news reports)",
+  "PHI Will Shipley: Questionable (late change, from news reports)",
+  "DAL Luke Schoonmaker: Questionable (late change, from news reports)"
+ ],
  "inputs": {
   "qbs": {
    "DAL": "Dak Prescott",
    "PHI": "Joe Milton III"
   },
-  "report_final": false,
+  "report_final": true,
   "low_conf": {
    "PHI": "Joe Milton III has 54 pass attempts for the Eagles this season, so their numbers are low confidence."
   },
   "notes": [
-   "Eagles QB Joe Milton III makes another start with Jalen Hurts on injured reserve. The game line is a Monday FanDuel quote; no newer line was found."
+   "Eagles QB Joe Milton III starts again with Jalen Hurts out; Philadelphia stays low confidence. Eagles RBs Dameon Pierce and Tank Bigsby and WR Dontayvion Wicks are out, and RB Will Shipley is questionable. Saquon Barkley and DeVonta Smith carry no designation.",
+   "Cowboys TE Jake Ferguson and WR Jonathan Mingo are out; TE Luke Schoonmaker (illness) is questionable. The game line is a Monday FanDuel quote; no newer line was found."
   ]
  },
  "sources": [
@@ -259,6 +272,14 @@
   {
    "label": "A to Z Sports: Milton lined up to start at Dallas",
    "url": "https://atozsports.com/?p=510666"
+  },
+  {
+   "label": "Fantasy Index NFL Week 12 injury report (Thanksgiving game statuses)",
+   "url": "https://fantasyindex.com/football/nfl-week-12-injury-report/"
+  },
+  {
+   "label": "SI Eagles: injury report breakdown before Cowboys (Nov 25)",
+   "url": "https://www.si.com/nfl/eagles/onsi/breaking-down-eagles-injury-report-ahead-cowboys-clash-thanksgiving-01m87np9emz"
   }
  ]
 }

@@ -625,7 +625,7 @@
     "fg_shift": 0.0
    },
    "notes": [
-    "Lions TE Sam LaPorta (ankle) was limited at Monday's walkthrough. The official game statuses come out Wednesday evening, so every call here waits for them."
+    "No skill player is ruled out. Bears RB Roschon Johnson and WR Zavion Thomas and Lions RB Sione Vaki are questionable and get no calls. Lions TE Sam LaPorta (ankle) carries no designation."
    ],
    "sources": [
     {
@@ -643,7 +643,29 @@
     {
      "label": "Fox Sports game page (LaPorta practice note)",
      "url": "https://www.foxsports.com/nfl/week-12-chicago-bears-vs-detroit-lions-nov-26-2026-game-boxscore-11096?tab=odds"
+    },
+    {
+     "label": "Fantasy Index NFL Week 12 injury report (Thanksgiving game statuses)",
+     "url": "https://fantasyindex.com/football/nfl-week-12-injury-report/"
+    },
+    {
+     "label": "SI: Bears vs Lions injuries and odds (Nov 24)",
+     "url": "https://www.si.com/betting/bears-vs-lions-prediction-odds-spread-injuries-trends-for-thanksgiving-day-in-nfl-week-12-2026"
     }
+   ],
+   "q_names": [
+    [
+     "Roschon Johnson",
+     "CHI"
+    ],
+    [
+     "Zavion Thomas",
+     "CHI"
+    ],
+    [
+     "Sione Vaki",
+     "DET"
+    ]
    ]
   },
   "PHI_DAL": {
@@ -766,16 +788,6 @@
       ]
      ]
     },
-    "Luke Schoonmaker": {
-     "price": 750,
-     "book": "BetMGM",
-     "all": [
-      [
-       "BetMGM",
-       750
-      ]
-     ]
-    },
     "Zach Ertz": {
      "price": 1550,
      "book": "BetMGM",
@@ -843,7 +855,8 @@
     "fg_shift": 0.0
    },
    "notes": [
-    "Eagles QB Joe Milton III makes another start with Jalen Hurts on injured reserve. The game line is a Monday FanDuel quote; no newer line was found."
+    "Eagles QB Joe Milton III starts again with Jalen Hurts out; Philadelphia stays low confidence. Eagles RBs Dameon Pierce and Tank Bigsby and WR Dontayvion Wicks are out, and RB Will Shipley is questionable. Saquon Barkley and DeVonta Smith carry no designation.",
+    "Cowboys TE Jake Ferguson and WR Jonathan Mingo are out; TE Luke Schoonmaker (illness) is questionable. The game line is a Monday FanDuel quote; no newer line was found."
    ],
    "sources": [
     {
@@ -861,7 +874,47 @@
     {
      "label": "A to Z Sports: Milton lined up to start at Dallas",
      "url": "https://atozsports.com/?p=510666"
+    },
+    {
+     "label": "Fantasy Index NFL Week 12 injury report (Thanksgiving game statuses)",
+     "url": "https://fantasyindex.com/football/nfl-week-12-injury-report/"
+    },
+    {
+     "label": "SI Eagles: injury report breakdown before Cowboys (Nov 25)",
+     "url": "https://www.si.com/nfl/eagles/onsi/breaking-down-eagles-injury-report-ahead-cowboys-clash-thanksgiving-01m87np9emz"
     }
+   ],
+   "out_names": [
+    [
+     "Dameon Pierce",
+     "PHI"
+    ],
+    [
+     "Tank Bigsby",
+     "PHI"
+    ],
+    [
+     "Dontayvion Wicks",
+     "PHI"
+    ],
+    [
+     "Jonathan Mingo",
+     "DAL"
+    ],
+    [
+     "Jake Ferguson",
+     "DAL"
+    ]
+   ],
+   "q_names": [
+    [
+     "Will Shipley",
+     "PHI"
+    ],
+    [
+     "Luke Schoonmaker",
+     "DAL"
+    ]
    ]
   },
   "KC_BUF": {
@@ -882,16 +935,6 @@
     ]
    },
    "td_odds": {
-    "Kenneth Walker III": {
-     "price": -165,
-     "book": "BetMGM",
-     "all": [
-      [
-       "BetMGM",
-       -165
-      ]
-     ]
-    },
     "Emmett Johnson": {
      "price": -130,
      "book": "BetMGM",
@@ -939,16 +982,6 @@
       [
        "BetMGM",
        210
-      ]
-     ]
-    },
-    "Dalton Kincaid": {
-     "price": 230,
-     "book": "BetMGM",
-     "all": [
-      [
-       "BetMGM",
-       230
       ]
      ]
     },
@@ -1142,7 +1175,7 @@
     "fg_shift": -0.312
    },
    "notes": [
-    "Chiefs RB Kenneth Walker III (groin) is listed questionable on ESPN; Emmett Johnson leads if he sits. The official game statuses come out Wednesday evening, so every call here waits for them.",
+    "Chiefs RB Kenneth Walker III (groin) is ruled out, so rookie Emmett Johnson starts; WR Tyquan Thornton is also out. Bills TE Dalton Kincaid is doubtful and WR Joshua Palmer is out, so both are left out. Chiefs TE Noah Gray and Bills TE Jackson Hawes are questionable and get no calls.",
     "The total has dropped from 50 to 47.5 at DraftKings on the weather forecast. The yardage lines are Tuesday BetMGM quotes from before that move.",
     "The model's total (40) sits 7.5 under DraftKings' 47.5. Almost all of that is the weather adjustment: the book has moved 2.5 points on the same forecast, so the under is a weather bet and depends on the rain and wind arriving as forecast."
    ],
@@ -1166,7 +1199,47 @@
     {
      "label": "The Spun via Yahoo: weather.com Thursday night forecast, Nov 24",
      "url": "https://sports.yahoo.com/articles/forecast-thanksgiving-nights-bills-vs-152626656.html"
+    },
+    {
+     "label": "PFT: Kenneth Walker ruled out for Thanksgiving night (Nov 25)",
+     "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kenneth-walker-ruled-out-for-thanksgiving-night-vs-bills"
+    },
+    {
+     "label": "Arrowhead Report (SI): Walker ruled out, Emmett Johnson to start (Nov 25)",
+     "url": "https://www.si.com/nfl/chiefs/onsi/kenneth-walker-ruled-out-for-thanksgiving-game-what-it-means-for-the-chiefs"
+    },
+    {
+     "label": "Fantasy Index NFL Week 12 injury report (Thanksgiving game statuses)",
+     "url": "https://fantasyindex.com/football/nfl-week-12-injury-report/"
     }
+   ],
+   "out_names": [
+    [
+     "Kenneth Walker III",
+     "KC"
+    ],
+    [
+     "Tyquan Thornton",
+     "KC"
+    ],
+    [
+     "Dalton Kincaid",
+     "BUF"
+    ],
+    [
+     "Josh Palmer",
+     "BUF"
+    ]
+   ],
+   "q_names": [
+    [
+     "Noah Gray",
+     "KC"
+    ],
+    [
+     "Jackson Hawes",
+     "BUF"
+    ]
    ]
   },
   "DEN_PIT": {
@@ -1421,15 +1494,6 @@
       "under": -105,
       "book": "BetMGM"
      }
-    ],
-    "J.K. Dobbins": [
-     {
-      "stat": "rush",
-      "line": 6.5,
-      "over": -125,
-      "under": -105,
-      "book": "BetMGM"
-     }
     ]
    },
    "weather": {
@@ -1451,7 +1515,7 @@
    },
    "notes": [
     "The Steelers benched Aaron Rodgers late Tuesday: Mason Rudolph starts and Rodgers is inactive.",
-    "The official game statuses come out Wednesday evening, so every call here waits for them.",
+    "Broncos RB J.K. Dobbins is suspended for this game (conduct detrimental to the team), so Jonah Coleman leads the backfield. No Friday game statuses were found yet: Steelers WR Ben Skowronek missed Tuesday practice and is the one to watch.",
     "The model's total (33) is 7 under the book's 40 and it gives Pittsburgh 24% against the book's 42%: that comes from Rudolph's thin record and a 62% rain chance, so the game lines and the Steelers' player calls are held."
    ],
    "sources": [
@@ -1474,11 +1538,26 @@
     {
      "label": "AccuWeather, Acrisure Stadium 10-day forecast",
      "url": "https://www.accuweather.com/en/us/acrisure-stadium/15212/weather-forecast/53633_poi"
+    },
+    {
+     "label": "Bleacher Report: Dobbins suspended for Black Friday game (Nov 24)",
+     "url": "https://bleacherreport.com/articles/25537375-jk-dobbins-suspended-broncos-black-friday-nfl-game-vs-steelers"
+    },
+    {
+     "label": "Broncos-Steelers practice participation report (Nov 24)",
+     "url": "https://sports.yahoo.com/nfl/articles/broncos-vs-steelers-practice-participation-232025459.html"
     }
    ],
    "low_conf": {
     "PIT": "Mason Rudolph starts after Aaron Rodgers was benched; he has 4 pass attempts for the Steelers this season, so their numbers are low confidence."
-   }
+   },
+   "out_names": [
+    [
+     "J.K. Dobbins",
+     "DEN"
+    ]
+   ]
   }
- }
+ },
+ "report_final": true
 }

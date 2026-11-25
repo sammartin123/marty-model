@@ -6,7 +6,7 @@
  "home": "DET",
  "kickoff_utc": "2026-11-26T18:00:00+00:00",
  "book": "BetMGM (Tue Nov 24)",
- "logged_utc": "2026-11-25T15:05+00:00",
+ "logged_utc": "2026-11-25T17:25+00:00",
  "entries": [
   {
    "kind": "td",
@@ -20,7 +20,7 @@
    "p_call": 0.0988,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "td",
@@ -34,7 +34,7 @@
    "p_call": 0.0644,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "td",
@@ -48,7 +48,7 @@
    "p_call": 0.0784,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "td",
@@ -61,8 +61,8 @@
    "mkt": 0.5745,
    "p_call": 0.5072,
    "call": "fade",
-   "live": false,
-   "gate": "Injuries not final"
+   "live": true,
+   "gate": null
   },
   {
    "kind": "yards",
@@ -78,8 +78,8 @@
    "mkt": 0.5,
    "p_call": 0.5575,
    "call": "lean",
-   "live": false,
-   "gate": "Injuries not final"
+   "live": true,
+   "gate": null
   },
   {
    "kind": "td",
@@ -93,7 +93,7 @@
    "p_call": 0.335,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "yards",
@@ -110,7 +110,7 @@
    "p_call": 0.5132,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "td",
@@ -124,7 +124,7 @@
    "p_call": 0.0356,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "td",
@@ -138,7 +138,7 @@
    "p_call": 0.2902,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "td",
@@ -152,7 +152,7 @@
    "p_call": 0.7182,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "yards",
@@ -169,7 +169,7 @@
    "p_call": 0.5319,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "yards",
@@ -186,7 +186,7 @@
    "p_call": 0.517,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": "Questionable"
   },
   {
    "kind": "td",
@@ -200,7 +200,7 @@
    "p_call": 0.1747,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "td",
@@ -214,7 +214,7 @@
    "p_call": 0.223,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "td",
@@ -228,7 +228,7 @@
    "p_call": 0.5376,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "yards",
@@ -245,7 +245,7 @@
    "p_call": 0.5661,
    "call": "lean",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": "Correlated"
   },
   {
    "kind": "td",
@@ -259,7 +259,7 @@
    "p_call": 0.2034,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "yards",
@@ -275,8 +275,8 @@
    "mkt": 0.5,
    "p_call": 0.583,
    "call": "play",
-   "live": false,
-   "gate": "Injuries not final"
+   "live": true,
+   "gate": null
   },
   {
    "kind": "td",
@@ -290,7 +290,7 @@
    "p_call": 0.3608,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "yards",
@@ -307,7 +307,7 @@
    "p_call": 0.5171,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "td",
@@ -321,7 +321,7 @@
    "p_call": 0.4212,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "yards",
@@ -338,7 +338,7 @@
    "p_call": 0.5185,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "td",
@@ -352,7 +352,7 @@
    "p_call": 0.3947,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "yards",
@@ -369,7 +369,7 @@
    "p_call": 0.5312,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "td",
@@ -383,7 +383,7 @@
    "p_call": 0.3743,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "yards",
@@ -400,7 +400,7 @@
    "p_call": 0.5398,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "spread",

@@ -11,8 +11,20 @@
   "BUF": "00-0034857",
   "KC": "00-0033873"
  },
- "out": [],
- "status": {},
+ "out": [
+  "00-0036988",
+  "00-0038104",
+  "00-0038134",
+  "00-0038933"
+ ],
+ "status": {
+  "00-0038134": "Out",
+  "00-0038104": "Out",
+  "00-0038933": "Out",
+  "00-0036988": "Out",
+  "00-0036637": "Questionable",
+  "00-0040194": "Questionable"
+ },
  "out_json": "out/KC_BUF.json",
  "meta": {
   "title": "Chiefs at Bills",
@@ -61,16 +73,6 @@
   "fg_shift": -0.312
  },
  "td_odds": {
-  "Kenneth Walker III": {
-   "price": -165,
-   "book": "BetMGM",
-   "all": [
-    [
-     "BetMGM",
-     -165
-    ]
-   ]
-  },
   "Emmett Johnson": {
    "price": -130,
    "book": "BetMGM",
@@ -118,16 +120,6 @@
     [
      "BetMGM",
      210
-    ]
-   ]
-  },
-  "Dalton Kincaid": {
-   "price": 230,
-   "book": "BetMGM",
-   "all": [
-    [
-     "BetMGM",
-     230
     ]
    ]
   },
@@ -306,16 +298,23 @@
    }
   ]
  },
- "injuries": [],
+ "injuries": [
+  "KC Kenneth Walker III: Out (late change, from news reports)",
+  "KC Tyquan Thornton: Out (late change, from news reports)",
+  "BUF Dalton Kincaid: Out (late change, from news reports)",
+  "BUF Josh Palmer: Out (late change, from news reports)",
+  "KC Noah Gray: Questionable (late change, from news reports)",
+  "BUF Jackson Hawes: Questionable (late change, from news reports)"
+ ],
  "inputs": {
   "qbs": {
    "BUF": "Josh Allen",
    "KC": "Patrick Mahomes"
   },
-  "report_final": false,
+  "report_final": true,
   "low_conf": {},
   "notes": [
-   "Chiefs RB Kenneth Walker III (groin) is listed questionable on ESPN; Emmett Johnson leads if he sits. The official game statuses come out Wednesday evening, so every call here waits for them.",
+   "Chiefs RB Kenneth Walker III (groin) is ruled out, so rookie Emmett Johnson starts; WR Tyquan Thornton is also out. Bills TE Dalton Kincaid is doubtful and WR Joshua Palmer is out, so both are left out. Chiefs TE Noah Gray and Bills TE Jackson Hawes are questionable and get no calls.",
    "The total has dropped from 50 to 47.5 at DraftKings on the weather forecast. The yardage lines are Tuesday BetMGM quotes from before that move.",
    "The model's total (40) sits 7.5 under DraftKings' 47.5. Almost all of that is the weather adjustment: the book has moved 2.5 points on the same forecast, so the under is a weather bet and depends on the rain and wind arriving as forecast."
   ]
@@ -344,6 +343,18 @@
   {
    "label": "The Spun via Yahoo: weather.com Thursday night forecast, Nov 24",
    "url": "https://sports.yahoo.com/articles/forecast-thanksgiving-nights-bills-vs-152626656.html"
+  },
+  {
+   "label": "PFT: Kenneth Walker ruled out for Thanksgiving night (Nov 25)",
+   "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kenneth-walker-ruled-out-for-thanksgiving-night-vs-bills"
+  },
+  {
+   "label": "Arrowhead Report (SI): Walker ruled out, Emmett Johnson to start (Nov 25)",
+   "url": "https://www.si.com/nfl/chiefs/onsi/kenneth-walker-ruled-out-for-thanksgiving-game-what-it-means-for-the-chiefs"
+  },
+  {
+   "label": "Fantasy Index NFL Week 12 injury report (Thanksgiving game statuses)",
+   "url": "https://fantasyindex.com/football/nfl-week-12-injury-report/"
   }
  ]
 }

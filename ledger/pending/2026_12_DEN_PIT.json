@@ -6,7 +6,7 @@
  "home": "PIT",
  "kickoff_utc": "2026-11-27T20:00:00+00:00",
  "book": "BetMGM (Tue Nov 24)",
- "logged_utc": "2026-11-25T15:05+00:00",
+ "logged_utc": "2026-11-25T17:26+00:00",
  "entries": [
   {
    "kind": "td",
@@ -181,12 +181,12 @@
    "team": "DEN",
    "price": 500,
    "book": "BetMGM",
-   "sim": 0.1327,
+   "sim": 0.135,
    "mkt": 0.1667,
-   "p_call": 0.1531,
+   "p_call": 0.154,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "td",
@@ -195,12 +195,12 @@
    "team": "DEN",
    "price": 450,
    "book": "BetMGM",
-   "sim": 0.2023,
+   "sim": 0.202,
    "mkt": 0.1818,
-   "p_call": 0.19,
+   "p_call": 0.1899,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "yards",
@@ -212,29 +212,12 @@
    "side": "under",
    "price": -111,
    "book": "BetMGM",
-   "sim": 0.5492,
+   "sim": 0.5404,
    "mkt": 0.491,
-   "p_call": 0.5142,
+   "p_call": 0.5107,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
-  },
-  {
-   "kind": "yards",
-   "pid": "00-0036158",
-   "name": "J.K. Dobbins",
-   "team": "DEN",
-   "stat": "rush",
-   "line": 6.5,
-   "side": "over",
-   "price": -125,
-   "book": "BetMGM",
-   "sim": 0.7276,
-   "mkt": 0.5203,
-   "p_call": 0.6032,
-   "call": "play",
-   "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "td",
@@ -243,12 +226,12 @@
    "team": "DEN",
    "price": 1200,
    "book": "BetMGM",
-   "sim": 0.0585,
+   "sim": 0.0604,
    "mkt": 0.0769,
-   "p_call": 0.0696,
+   "p_call": 0.0703,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "td",
@@ -257,12 +240,12 @@
    "team": "DEN",
    "price": 270,
    "book": "BetMGM",
-   "sim": 0.1901,
+   "sim": 0.1923,
    "mkt": 0.2703,
-   "p_call": 0.2382,
+   "p_call": 0.2391,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "yards",
@@ -274,12 +257,12 @@
    "side": "under",
    "price": -115,
    "book": "BetMGM",
-   "sim": 0.7033,
+   "sim": 0.6931,
    "mkt": 0.5,
-   "p_call": 0.5813,
+   "p_call": 0.5772,
    "call": "play",
-   "live": false,
-   "gate": "Injuries not final"
+   "live": true,
+   "gate": null
   },
   {
    "kind": "td",
@@ -288,12 +271,12 @@
    "team": "DEN",
    "price": 650,
    "book": "BetMGM",
-   "sim": 0.0925,
+   "sim": 0.0926,
    "mkt": 0.1333,
    "p_call": 0.117,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "td",
@@ -302,12 +285,12 @@
    "team": "DEN",
    "price": 525,
    "book": "BetMGM",
-   "sim": 0.1358,
+   "sim": 0.1342,
    "mkt": 0.16,
-   "p_call": 0.1503,
+   "p_call": 0.1497,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "yards",
@@ -316,15 +299,15 @@
    "team": "DEN",
    "stat": "rush",
    "line": 10.5,
-   "side": "over",
-   "price": -125,
+   "side": "under",
+   "price": -105,
    "book": "BetMGM",
-   "sim": 0.4848,
-   "mkt": 0.5203,
-   "p_call": 0.5061,
+   "sim": 0.5352,
+   "mkt": 0.4797,
+   "p_call": 0.5019,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "td",
@@ -333,12 +316,12 @@
    "team": "DEN",
    "price": 1050,
    "book": "BetMGM",
-   "sim": 0.1128,
+   "sim": 0.115,
    "mkt": 0.087,
-   "p_call": 0.0973,
+   "p_call": 0.0982,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "td",
@@ -347,12 +330,12 @@
    "team": "DEN",
    "price": 475,
    "book": "BetMGM",
-   "sim": 0.107,
+   "sim": 0.1093,
    "mkt": 0.1739,
-   "p_call": 0.1472,
+   "p_call": 0.1481,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "yards",
@@ -364,12 +347,12 @@
    "side": "under",
    "price": -115,
    "book": "BetMGM",
-   "sim": 0.6286,
+   "sim": 0.62,
    "mkt": 0.5,
-   "p_call": 0.5514,
+   "p_call": 0.548,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "td",
@@ -378,12 +361,12 @@
    "team": "DEN",
    "price": -130,
    "book": "BetMGM",
-   "sim": 0.4403,
+   "sim": 0.5137,
    "mkt": 0.5652,
-   "p_call": 0.5152,
+   "p_call": 0.5446,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "yards",
@@ -392,15 +375,15 @@
    "team": "DEN",
    "stat": "rush",
    "line": 68.5,
-   "side": "under",
+   "side": "over",
    "price": -115,
    "book": "BetMGM",
-   "sim": 0.6479,
+   "sim": 0.5818,
    "mkt": 0.5,
-   "p_call": 0.5592,
-   "call": "lean",
+   "p_call": 0.5327,
+   "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "spread",

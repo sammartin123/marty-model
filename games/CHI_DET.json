@@ -12,7 +12,11 @@
   "CHI": "00-0039918"
  },
  "out": [],
- "status": {},
+ "status": {
+  "00-0039021": "Questionable",
+  "00-0041051": "Questionable",
+  "00-0039364": "Questionable"
+ },
  "out_json": "out/CHI_DET.json",
  "meta": {
   "title": "Bears at Lions",
@@ -318,16 +322,20 @@
    }
   ]
  },
- "injuries": [],
+ "injuries": [
+  "CHI Roschon Johnson: Questionable (late change, from news reports)",
+  "CHI Zavion Thomas: Questionable (late change, from news reports)",
+  "DET Sione Vaki: Questionable (late change, from news reports)"
+ ],
  "inputs": {
   "qbs": {
    "DET": "Jared Goff",
    "CHI": "Caleb Williams"
   },
-  "report_final": false,
+  "report_final": true,
   "low_conf": {},
   "notes": [
-   "Lions TE Sam LaPorta (ankle) was limited at Monday's walkthrough. The official game statuses come out Wednesday evening, so every call here waits for them."
+   "No skill player is ruled out. Bears RB Roschon Johnson and WR Zavion Thomas and Lions RB Sione Vaki are questionable and get no calls. Lions TE Sam LaPorta (ankle) carries no designation."
   ]
  },
  "sources": [
@@ -350,6 +358,14 @@
   {
    "label": "Fox Sports game page (LaPorta practice note)",
    "url": "https://www.foxsports.com/nfl/week-12-chicago-bears-vs-detroit-lions-nov-26-2026-game-boxscore-11096?tab=odds"
+  },
+  {
+   "label": "Fantasy Index NFL Week 12 injury report (Thanksgiving game statuses)",
+   "url": "https://fantasyindex.com/football/nfl-week-12-injury-report/"
+  },
+  {
+   "label": "SI: Bears vs Lions injuries and odds (Nov 24)",
+   "url": "https://www.si.com/betting/bears-vs-lions-prediction-odds-spread-injuries-trends-for-thanksgiving-day-in-nfl-week-12-2026"
   }
  ]
 }

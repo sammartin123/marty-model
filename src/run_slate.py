@@ -58,6 +58,8 @@ def main(path):
             G['qb'][team] = pid_of(nm, team); G['inputs']['qbs'][team] = nm
             G['inputs']['low_conf'].pop(team, None)
         G['inputs']['low_conf'].update(ov.get('low_conf', {}))
+        if ov.get('report_final', S.get('report_final')) is not None:   # final statuses taken from news before the data feed has them
+            G['inputs']['report_final'] = bool(ov.get('report_final', S.get('report_final')))
         if ov.get('hold_lines'):   # game lines held for a stated reason the data cannot see yet (player props stay live)
             G['inputs']['hold_lines'] = ov['hold_lines']
         G['inputs']['notes'] = ov.get('notes', [])

@@ -6,22 +6,8 @@
  "home": "BUF",
  "kickoff_utc": "2026-11-27T01:20:00+00:00",
  "book": "DraftKings (Wed Nov 25, via ESPN)",
- "logged_utc": "2026-11-25T15:05+00:00",
+ "logged_utc": "2026-11-25T17:26+00:00",
  "entries": [
-  {
-   "kind": "td",
-   "pid": "00-0038933",
-   "name": "Dalton Kincaid",
-   "team": "BUF",
-   "price": 230,
-   "book": "BetMGM",
-   "sim": 0.1717,
-   "mkt": 0.303,
-   "p_call": 0.2505,
-   "call": "fade",
-   "live": false,
-   "gate": "Injuries not final"
-  },
   {
    "kind": "td",
    "pid": "00-0034827",
@@ -29,12 +15,12 @@
    "team": "BUF",
    "price": 190,
    "book": "BetMGM",
-   "sim": 0.2406,
+   "sim": 0.2716,
    "mkt": 0.3448,
-   "p_call": 0.3032,
+   "p_call": 0.3155,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "yards",
@@ -46,12 +32,12 @@
    "side": "under",
    "price": -115,
    "book": "BetMGM",
-   "sim": 0.8035,
+   "sim": 0.7448,
    "mkt": 0.5,
-   "p_call": 0.6214,
+   "p_call": 0.5979,
    "call": "play",
-   "live": false,
-   "gate": "Injuries not final"
+   "live": true,
+   "gate": null
   },
   {
    "kind": "td",
@@ -60,12 +46,12 @@
    "team": "BUF",
    "price": -125,
    "book": "BetMGM",
-   "sim": 0.3143,
+   "sim": 0.3117,
    "mkt": 0.5556,
-   "p_call": 0.4591,
+   "p_call": 0.458,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "yards",
@@ -77,12 +63,12 @@
    "side": "under",
    "price": -115,
    "book": "BetMGM",
-   "sim": 0.7428,
+   "sim": 0.7434,
    "mkt": 0.5,
-   "p_call": 0.5971,
+   "p_call": 0.5974,
    "call": "play",
-   "live": false,
-   "gate": "Injuries not final"
+   "live": true,
+   "gate": null
   },
   {
    "kind": "yards",
@@ -94,12 +80,12 @@
    "side": "under",
    "price": -110,
    "book": "BetMGM",
-   "sim": 0.5309,
+   "sim": 0.5297,
    "mkt": 0.4899,
-   "p_call": 0.5063,
+   "p_call": 0.5058,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "td",
@@ -108,12 +94,12 @@
    "team": "BUF",
    "price": 525,
    "book": "BetMGM",
-   "sim": 0.1035,
+   "sim": 0.1231,
    "mkt": 0.16,
-   "p_call": 0.1374,
+   "p_call": 0.1452,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "td",
@@ -122,12 +108,12 @@
    "team": "BUF",
    "price": -105,
    "book": "BetMGM",
-   "sim": 0.5514,
+   "sim": 0.5585,
    "mkt": 0.5122,
-   "p_call": 0.5279,
+   "p_call": 0.5307,
    "call": "lean",
-   "live": false,
-   "gate": "Injuries not final"
+   "live": true,
+   "gate": null
   },
   {
    "kind": "yards",
@@ -139,12 +125,12 @@
    "side": "under",
    "price": -115,
    "book": "BetMGM",
-   "sim": 0.6362,
+   "sim": 0.6338,
    "mkt": 0.5,
-   "p_call": 0.5545,
+   "p_call": 0.5535,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "td",
@@ -153,12 +139,12 @@
    "team": "BUF",
    "price": 300,
    "book": "BetMGM",
-   "sim": 0.2069,
+   "sim": 0.2333,
    "mkt": 0.25,
-   "p_call": 0.2327,
+   "p_call": 0.2433,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "yards",
@@ -170,12 +156,12 @@
    "side": "under",
    "price": -115,
    "book": "BetMGM",
-   "sim": 0.6202,
+   "sim": 0.5384,
    "mkt": 0.5,
-   "p_call": 0.5481,
+   "p_call": 0.5154,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "td",
@@ -184,26 +170,12 @@
    "team": "BUF",
    "price": 390,
    "book": "BetMGM",
-   "sim": 0.1685,
+   "sim": 0.191,
    "mkt": 0.2041,
-   "p_call": 0.1898,
+   "p_call": 0.1988,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
-  },
-  {
-   "kind": "td",
-   "pid": "00-0038134",
-   "name": "Kenneth Walker III",
-   "team": "KC",
-   "price": -165,
-   "book": "BetMGM",
-   "sim": 0.4928,
-   "mkt": 0.6226,
-   "p_call": 0.5707,
-   "call": "fade",
-   "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "td",
@@ -212,12 +184,12 @@
    "team": "KC",
    "price": 210,
    "book": "BetMGM",
-   "sim": 0.1729,
+   "sim": 0.1891,
    "mkt": 0.3226,
-   "p_call": 0.2627,
+   "p_call": 0.2692,
    "call": "fade",
-   "live": false,
-   "gate": "Injuries not final"
+   "live": true,
+   "gate": null
   },
   {
    "kind": "yards",
@@ -229,12 +201,12 @@
    "side": "under",
    "price": -115,
    "book": "BetMGM",
-   "sim": 0.8212,
+   "sim": 0.7769,
    "mkt": 0.5,
-   "p_call": 0.6285,
+   "p_call": 0.6107,
    "call": "play",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": "Correlated"
   },
   {
    "kind": "td",
@@ -243,12 +215,12 @@
    "team": "KC",
    "price": 525,
    "book": "BetMGM",
-   "sim": 0.0649,
+   "sim": 0.0746,
    "mkt": 0.16,
-   "p_call": 0.122,
+   "p_call": 0.1259,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "td",
@@ -257,12 +229,12 @@
    "team": "KC",
    "price": 700,
    "book": "BetMGM",
-   "sim": 0.0914,
+   "sim": 0.1026,
    "mkt": 0.125,
-   "p_call": 0.1116,
+   "p_call": 0.116,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": "Questionable"
   },
   {
    "kind": "td",
@@ -271,12 +243,12 @@
    "team": "KC",
    "price": 290,
    "book": "BetMGM",
-   "sim": 0.1874,
+   "sim": 0.2064,
    "mkt": 0.2564,
-   "p_call": 0.2288,
+   "p_call": 0.2364,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "yards",
@@ -288,12 +260,12 @@
    "side": "under",
    "price": -105,
    "book": "BetMGM",
-   "sim": 0.8395,
+   "sim": 0.8021,
    "mkt": 0.4797,
-   "p_call": 0.6236,
+   "p_call": 0.6087,
    "call": "play",
-   "live": false,
-   "gate": "Injuries not final"
+   "live": true,
+   "gate": null
   },
   {
    "kind": "td",
@@ -302,12 +274,12 @@
    "team": "KC",
    "price": 250,
    "book": "BetMGM",
-   "sim": 0.2166,
+   "sim": 0.2423,
    "mkt": 0.2857,
-   "p_call": 0.2581,
+   "p_call": 0.2683,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "yards",
@@ -319,12 +291,12 @@
    "side": "under",
    "price": -115,
    "book": "BetMGM",
-   "sim": 0.7634,
+   "sim": 0.7076,
    "mkt": 0.5,
-   "p_call": 0.6054,
+   "p_call": 0.583,
    "call": "play",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": "Correlated"
   },
   {
    "kind": "td",
@@ -333,12 +305,12 @@
    "team": "KC",
    "price": 425,
    "book": "BetMGM",
-   "sim": 0.2441,
+   "sim": 0.2687,
    "mkt": 0.1905,
-   "p_call": 0.2119,
-   "call": "lean",
-   "live": false,
-   "gate": "Injuries not final"
+   "p_call": 0.2218,
+   "call": "play",
+   "live": true,
+   "gate": null
   },
   {
    "kind": "td",
@@ -347,12 +319,12 @@
    "team": "KC",
    "price": 2000,
    "book": "BetMGM",
-   "sim": 0.0624,
+   "sim": 0.0694,
    "mkt": 0.0476,
-   "p_call": 0.0535,
+   "p_call": 0.0563,
    "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "td",
@@ -361,12 +333,12 @@
    "team": "KC",
    "price": 700,
    "book": "BetMGM",
-   "sim": 0.155,
+   "sim": 0.169,
    "mkt": 0.125,
-   "p_call": 0.137,
-   "call": "pass",
-   "live": false,
-   "gate": "Injuries not final"
+   "p_call": 0.1426,
+   "call": "lean",
+   "live": true,
+   "gate": null
   },
   {
    "kind": "td",
@@ -375,12 +347,12 @@
    "team": "KC",
    "price": -130,
    "book": "BetMGM",
-   "sim": 0.3335,
+   "sim": 0.5727,
    "mkt": 0.5652,
-   "p_call": 0.4725,
-   "call": "fade",
+   "p_call": 0.5682,
+   "call": "pass",
    "live": false,
-   "gate": "Injuries not final"
+   "gate": null
   },
   {
    "kind": "spread",

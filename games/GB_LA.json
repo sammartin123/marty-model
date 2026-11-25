@@ -1,0 +1,382 @@
+{
+ "home": "LA",
+ "away": "GB",
+ "season": 2026,
+ "week": 12,
+ "asof": "2026-11-25",
+ "n_sims": 100000,
+ "seed": 20261125,
+ "neutral": false,
+ "qb": {
+  "LA": "00-0026498",
+  "GB": "00-0036264"
+ },
+ "out": [
+  "00-0035700",
+  "00-0040737"
+ ],
+ "status": {
+  "00-0035700": "Questionable",
+  "00-0037091": "Questionable",
+  "00-0038090": "Questionable",
+  "00-0040737": "Out"
+ },
+ "out_json": "out/GB_LA.json",
+ "meta": {
+  "title": "Packers at Rams",
+  "home_name": "Rams",
+  "away_name": "Packers",
+  "home_city": "Los Angeles",
+  "away_city": "Green Bay",
+  "kickoff": "Wed Nov 25, 2026 \u00b7 8:00 PM ET",
+  "time": "8:00 PM",
+  "venue": "SoFi Stadium, Los Angeles",
+  "generated": "Wed Nov 25, 2026",
+  "roof": "dome",
+  "lat": 33.953,
+  "lon": -118.339,
+  "data_through": "Week 11",
+  "td_note": "Market = the best anytime TD price found from a named book (BetMGM, Fanatics, FanDuel; Nov 24 to 25). No Josh Jacobs price was posted. Yardage lines are BetMGM (Nov 24). Confirm the price in your own book first: a call only holds at the price shown or longer."
+ },
+ "market": {
+  "spread_home": -2.5,
+  "total": 44.5,
+  "ml_home": -137,
+  "ml_away": 116,
+  "book": "DraftKings (Wed Nov 25, via ESPN)",
+  "others": [
+   {
+    "book": "Fanatics (Tue Nov 24)",
+    "spread_home": -2.5,
+    "total": 45.0,
+    "ml_home": -150,
+    "ml_away": 125
+   }
+  ]
+ },
+ "weather": {
+  "summary": "Indoors",
+  "precip": null,
+  "wind": null,
+  "rain_flag": false,
+  "note": "SoFi Stadium is covered; treated as indoors.",
+  "effect": "No weather adjustment."
+ },
+ "wx_model": {
+  "pass_mult": 1.0,
+  "cr_mult": 1.0,
+  "td_shift": 0.0,
+  "fg_shift": 0.0
+ },
+ "td_odds": {
+  "Kyren Williams": {
+   "price": -105,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     -105
+    ],
+    [
+     "Fanatics",
+     -125
+    ]
+   ]
+  },
+  "Blake Corum": {
+   "price": 110,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     110
+    ],
+    [
+     "Fanatics",
+     -120
+    ]
+   ]
+  },
+  "Christian Watson": {
+   "price": 170,
+   "book": "Fanatics",
+   "all": [
+    [
+     "BetMGM",
+     145
+    ],
+    [
+     "Fanatics",
+     170
+    ]
+   ]
+  },
+  "Matthew Golden": {
+   "price": 200,
+   "book": "Fanatics",
+   "all": [
+    [
+     "BetMGM",
+     145
+    ],
+    [
+     "Fanatics",
+     200
+    ],
+    [
+     "FanDuel",
+     195
+    ]
+   ]
+  },
+  "Kaleb Johnson": {
+   "price": 220,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     220
+    ],
+    [
+     "Fanatics",
+     210
+    ]
+   ]
+  },
+  "Tucker Kraft": {
+   "price": 270,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     270
+    ]
+   ]
+  },
+  "Colby Parkinson": {
+   "price": 280,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     280
+    ]
+   ]
+  },
+  "Tyler Higbee": {
+   "price": 300,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     300
+    ]
+   ]
+  },
+  "MarShawn Lloyd": {
+   "price": 360,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     360
+    ]
+   ]
+  },
+  "Tutu Atwell": {
+   "price": 525,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     525
+    ]
+   ]
+  },
+  "Jordan Love": {
+   "price": 950,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     950
+    ]
+   ]
+  },
+  "Jonnu Smith": {
+   "price": 1250,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     1250
+    ]
+   ]
+  },
+  "Matthew Stafford": {
+   "price": 1800,
+   "book": "BetMGM",
+   "all": [
+    [
+     "BetMGM",
+     1800
+    ]
+   ]
+  }
+ },
+ "yard_lines": {
+  "Matthew Golden": [
+   {
+    "stat": "rec",
+    "line": 76.5,
+    "over": -115,
+    "under": -115,
+    "book": "BetMGM"
+   }
+  ],
+  "Christian Watson": [
+   {
+    "stat": "rec",
+    "line": 74.5,
+    "over": -115,
+    "under": -115,
+    "book": "BetMGM"
+   }
+  ],
+  "Tucker Kraft": [
+   {
+    "stat": "rec",
+    "line": 37.5,
+    "over": -115,
+    "under": -115,
+    "book": "BetMGM"
+   }
+  ],
+  "Konata Mumpfield": [
+   {
+    "stat": "rec",
+    "line": 36.5,
+    "over": -115,
+    "under": -115,
+    "book": "BetMGM"
+   }
+  ],
+  "Tyler Higbee": [
+   {
+    "stat": "rec",
+    "line": 32.5,
+    "over": -115,
+    "under": -115,
+    "book": "BetMGM"
+   }
+  ],
+  "Blake Corum": [
+   {
+    "stat": "rush",
+    "line": 57.5,
+    "over": -111,
+    "under": -120,
+    "book": "BetMGM"
+   }
+  ],
+  "Kyren Williams": [
+   {
+    "stat": "rush",
+    "line": 57.5,
+    "over": -115,
+    "under": -115,
+    "book": "BetMGM"
+   }
+  ],
+  "Kaleb Johnson": [
+   {
+    "stat": "rush",
+    "line": 32.5,
+    "over": -115,
+    "under": -115,
+    "book": "BetMGM"
+   }
+  ],
+  "MarShawn Lloyd": [
+   {
+    "stat": "rush",
+    "line": 11.5,
+    "over": -115,
+    "under": -115,
+    "book": "BetMGM"
+   }
+  ],
+  "Jordan Love": [
+   {
+    "stat": "rush",
+    "line": 3.5,
+    "over": -110,
+    "under": -120,
+    "book": "BetMGM"
+   }
+  ]
+ },
+ "injuries": [
+  "GB Josh Jacobs (RB): Questionable, Finger; Matt LaFleur called him unlikely to play, so he is simulated as out",
+  "GB Bo Melton (WR): Questionable, Thigh",
+  "GB Skyy Moore (WR): Questionable, Ankle",
+  "LA Terrance Ferguson (TE): Out, Ankle",
+  "LA Puka Nacua (WR) and Davante Adams (WR): on injured reserve"
+ ],
+ "inputs": {
+  "qbs": {
+   "LA": "Matthew Stafford",
+   "GB": "Jordan Love"
+  },
+  "report_final": true,
+  "low_conf": {},
+  "notes": [
+   "Packers RB Josh Jacobs (finger) is questionable after limited practices all week; Matt LaFleur said he remains unlikely to play and books are not pricing his touchdown, so he is simulated as out with Kaleb Johnson leading the backfield. If Jacobs is active at the 6:30 PM ET inactives, the Packers running back calls do not hold.",
+   "Rams WRs Puka Nacua and Davante Adams are both on injured reserve, so the Rams' targets spread across Konata Mumpfield, Tutu Atwell and the tight ends. TE Terrance Ferguson is out.",
+   "Stafford (elbow) and Kyren Williams (toe) practised fully and carry no designation. Packers WRs Bo Melton and Skyy Moore are questionable."
+  ],
+  "hold_lines": "The model's Rams rating is built mostly from games with Puka Nacua and Davante Adams, who are both on injured reserve, so its 70% for the Rams (book 56%) overstates them; game-line calls are held and player props stay live."
+ },
+ "sources": [
+  {
+   "label": "Play-by-play, rosters, depth charts, injuries, schedule (nflverse)",
+   "url": "https://github.com/nflverse/nflverse-data"
+  },
+  {
+   "label": "Spread, total, moneyline and yardage ladder (DraftKings), ESPN odds page",
+   "url": "https://www.espn.com/nfl/odds/_/gameId/401873079"
+  },
+  {
+   "label": "Lines, anytime TD and yardage props (Fanatics), Nov 24",
+   "url": "https://betfanatics.com/blog/packers-vs-rams-odds-spreads-and-lines"
+  },
+  {
+   "label": "Anytime TD odds table (BetMGM), Nov 24",
+   "url": "https://sports.betmgm.com/en/blog/nfl/packers-rams-first-anytime-td-odds-picks-week-12-gaa/"
+  },
+  {
+   "label": "Prediction, odds and player props (BetMGM), Nov 24",
+   "url": "https://sports.betmgm.com/en/blog/nfl/packers-rams-prediction-odds-player-prop-bets-picks-week-12-jaa/"
+  },
+  {
+   "label": "Anytime TD prices (FanDuel), Action Network via Yahoo, Nov 25",
+   "url": "https://sports.yahoo.com/betting/articles/packers-vs-rams-anytime-touchdown-121251600.html"
+  },
+  {
+   "label": "Rams Week 12 injury report (Nov 24)",
+   "url": "https://www.therams.com/news/rams-injury-report-week-12-2026-vs-packers-steve-avila-terrance-ferguson-coleman-shelton-kobie-turner"
+  },
+  {
+   "label": "Packers Week 12 injury report (Nov 24)",
+   "url": "https://www.packers.com/news/packers-list-eight-questionable-vs-rams-week-12-injury-report"
+  },
+  {
+   "label": "SI: Is Josh Jacobs playing tonight? (Nov 25)",
+   "url": "https://www.si.com/betting/josh-jacobs-injury-update-betting-impact-for-packers-vs-rams-in-nfl-week-12-2026"
+  },
+  {
+   "label": "RotoWire: Jacobs officially questionable, possible pregame workout (Nov 24)",
+   "url": "https://www.rotowire.com/football/headlines/josh-jacobs-injury-officially-questionable-for-wednesday-649591"
+  }
+ ]
+}
